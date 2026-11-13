@@ -1,0 +1,147 @@
+/* FullStack Grant – Design-Tokens (Brand Guideline v1, 08.11.2026)
+   Einbinden: <link rel="stylesheet" href="/fonts/fonts.css"> + diese Datei.
+   Hell ist Standard; Dunkel über prefers-color-scheme oder <html data-theme="dark">. */
+
+:root {
+  --fsg-ink: #111111;
+  --fsg-paper: #FFFFFF;
+  --fsg-gold: #E09A00;
+  --fsg-gold-on-dark: #FFB020;
+  --fsg-neutral-0: #FFFFFF;
+  --fsg-neutral-50: #F7F7F7;
+  --fsg-neutral-100: #EFEFEF;
+  --fsg-neutral-200: #DBDBDB;
+  --fsg-neutral-300: #C2C2C2;
+  --fsg-neutral-400: #999999;
+  --fsg-neutral-500: #737373;
+  --fsg-neutral-600: #595959;
+  --fsg-neutral-700: #414141;
+  --fsg-neutral-800: #2B2B2B;
+  --fsg-neutral-900: #1C1C1C;
+  --fsg-neutral-950: #111111;
+  --fsg-gold-50: #FFF9EB;
+  --fsg-gold-100: #FFF0CC;
+  --fsg-gold-200: #FFE099;
+  --fsg-gold-300: #FFC85C;
+  --fsg-gold-400: #FFB020;
+  --fsg-gold-500: #E09A00;
+  --fsg-gold-600: #B87D00;
+  --fsg-gold-700: #8F6000;
+  --fsg-gold-800: #664400;
+  --fsg-gold-900: #402B00;
+  --fsg-gold-950: #261A00;
+  --fsg-success: #15803D;
+  --fsg-success-bg: #F0FDF4;
+  --fsg-warning: #C2410C;
+  --fsg-warning-bg: #FFF7ED;
+  --fsg-error: #B91C1C;
+  --fsg-error-bg: #FEF2F2;
+  --fsg-info: #1D4ED8;
+  --fsg-info-bg: #EFF6FF;
+
+  --fsg-font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --fsg-font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --fsg-text-display: clamp(2.5rem, 2.0455rem + 1.9394vw, 3.5rem);
+  --fsg-leading-display: 1.05;
+  --fsg-weight-display: 700;
+  --fsg-tracking-display: -0.03em;
+  --fsg-text-h1: clamp(2.0rem, 1.6591rem + 1.4545vw, 2.75rem);
+  --fsg-leading-h1: 1.1;
+  --fsg-weight-h1: 700;
+  --fsg-tracking-h1: -0.025em;
+  --fsg-text-h2: clamp(1.625rem, 1.4545rem + 0.7273vw, 2.0rem);
+  --fsg-leading-h2: 1.15;
+  --fsg-weight-h2: 700;
+  --fsg-tracking-h2: -0.02em;
+  --fsg-text-h3: clamp(1.375rem, 1.3182rem + 0.2424vw, 1.5rem);
+  --fsg-leading-h3: 1.25;
+  --fsg-weight-h3: 600;
+  --fsg-tracking-h3: -0.01em;
+  --fsg-text-h4: clamp(1.125rem, 1.0682rem + 0.2424vw, 1.25rem);
+  --fsg-leading-h4: 1.3;
+  --fsg-weight-h4: 600;
+  --fsg-tracking-h4: 0em;
+  --fsg-text-lead: clamp(1.125rem, 1.0682rem + 0.2424vw, 1.25rem);
+  --fsg-leading-lead: 1.5;
+  --fsg-weight-lead: 300;
+  --fsg-tracking-lead: 0em;
+  --fsg-text-body-lg: clamp(1.0625rem, 1.0341rem + 0.1212vw, 1.125rem);
+  --fsg-leading-body-lg: 1.6;
+  --fsg-weight-body-lg: 400;
+  --fsg-tracking-body-lg: 0em;
+  --fsg-text-body: 1.0rem;
+  --fsg-leading-body: 1.6;
+  --fsg-weight-body: 400;
+  --fsg-tracking-body: 0em;
+  --fsg-text-small: 0.875rem;
+  --fsg-leading-small: 1.5;
+  --fsg-weight-small: 400;
+  --fsg-tracking-small: 0em;
+  --fsg-text-label: 0.75rem;
+  --fsg-leading-label: 1.4;
+  --fsg-weight-label: 500;
+  --fsg-tracking-label: 0.08em;
+  --fsg-radius-sm: 4px;
+  --fsg-radius-md: 8px;
+  --fsg-radius-lg: 12px;
+  --fsg-radius-xl: 20px;
+  --fsg-radius-full: 9999px;
+  --fsg-shadow-sm: 0 1px 2px rgb(17 17 17 / 0.06);
+  --fsg-shadow-md: 0 4px 16px rgb(17 17 17 / 0.08);
+  --fsg-shadow-lg: 0 12px 40px rgb(17 17 17 / 0.12);
+
+  /* semantisch – hell */
+  --fsg-color-bg: var(--fsg-neutral-0);
+  --fsg-color-bg-subtle: var(--fsg-neutral-50);
+  --fsg-color-surface: #FFFFFF;
+  --fsg-color-border: var(--fsg-neutral-200);
+  --fsg-color-text: var(--fsg-neutral-950);
+  --fsg-color-text-muted: var(--fsg-neutral-700);
+  --fsg-color-text-subtle: var(--fsg-neutral-500);
+  --fsg-color-accent: var(--fsg-gold-500);
+  --fsg-color-on-accent: var(--fsg-neutral-950);
+  --fsg-color-accent-text: var(--fsg-gold-700);
+  --fsg-color-focus: var(--fsg-gold-600);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fsg-color-bg: var(--fsg-neutral-950);
+    --fsg-color-bg-subtle: var(--fsg-neutral-900);
+    --fsg-color-surface: var(--fsg-neutral-900);
+    --fsg-color-border: var(--fsg-neutral-800);
+    --fsg-color-text: var(--fsg-neutral-0);
+    --fsg-color-text-muted: var(--fsg-neutral-200);
+    --fsg-color-text-subtle: var(--fsg-neutral-400);
+    --fsg-color-accent: var(--fsg-gold-400);
+    --fsg-color-on-accent: var(--fsg-neutral-950);
+    --fsg-color-accent-text: var(--fsg-gold-400);
+    --fsg-color-focus: var(--fsg-gold-400);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --fsg-color-bg: var(--fsg-neutral-950);
+  --fsg-color-bg-subtle: var(--fsg-neutral-900);
+  --fsg-color-surface: var(--fsg-neutral-900);
+  --fsg-color-border: var(--fsg-neutral-800);
+  --fsg-color-text: var(--fsg-neutral-0);
+  --fsg-color-text-muted: var(--fsg-neutral-200);
+  --fsg-color-text-subtle: var(--fsg-neutral-400);
+  --fsg-color-accent: var(--fsg-gold-400);
+  --fsg-color-on-accent: var(--fsg-neutral-950);
+  --fsg-color-accent-text: var(--fsg-gold-400);
+  --fsg-color-focus: var(--fsg-gold-400);
+  color-scheme: dark;
+}
+
+/* Grundstil (optional) */
+body { font-family: var(--fsg-font-sans); color: var(--fsg-color-text); background: var(--fsg-color-bg);
+       font-size: var(--fsg-text-body); line-height: var(--fsg-leading-body);
+       font-feature-settings: 'cv11', 'ss01'; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { letter-spacing: var(--fsg-tracking-h2); }
+.fsg-zahl { font-variant-numeric: tabular-nums; }   /* Beträge, Tabellen */
+a { color: inherit; text-decoration-color: var(--fsg-color-accent); text-underline-offset: 0.2em; text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--fsg-color-focus); outline-offset: 2px; }

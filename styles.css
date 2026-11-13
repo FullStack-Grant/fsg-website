@@ -1,0 +1,112 @@
+/* FullStack Grant, Website. Gestaltung nach Brand Guideline v1 (Tokens in tokens.css).
+   Kein Tracking, keine Cookies, keine externen Ressourcen. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--fsg-color-bg);
+  color: var(--fsg-color-text);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Kopf */
+.site-header { padding: 2.5rem 0 0; }
+.site-header .logo { display: inline-block; line-height: 0; }
+.site-header .logo img { width: 216px; height: 36px; }
+
+/* Hauptteil */
+main { flex: 1 0 auto; padding: 3rem 0 4rem; }
+
+h1 {
+  font-size: var(--fsg-text-h1);
+  line-height: var(--fsg-leading-h1);
+  font-weight: var(--fsg-weight-h1);
+  letter-spacing: var(--fsg-tracking-h1);
+  margin: 0 0 1.25rem;
+}
+
+h2 {
+  font-size: var(--fsg-text-h3);
+  line-height: var(--fsg-leading-h3);
+  font-weight: var(--fsg-weight-h3);
+  letter-spacing: var(--fsg-tracking-h3);
+  margin: 2.5rem 0 0.75rem;
+}
+
+p { margin: 0 0 1rem; max-width: 38rem; }
+
+.lead {
+  font-size: var(--fsg-text-lead);
+  line-height: var(--fsg-leading-lead);
+  font-weight: var(--fsg-weight-lead);
+  color: var(--fsg-color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.slogan { margin: 0 0 2rem; }
+.slogan span { display: block; }
+
+.hinweis {
+  display: inline-block;
+  font-family: var(--fsg-font-mono);
+  font-size: var(--fsg-text-label);
+  line-height: var(--fsg-leading-label);
+  letter-spacing: var(--fsg-tracking-label);
+  text-transform: uppercase;
+  color: var(--fsg-color-accent-text);
+  border: 1px solid var(--fsg-color-border);
+  border-radius: var(--fsg-radius-full);
+  padding: 0.4rem 0.85rem;
+  margin: 0 0 1.75rem;
+}
+
+.regel {
+  border: 0;
+  border-top: 1px solid var(--fsg-color-border);
+  margin: 2.5rem 0 0;
+}
+
+dl.daten { margin: 0 0 1rem; }
+dl.daten dt {
+  font-size: var(--fsg-text-small);
+  line-height: var(--fsg-leading-small);
+  color: var(--fsg-color-text-subtle);
+  margin-top: 1rem;
+}
+dl.daten dd { margin: 0.15rem 0 0; }
+
+ul { margin: 0 0 1rem; padding-left: 1.25rem; max-width: 38rem; }
+li { margin-bottom: 0.4rem; }
+
+a { color: inherit; }
+a:hover { text-decoration-color: var(--fsg-color-accent); }
+
+/* Fuß */
+.site-footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--fsg-color-border);
+  padding: 1.5rem 0 2.5rem;
+  font-size: var(--fsg-text-small);
+  line-height: var(--fsg-leading-small);
+  color: var(--fsg-color-text-muted);
+}
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.site-footer .firma { margin: 0.75rem 0 0; color: var(--fsg-color-text-subtle); }
+
+@media (max-width: 30rem) {
+  .site-header { padding-top: 2rem; }
+  .site-header .logo img { width: 180px; height: 30px; }
+  main { padding: 2rem 0 3rem; }
+}
