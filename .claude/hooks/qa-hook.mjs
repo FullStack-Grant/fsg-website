@@ -37,9 +37,16 @@ function qa(stufe, extra = []) {
 }
 
 // Nur Zusammenfassung und Fehlerzeilen an Claude, nicht das ganze Protokoll.
+// Warnungen bleiben draußen; Fehlerblöcke der Prüfskripte, Playwright-Fehler und die Stufen-Zusammenfassung bleiben.
 function kurz(text) {
-  const wichtig = text.split('\n').filter((z) => /ROT|Fehler \(|^\s{4}\S.*: |Error|✘|^\s+\d+\) |axe-Violations|Fremd|CSP/.test(z));
-  return [...new Set(wichtig)].slice(0, 60).join('\n');
+  const out = [];
+  let imFehlerblock = false;
+  for (const z of text.split('\n')) {
+    if (/^\s+Fehler \(\d+\):/.test(z)) imFehlerblock = true;
+    else if (/^\s+Warnungen \(\d+\):|^\[/.test(z)) imFehlerblock = false;
+    if (imFehlerblock || /^\[.*\] ROT|^\s+ROT |^\s+\d+\) |Error:|axe-Violations|^\s+\+\s+"/.test(z)) out.push(z);
+  }
+  return [...new Set(out)].slice(0, 60).join('\n');
 }
 
 function gruenMerken() {
