@@ -1,5 +1,6 @@
 ---
 // Abschnitt im Zeilenraster: Marginalie (Nummer, Label, Kurztext) links, Inhalt rechts.
+// Marginalie als div, nicht aside: mehrere unbenannte complementary-Landmarks je Seite (Befund WEB T11, html-validate unique-landmark).
 interface Props {
   nr?: string;
   label?: string;
@@ -11,12 +12,12 @@ interface Props {
 const { nr, label, notiz, id, ueberschriftId, hero = false } = Astro.props;
 ---
 <section class:list={['zeile', { hero }]} id={id} aria-labelledby={ueberschriftId}>
-  <aside>
+  <div class="rand">
     {nr && <span class="nr">{nr}</span>}
     {label && <span class="label">{label}</span>}
     {notiz && <p>{notiz}</p>}
     <slot name="rand" />
-  </aside>
+  </div>
   <div>
     <slot />
   </div>

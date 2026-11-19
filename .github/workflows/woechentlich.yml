@@ -1,0 +1,67 @@
+# Stufe 4 von website-testing (WEB T11, T4 6.3): wöchentlich gegen die Produktion, Befunde als Issue.
+# Bis T13 ist die Produktion https://fsg-website.fh-1e8.workers.dev; T13 setzt PROD_URL auf https://fullstackgrant.de.
+name: Wöchentlich
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  PROD_URL: https://fsg-website.fh-1e8.workers.dev
+
+jobs:
+  produktion:
+    name: stufe-4-produktion
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.0-noble
+      options: --ipc=host
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - name: Smoke-Test
+        id: smoke
+        continue-on-error: true
+        run: node scripts/qa/smoke.mjs --url "$PROD_URL" | tee smoke.txt
+      - name: Datenschutz gegen Produktion (echte Header)
+        id: datenschutz
+        continue-on-error: true
+        run: QA_BASE_URL="$PROD_URL" npx playwright test --project desktop-hell --project mobil-hell --grep Datenschutz | tee datenschutz.txt
+      - name: Inhaltsfrische
+        id: frische
+        continue-on-error: true
+        run: node scripts/qa/frische.mjs | tee frische.txt
+      - name: Externe Links
+        id: links
+        continue-on-error: true
+        run: |
+          npx astro build --outDir dist
+          curl -sSfL -o lychee.tgz https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-unknown-linux-gnu.tar.gz
+          echo "1f4e0ef7f6554a6ed33dd7ac144fb2e1bbed98598e7af973042fc5cd43951c9a  lychee.tgz" | sha256sum -c -
+          tar -xzf lychee.tgz
+          ./lychee --no-progress --scheme https --scheme http --exclude '^https://fullstackgrant\.de' 'dist/**/*.html' | tee links.txt
+        env: { FSG_VORSCHAU: '0' }
+      - name: Issue bei Befunden
+        if: steps.smoke.outcome == 'failure' || steps.datenschutz.outcome == 'failure' || steps.frische.outcome == 'failure' || steps.links.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "Wöchentliche Prüfung gegen $PROD_URL, Lauf $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            for f in smoke datenschutz frische links; do
+              [ -f "$f.txt" ] && { echo; echo "### $f"; echo '```'; tail -n 60 "$f.txt"; echo '```'; }
+            done
+          } > bericht.md
+          curl -sSf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/issues" \
+            -d "$(node -e 'const fs=require("fs");console.log(JSON.stringify({title:"Wöchentliche Prüfung: Befunde "+new Date().toISOString().slice(0,10),body:fs.readFileSync("bericht.md","utf8"),labels:["qa-woechentlich"]}))')"

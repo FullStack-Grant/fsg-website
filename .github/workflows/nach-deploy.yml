@@ -1,0 +1,42 @@
+# Prüfung 13 (T4 6.2): Smoke-Test der Produktion nach jedem Deploy aus main (WEB T11).
+# Cloudflare Workers Builds deployt main selbst; dieser Lauf wartet auf dessen Check und prüft dann die ausgelieferte Seite.
+# Rot heißt: Revert-PR (Skill website-testing, „Produktion rot“), nie Force-Push.
+name: Nach Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: read
+
+jobs:
+  smoke:
+    name: smoke-produktion
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+      - name: Auf Workers Builds warten
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+        run: |
+          for i in $(seq 1 60); do
+            zeile=$(gh api "repos/$GITHUB_REPOSITORY/commits/$SHA/check-runs" --jq '.check_runs[] | select(.name=="Workers Builds: fsg-website") | .status + " " + (.conclusion // "")' | head -1)
+            echo "Workers Builds: ${zeile:-noch nicht gestartet}"
+            case "$zeile" in
+              "completed success") sleep 20; exit 0 ;;
+              completed*) echo "::error::Workers Builds fehlgeschlagen: $zeile"; exit 1 ;;
+            esac
+            sleep 15
+          done
+          echo "::error::Workers Builds nicht innerhalb von 15 Minuten fertig"; exit 1
+      - name: Smoke-Test
+        # Bis T13 die Produktion auf workers.dev; T13 stellt auf https://fullstackgrant.de um.
+        run: node scripts/qa/smoke.mjs --url https://fsg-website.fh-1e8.workers.dev

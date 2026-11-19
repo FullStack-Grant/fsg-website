@@ -39,9 +39,12 @@ const NAMEN: Record<string, string> = {
 const kurz = (d.title.split(':')[0] ?? d.title).trim();
 const segmente = pfad.split('/').filter(Boolean);
 const krumen = [{ name: 'Start', pfad: '/' }];
+// Zwischenstufen nur, wenn es dort eine Seite gibt (z. B. kein Hub /wissen/artikel/; Befund WEB T11).
+const HUBS = new Set(['/leistungen/', '/foerderung/', '/foerderung/programme/', '/wissen/', '/wissen/faq/', '/wissen/glossar/']);
 segmente.forEach((s, i) => {
   const p = `/${segmente.slice(0, i + 1).join('/')}/`;
-  krumen.push({ name: i === segmente.length - 1 ? kurz : (NAMEN[s] ?? s), pfad: p });
+  const letzte = i === segmente.length - 1;
+  if (letzte || HUBS.has(p)) krumen.push({ name: letzte ? kurz : (NAMEN[s] ?? s), pfad: p });
 });
 
 const info = { pfad, titel: d.title, beschreibung: d.description, veroeffentlicht: d.datePublished, geaendert: d.dateModified };

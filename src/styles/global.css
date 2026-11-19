@@ -74,9 +74,9 @@ p { max-width: 66ch; }
 
 /* Zeilenraster: Marginalie links, Text rechts */
 .zeile { display: grid; grid-template-columns: var(--rand) var(--text); gap: 48px; padding: 72px 0; border-bottom: 1px solid var(--fsg-color-border); }
-.zeile > aside { padding-top: 6px; }
-.zeile > aside .nr { font: 700 13px var(--fsg-font-mono); color: var(--fsg-color-accent-text); display: block; margin-bottom: 6px; }
-.zeile > aside p { margin: 14px 0 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); max-width: 28ch; }
+.zeile > .rand { padding-top: 6px; }
+.zeile > .rand .nr { font: 700 13px var(--fsg-font-mono); color: var(--fsg-color-accent-text); display: block; margin-bottom: 6px; }
+.zeile > .rand p { margin: 14px 0 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); max-width: 28ch; }
 .zeile.hero { padding-top: 88px; }
 
 /* Fließtext aus Markdown */
@@ -106,7 +106,7 @@ p { max-width: 66ch; }
   .zeile { grid-template-columns: 1fr; gap: 20px; padding: 48px 0; }
   .zeile.hero { padding-top: 48px; }
   .zeile.hero > aside { order: 2; }
-  .zeile > aside p { max-width: none; }
+  .zeile > .rand p { max-width: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
