@@ -5,7 +5,7 @@ Website der FullStack Grant UG (haftungsbeschränkt). Zwei Teile liegen bis zum 
 | Teil | Wo | Ausgeliefert |
 |---|---|---|
 | **Platzhalterseite** (live) | `index.html`, `impressum.html`, `datenschutz.html`, `styles.css`, `tokens.css`, `fonts/`, Logos und Icons im Wurzelordner, `CNAME`, `.nojekyll` | GitHub Pages aus `main`, Ordner `/` |
-| **Neue Website** (Astro 7) | `src/`, `public/`, `astro.config.mjs`, `wrangler.jsonc` | Cloudflare Workers Static Assets (`fsg-website`), bis T13 nur Vorschau |
+| **Neue Website** (Astro 7) | `src/`, `public/`, `astro.config.mjs`, `wrangler.jsonc` | Cloudflare Workers Static Assets (`fsg-website`), bis T13 nur Vorschau und workers.dev (noindex) |
 
 GitHub Pages liefert die Astro-Quellen zwar als Dateien aus, nutzt sie aber nicht; die Live-Seite bleibt die Platzhalterseite, bis T13 die Route auf Cloudflare umstellt und die Platzhalterdateien entfernt.
 
@@ -22,7 +22,7 @@ GitHub Pages liefert die Astro-Quellen zwar als Dateien aus, nutzt sie aber nich
 ## Deploy (Cloudflare Workers Builds)
 Der Worker `fsg-website` im Cloudflare-Konto fh@ baut direkt aus diesem Repo (GitHub-App „Cloudflare Workers and Pages“, nur dieses Repo).
 - **Jeder Branch und jeder PR:** Build mit `npm run build`, dann `npx wrangler preview`; Vorschau unter `https://<branch>-fsg-website.fh-1e8.workers.dev/`, Build-Status als Check „Workers Builds: fsg-website“ am PR. Auf Branches außer `main` baut Astro im Vorschau-Modus (Entwürfe sichtbar, `noindex`, robots.txt sperrt).
-- **`main`:** Build und `npx wrangler deploy`. Die Produktion hat bis T13 keine öffentliche URL (`workers_dev: false`, sonst wäre sie ohne `noindex` indexierbar); T13 setzt die Route auf `fullstackgrant.de` in `wrangler.jsonc`.
+- **`main`:** Build und `npx wrangler deploy` auf `https://fsg-website.fh-1e8.workers.dev/`, dort `X-Robots-Tag: noindex` über eine Host-Regel in `public/_headers`. `workers_dev: false` würde auch die Vorschau-URLs abschalten. T13 setzt die Route auf `fullstackgrant.de` in `wrangler.jsonc`.
 - Node-Version aus `.node-version`, Abhängigkeiten aus `package-lock.json`; `wrangler preview` braucht den Block `previews` in `wrangler.jsonc`.
 
 ## Aufbau
