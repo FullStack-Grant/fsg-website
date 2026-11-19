@@ -1,0 +1,12 @@
+---
+import Hub from '../../../layouts/Hub.astro';
+import { holen, pfadVon } from '../../../lib/inhalte';
+
+const programme = await holen('programme');
+---
+<Hub titel="Förderprogramme für Tech-Startups im Überblick" h1="Förderprogramme"
+  beschreibung="Förderprogramme für Tech-Startups im Überblick: Förderart, Ebene und Stand je Programm, mit Primärquellen und Datum der letzten Prüfung."
+  einleitung="Programme, die FullStack Grant regelmäßig prüft, mit Förderart, Ebene und Datum der letzten Prüfung."
+  pfad="/foerderung/programme/"
+  krumen={[{ name: 'Start', pfad: '/' }, { name: 'Förderung', pfad: '/foerderung/' }, { name: 'Programme', pfad: '/foerderung/programme/' }]}
+  gruppen={[{ titel: 'Programme', karten: programme.map((p) => ({ titel: p.data.title, text: p.data.description, pfad: pfadVon(p), label: `${p.data.ebene} · ${p.data.foerderart}` })) }]} />

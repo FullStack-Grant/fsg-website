@@ -1,0 +1,10 @@
+---
+// Kurzantwort oben (2 bis 3 Sätze): was, für wen, wichtigste Zahl mit Stand, Grenze (T6 4.3 Nr. 1).
+interface Props { text: string }
+const { text } = Astro.props;
+---
+<p class="antwort lead">{text}</p>
+
+<style>
+  .antwort { color: var(--fsg-color-text); border-left: 3px solid var(--fsg-color-accent); padding-left: 20px; }
+</style>

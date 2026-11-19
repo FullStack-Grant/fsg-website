@@ -1,0 +1,138 @@
+---
+// Eine Route für alle Inhalte aus src/content: Pfad aus `slug` bzw. `url` im Frontmatter,
+// Template nach Sammlung (T4 Abschnitt 3.4). Hubs und Start sind eigene Seiten in src/pages.
+import { render } from 'astro:content';
+import Inhalt from '../layouts/Inhalt.astro';
+import Byline from '../components/Byline.astro';
+import ProgrammSteckbrief from '../components/ProgrammSteckbrief.astro';
+import Vergleichstabelle from '../components/Vergleichstabelle.astro';
+import Faq from '../components/Faq.astro';
+import Impressum from '../components/Impressum.astro';
+import { alleEintraege, pfadVon, datumDe, type Eintrag } from '../lib/inhalte';
+import * as ld from '../lib/jsonld';
+
+export async function getStaticPaths() {
+  const alle = await alleEintraege();
+  return alle
+    .filter((e) => pfadVon(e) !== '/')
+    .map((e) => ({ params: { pfad: pfadVon(e).replace(/^\/|\/$/g, '') }, props: { eintrag: e } }));
+}
+
+const { eintrag } = Astro.props as { eintrag: Eintrag };
+const d = eintrag.data;
+const pfad = pfadVon(eintrag);
+const { Content, headings } = await render(eintrag);
+
+if (headings.some((h) => h.depth === 1)) {
+  throw new Error(`${eintrag.collection}/${eintrag.id}: Die H1 gehört ins Frontmatter (Feld h1), nicht in den Text.`);
+}
+const doppelteAnker = headings.map((h) => h.slug).filter((s, i, a) => a.indexOf(s) !== i);
+if (doppelteAnker.length) {
+  throw new Error(`${eintrag.collection}/${eintrag.id}: Anker doppelt (${doppelteAnker.join(', ')}); einer Überschrift eine eigene ID {#…} geben.`);
+}
+
+// Brotkrumen aus den Pfadsegmenten.
+const NAMEN: Record<string, string> = {
+  leistungen: 'Leistungen', foerderung: 'Förderung', programme: 'Programme', wissen: 'Wissen',
+  artikel: 'Artikel', faq: 'FAQ', glossar: 'Glossar',
+};
+const kurz = (d.title.split(':')[0] ?? d.title).trim();
+const segmente = pfad.split('/').filter(Boolean);
+const krumen = [{ name: 'Start', pfad: '/' }];
+segmente.forEach((s, i) => {
+  const p = `/${segmente.slice(0, i + 1).join('/')}/`;
+  krumen.push({ name: i === segmente.length - 1 ? kurz : (NAMEN[s] ?? s), pfad: p });
+});
+
+const info = { pfad, titel: d.title, beschreibung: d.description, veroeffentlicht: d.datePublished, geaendert: d.dateModified };
+const h1 = ('h1' in d && typeof d.h1 === 'string' && d.h1) || kurz;
+
+let jsonld: unknown[] = [];
+let compliance = false;
+let quellen = d.quellen;
+switch (eintrag.collection) {
+  case 'seiten':
+    jsonld = eintrag.data.seitentyp === 'profil' ? [ld.profilseite(info), ld.personKnoten()]
+      : eintrag.data.seitentyp === 'kontakt' ? [ld.kontaktseite(info)] : [ld.webseite(info)];
+    break;
+  case 'leistungen':
+    jsonld = [ld.webseite(info), ld.leistung(info, d.hauptbegriff ?? kurz)];
+    compliance = true;
+    break;
+  case 'artikel':
+    jsonld = [ld.webseite(info), ld.beitrag(info, d.quellen.map((q) => q.url))];
+    compliance = true;
+    break;
+  case 'programme':
+    jsonld = [ld.webseite(info, d.hauptbegriff ?? kurz)];
+    compliance = true;
+    break;
+  case 'themen':
+    jsonld = [ld.sammlungsseite(info)];
+    compliance = true;
+    break;
+  case 'referenz':
+    jsonld = eintrag.data.typ === 'glossar' ? [ld.webseite(info), ld.begriffsliste(info, eintrag.data.begriffe)] : [ld.webseite(info)];
+    break;
+  case 'recht':
+    jsonld = [ld.webseite(info)];
+    quellen = [];
+    break;
+}
+---
+<Inhalt titel={d.title} h1={h1} beschreibung={d.description} pfad={pfad} krumen={krumen}
+  antwort={d.antwort} status={d.status} jsonld={jsonld} compliance={compliance} quellen={quellen}
+  ogTyp={eintrag.collection === 'artikel' ? 'article' : 'website'}
+  cta={eintrag.collection !== 'recht'}>
+
+  {eintrag.collection === 'artikel' && (
+    <Byline slot="kopf-oben" rolle="autor" name={eintrag.data.author} geaendert={d.dateModified}
+      zuletztGeprueft={d.zuletztGeprueft} meinung={eintrag.data.typ === 'meinung'} />
+  )}
+  {(eintrag.collection === 'programme' || eintrag.collection === 'themen') && (
+    <Byline slot="kopf-oben" rolle="geprueft" name={d.reviewedBy} geaendert={d.dateModified} zuletztGeprueft={d.zuletztGeprueft} />
+  )}
+
+  {eintrag.collection === 'programme' && (
+    <ProgrammSteckbrief slot="kopf" foerderart={eintrag.data.foerderart} ebene={eintrag.data.ebene}
+      zuletztGeprueft={eintrag.data.zuletztGeprueft} zeilen={eintrag.data.steckbrief}
+      primaerquelle={eintrag.data.quellen[0]} />
+  )}
+  {eintrag.collection === 'themen' && (
+    <div slot="kopf">
+      {eintrag.data.art === 'region' && (
+        <p class="hinweis-region">Informationsseite zur Landesförderung. FullStack Grant berät bundesweit per Video und hat dort keinen Standort.</p>
+      )}
+      <Vergleichstabelle zeilen={eintrag.data.vergleich} beschriftung={`Programme im Vergleich: ${h1}`} />
+    </div>
+  )}
+  {eintrag.collection === 'referenz' && eintrag.data.typ === 'glossar' && (
+    <dl slot="kopf" class="glossar">
+      {eintrag.data.begriffe.map((b) => (
+        <>
+          <dt id={b.id}>{b.link ? <a href={b.link}>{b.begriff}</a> : b.begriff}</dt>
+          <dd>{b.definition}</dd>
+        </>
+      ))}
+    </dl>
+  )}
+  {eintrag.collection === 'recht' && eintrag.data.typ === 'impressum' && <Impressum slot="kopf" />}
+
+  <Content />
+
+  {eintrag.collection === 'leistungen' && eintrag.data.faq.length > 0 && (
+    <section slot="nach-text" aria-labelledby="h-faq">
+      <h2 id="h-faq">Häufige Fragen</h2>
+      <Faq fragen={eintrag.data.faq} />
+    </section>
+  )}
+  {eintrag.collection === 'recht' && <p slot="nach-text" class="stand">Stand: {datumDe(eintrag.data.stand)}</p>}
+</Inhalt>
+
+<style>
+  .hinweis-region { font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+  .glossar { margin: 24px 0 40px; }
+  .glossar dt { font-weight: 700; margin-top: 20px; scroll-margin-top: 24px; }
+  .glossar dd { margin: 4px 0 0; color: var(--fsg-color-text-muted); max-width: 66ch; }
+  .stand { font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); margin-top: 40px; }
+</style>

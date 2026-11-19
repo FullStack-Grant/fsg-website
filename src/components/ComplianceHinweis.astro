@@ -1,0 +1,10 @@
+---
+// Leistungsgrenzen (RDG, § 264 StGB, StBerG); einheitlich, kurz, am Ende vor dem CTA (T6 4.3 Nr. 6).
+// Gerüst-Wortlaut (T10); T12 setzt den Wortlaut aus T5 Abschnitt 4 nach der Rechtsprüfung (T9) ein.
+interface Props { zusatz?: string }
+const { zusatz } = Astro.props;
+---
+<aside class="kasten" aria-label="Leistungsgrenzen">
+  <span class="gold-label"><span class="gpunkt"></span>Klare Grenzen</span>
+  <p>FullStack Grant bereitet vor, du entscheidest und reichst selbst ein. Wir leisten keine Rechts- und keine Steuerberatung; den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater.{zusatz && ` ${zusatz}`}</p>
+</aside>

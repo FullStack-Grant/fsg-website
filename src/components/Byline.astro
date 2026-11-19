@@ -1,0 +1,27 @@
+---
+// Byline mit Link auf Über uns, Datum und „zuletzt geprüft“ (E-E-A-T, T4 4.5; T6 4.3 Nr. 5).
+import { person } from '../data/firma';
+import { datumDe, datumIso } from '../lib/inhalte';
+interface Props {
+  rolle: 'autor' | 'geprueft';
+  name?: string;
+  geaendert: Date;
+  zuletztGeprueft?: Date;
+  meinung?: boolean;
+}
+const { rolle, name = person.name, geaendert, zuletztGeprueft, meinung = false } = Astro.props;
+---
+<div class="byline">
+  {meinung && <p class="meinung"><span class="gold-label">Meinungsbeitrag</span> Perspektive des Autors, kein Tatsachenvergleich.</p>}
+  <p>
+    {rolle === 'autor' ? 'Von ' : 'Geprüft von '}<a href="/ueber-uns/">{name}</a>, ehemals Finance Lead in Tech-Startups
+    · Stand <time datetime={datumIso(geaendert)}>{datumDe(geaendert)}</time>
+    {zuletztGeprueft && <> · zuletzt geprüft <time datetime={datumIso(zuletztGeprueft)}>{datumDe(zuletztGeprueft)}</time></>}
+  </p>
+</div>
+
+<style>
+  .byline { font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); margin: 0 0 32px; }
+  .byline p { margin: 0 0 6px; }
+  .meinung { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+</style>

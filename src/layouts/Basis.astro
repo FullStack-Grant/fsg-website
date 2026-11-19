@@ -1,0 +1,86 @@
+---
+// Grundlayout aller Seiten: Head (SEO, OG, Icons, Fonts), Kopf, Fuß, JSON-LD.
+// Kein Inline-Skript, kein Fremd-Request (CSP und Datenschutz, T4 2.3 und 6.2).
+import '../styles/global.css';
+import Kopf from '../components/Kopf.astro';
+import Fuss from '../components/Fuss.astro';
+import { firma } from '../data/firma';
+import { istVorschau } from '../lib/umgebung';
+import { graph, organisation, website } from '../lib/jsonld';
+
+interface Props {
+  titel: string;
+  beschreibung: string;
+  pfad: string;
+  ogTyp?: 'website' | 'article' | 'profile';
+  ogBild?: string;
+  ogBildAlt?: string;
+  jsonld?: unknown[];
+  /** Startseite trägt die vollen Knoten Organization und WebSite. */
+  vollerGraph?: boolean;
+  status?: 'entwurf' | 'freigegeben';
+  noindex?: boolean;
+}
+
+const {
+  titel, beschreibung, pfad, ogTyp = 'website', ogBild = '/og-image.png',
+  ogBildAlt = 'FullStack Grant: Fördergeld für Innovation. Vom Startup bis zum Hidden Champion.',
+  jsonld = [], vollerGraph = false, status = 'freigegeben', noindex = false,
+} = Astro.props;
+
+const kanonisch = new URL(pfad, firma.url).href;
+const ogBildUrl = new URL(ogBild, firma.url).href;
+const robots = istVorschau || noindex ? 'noindex, nofollow' : 'index, follow';
+const knoten = [website(), organisation(vollerGraph), ...jsonld];
+---
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{titel}</title>
+<meta name="description" content={beschreibung}>
+<meta name="robots" content={robots}>
+<link rel="canonical" href={kanonisch}>
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+
+<link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+<meta property="og:site_name" content={firma.name}>
+<meta property="og:type" content={ogTyp}>
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content={titel}>
+<meta property="og:description" content={beschreibung}>
+<meta property="og:url" content={kanonisch}>
+<meta property="og:image" content={ogBildUrl}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content={ogBildAlt}>
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json" set:html={graph(knoten)} />
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+{istVorschau && (
+  <div class="vorschau-band" role="note">
+    Vorschau, nicht veröffentlicht{status === 'entwurf' ? ' · Entwurf' : ''}
+  </div>
+)}
+<div class="wrap">
+  <Kopf />
+  <main id="inhalt">
+    <slot />
+  </main>
+  <Fuss />
+</div>
+</body>
+</html>

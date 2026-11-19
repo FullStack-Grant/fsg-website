@@ -1,0 +1,14 @@
+---
+interface Props { schritte: { titel: string; text: string }[] }
+const { schritte } = Astro.props;
+---
+<ol class="schritte">
+  {schritte.map((s) => <li><div><h3>{s.titel}</h3><p>{s.text}</p></div></li>)}
+</ol>
+
+<style>
+  .schritte { counter-reset: s; list-style: none; padding: 0; margin: 24px 0 32px; }
+  li { counter-increment: s; display: grid; grid-template-columns: 48px 1fr; padding: 14px 0; border-top: 1px solid var(--fsg-color-border); }
+  li::before { content: counter(s, decimal-leading-zero); font: 700 13px var(--fsg-font-mono); color: var(--fsg-color-accent-text); padding-top: 3px; }
+  p { margin: 6px 0 0; color: var(--fsg-color-text-muted); }
+</style>

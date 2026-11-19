@@ -1,0 +1,26 @@
+---
+import { firma } from '../data/firma';
+import { rechtsnavigation } from '../data/navigation';
+---
+<footer class="fuss">
+  <div>
+    <p class="slogan">{firma.slogan.map((z) => <span>{z}</span>)}</p>
+  </div>
+  <div>
+    <p>{firma.rechtsname}, {firma.anschrift.ort}. Keine Rechts- oder Steuerberatung.</p>
+    <nav aria-label="Rechtliches">
+      {rechtsnavigation.map((n) => <a href={n.pfad}>{n.titel}</a>)}
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .fuss { padding: 56px 0 40px; display: grid; grid-template-columns: auto 1fr; gap: 64px; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+  .slogan { font-size: var(--fsg-text-h4); color: var(--fsg-color-text); font-weight: 600; line-height: 1.35; margin: 0; }
+  .slogan span { display: block; white-space: nowrap; }
+  nav { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 16px; }
+  @media (max-width: 820px) {
+    .fuss { grid-template-columns: 1fr; gap: 20px; padding: 48px 0 32px; }
+    .slogan { font-size: 15px; }
+  }
+</style>

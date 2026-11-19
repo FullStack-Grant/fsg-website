@@ -1,0 +1,17 @@
+---
+// Zitat von Felix aus eigener Praxis, als Perspektive gekennzeichnet (T6 4.3 Nr. 5). Nur freigegebene Zitate.
+import { person } from '../data/firma';
+interface Props { text: string }
+const { text } = Astro.props;
+---
+<figure class="zitat">
+  <blockquote><p>„{text}“</p></blockquote>
+  <figcaption>{person.name}, {person.rolle}</figcaption>
+</figure>
+
+<style>
+  .zitat { margin: 40px 0; }
+  blockquote { margin: 0 0 12px; padding-left: 24px; border-left: 3px solid var(--fsg-color-accent); font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); font-weight: 300; line-height: 1.3; letter-spacing: -0.015em; max-width: 30ch; }
+  blockquote p { margin: 0; }
+  figcaption { padding-left: 27px; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+</style>

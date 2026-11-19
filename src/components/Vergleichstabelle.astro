@@ -1,0 +1,29 @@
+---
+// Vergleich der Programme einer Themen- oder Regionsseite (T6 7.1): Programm, Art, Quote, Stand, Primärquelle.
+interface Props {
+  zeilen: { programm: string; art: string; quote: string; stand: string; quelle: string; link?: string }[];
+  beschriftung: string;
+}
+const { zeilen, beschriftung } = Astro.props;
+---
+{zeilen.length > 0 && (
+  <div class="tabelle-rahmen">
+    <table class="tabelle">
+      <caption class="sr-only">{beschriftung}</caption>
+      <thead><tr><th scope="col">Programm</th><th scope="col">Art</th><th scope="col">Förderquote</th><th scope="col">Stand</th><th scope="col">Quelle</th></tr></thead>
+      <tbody>
+        {zeilen.map((z) => (
+          <tr>
+            <th scope="row">{z.link ? <a href={z.link}>{z.programm}</a> : z.programm}</th>
+            <td>{z.art}</td><td>{z.quote}</td><td>{z.stand}</td>
+            <td><a href={z.quelle} rel="noopener">Primärquelle</a></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
+
+<style>
+  tbody th { font: inherit; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--fsg-color-text); border-bottom: 1px solid var(--fsg-color-border); }
+</style>

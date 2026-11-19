@@ -1,0 +1,23 @@
+---
+// Aufklappbare Fragen; die Antwort steht immer im Server-HTML (T6 4.3 Nr. 7).
+interface Props { fragen: { frage: string; antwort: string; id?: string }[]; erstesOffen?: boolean }
+const { fragen, erstesOffen = true } = Astro.props;
+---
+<div class="faq">
+  {fragen.map((f, i) => (
+    <details open={erstesOffen && i === 0} id={f.id}>
+      <summary>{f.frage}</summary>
+      <p>{f.antwort}</p>
+    </details>
+  ))}
+</div>
+
+<style>
+  details { border-top: 1px solid var(--fsg-color-border); padding: 18px 0; }
+  details:last-child { border-bottom: 1px solid var(--fsg-color-border); }
+  summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; font-family: var(--fsg-font-mono); color: var(--fsg-color-accent-text); }
+  details[open] summary::after { content: '\2212'; }
+  p { color: var(--fsg-color-text-muted); margin: 12px 0 0; }
+</style>

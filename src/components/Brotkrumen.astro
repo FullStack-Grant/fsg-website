@@ -1,0 +1,20 @@
+---
+// Sichtbare Pfadnavigation; das BreadcrumbList-JSON-LD erzeugt das Layout aus denselben Daten.
+interface Props { teile: { name: string; pfad: string }[] }
+const { teile } = Astro.props;
+---
+<nav class="krumen" aria-label="Brotkrumen">
+  <ol>
+    {teile.map((t, i) => (
+      <li>{i < teile.length - 1 ? <a href={t.pfad}>{t.name}</a> : <span aria-current="page">{t.name}</span>}</li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .krumen { padding: 20px 0 0; }
+  ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; font: 500 11px/1.6 var(--fsg-font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fsg-color-text-subtle); }
+  li + li::before { content: '/'; margin-right: 6px; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
