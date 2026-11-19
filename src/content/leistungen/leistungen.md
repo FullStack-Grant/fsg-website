@@ -4,7 +4,7 @@ h1: "Leistungen"
 description: "Muster Template Leistung: Förderberatung für Tech-Startups nach Finanzierungsinstrument, von der Forschungszulage bis zum Förderkredit, mit klaren Grenzen."
 url: /leistungen/
 datePublished: 2026-12-01
-dateModified: 2026-11-19
+dateModified: 2026-12-01
 status: entwurf
 antwort: "Muster für das Template, kein veröffentlichter Text. T12 ersetzt ihn durch die freigegebenen Texte aus T7 und T8."
 registerModul: [B0, B1, B2, B3, B5, A4]

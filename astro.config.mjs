@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
+import { nachbearbeitung } from './scripts/nachbearbeitung.mjs';
 
 export default defineConfig({
   site: 'https://fullstackgrant.de',
@@ -35,6 +36,7 @@ export default defineConfig({
     // Englisch kommt später unter /en/ (Folgeprojekt); dann hier 'en' ergänzen.
   },
   integrations: [
+    nachbearbeitung(),
     sitemap({
       filter: (url) => !url.endsWith('/404/'),
     }),

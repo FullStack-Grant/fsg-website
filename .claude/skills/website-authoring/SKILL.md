@@ -30,7 +30,7 @@ Regeln für Inhalte und Templates der Website fullstackgrant.de (Astro 7, Cloudf
 Start (`src/pages/index.astro`) und die Hubs (`/wissen/`, `/foerderung/`, `/foerderung/programme/`) sind Astro-Seiten; Hubs listen die Sammlungen automatisch. Pfade: Kleinschreibung, ohne Umlaute, mit `/` am Ende, höchstens drei Ebenen, eine URL je Suchintention.
 
 ## Frontmatter
-Pflicht für alle: `title` (≤ 60 Zeichen, Muster „Thema: Nutzen bzw. Frage (Jahr)“), `description` (110 bis 160 Zeichen, Antwort plus Zielgruppe), `url` oder `slug`, `datePublished`, `dateModified`, `status` (`entwurf` · `freigegeben`). Üblich: `h1`, `antwort` (Antwortblock, 2 bis 3 Sätze), `hauptbegriff`, `nebenbegriffe`, `fragen`, `quellen` (`titel`, `url`, `abruf`), `zuletztGeprueft`, `reviewedBy` (Default Felix Hinkelmann), `freigabe`.
+Pflicht für alle: `title` (≤ 60 Zeichen, Muster „Thema: Nutzen bzw. Frage (Jahr)“), `description` (110 bis 160 Zeichen, Antwort plus Zielgruppe), `url` oder `slug`, `datePublished`, `dateModified`, `status` (`entwurf` · `freigegeben`). Üblich: `h1`, `antwort` (Antwortblock, 2 bis 3 Sätze), `hauptbegriff`, `nebenbegriffe`, `fragen`, `quellen` (`titel`, `url`, `abruf`), `zuletztGeprueft`, `freigabe`. `reviewedBy` nur bei echter Fremdprüfung; `dateModified` nie vor `datePublished` (Schema prüft).
 
 Je Sammlung zusätzlich: Artikel `typ`, `author` · Programme `foerderart`, `ebene`, `zuletztGeprueft`, optional `programmId` (Join-Key `programme.jsonl`, nur nach Audit), `katalogId`, `steckbrief` (`merkmal`, `wert`, `stand`), `pruefTermin` · Themen `art`, `zuletztGeprueft`, `vergleich` (`programm`, `art`, `quote`, `stand`, `quelle`, `link`) · Leistungen `registerModul`, `faq` · Glossar `begriffe` (`id`, `begriff`, `definition`, `link`) · Recht `typ`, `stand`. Maßgeblich ist `src/content.config.ts`.
 
@@ -39,7 +39,7 @@ Produktion baut nur `freigegeben`; die Vorschau baut auch Entwürfe und setzt ü
 ## Markdown: Fallen
 - **Keine H1 im Text.** Die H1 steht im Feld `h1` (sonst Title vor dem Doppelpunkt); `# …` im Markdown bricht den Build.
 - **Anker** mit `## Frage {#anker}`; jeder Anker nur einmal je Seite (Gruppen-H2 und Frage-H3 kollidieren leicht, z. B. „Kosten“). Der Build bricht bei doppelten Ankern ab. Bestehende Anker nie umbenennen, auf sie zeigen Links von außen (z. B. `/datenschutz/#online-besprechungen` aus Google Meet).
-- **Kein HTML im Markdown** (abgeschaltet), auch keine Kommentare `<!-- -->` und keine Prüfmarken wie `[T9-1]` oder `[Platzhalter]` in freigegebenen Texten.
+- **Kein HTML im Markdown** (abgeschaltet). Kommentare `<!-- -->` (etwa „ab Fassung 1.1“) entfernt der Build aus dem ausgelieferten HTML. Redaktionsmarker wie `[T9-1]`, `[prüfen]`, `[Platzhalter]` und Gedankenstriche bricht der Produktions-Build ab (`scripts/nachbearbeitung.mjs`), die Vorschau warnt nur.
 - **Typografie bleibt wie geschrieben** (Smart Punctuation aus): deutsche Anführungszeichen „…“ selbst setzen.
 
 ## Schreiben

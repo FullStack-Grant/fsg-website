@@ -6,7 +6,7 @@ url: /datenschutz/
 typ: datenschutz
 stand: 2026-11-19
 datePublished: 2026-12-01
-dateModified: 2026-11-19
+dateModified: 2026-12-01
 status: entwurf
 ---
 

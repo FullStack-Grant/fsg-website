@@ -5,7 +5,7 @@ description: "Muster Template Glossar: Begriffe der Förderung mit Kurzdefinitio
 slug: /wissen/glossar/
 typ: glossar
 datePublished: 2026-12-18
-dateModified: 2026-11-19
+dateModified: 2026-12-18
 status: entwurf
 antwort: "Muster für das Template, kein veröffentlichter Text. T12 ersetzt ihn durch die freigegebenen Texte aus T7 und T8."
 begriffe:

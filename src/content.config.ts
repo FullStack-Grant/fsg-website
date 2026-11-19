@@ -27,7 +27,8 @@ const basis = z.object({
   url: pfad.optional(),
   datePublished: z.coerce.date(),
   dateModified: z.coerce.date(),
-  reviewedBy: z.string().default('Felix Hinkelmann'),
+  // Nur bei echter Fremdprüfung setzen (T9-Regel G35); sonst steht der Autor in der Byline.
+  reviewedBy: z.string().optional(),
   status: z.enum(['entwurf', 'freigegeben']),
   freigabe: z.string().optional(),
   hauptbegriff: z.string().optional(),
@@ -41,8 +42,10 @@ const basis = z.object({
   antwort: z.string().optional(),
 });
 
-const mitPfad = <T extends z.ZodType<{ slug?: string; url?: string; status: string }>>(schema: T) =>
-  schema.refine((d) => d.slug || d.url, { message: 'slug oder url fehlt' });
+const mitPfad = <T extends z.ZodType<{ slug?: string; url?: string; datePublished: Date; dateModified: Date }>>(schema: T) =>
+  schema
+    .refine((d) => d.slug || d.url, { message: 'slug oder url fehlt' })
+    .refine((d) => d.dateModified >= d.datePublished, { message: 'dateModified liegt vor datePublished (T9-Regel G35)' });
 
 // Kernseiten ohne eigenes Template (Vorgehen, Vergütung, Über uns, Kontakt).
 const seiten = defineCollection({

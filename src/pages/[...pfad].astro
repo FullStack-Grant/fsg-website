@@ -90,7 +90,7 @@ switch (eintrag.collection) {
       zuletztGeprueft={d.zuletztGeprueft} meinung={eintrag.data.typ === 'meinung'} />
   )}
   {(eintrag.collection === 'programme' || eintrag.collection === 'themen') && (
-    <Byline slot="kopf-oben" rolle="geprueft" name={d.reviewedBy} geaendert={d.dateModified} zuletztGeprueft={d.zuletztGeprueft} />
+    <Byline slot="kopf-oben" rolle={d.reviewedBy ? 'geprueft' : 'autor'} name={d.reviewedBy} geaendert={d.dateModified} zuletztGeprueft={d.zuletztGeprueft} />
   )}
 
   {eintrag.collection === 'programme' && (
