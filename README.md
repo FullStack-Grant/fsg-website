@@ -19,6 +19,12 @@ GitHub Pages liefert die Astro-Quellen zwar als Dateien aus, nutzt sie aber nich
 | `npm run check` | Typen und Frontmatter-Schema |
 | `npm run kit:sync` | Marken-Kit aus dem FSG-Drive übernehmen |
 
+## Deploy (Cloudflare Workers Builds)
+Der Worker `fsg-website` im Cloudflare-Konto fh@ baut direkt aus diesem Repo (GitHub-App „Cloudflare Workers and Pages“, nur dieses Repo).
+- **Jeder Branch und jeder PR:** Build mit `npm run build`, dann `npx wrangler preview`; die Vorschau-URL steht als Kommentar bzw. Check am PR. Auf Branches außer `main` baut Astro im Vorschau-Modus (Entwürfe sichtbar, `noindex`, robots.txt sperrt).
+- **`main`:** Build und `npx wrangler deploy` auf `fsg-website.<konto>.workers.dev`. Eine Route auf `fullstackgrant.de` setzt erst T13 in `wrangler.jsonc`.
+- Node-Version aus `.node-version`, Abhängigkeiten aus `package-lock.json`.
+
 ## Aufbau
 - `src/content/<sammlung>/*.md`: Inhalte mit Frontmatter; Schema in `src/content.config.ts` (Build bricht bei Verstößen ab). Pfad steht im Frontmatter (`url` bzw. `slug`).
 - `src/pages/[...pfad].astro`: eine Route für alle Inhalte, Template nach Sammlung; `index.astro` (Start), Hubs unter `wissen/` und `foerderung/`.
