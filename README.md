@@ -21,8 +21,8 @@ GitHub Pages liefert die Astro-Quellen zwar als Dateien aus, nutzt sie aber nich
 
 ## Deploy (Cloudflare Workers Builds)
 Der Worker `fsg-website` im Cloudflare-Konto fh@ baut direkt aus diesem Repo (GitHub-App „Cloudflare Workers and Pages“, nur dieses Repo).
-- **Jeder Branch und jeder PR:** Build mit `npm run build`, dann `npx wrangler preview`; Vorschau unter `https://<branch>-fsg-website.fh-1e8.workers.dev/`, Build-Status als Check „Workers Builds: fsg-website“ am PR. Auf Branches außer `main` baut Astro im Vorschau-Modus (Entwürfe sichtbar, `noindex`, robots.txt sperrt).
-- **`main`:** Build und `npx wrangler deploy` auf `https://fsg-website.fh-1e8.workers.dev/`, dort `X-Robots-Tag: noindex` über eine Host-Regel in `public/_headers`. `workers_dev: false` würde auch die Vorschau-URLs abschalten. T13 setzt die Route auf `fullstackgrant.de` in `wrangler.jsonc`.
+- **Jeder Branch und jeder PR:** Build mit `npm run build`, dann `npx wrangler preview`; Vorschau unter `https://<branch>-fsg-website.fh-1e8.workers.dev/` (gelöscht mit dem Branch, also auch nach dem Merge), Build-Status als Check „Workers Builds: fsg-website“ am PR. Auf Branches außer `main` baut Astro im Vorschau-Modus (Entwürfe sichtbar, `noindex`, robots.txt sperrt).
+- **`main`:** Build und `npx wrangler deploy` auf `https://fsg-website.fh-1e8.workers.dev/`, dort `X-Robots-Tag: noindex` über eine Host-Regel in `public/_headers`. T13 setzt die Route auf `fullstackgrant.de` in `wrangler.jsonc`.
 - Node-Version aus `.node-version`, Abhängigkeiten aus `package-lock.json`; `wrangler preview` braucht den Block `previews` in `wrangler.jsonc`.
 
 ## Aufbau
