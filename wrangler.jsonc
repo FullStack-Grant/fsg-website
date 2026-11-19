@@ -12,5 +12,7 @@
   },
   "workers_dev": true,
   "preview_urls": true,
+  // Pflicht für `wrangler preview` (Vorschau je Branch/PR in Workers Builds); leer = Einstellungen wie oben.
+  "previews": {},
   "observability": { "enabled": false }
 }
