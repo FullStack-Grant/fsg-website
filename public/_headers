@@ -1,0 +1,17 @@
+# Sicherheitsheader (T4 2.3), Cloudflare Workers Static Assets.
+# HSTS ohne preload und ohne includeSubDomains, bis alle Subdomains geprüft sind.
+/*
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: DENY
+
+# workers.dev und Vorschau-URLs setzt Cloudflare selbst auf X-Robots-Tag: noindex; Vorschau-Builds haben zusätzlich noindex im HTML.
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

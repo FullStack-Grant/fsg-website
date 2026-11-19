@@ -1,0 +1,16 @@
+// Cloudflare Workers Static Assets (WEB T10, T4 Abschnitt 2.1).
+// Nur statische Dateien aus dist/, kein Worker-Code. Die Live-Route (fullstackgrant.de)
+// wird erst in T13 eingetragen; bis dahin nur workers.dev und Vorschau-URLs je Version.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fsg-website",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": { "enabled": false }
+}

@@ -1,0 +1,52 @@
+---
+// Hub (Template CollectionPage, T4 3.4): Kartenliste der Unterseiten, aus den Sammlungen erzeugt.
+import Basis from './Basis.astro';
+import Brotkrumen from '../components/Brotkrumen.astro';
+import CtaTermin from '../components/CtaTermin.astro';
+import { brotkrumen, sammlungsseite } from '../lib/jsonld';
+
+interface Props {
+  titel: string;
+  h1: string;
+  beschreibung: string;
+  einleitung: string;
+  pfad: string;
+  krumen: { name: string; pfad: string }[];
+  gruppen: { titel: string; karten: { titel: string; text: string; pfad: string; label?: string }[] }[];
+}
+const { titel, h1, beschreibung, einleitung, pfad, krumen, gruppen } = Astro.props;
+const info = { pfad, titel, beschreibung };
+---
+<Basis titel={titel} beschreibung={beschreibung} pfad={pfad} jsonld={[sammlungsseite(info), brotkrumen(krumen)]}>
+  <Brotkrumen teile={krumen} />
+  <div class="hub">
+    <h1 class="klein">{h1}</h1>
+    <p class="lead">{einleitung}</p>
+    {gruppen.filter((g) => g.karten.length).map((g) => (
+      <section>
+        <h2>{g.titel}</h2>
+        <ul class="karten">
+          {g.karten.map((k) => (
+            <li>
+              {k.label && <span class="label">{k.label}</span>}
+              <h3><a href={k.pfad}>{k.titel}</a></h3>
+              <p>{k.text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+  <CtaTermin />
+</Basis>
+
+<style>
+  .hub { padding: 40px 0 0; }
+  section { margin-top: 48px; }
+  .karten { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); border-top: var(--rule); }
+  .karten li { padding: 20px 24px 24px 0; border-bottom: 1px solid var(--fsg-color-border); }
+  h3 { margin: 6px 0 8px; }
+  h3 a { text-decoration: none; }
+  h3 a:hover { text-decoration: underline; text-decoration-color: var(--fsg-color-accent); }
+  .karten p { margin: 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+</style>

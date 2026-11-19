@@ -1,0 +1,17 @@
+---
+import Hub from '../../layouts/Hub.astro';
+import { holen, pfadVon } from '../../lib/inhalte';
+
+const themen = await holen('themen');
+const programme = await holen('programme');
+const karte = (e: Parameters<typeof pfadVon>[0]) => ({ titel: e.data.title, text: e.data.description, pfad: pfadVon(e) });
+---
+<Hub titel="Förderung für Tech-Startups: Themen und Programme" h1="Förderung für Tech-Startups"
+  beschreibung="Förderprogramme für Tech-Startups nach Phase, Ebene, Branche und Region: Vergleiche mit Quellen und Stand, geprüft von FullStack Grant."
+  einleitung="Förderung nach Phase, Ebene, Branche und Region, mit Vergleichen, Quellen und Datum der letzten Prüfung."
+  pfad="/foerderung/" krumen={[{ name: 'Start', pfad: '/' }, { name: 'Förderung', pfad: '/foerderung/' }]}
+  gruppen={[
+    { titel: 'Themen', karten: themen.filter((t) => t.data.art === 'thema').map(karte) },
+    { titel: 'Regionen', karten: themen.filter((t) => t.data.art === 'region').map(karte) },
+    { titel: 'Programme', karten: programme.map((p) => ({ ...karte(p), label: p.data.ebene })) },
+  ]} />

@@ -1,0 +1,20 @@
+---
+// Genau ein Abschluss-CTA je Inhaltsseite (T6 6 Nr. 4). Ziel: Erstgespräch oder passende Leistungs-Ebene.
+import { firma } from '../data/firma';
+interface Props { titel?: string; text?: string; ziel?: string; knopf?: string }
+const {
+  titel = 'Ein Gespräch, danach weißt du, welche Förderung zu dir passt.',
+  text = 'Du wählst einen Termin und sprichst direkt mit dem Gründer über Vorhaben und Finanzierung.',
+  ziel = firma.terminUrl,
+  knopf = 'Erstgespräch buchen',
+} = Astro.props;
+---
+<section class="cta" aria-labelledby="h-cta">
+  <h2 id="h-cta">{titel}</h2>
+  <p class="lead">{text}</p>
+  <a class="btn" href={ziel}>{knopf} <span class="pfeil" aria-hidden="true">→</span></a>
+</section>
+
+<style>
+  .cta { padding: 56px 0 64px; border-top: var(--rule); margin-top: 56px; }
+</style>

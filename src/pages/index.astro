@@ -1,0 +1,127 @@
+---
+// Template Start (Home, Design E2). Mustertexte: T12 setzt die freigegebenen Texte aus T7 (01_Start) nach T9 ein.
+import Basis from '../layouts/Basis.astro';
+import Zeile from '../components/Zeile.astro';
+import Personenkarte from '../components/Personenkarte.astro';
+import Kapitalsaeule, { type Ebene } from '../components/Kapitalsaeule.astro';
+import Zustaendigkeiten from '../components/Zustaendigkeiten.astro';
+import Schritte from '../components/Schritte.astro';
+import Faq from '../components/Faq.astro';
+import Zitat from '../components/Zitat.astro';
+import { firma } from '../data/firma';
+import { personKnoten } from '../lib/jsonld';
+
+const ebenen: Ebene[] = [
+  {
+    nr: '01', kurz: 'Steuer', titel: 'Steuerliche Förderung', anker: 'steuerliche-foerderung', kosten: 1, zuerst: true,
+    text: 'Forschungszulage: Rechtsanspruch statt Wettbewerb um Budget.',
+    zeilen: [
+      { label: 'Du gibst ab', wert: 'Nichts, Festsetzung über deinen Steuerberater' },
+      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
+      { label: 'Compliance', wert: 'Mustertext (T12: Compliance-Leistung aus T7)', art: 'gold' },
+    ],
+    tags: ['Bund'],
+  },
+  {
+    nr: '02', kurz: 'Zuschuss', titel: 'Zuschüsse und Grants', anker: 'zuschuesse', kosten: 1,
+    text: 'Programme von Bund und Ländern, EU-Grants.',
+    zeilen: [
+      { label: 'Du gibst ab', wert: 'Nichts, aber Wettbewerb um Budget und Nachweispflichten' },
+      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
+      { label: 'Compliance', wert: 'Mustertext (T12: Compliance-Leistung aus T7)', art: 'gold' },
+    ],
+    tags: ['EU', 'Bund', 'Land'],
+  },
+  {
+    nr: '03', kurz: 'Kredit und Bürgschaft', titel: 'Gefördertes Fremdkapital und Risikoübernahme', anker: 'foerderkredite', kosten: 2,
+    text: 'Förderkredite, Bürgschaften und Haftungsfreistellungen für deine Hausbank.',
+    zeilen: [
+      { label: 'Du gibst ab', wert: 'Zins und Tilgung, unter Marktkonditionen' },
+      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
+      { label: 'Compliance', wert: 'Mustertext (T12: Compliance-Leistung aus T7)', art: 'gold' },
+    ],
+    tags: ['Bund', 'Land'],
+  },
+  {
+    nr: '04', kurz: 'Beteiligung, nur EIC', titel: 'Beteiligungskapital mit Förderantrag', anker: 'beteiligungskapital', kosten: 4,
+    text: 'Nur der Equity-Teil des EIC Accelerator, beantragt zusammen mit dem Grant.',
+    zeilen: [
+      { label: 'Du gibst ab', wert: 'Anteile an den EIC Fund' },
+      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
+      { label: 'Nicht bei uns', wert: 'VC-Fundraising, auch bei Public VCs wie dem HTGF', art: 'nicht' },
+      { label: 'Compliance', wert: 'Berichtspflichten aus Grant und Beteiligung', art: 'gold' },
+    ],
+    tags: ['EU'],
+  },
+];
+---
+<Basis titel="FullStack Grant: Förderberatung für Tech-Startups, Hamburg" pfad="/" vollerGraph
+  beschreibung="FullStack Grant ist eine Förderberatung für Tech-Startups: Forschungszulage, Zuschüsse, EU-Grants und Förderkredite, geführt von einem Finance Lead."
+  jsonld={[personKnoten()]}>
+
+  <Zeile hero ueberschriftId="h-hero">
+    <Fragment slot="rand">
+      <span class="label">{firma.name} · {firma.anschrift.ort}</span>
+      <Personenkarte text="Mustertext (T12: Personenkarte aus T7, ohne Summen)" />
+    </Fragment>
+    <h1 id="h-hero">Förderung, die auch in der Prüfung noch trägt.</h1>
+    <p class="lead">Mustertext (T12: Lead aus T7 01_Start.)</p>
+    <div class="cta-zeile">
+      <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <span class="pfeil" aria-hidden="true">→</span></a>
+      <a class="link" href="#finanzierungsmix">Finanzierungsmix ansehen</a>
+    </div>
+  </Zeile>
+
+  <Zeile nr="01" label="Finanzierungsmix" id="finanzierungsmix" ueberschriftId="h-mix"
+    notiz="Förderung ist Finanzierung. Wir ordnen sie deshalb wie eine Kapitalstruktur, nicht nach Behörden.">
+    <h2 id="h-mix">Das ganze Förderportfolio, sortiert nach Kapitalkosten.</h2>
+    <p class="regel">Erst, worauf du Anspruch hast. Dann Zuschüsse, dann günstiges Fremdkapital. <b>Anteile zuletzt.</b></p>
+    <Kapitalsaeule ebenen={ebenen}
+      rahmenText="Der goldene Rahmen ist die Compliance: Fristen, Belege, Nachweise und Prüfungsbereitschaft über die ganze Laufzeit, für jede Ebene." />
+  </Zeile>
+
+  <Zeile nr="02" label="Zuständigkeiten" ueberschriftId="h-zust"
+    notiz="Klare Grenzen sind das erste Vertrauenssignal: Du weißt, wer was tut, bevor du unterschreibst.">
+    <h2 id="h-zust">Wer was tut. Schwarz auf weiß.</h2>
+    <Zustaendigkeiten spalten={[
+      { titel: 'FullStack Grant', punkte: ['Mustertext (T12: aus T7)'] },
+      { titel: 'Dein Unternehmen', punkte: ['entscheidet und reicht selbst ein', 'liefert Zahlen und Projektwissen'] },
+      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung (RDG)', 'Steuerberatung und Festsetzungsantrag zur Forschungszulage (dein Steuerberater)', 'Einreichen im Namen des Kunden'] },
+    ]} />
+  </Zeile>
+
+  <Zeile nr="03" label="Gründer" id="gruender" ueberschriftId="h-gruender">
+    <h2 id="h-gruender">Wer hinter FullStack Grant steht.</h2>
+    <p>Mustertext (T12: Gründer-Abschnitt aus T7.)</p>
+    <Zitat text="Mustertext (T12: freigegebenes Zitat von Felix)" />
+  </Zeile>
+
+  <Zeile nr="04" label="Vorgehen" id="vorgehen" ueberschriftId="h-vorg"
+    notiz="Gewissheit entsteht aus einem Prozess, der auch nach der Bewilligung weiterläuft.">
+    <h2 id="h-vorg">Von der ersten Frage bis zum letzten Nachweis.</h2>
+    <Schritte schritte={[
+      { titel: 'Fördercheck', text: 'Mustertext (T12: aus T7)' },
+      { titel: 'Antrag vorbereiten', text: 'Mustertext (T12: aus T7)' },
+      { titel: 'Laufzeit begleiten', text: 'Mustertext (T12: aus T7)' },
+    ]} />
+  </Zeile>
+
+  <Zeile nr="05" label="Häufige Fragen" id="fragen" ueberschriftId="h-fragen">
+    <h2 id="h-fragen">Häufige Fragen</h2>
+    <Faq fragen={[
+      { frage: 'Reicht FullStack Grant den Antrag für uns ein?', antwort: 'Nein. FullStack Grant bereitet Antrag und Unterlagen vor, dein Unternehmen prüft und reicht selbst ein.' },
+      { frage: 'Mustertext (T12: Frage aus T7)', antwort: 'Mustertext (T12: Antwort aus T7)' },
+    ]} />
+  </Zeile>
+
+  <Zeile nr="06" label="Erstgespräch" id="termin" ueberschriftId="h-termin">
+    <h2 id="h-termin">Ein Gespräch, danach weißt du, welche Förderung zu dir passt.</h2>
+    <p class="lead">Du wählst einen Termin und sprichst direkt mit dem Gründer über Vorhaben und Finanzierung. Erstgespräch 20 Minuten per Video.</p>
+    <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <span class="pfeil" aria-hidden="true">→</span></a>
+  </Zeile>
+</Basis>
+
+<style>
+  .regel { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); font-weight: 300; letter-spacing: -0.01em; line-height: 1.35; margin: 0 0 36px; max-width: 40ch; }
+  .regel b { font-weight: 700; }
+</style>

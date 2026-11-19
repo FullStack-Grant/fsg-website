@@ -1,23 +1,33 @@
 # fullstackgrant.de
 
-Statische Website der FullStack Grant UG (haftungsbeschränkt), Stand „im Aufbau“.
-Drei Seiten, kein Build-Schritt, kein Tracking, keine Cookies, keine externen Ressourcen.
+Website der FullStack Grant UG (haftungsbeschränkt). Zwei Teile liegen bis zum Go-live (01.12.2026, Projekt WEB T13) nebeneinander im Repo:
 
-| Datei | Inhalt |
+| Teil | Wo | Ausgeliefert |
+|---|---|---|
+| **Platzhalterseite** (live) | `index.html`, `impressum.html`, `datenschutz.html`, `styles.css`, `tokens.css`, `fonts/`, Logos und Icons im Wurzelordner, `CNAME`, `.nojekyll` | GitHub Pages aus `main`, Ordner `/` |
+| **Neue Website** (Astro 7) | `src/`, `public/`, `astro.config.mjs`, `wrangler.jsonc` | Cloudflare Workers Static Assets (`fsg-website`), bis T13 nur Vorschau und workers.dev |
+
+GitHub Pages liefert die Astro-Quellen zwar als Dateien aus, nutzt sie aber nicht; die Live-Seite bleibt die Platzhalterseite, bis T13 die Route auf Cloudflare umstellt und die Platzhalterdateien entfernt.
+
+## Neue Website: Befehle
+| Befehl | Zweck |
 |---|---|
-| `index.html` | Startseite mit Slogan, Hinweis „im Aufbau“ und E-Mail-Kontakt |
-| `impressum.html` | Pflichtangaben nach § 5 DDG |
-| `datenschutz.html` | Datenschutzhinweise für die Website (Hosting, Server-Protokolle) |
-| `styles.css` | Gestaltung |
-| `tokens.css`, `fonts/`, `logo*.svg`, `favicon*`, `icon-*`, `og-image.png`, `site.webmanifest` | unverändert aus dem Brand-Kit `50_Sales\51_Logo\R1_Raute\04_Website` im FSG-Drive |
+| `npm ci` | Abhängigkeiten (Versionen exakt gepinnt) |
+| `npm run dev` | Dev-Server mit Entwürfen |
+| `npm run build` | Produktion: nur `status: freigegeben` |
+| `npm run build:vorschau` | Vorschau: auch Entwürfe, alles `noindex`, robots.txt sperrt |
+| `npm run check` | Typen und Frontmatter-Schema |
+| `npm run kit:sync` | Marken-Kit aus dem FSG-Drive übernehmen |
 
-## Pflege
-- Marke: Kit-Dateien nie von Hand ändern. Neue Fassung erzeugt der Generator
-  `50_Sales\51_Logo\scripts\build_all.py` im Repo `fsg-hq`; danach die Dateien hier neu kopieren.
-- Pflichtangaben (Firma, Anschrift, Vertretung, Registergericht, HRB, E-Mail) stammen aus
-  `10_Legal\00_Stammdaten-und-IDs.md` im FSG-Drive. Ändert sich dort etwas, hier nachziehen.
-- Telefonnummer und USt-IdNr. stehen noch nicht im Impressum, weil sie in den Stammdaten leer sind.
+## Aufbau
+- `src/content/<sammlung>/*.md`: Inhalte mit Frontmatter; Schema in `src/content.config.ts` (Build bricht bei Verstößen ab). Pfad steht im Frontmatter (`url` bzw. `slug`).
+- `src/pages/[...pfad].astro`: eine Route für alle Inhalte, Template nach Sammlung; `index.astro` (Start), Hubs unter `wissen/` und `foerderung/`.
+- `src/layouts/`: `Basis` (Head, SEO, JSON-LD), `Inhalt` (Inhaltsseiten), `Hub` (Übersichten).
+- `src/components/`: fester Komponentensatz, Liste in `src/components/Bausteine.md`.
+- `src/data/firma.ts`: Firmendaten für Impressum, Fußzeile und JSON-LD.
+- `public/_headers` (Sicherheitsheader, CSP), `public/_redirects` (alte `.html`-Pfade).
 
-## Hosting
-GitHub Pages aus `main`, Ordner `/` (root). `CNAME` setzt die eigene Domain, `.nojekyll` schaltet
-die Jekyll-Verarbeitung ab. HTTPS über „Enforce HTTPS“ in den Repo-Einstellungen.
+Regeln für Inhalte und Änderungen: Skill `website-authoring` in `.claude/skills/`.
+
+## Marke
+Kit-Dateien (`src/styles/kit/tokens.css`, `public/fonts/`, Logos, Icons) nie von Hand ändern. Neue Fassung erzeugt der Generator `50_Sales\51_Logo\scripts\build_all.py` im Repo `fsg-hq`; danach `npm run kit:sync`.

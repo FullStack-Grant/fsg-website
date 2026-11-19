@@ -1,0 +1,23 @@
+---
+// Abschnitt im Zeilenraster: Marginalie (Nummer, Label, Kurztext) links, Inhalt rechts.
+interface Props {
+  nr?: string;
+  label?: string;
+  notiz?: string;
+  id?: string;
+  ueberschriftId?: string;
+  hero?: boolean;
+}
+const { nr, label, notiz, id, ueberschriftId, hero = false } = Astro.props;
+---
+<section class:list={['zeile', { hero }]} id={id} aria-labelledby={ueberschriftId}>
+  <aside>
+    {nr && <span class="nr">{nr}</span>}
+    {label && <span class="label">{label}</span>}
+    {notiz && <p>{notiz}</p>}
+    <slot name="rand" />
+  </aside>
+  <div>
+    <slot />
+  </div>
+</section>

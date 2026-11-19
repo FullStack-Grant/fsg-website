@@ -1,0 +1,18 @@
+---
+import Hub from '../../layouts/Hub.astro';
+import { holen, pfadVon } from '../../lib/inhalte';
+
+const artikel = (await holen('artikel')).sort((a, b) => +b.data.datePublished - +a.data.datePublished);
+const referenz = await holen('referenz');
+const karte = (e: { data: { title: string; description: string } } & Parameters<typeof pfadVon>[0]) => ({
+  titel: e.data.title, text: e.data.description, pfad: pfadVon(e),
+});
+---
+<Hub titel="Wissen: Förderung für Tech-Startups verständlich" h1="Wissen"
+  beschreibung="Artikel, FAQ und Glossar von FullStack Grant: wie Förderung für Tech-Startups funktioniert, was sie kostet und worauf es in der Prüfung ankommt."
+  einleitung="Artikel, häufige Fragen und Begriffe rund um Förderung, Finanzierung und Compliance."
+  pfad="/wissen/" krumen={[{ name: 'Start', pfad: '/' }, { name: 'Wissen', pfad: '/wissen/' }]}
+  gruppen={[
+    { titel: 'Artikel', karten: artikel.map((a) => ({ ...karte(a), label: a.data.typ === 'meinung' ? 'Meinungsbeitrag' : 'Fachbeitrag' })) },
+    { titel: 'Nachschlagen', karten: referenz.map(karte) },
+  ]} />

@@ -1,0 +1,55 @@
+---
+// Inhaltsseite: Brotkrumen, H1, Byline, Antwortblock, Kopfteil (Steckbrief, Vergleich), Text, Compliance, Quellen, CTA.
+// Die Templates (Leistung, Artikel, Programm, Thema, Region, FAQ, Glossar, Rechtliches, Seite) setzen nur die Schalter.
+import Basis from './Basis.astro';
+import Brotkrumen from '../components/Brotkrumen.astro';
+import Antwortblock from '../components/Antwortblock.astro';
+import ComplianceHinweis from '../components/ComplianceHinweis.astro';
+import Quellen from '../components/Quellen.astro';
+import CtaTermin from '../components/CtaTermin.astro';
+import { brotkrumen } from '../lib/jsonld';
+
+interface Props {
+  titel: string;
+  h1: string;
+  beschreibung: string;
+  pfad: string;
+  krumen: { name: string; pfad: string }[];
+  antwort?: string;
+  status: 'entwurf' | 'freigegeben';
+  jsonld?: unknown[];
+  ogTyp?: 'website' | 'article' | 'profile';
+  compliance?: boolean;
+  quellen?: { titel: string; url: string; abruf: Date }[];
+  cta?: boolean | { titel?: string; text?: string; ziel?: string; knopf?: string };
+}
+const {
+  titel, h1, beschreibung, pfad, krumen, antwort, status, jsonld = [], ogTyp,
+  compliance = false, quellen = [], cta = true,
+} = Astro.props;
+const ctaProps = typeof cta === 'object' ? cta : {};
+---
+<Basis titel={titel} beschreibung={beschreibung} pfad={pfad} status={status} ogTyp={ogTyp}
+  jsonld={[...jsonld, brotkrumen(krumen)]}>
+  <Brotkrumen teile={krumen} />
+  <article class="inhalt">
+    <header>
+      <h1 class="klein">{h1}</h1>
+      <slot name="kopf-oben" />
+      {antwort && <Antwortblock text={antwort} />}
+      <slot name="kopf" />
+    </header>
+    <div class="prosa">
+      <slot />
+    </div>
+    <slot name="nach-text" />
+    {compliance && <ComplianceHinweis />}
+    <Quellen quellen={quellen} />
+  </article>
+  {cta && <CtaTermin {...ctaProps} />}
+</Basis>
+
+<style>
+  .inhalt { max-width: 780px; padding: 40px 0 0; }
+  header { margin-bottom: 8px; }
+</style>

@@ -1,0 +1,22 @@
+---
+import { datumDe } from '../lib/inhalte';
+interface Props { quellen: { titel: string; url: string; abruf: Date }[] }
+const { quellen } = Astro.props;
+---
+{quellen.length > 0 && (
+  <section class="quellen" aria-labelledby="h-quellen">
+    <h2 id="h-quellen">Quellen</h2>
+    <ol>
+      {quellen.map((q) => (
+        <li><a href={q.url} rel="noopener">{q.titel}</a>, abgerufen am {datumDe(q.abruf)}</li>
+      ))}
+    </ol>
+  </section>
+)}
+
+<style>
+  .quellen { margin-top: 56px; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+  h2 { font-size: var(--fsg-text-h3); }
+  ol { padding-left: 22px; }
+  li { margin-bottom: 6px; overflow-wrap: anywhere; }
+</style>

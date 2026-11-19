@@ -1,0 +1,32 @@
+---
+import { hauptnavigation } from '../data/navigation';
+import { firma } from '../data/firma';
+const aktuell = Astro.url.pathname;
+---
+<header class="kopf">
+  <a href="/" class="logo" aria-label="FullStack Grant, Startseite">
+    <img class="lt" src="/logo.svg" alt="FullStack Grant" width="192" height="32">
+    <img class="dk" src="/logo-dunkel.svg" alt="FullStack Grant" width="192" height="32">
+  </a>
+  <nav aria-label="Hauptnavigation">
+    {hauptnavigation.map((n) => (
+      <a class="nav-link" href={n.pfad} aria-current={aktuell.startsWith(n.pfad) ? 'page' : undefined}>{n.titel}</a>
+    ))}
+    <a class="btn" href={firma.terminUrl}>Erstgespräch<span class="lang"> buchen</span> <span class="pfeil" aria-hidden="true">→</span></a>
+  </nav>
+</header>
+
+<style>
+  .kopf { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 0; border-bottom: var(--rule); }
+  .logo img { height: 32px; width: auto; display: block; }
+  nav { display: flex; gap: 28px; align-items: center; font-size: var(--fsg-text-small); }
+  .nav-link { text-decoration: none; }
+  .nav-link:hover, .nav-link[aria-current='page'] { text-decoration: underline; text-decoration-color: var(--fsg-color-accent); }
+  .btn { color: var(--fsg-color-bg); }
+  @media (max-width: 820px) {
+    .kopf { gap: 12px; }
+    .nav-link, .lang { display: none; }
+    .logo img { height: 26px; }
+    .btn { font-size: 13px; padding: 0 12px; min-height: 40px; }
+  }
+</style>
