@@ -161,4 +161,5 @@ jobs:
         env:
           PR: ${{ github.event.pull_request.number }}
           SHA: ${{ github.event.pull_request.head.sha }}
-        run: echo "Freigegeben durch Environment-Review: PR #$PR, Commit $SHA" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "Freigegeben durch Environment-Review: PR #$PR, Commit $SHA" >> "$GITHUB_STEP_SUMMARY"
