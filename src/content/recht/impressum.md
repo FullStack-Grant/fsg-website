@@ -6,7 +6,7 @@ url: /impressum/
 typ: impressum
 stand: 2026-11-16
 datePublished: 2026-12-01
-dateModified: 2026-11-19
+dateModified: 2026-12-01
 status: freigegeben
 freigabe: "Inhalt wie Platzhalterseite (Stand 16.11.2026); Angaben aus src/data/firma.ts"
 ---
