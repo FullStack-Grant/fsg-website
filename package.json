@@ -14,7 +14,15 @@
     "check": "astro check",
     "kit:sync": "node scripts/kit-sync.mjs",
     "cf:dev": "wrangler dev",
-    "cf:vorschau": "wrangler versions upload"
+    "cf:vorschau": "wrangler versions upload",
+    "qa:schnell": "node scripts/qa/qa.mjs schnell",
+    "qa:voll": "node scripts/qa/qa.mjs voll",
+    "qa:ci": "node scripts/qa/qa.mjs ci",
+    "qa:seo": "node scripts/qa/seo.mjs",
+    "qa:text": "node scripts/qa/textregeln.mjs",
+    "qa:browser": "playwright test",
+    "qa:lighthouse": "lhci autorun",
+    "qa:server": "node scripts/qa/server.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.10",
@@ -23,10 +31,22 @@
     "marked": "18.2.1"
   },
   "devDependencies": {
+    "@adobe/structured-data-validator": "1.7.1",
     "@astrojs/check": "0.9.12",
+    "@axe-core/playwright": "4.14.0",
+    "@lhci/cli": "0.16.1",
+    "@playwright/test": "1.65.0",
+    "cheerio": "1.2.0",
     "cross-env": "10.1.0",
+    "html-validate": "11.21.1",
+    "robots-parser": "3.0.1",
     "schema-dts": "2.1.0",
     "typescript": "5.9.3",
-    "wrangler": "4.165.0"
+    "vnu-jar": "26.11.9",
+    "wrangler": "4.165.0",
+    "xmllint-wasm": "5.3.0"
+  },
+  "overrides": {
+    "playwright-core": "1.65.0"
   }
 }

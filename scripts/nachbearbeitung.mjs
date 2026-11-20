@@ -29,7 +29,7 @@ export function nachbearbeitung() {
     hooks: {
       'astro:build:done': ({ dir, logger }) => {
         const root = fileURLToPath(dir);
-        const vorschau = process.env.FSG_VORSCHAU === '1' ||
+        const vorschau = process.env.FSG_VORSCHAU === '0' ? false : process.env.FSG_VORSCHAU === '1' ||
           ((process.env.WORKERS_CI_BRANCH || process.env.GITHUB_HEAD_REF || 'main') !== 'main');
         const funde = [];
         for (const datei of htmlDateien(root)) {

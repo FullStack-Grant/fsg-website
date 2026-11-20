@@ -18,6 +18,10 @@ GitHub Pages liefert die Astro-Quellen zwar als Dateien aus, nutzt sie aber nich
 | `npm run build:vorschau` | Vorschau: auch Entwürfe, alles `noindex`, robots.txt sperrt |
 | `npm run check` | Typen und Frontmatter-Schema |
 | `npm run kit:sync` | Marken-Kit aus dem FSG-Drive übernehmen |
+| `npm run qa:schnell` / `qa:voll` / `qa:ci` | Prüfstufen 1, 2, 3 (Skill `website-testing`) |
+
+## Prüfungen und Freigabe
+Claude-Code-Hooks (`.claude/settings.json`) prüfen nach jeder Änderung und vor jedem Commit; GitHub Actions (`.github/workflows/ci.yml`) prüft jeden PR. `main` ist per Ruleset geschützt: nur per PR, alle Pflicht-Checks grün, Branch aktuell, und der Check `freigabe` wird erst grün, wenn Felix im PR „Approve and deploy“ klickt (Environment `freigabe`). Details: Skill `website-testing`.
 
 ## Deploy (Cloudflare Workers Builds)
 Der Worker `fsg-website` im Cloudflare-Konto fh@ baut direkt aus diesem Repo (GitHub-App „Cloudflare Workers and Pages“, nur dieses Repo).

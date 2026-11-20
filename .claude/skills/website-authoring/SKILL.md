@@ -10,11 +10,11 @@ Regeln für Inhalte und Templates der Website fullstackgrant.de (Astro 7, Cloudf
 ## Ablauf einer Änderung
 1. Branch `<thema>-<detail>` von `main`; nie direkt auf `main`.
 2. Datei anlegen oder ändern (Sammlung und Frontmatter unten), Text nach „Schreiben“.
-3. `npm run check` und `npm run build:vorschau`: beide ohne Fehler. Das Schema bricht den Build mit Meldung ab; Meldung lesen und an der Ursache beheben, nie das Schema lockern, um einen Text durchzubekommen.
+3. Prüfen nach Skill `website-testing` (Hooks laufen automatisch; Stufe 2 vor jedem Commit). Das Schema bricht den Build mit Meldung ab; Meldung lesen und an der Ursache beheben, nie das Schema lockern, um einen Text durchzubekommen.
 4. Sichtprüfung der geänderten Seiten in hell, dunkel und mobil (375 px), dann PR mit Vorschau-Link an Felix.
-5. Felix gibt im Chat frei → `status: freigegeben` und `freigabe: "<Datum>, Felix"` setzen, dann Merge.
+5. Felix gibt den Text im Chat frei → `status: freigegeben` und `freigabe: "<Datum>, Felix"` setzen, committen; gemergt wird über die Freigabe im PR (`website-testing`, „Ablauf einer Änderung“).
 
-**Merge = Veröffentlichung** (sobald die Live-Route auf Cloudflare zeigt). Ohne Felix' ausdrückliches OK im Chat nur Routine (Tippfehler, Abhängigkeiten, Tests) nach grüner CI mergen; jede neue Seite, neue Aussage, Rechtstext, Vergütungsaussage oder jeder neue Dienst mit Datenfluss braucht sein OK. Rücknahme per Revert-PR, nie per Force-Push.
+**Merge = Veröffentlichung**: Cloudflare deployt `main` sofort. Jeder Merge braucht grüne Pflicht-Checks und Felix' Klick auf die Freigabe im PR (Ruleset, Environment `freigabe`), auch Routine. Rücknahme per Revert-PR, nie per Force-Push.
 
 ## Sammlungen und Pfade
 | Sammlung (`src/content/…`) | Template | Pfad |

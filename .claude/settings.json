@@ -1,0 +1,32 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [{ "type": "command", "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/qa-hook.mjs\" schnell", "timeout": 60 }]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{ "type": "command", "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/qa-hook.mjs\" commit", "timeout": 300 }]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [{ "type": "command", "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/qa-hook.mjs\" stop", "timeout": 300 }]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Bash(gh api *pending_deployments*)",
+      "Bash(gh api *environments*)",
+      "Bash(gh api *rulesets*)",
+      "Bash(gh pr merge * --admin*)",
+      "Bash(git push * --force*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)"
+    ]
+  }
+}

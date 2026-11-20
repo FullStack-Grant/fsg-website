@@ -17,7 +17,7 @@ const { text, bild } = Astro.props;
 <style>
   .person { display: grid; grid-template-columns: 88px 1fr; gap: 16px; align-items: start; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--fsg-color-border); }
   .bild { width: 88px; aspect-ratio: 4 / 5; object-fit: cover; }
-  .platzhalter { display: grid; place-items: center; text-align: center; font: 500 9px/1.4 var(--fsg-font-mono); color: var(--fsg-color-text-subtle); padding: 6px; background: var(--fsg-color-bg-subtle); }
+  .platzhalter { display: grid; place-items: center; text-align: center; font: 500 9px/1.4 var(--fsg-font-mono); color: var(--fsg-color-text-muted); padding: 6px; background: var(--fsg-color-bg-subtle); } /* text-muted: text-subtle verfehlt 4,5:1 auf bg-subtle (axe, WEB T11) */
   strong { display: block; font-size: var(--fsg-text-body); }
   span { display: block; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); margin-top: 2px; }
   p { margin: 10px 0 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }

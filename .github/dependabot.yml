@@ -1,0 +1,20 @@
+# Aktualisierungen für Actions (SHA-gepinnt) und npm (exakt gepinnt); jede läuft als PR durch alle Prüfungen
+# und braucht Felix' Freigabe (WEB T11, T4 6.4). Playwright-Version und Container-Tag in den Workflows gemeinsam anheben.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    groups:
+      actions: { patterns: ['*'] }
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    versioning-strategy: increase
+    groups:
+      astro: { patterns: ['astro', '@astrojs/*'] }
+      qa: { patterns: ['@playwright/test', '@axe-core/playwright', '@lhci/cli', 'html-validate', '@adobe/structured-data-validator', 'cheerio', 'robots-parser', 'xmllint-wasm', 'vnu-jar'] }
+    ignore:
+      # Playwright nur zusammen mit dem Container-Tag mcr.microsoft.com/playwright:v<Version>-noble anheben.
+      - dependency-name: '@playwright/test'
+        update-types: ['version-update:semver-minor', 'version-update:semver-patch']

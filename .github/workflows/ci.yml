@@ -1,0 +1,165 @@
+# Stufe 3 von website-testing (WEB T11, T4 6.3 und 6.4).
+# Pflicht-Checks im Ruleset auf main: qa-build, qa-browser, qa-lighthouse, qa-geheimnisse, freigabe,
+# dazu „Workers Builds: fsg-website“ von Cloudflare. Deploy macht Cloudflare Workers Builds aus main;
+# deshalb sichert der Merge ab: ohne Grün und ohne Felix' Freigabe (Environment „freigabe“) kein Merge.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  qa-build:
+    name: qa-build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - name: Typen und Frontmatter (astro check)
+        run: npm run check
+      - name: Build Produktion
+        run: npx astro build --outDir dist
+        env: { FSG_VORSCHAU: '0' }
+      - name: Build Vorschau
+        run: npx astro build --outDir dist-vorschau
+        env: { FSG_VORSCHAU: '1' }
+      - name: HTML (html-validate)
+        run: npx html-validate "dist/**/*.html" "dist-vorschau/**/*.html"
+      - name: HTML (Nu Html Checker)
+        run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors-only --skip-non-html dist dist-vorschau
+      - name: SEO, Links, JSON-LD, robots, Sitemap, CSP (Produktion)
+        run: node scripts/qa/seo.mjs --dir dist --modus produktion --vergleich dist-vorschau
+      - name: SEO, Links, JSON-LD, robots, Sitemap, CSP (Vorschau)
+        run: node scripts/qa/seo.mjs --dir dist-vorschau --modus vorschau
+      - name: Textregeln
+        env:
+          SPERRLISTE: ${{ secrets.FSG_SPERRLISTE }}
+        run: |
+          if [ -n "$SPERRLISTE" ]; then printf '%s\n' "$SPERRLISTE" > "$RUNNER_TEMP/sperrliste.txt"; export FSG_SPERRLISTE="$RUNNER_TEMP/sperrliste.txt"; fi
+          node scripts/qa/textregeln.mjs --dir dist
+          node scripts/qa/textregeln.mjs --dir dist-vorschau
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: builds
+          path: |
+            dist
+            dist-vorschau
+          include-hidden-files: true
+          retention-days: 7
+
+  qa-browser:
+    name: qa-browser
+    needs: qa-build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.0-noble
+      options: --ipc=host
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with: { name: builds }
+      - name: Datenschutz, Barrierefreiheit, visuelle Regression (Playwright)
+        run: npx playwright test
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-bericht
+          path: |
+            playwright-report
+            test-results
+          retention-days: 14
+
+  qa-lighthouse:
+    name: qa-lighthouse
+    needs: qa-build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with: { name: builds }
+      - name: Lighthouse CI
+        run: npx lhci autorun
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: ${{ !cancelled() }}
+        with:
+          name: lighthouse-bericht
+          path: .lighthouseci
+          include-hidden-files: true
+          retention-days: 14
+
+  qa-geheimnisse:
+    name: qa-geheimnisse
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with: { fetch-depth: 0 }
+      - name: gitleaks 8.30.1 (Prüfsumme gepinnt)
+        run: |
+          curl -sSfL -o gitleaks.tgz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gitleaks.tgz" | sha256sum -c -
+          tar -xzf gitleaks.tgz gitleaks
+          ./gitleaks git --redact --no-banner --exit-code 1 .
+
+  links-extern:
+    name: links-extern (Warnung)
+    if: github.event_name == 'pull_request'
+    needs: qa-build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with: { name: builds }
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.run_id }}
+          restore-keys: lychee-
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: --no-progress --cache --max-cache-age 3d --scheme https --scheme http --exclude '^https://fullstackgrant\.de' 'dist-vorschau/**/*.html'
+          fail: false
+          jobSummary: true
+
+  freigabe:
+    name: freigabe
+    if: github.event_name == 'pull_request'
+    needs: [qa-build, qa-browser, qa-lighthouse, qa-geheimnisse]
+    runs-on: ubuntu-24.04
+    # Felix ist Required Reviewer; erst sein Klick „Approve and deploy“ macht diesen Check grün.
+    environment: freigabe
+    steps:
+      - name: Freigabe dokumentieren
+        env:
+          PR: ${{ github.event.pull_request.number }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          echo "Freigegeben durch Environment-Review: PR #$PR, Commit $SHA" >> "$GITHUB_STEP_SUMMARY"
