@@ -1,5 +1,7 @@
 ---
-// Template Start (Home, Design E2). Mustertexte: T12 setzt die freigegebenen Texte aus T7 (01_Start) nach T9 ein.
+// Start (Home, Design E2). Text: T7 01_Start in der T9-Fassung vom 19.11.2026 (Drive `T9_Rechtspruefung\korrigiert\`),
+// freigegeben 18.11.2026 von Felix, korrigiert von T9. Go-live-Rückfall: Kommentare „T9 ab Fassung 1.1“ erst nach
+// LEGAL-Meldung zum Einfrieren von AGB 1.1 und Vorlage 1.1 umschalten, auf allen Seiten zugleich.
 import Basis from '../layouts/Basis.astro';
 import Zeile from '../components/Zeile.astro';
 import Personenkarte from '../components/Personenkarte.astro';
@@ -11,45 +13,48 @@ import Zitat from '../components/Zitat.astro';
 import { firma } from '../data/firma';
 import { personKnoten } from '../lib/jsonld';
 
+const FINANZAMT = 'Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater.';
+
 const ebenen: Ebene[] = [
   {
     nr: '01', kurz: 'Steuer', titel: 'Steuerliche Förderung', anker: 'steuerliche-foerderung', kosten: 1, zuerst: true,
-    text: 'Forschungszulage: Rechtsanspruch statt Wettbewerb um Budget.',
+    text: 'Auf die Forschungszulage besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind; es gibt keinen Wettbewerb um ein Budget.',
     zeilen: [
-      { label: 'Du gibst ab', wert: 'Nichts, Festsetzung über deinen Steuerberater' },
-      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
-      { label: 'Compliance', wert: 'Mustertext (T12: Compliance-Leistung aus T7)', art: 'gold' },
+      // T9 ab Fassung 1.1: „Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“
+      { label: 'Du gibst ab', wert: `Nichts an Kapital. ${FINANZAMT}` },
+      { label: 'Wir bereiten vor', wert: 'Programmcheck, BSFZ-Antrag mit FuE-Argumentation, Vorhabenbeschreibung und Arbeitspaketen, Entwürfe der Antworten auf Rückfragen der BSFZ.' },
+      // T9 ab Fassung 1.1: „Compliance: eine nachvollziehbare Projektdokumentation für jedes Wirtschaftsjahr und eine Unterlagenmappe für dich und deinen Steuerberater, im Erfolgshonorar.“
+      { label: 'Compliance', wert: 'Hinweise, wie dein Team die Stunden von Anfang an zeitnah und lückenlos je Vorhaben erfasst.', art: 'gold' },
     ],
     tags: ['Bund'],
   },
   {
     nr: '02', kurz: 'Zuschuss', titel: 'Zuschüsse und Grants', anker: 'zuschuesse', kosten: 1,
-    text: 'Programme von Bund und Ländern, EU-Grants.',
+    text: 'Programme von Bund, Ländern und EU, etwa ZIM, Landesprogramme, EIC Accelerator und Horizon Europe.',
     zeilen: [
-      { label: 'Du gibst ab', wert: 'Nichts, aber Wettbewerb um Budget und Nachweispflichten' },
-      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
-      { label: 'Compliance', wert: 'Mustertext (T12: Compliance-Leistung aus T7)', art: 'gold' },
+      { label: 'Du gibst ab', wert: 'Keine Anteile, dafür Wettbewerb um Budget, Eigenanteil und Nachweispflichten.' },
+      { label: 'Wir bereiten vor', wert: 'Auswahl und Kombination, Entwürfe für Skizze, Antrag und Finanzplan aus deinen Zahlen.' },
+      { label: 'Compliance', wert: 'Zwischen- und Verwendungsnachweise und Änderungsanträge, auf Wunsch und nach Aufwand von uns vorbereitet, von dir eingereicht.', art: 'gold' },
     ],
     tags: ['EU', 'Bund', 'Land'],
   },
   {
     nr: '03', kurz: 'Kredit und Bürgschaft', titel: 'Gefördertes Fremdkapital und Risikoübernahme', anker: 'foerderkredite', kosten: 2,
-    text: 'Förderkredite, Bürgschaften und Haftungsfreistellungen für deine Hausbank.',
+    text: 'Förderkredite von KfW und Landesförderbanken, Bürgschaften und Haftungsfreistellungen für deine Hausbank.',
     zeilen: [
-      { label: 'Du gibst ab', wert: 'Zins und Tilgung, unter Marktkonditionen' },
-      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
-      { label: 'Compliance', wert: 'Mustertext (T12: Compliance-Leistung aus T7)', art: 'gold' },
+      { label: 'Du gibst ab', wert: 'Zins und Tilgung, meist zu günstigeren Konditionen als am Markt, dazu gegebenenfalls ein Bürgschaftsentgelt.' },
+      { label: 'Wir bereiten vor', wert: 'Einordnung in deinen Finanzierungsplan, Unterlagen für Hausbank und Förderbank.' },
+      { label: 'Compliance', wert: 'Nachweise je Programm, auf Wunsch und nach Aufwand von uns vorbereitet.', art: 'gold' },
     ],
     tags: ['Bund', 'Land'],
   },
   {
     nr: '04', kurz: 'Beteiligung, nur EIC', titel: 'Beteiligungskapital mit Förderantrag', anker: 'beteiligungskapital', kosten: 4,
-    text: 'Nur der Equity-Teil des EIC Accelerator, beantragt zusammen mit dem Grant.',
+    text: 'Nur dort, wo Beteiligung an einem Förderantrag hängt: der Equity-Teil des EIC Accelerator, beantragt zusammen mit dem Grant.',
     zeilen: [
-      { label: 'Du gibst ab', wert: 'Anteile an den EIC Fund' },
-      { label: 'Wir übernehmen', wert: 'Mustertext (T12: Leistung aus T7)' },
-      { label: 'Nicht bei uns', wert: 'VC-Fundraising, auch bei Public VCs wie dem HTGF', art: 'nicht' },
-      { label: 'Compliance', wert: 'Berichtspflichten aus Grant und Beteiligung', art: 'gold' },
+      { label: 'Du gibst ab', wert: 'Anteile an den EIC Fund (verwässernd).' },
+      { label: 'Wir bereiten vor', wert: 'Den EIC-Antrag mit Equity-Teil. Wir vermitteln nicht und haben keinen Investorenkontakt.' },
+      { label: 'Nicht bei uns', wert: 'VC-Fundraising, auch bei öffentlichen Fonds wie dem HTGF.', art: 'nicht' },
     ],
     tags: ['EU'],
   },
@@ -62,10 +67,10 @@ const ebenen: Ebene[] = [
   <Zeile hero ueberschriftId="h-hero">
     <Fragment slot="rand">
       <span class="label">{firma.name} · {firma.anschrift.ort}</span>
-      <Personenkarte text="Mustertext (T12: Personenkarte aus T7, ohne Summen)" />
+      <Personenkarte text="Bis 2026 Director und VP Finance in Tech-Startups. Hat dort die Forschungszulage einschließlich der BSFZ-Anträge selbst verantwortet und ein Verfahren bis durch die steuerliche Außenprüfung begleitet. Zuvor hat er ZIM-Projekte in der Abwicklung betreut." />
     </Fragment>
-    <h1 id="h-hero">Förderung, die auch in der Prüfung noch trägt.</h1>
-    <p class="lead">Mustertext (T12: Lead aus T7 01_Start.)</p>
+    <h1 id="h-hero">Förderung, belastbar dokumentiert und auch Jahre später nachvollziehbar.</h1>
+    <p class="lead">FullStack Grant ist eine Förderberatung aus Hamburg für Tech-Startups in ganz Deutschland. Wir bereiten für dein Startup die Anträge vor, die zu deiner Finanzierung passen, und begleiten dich auf Wunsch auch nach der Bewilligung. Mit dem Blick eines Finance Leads, der Förderung im Startup selbst verantwortet hat.</p>
     <div class="cta-zeile">
       <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <span class="pfeil" aria-hidden="true">→</span></a>
       <a class="link" href="#finanzierungsmix">Finanzierungsmix ansehen</a>
@@ -74,49 +79,83 @@ const ebenen: Ebene[] = [
 
   <Zeile nr="01" label="Finanzierungsmix" id="finanzierungsmix" ueberschriftId="h-mix"
     notiz="Förderung ist Finanzierung. Wir ordnen sie deshalb wie eine Kapitalstruktur, nicht nach Behörden.">
-    <h2 id="h-mix">Das ganze Förderportfolio, sortiert nach Kapitalkosten.</h2>
-    <p class="regel">Erst, worauf du Anspruch hast. Dann Zuschüsse, dann günstiges Fremdkapital. <b>Anteile zuletzt.</b></p>
+    <h2 id="h-mix">Das ganze Förderportfolio, sortiert nach Kapitalkosten</h2>
+    <p class="regel">Erst, worauf du Anspruch hast, dann Zuschüsse, dann günstiges Fremdkapital. <b>Anteile zuletzt.</b></p>
     <Kapitalsaeule ebenen={ebenen}
-      rahmenText="Der goldene Rahmen ist die Compliance: Fristen, Belege, Nachweise und Prüfungsbereitschaft über die ganze Laufzeit, für jede Ebene." />
+      rahmenText="Nach der Bewilligung: Für Zuschüsse, Grants und Förderkredite bereiten wir auf Wunsch Nachweise und Änderungsanträge vor, nach Aufwand. Die Fristen verantwortest du; auf Fristen, die wir erfahren, weisen wir dich hin." />
+    <p class="weiter">Im Detail:
+      <a href="/leistungen/#steuerliche-foerderung">Steuerliche Förderung</a> ·
+      <a href="/leistungen/#zuschuesse">Zuschüsse und Grants</a> ·
+      <a href="/leistungen/#foerderkredite">Förderkredite</a> ·
+      <a href="/leistungen/#beteiligungskapital">Beteiligungskapital</a> ·
+      <a href="/leistungen/#nach-der-bewilligung">Nach der Bewilligung</a>
+    </p>
   </Zeile>
 
   <Zeile nr="02" label="Zuständigkeiten" ueberschriftId="h-zust"
     notiz="Klare Grenzen sind das erste Vertrauenssignal: Du weißt, wer was tut, bevor du unterschreibst.">
     <h2 id="h-zust">Wer was tut. Schwarz auf weiß.</h2>
     <Zustaendigkeiten spalten={[
-      { titel: 'FullStack Grant', punkte: ['Mustertext (T12: aus T7)'] },
-      { titel: 'Dein Unternehmen', punkte: ['entscheidet und reicht selbst ein', 'liefert Zahlen und Projektwissen'] },
-      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung (RDG)', 'Steuerberatung und Festsetzungsantrag zur Forschungszulage (dein Steuerberater)', 'Einreichen im Namen des Kunden'] },
+      { titel: 'FullStack Grant', punkte: ['findet die passenden Programme, nicht nur die Forschungszulage', 'entwirft Antrag und Finanzplan aus deinen Zahlen', 'bereitet auf Wunsch Nachweise über die Laufzeit vor'] },
+      { titel: 'Du', punkte: ['entscheidest und reichst selbst ein', 'lieferst Zahlen und Projektwissen', 'prüfst jede Fassung, bestätigst sie in Textform und behältst die Fristen im Blick'] },
+      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung', 'Steuerberatung und Antrag beim Finanzamt zur Forschungszulage (dein Unternehmen bzw. dein Steuerberater)', 'Einreichen in deinem Namen, Garantie einer Bewilligung, VC-Fundraising'] },
     ]} />
+    <p class="weiter"><a href="/vorgehen/">So läuft eine Förderberatung bei uns</a></p>
   </Zeile>
 
   <Zeile nr="03" label="Gründer" id="gruender" ueberschriftId="h-gruender">
-    <h2 id="h-gruender">Wer hinter FullStack Grant steht.</h2>
-    <p>Mustertext (T12: Gründer-Abschnitt aus T7.)</p>
-    <Zitat text="Mustertext (T12: freigegebenes Zitat von Felix)" />
+    <h2 id="h-gruender">Warum Förderberatung aus der Finance-Leitung kommt</h2>
+    <p>Förderung landet am Ende im Liquiditätsplan, im Jahresabschluss und in späteren Prüfungen. Felix Hinkelmann hat sie als Finance Lead selbst verantwortet. Bei der Impossible Cloud GmbH hat er als Director und VP Finance die Forschungszulage für drei Wirtschaftsjahre verantwortet, die BSFZ-Anträge selbst geschrieben und ein Verfahren bis durch die steuerliche Außenprüfung begleitet. Davor hat er bei der Easy-Tutor GmbH als Director Finance die BSFZ-Anträge geschrieben und die Forschungszulage im Unternehmen verantwortet, dazu Mittel aus Start-up Shield Bayern beantragt. Bei der Ibeo Automotive Systems GmbH hat er zuvor ZIM-Projekte in der Abwicklung betreut. Heute bereitet er Anträge vor; steuerliche Prüfungen begleitet dein Steuerberater.</p>
+    <p>Jedes Mandat führt er persönlich.</p>
+    <Zitat text="Ich habe Förderung als Finance Lead selbst verantwortet. Deshalb behandle ich sie wie Finanzierung: mit Plan, Belegen und Blick auf die Prüfung." />
+    <p class="weiter">
+      <a href="/ueber-uns/">Mehr über Felix Hinkelmann</a> ·
+      <a href="/wissen/artikel/foerderberatung-aus-finance-sicht/">Perspektive: Warum Förderberatung aus der Finance-Leitung kommen sollte</a>
+    </p>
   </Zeile>
 
-  <Zeile nr="04" label="Vorgehen" id="vorgehen" ueberschriftId="h-vorg"
+  <Zeile nr="04" label="Mehr als die Forschungszulage" id="mehr-als-forschungszulage" ueberschriftId="h-mehr">
+    <h2 id="h-mehr">Welche Förderung gibt es außer der Forschungszulage?</h2>
+    <p>Neben der Forschungszulage gibt es Zuschüsse von Bund, Ländern und EU, Förderkredite mit Bürgschaften und beim EIC Accelerator Beteiligungskapital. Welche Kombination passt, hängt von Vorhaben, Phase und Finanzierung ab; die Regeln zur Kombination legt jedes Programm selbst fest.</p>
+    <Zitat rolle="Perspektive" text="Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Oft bringt ein Zuschuss mit höherer Förderquote mehr, auch wenn er mehr Arbeit macht." />
+    <p class="weiter">
+      <a href="/foerderung/programme/forschungszulage/">Forschungszulage für Startups</a> ·
+      <a href="/foerderung/programme/zim/">ZIM Förderung</a> ·
+      <a href="/wissen/artikel/mehr-als-forschungszulage/">Perspektive: Warum Förderberatung nicht bei der Forschungszulage aufhören sollte</a>
+    </p>
+  </Zeile>
+
+  <Zeile nr="05" label="Vorgehen" id="vorgehen" ueberschriftId="h-vorg"
     notiz="Gewissheit entsteht aus einem Prozess, der auch nach der Bewilligung weiterläuft.">
-    <h2 id="h-vorg">Von der ersten Frage bis zum letzten Nachweis.</h2>
+    <h2 id="h-vorg">Von der ersten Frage bis zum letzten Nachweis</h2>
     <Schritte schritte={[
-      { titel: 'Fördercheck', text: 'Mustertext (T12: aus T7)' },
-      { titel: 'Antrag vorbereiten', text: 'Mustertext (T12: aus T7)' },
-      { titel: 'Laufzeit begleiten', text: 'Mustertext (T12: aus T7)' },
+      { titel: 'Fördercheck', text: 'Welche Programme passen zu Vorhaben, Größe und Finanzierung, in welcher Reihenfolge. Kostenlos und unverbindlich.' },
+      { titel: 'Antrag vorbereiten', text: 'Wir entwerfen, du prüfst, bestätigst und reichst ein.' },
+      { titel: 'Laufzeit begleiten', text: 'Auf Wunsch und nach Aufwand Zwischen- und Verwendungsnachweise, Änderungsanträge und die Durchsicht vor Prüfungen des Fördergebers, ohne Testat.' },
     ]} />
+    <p class="weiter"><a href="/vorgehen/">Vorgehen und Compliance</a></p>
   </Zeile>
 
-  <Zeile nr="05" label="Häufige Fragen" id="fragen" ueberschriftId="h-fragen">
+  <Zeile nr="06" label="Vergütung" id="verguetung" ueberschriftId="h-verg">
+    <h2 id="h-verg">Vergütung je nach Programm, vorab im Angebot</h2>
+    {/* T9 ab Fassung 1.1: letzter Satz „Was nach der Bewilligung anfällt, rechnen wir nach Aufwand ab, mit Schätzung vorab; bei der Forschungszulage sind Projektdokumentation und Unterlagenmappe enthalten, eine Stundenübersicht und die Begleitung einer Betriebsprüfung laufen nach Stunden.“ */}
+    <p>Der Fördercheck ist kostenlos. Bei der Forschungszulage gilt: Bescheinigt die BSFZ dein Vorhaben nicht, zahlst du nichts. Bei anderen Programmen: Erfolgshonorar oder festes Honorar, je nach Programm; Einzelheiten im Angebot. Was nach der Bewilligung anfällt, rechnen wir nach Aufwand ab, mit Schätzung vorab.</p>
+    <p class="weiter"><a href="/verguetung/">So rechnet FullStack Grant ab</a></p>
+  </Zeile>
+
+  <Zeile nr="07" label="Häufige Fragen" id="fragen" ueberschriftId="h-fragen">
     <h2 id="h-fragen">Häufige Fragen</h2>
     <Faq fragen={[
-      { frage: 'Reicht FullStack Grant den Antrag für uns ein?', antwort: 'Nein. FullStack Grant bereitet Antrag und Unterlagen vor, dein Unternehmen prüft und reicht selbst ein.' },
-      { frage: 'Mustertext (T12: Frage aus T7)', antwort: 'Mustertext (T12: Antwort aus T7)' },
+      { frage: 'Reicht FullStack Grant den Antrag ein?', antwort: `Nein. FullStack Grant bereitet Antrag und Unterlagen vor, dein Unternehmen prüft und reicht selbst ein, im Verbund der Koordinator. So bleibt die Verantwortung dort, wo sie rechtlich liegt. ${FINANZAMT}` },
+      { frage: 'Mit wem arbeitet man bei FullStack Grant zusammen?', antwort: 'Mit Felix Hinkelmann persönlich, vom Erstgespräch bis zum Verwendungsnachweis.' },
+      { frage: 'Was passiert nach der Bewilligung?', antwort: 'Auf Wunsch bereitet FullStack Grant Zwischen- und Verwendungsnachweise und Änderungsanträge vor und sieht deine Unterlagen vor Prüfungen des Fördergebers durch, ohne Testat. Das rechnen wir nach Aufwand ab, mit Schätzung vorab.' },
     ]} />
+    <p class="weiter"><a href="/wissen/faq/">Alle Fragen zur Förderberatung</a></p>
   </Zeile>
 
-  <Zeile nr="06" label="Erstgespräch" id="termin" ueberschriftId="h-termin">
-    <h2 id="h-termin">Ein Gespräch, danach weißt du, welche Förderung zu dir passt.</h2>
-    <p class="lead">Du wählst einen Termin und sprichst direkt mit dem Gründer über Vorhaben und Finanzierung. Erstgespräch 20 Minuten per Video.</p>
+  <Zeile nr="08" label="Erstgespräch" id="termin" ueberschriftId="h-termin">
+    <h2 id="h-termin">Ein Gespräch, danach kennst du deine nächsten Schritte</h2>
+    <p class="lead">Im Erstgespräch sprichst du 20 Minuten direkt mit Felix Hinkelmann über Vorhaben und Finanzierung. Danach bekommst du auf Wunsch den Fördercheck: welche Programme passen und in welcher Reihenfolge. Kostenlos und unverbindlich.</p>
     <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <span class="pfeil" aria-hidden="true">→</span></a>
   </Zeile>
 </Basis>
@@ -124,4 +163,5 @@ const ebenen: Ebene[] = [
 <style>
   .regel { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); font-weight: 300; letter-spacing: -0.01em; line-height: 1.35; margin: 0 0 36px; max-width: 40ch; }
   .regel b { font-weight: 700; }
+  .weiter { font-size: var(--fsg-text-small); margin-top: 24px; }
 </style>

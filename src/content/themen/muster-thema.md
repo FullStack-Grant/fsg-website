@@ -10,7 +10,7 @@ zuletztGeprueft: 2026-11-19
 status: entwurf
 antwort: "Muster für das Template, kein veröffentlichter Text. T12 ersetzt ihn durch die freigegebenen Texte aus T7 und T8."
 vergleich:
-  - {programm: "Muster-Programm", art: "Zuschuss", quote: "25 bis 60 %", stand: "19.11.2026", quelle: "https://www.foerderdatenbank.de/", link: /foerderung/programme/muster-programm/}
+  - {programm: "Muster-Programm", art: "Zuschuss", quote: "25 bis 60 %", stand: "19.11.2026", quelle: "https://www.foerderdatenbank.de/", link: /foerderung/programme/forschungszulage/}
 quellen:
   - {titel: "Förderdatenbank des Bundes", url: "https://www.foerderdatenbank.de/", abruf: 2026-11-19}
 ---

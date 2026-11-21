@@ -1,12 +1,13 @@
 ---
 // Zitat von Felix aus eigener Praxis, als Perspektive gekennzeichnet (T6 4.3 Nr. 5). Nur freigegebene Zitate.
 import { person } from '../data/firma';
-interface Props { text: string }
-const { text } = Astro.props;
+// `rolle` ersetzt die Funktion in der Bildunterschrift, z. B. „Perspektive“ bei wertenden Aussagen (UWG, T9).
+interface Props { text: string; rolle?: string }
+const { text, rolle = person.rolle } = Astro.props;
 ---
 <figure class="zitat">
   <blockquote><p>„{text}“</p></blockquote>
-  <figcaption>{person.name}, {person.rolle}</figcaption>
+  <figcaption>{person.name}, {rolle}</figcaption>
 </figure>
 
 <style>
