@@ -4,6 +4,7 @@
 import '../styles/global.css';
 import Kopf from '../components/Kopf.astro';
 import Fuss from '../components/Fuss.astro';
+import Einwilligung from '../components/Einwilligung.astro';
 import { firma } from '../data/firma';
 import { istVorschau } from '../lib/umgebung';
 import { graph, organisation, website } from '../lib/jsonld';
@@ -82,5 +83,6 @@ const knoten = [website(), organisation(vollerGraph), ...jsonld];
   </main>
   <Fuss />
 </div>
+<Einwilligung />
 </body>
 </html>

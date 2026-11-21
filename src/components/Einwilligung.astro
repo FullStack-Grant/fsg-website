@@ -1,0 +1,94 @@
+---
+// Einwilligungsbanner (WEB T12, Felix 20.11.2026): selbst gehostet, ohne Fremd-Requests, Ablehnen gleichwertig
+// zum Erlauben (DSK, Orientierungshilfe Digitale Dienste). Erscheint nur mit JavaScript und nur ohne gespeicherte Wahl;
+// erneut über „Cookie-Einstellungen“ in der Fußzeile. Kategorien aus src/data/einwilligung.ts.
+import { kategorien } from '../data/einwilligung';
+---
+<section class="einwilligung" id="einwilligung-banner" role="dialog" aria-labelledby="einwilligung-titel" aria-describedby="einwilligung-text" hidden>
+  <h2 class="titel" id="einwilligung-titel">Externe Inhalte</h2>
+  <p id="einwilligung-text">Diese Seite kommt ohne Tracking aus. Nur für die Terminbuchung binden wir mit deiner Einwilligung Google Kalender ein. Deine Wahl speichern wir in einem Cookie, ändern kannst du sie jederzeit über „Cookie-Einstellungen“ in der Fußzeile. Einzelheiten in der <a href="/datenschutz/#einwilligung">Datenschutzerklärung</a>.</p>
+  <details class="auswahl">
+    <summary>Einstellungen</summary>
+    <fieldset>
+      <legend class="sr">Kategorien</legend>
+      <label class="kat"><input type="checkbox" checked disabled> <span><b>Notwendig</b> Auslieferung der Seite und Speichern deiner Wahl. Immer aktiv.</span></label>
+      {kategorien.map((k) => (
+        <label class="kat"><input type="checkbox" name="kategorie" value={k.id}> <span><b>{k.titel}</b> {k.text}</span></label>
+      ))}
+    </fieldset>
+    <button type="button" class="knopf" data-einwilligung="auswahl">Auswahl speichern</button>
+  </details>
+  <div class="knoepfe">
+    <button type="button" class="knopf" data-einwilligung="notwendig">Nur notwendige</button>
+    <button type="button" class="knopf" data-einwilligung="alle">Alle erlauben</button>
+  </div>
+</section>
+
+<script>
+  import { lesen, speichern, alleErlauben, nurNotwendige, EINSTELLUNGEN_OEFFNEN } from '../lib/einwilligung';
+
+  const banner = document.getElementById("einwilligung-banner");
+  if (banner) {
+    const boxen = () => Array.from(banner.querySelectorAll<HTMLInputElement>('input[name="kategorie"]'));
+    const zeigen = (fokus: boolean) => {
+      const w = lesen();
+      boxen().forEach((b) => { b.checked = w?.erlaubt[b.value] === true; });
+      banner.hidden = false;
+      if (fokus) banner.querySelector<HTMLButtonElement>('[data-einwilligung="notwendig"]')?.focus();
+    };
+    const schliessen = () => { banner.hidden = true; };
+
+    banner.addEventListener('click', (e) => {
+      const knopf = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-einwilligung]');
+      if (!knopf) return;
+      const art = knopf.dataset.einwilligung;
+      if (art === 'alle') alleErlauben();
+      else if (art === 'notwendig') nurNotwendige();
+      else speichern(Object.fromEntries(boxen().map((b) => [b.value, b.checked])));
+      schliessen();
+    });
+    banner.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lesen()) schliessen(); });
+
+    document.addEventListener(EINSTELLUNGEN_OEFFNEN, () => zeigen(true));
+    // Links und Knöpfe „Cookie-Einstellungen“ (Fußzeile, Kontaktseite) öffnen die Einstellungen.
+    document.addEventListener('click', (e) => {
+      const ziel = (e.target as HTMLElement).closest('a[href="#cookie-einstellungen"], [data-einstellungen]');
+      if (!ziel) return;
+      e.preventDefault();
+      zeigen(true);
+    });
+    document.querySelectorAll<HTMLElement>('[data-einstellungen]').forEach((el) => { el.hidden = false; });
+
+    if (!lesen()) zeigen(false);
+  }
+</script>
+
+<style>
+  .einwilligung {
+    position: fixed; inset: auto 16px 16px auto; z-index: 50; max-width: 440px;
+    background: var(--fsg-color-bg); color: var(--fsg-color-text);
+    border: 1px solid var(--fsg-color-border); border-left: 3px solid var(--fsg-color-accent);
+    padding: 20px 22px; font-size: var(--fsg-text-small); box-shadow: 0 8px 32px rgb(0 0 0 / 0.18);
+  }
+  .einwilligung[hidden] { display: none; }
+  .titel { font-size: var(--fsg-text-body); margin: 0 0 8px; }
+  p { margin: 0 0 12px; color: var(--fsg-color-text-muted); }
+  .auswahl { margin: 0 0 14px; }
+  .auswahl summary { cursor: pointer; font-weight: 600; }
+  fieldset { border: 0; padding: 0; margin: 10px 0; }
+  .kat { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; margin: 0 0 10px; color: var(--fsg-color-text-muted); }
+  .kat b { display: block; color: var(--fsg-color-text); }
+  .kat input { margin-top: 3px; accent-color: var(--fsg-color-text); }
+  .knoepfe { display: flex; gap: 10px; flex-wrap: wrap; }
+  /* Gleichwertig: beide Hauptknöpfe in derselben Gestaltung. */
+  .knopf {
+    font: inherit; font-weight: 600; min-height: 44px; padding: 0 16px; cursor: pointer;
+    background: var(--fsg-color-text); color: var(--fsg-color-bg); border: 1px solid var(--fsg-color-text);
+  }
+  .knopf:hover { background: var(--fsg-neutral-700); color: var(--fsg-neutral-0); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  @media (max-width: 520px) {
+    .einwilligung { inset: auto 8px 8px 8px; max-width: none; }
+    .knoepfe .knopf { flex: 1 1 0; }
+  }
+</style>

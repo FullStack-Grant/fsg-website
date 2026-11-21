@@ -1,8 +1,9 @@
 # Sicherheitsheader (T4 2.3), Cloudflare Workers Static Assets.
+# frame-src nur für die Terminbuchung auf /kontakt/, geladen erst nach Einwilligung (WEB T12).
 # HSTS ohne preload und ohne includeSubDomains, bis alle Subdomains geprüft sind.
 /*
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; frame-src https://calendar.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()

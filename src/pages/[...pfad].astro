@@ -8,6 +8,7 @@ import ProgrammSteckbrief from '../components/ProgrammSteckbrief.astro';
 import Vergleichstabelle from '../components/Vergleichstabelle.astro';
 import Faq from '../components/Faq.astro';
 import Impressum from '../components/Impressum.astro';
+import Terminbuchung from '../components/Terminbuchung.astro';
 import { alleEintraege, pfadVon, datumDe, type Eintrag } from '../lib/inhalte';
 import * as ld from '../lib/jsonld';
 
@@ -82,11 +83,16 @@ switch (eintrag.collection) {
     quellen = [];
     break;
 }
+if (d.grenzenImText) compliance = false;
+// FAQPage nur semantisch (T6 4.2): Fragen und Antworten aus den H3-Abschnitten des Markdown-Texts.
+if (eintrag.collection === 'referenz' && eintrag.data.typ === 'faq' && eintrag.body) {
+  jsonld.push(ld.fragenseite(info, ld.fragenAusMarkdown(eintrag.body)));
+}
 ---
 <Inhalt titel={d.title} h1={h1} beschreibung={d.description} pfad={pfad} krumen={krumen}
   antwort={d.antwort} status={d.status} jsonld={jsonld} compliance={compliance} quellen={quellen}
   ogTyp={eintrag.collection === 'artikel' ? 'article' : 'website'}
-  cta={eintrag.collection !== 'recht'}>
+  cta={eintrag.collection !== 'recht' && !(eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'kontakt')}>
 
   {eintrag.collection === 'artikel' && (
     <Byline slot="kopf-oben" rolle="autor" name={eintrag.data.author} geaendert={d.dateModified}
@@ -120,6 +126,7 @@ switch (eintrag.collection) {
     </dl>
   )}
   {eintrag.collection === 'recht' && eintrag.data.typ === 'impressum' && <Impressum slot="kopf" />}
+  {eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'kontakt' && <Terminbuchung slot="kopf" />}
 
   <Content />
 

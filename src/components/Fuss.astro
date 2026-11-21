@@ -10,6 +10,8 @@ import { rechtsnavigation } from '../data/navigation';
     <p>{firma.rechtsname}, {firma.anschrift.ort}. Keine Rechts- oder Steuerberatung.</p>
     <nav aria-label="Rechtliches">
       {rechtsnavigation.map((n) => <a href={n.pfad}>{n.titel}</a>)}
+      {/* Ohne JavaScript ausgeblendet: dann lädt ohnehin nichts, was eine Einwilligung braucht. */}
+      <button type="button" class="einstellungen" id="cookie-einstellungen" data-einstellungen hidden>Cookie-Einstellungen</button>
     </nav>
   </div>
 </footer>
@@ -19,6 +21,8 @@ import { rechtsnavigation } from '../data/navigation';
   .slogan { font-size: var(--fsg-text-h4); color: var(--fsg-color-text); font-weight: 600; line-height: 1.35; margin: 0; }
   .slogan span { display: block; white-space: nowrap; }
   nav { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 16px; }
+  .einstellungen { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+  .einstellungen[hidden] { display: none; }
   @media (max-width: 820px) {
     .fuss { grid-template-columns: 1fr; gap: 20px; padding: 48px 0 32px; }
     .slogan { font-size: 15px; }

@@ -1,0 +1,50 @@
+---
+// Terminbuchung auf /kontakt/ (DECISIONS T7 Nr. 4, Felix 18.11.2026; Bau WEB T12): Google-Kalender eingebettet,
+// lädt erst mit Einwilligung „Externe Inhalte“; vorher Platzhalter mit Link zur Buchungsseite. Wortlaut T9 (A37).
+import { firma } from '../data/firma';
+const url = firma.buchungUrl;
+---
+<div class="termin" data-termin={url}>
+  <p class="kopf"><strong>Termin buchen</strong></p>
+  <div class="platzhalter" data-termin-platzhalter>
+    <p>Der Kalender kommt von Google und lädt erst, wenn du externe Inhalte erlaubst. Du kannst das in den <a href="#cookie-einstellungen">Cookie-Einstellungen</a> nachholen oder <a href={url} target="_blank" rel="noopener noreferrer">direkt bei Google buchen</a>.</p>
+  </div>
+  <div class="eingebettet" data-termin-rahmen hidden>
+    <p>Wähl hier direkt einen freien Termin.</p>
+  </div>
+</div>
+
+<script>
+  import { erlaubt, EREIGNIS } from '../lib/einwilligung';
+
+  const box = document.querySelector<HTMLElement>('[data-termin]');
+  if (box) {
+    const laden = () => {
+      const rahmen = box.querySelector<HTMLElement>('[data-termin-rahmen]');
+      if (!rahmen || rahmen.querySelector('iframe') || !erlaubt('extern')) return;
+      const f = document.createElement('iframe');
+      f.src = `${box.dataset.termin}?gv=true`;
+      f.title = 'Terminbuchung Erstgespräch (Google Kalender)';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      rahmen.append(f);
+      rahmen.hidden = false;
+      box.querySelector<HTMLElement>('[data-termin-platzhalter]')!.hidden = true;
+    };
+    const entfernen = () => {
+      const rahmen = box.querySelector<HTMLElement>('[data-termin-rahmen]');
+      rahmen?.querySelector('iframe')?.remove();
+      if (rahmen) rahmen.hidden = true;
+      box.querySelector<HTMLElement>('[data-termin-platzhalter]')!.hidden = false;
+    };
+    document.addEventListener(EREIGNIS, () => (erlaubt('extern') ? laden() : entfernen()));
+    laden();
+  }
+</script>
+
+<style>
+  .termin { margin: 8px 0 40px; border: 1px solid var(--fsg-color-border); border-left: 3px solid var(--fsg-color-accent); padding: 20px 24px; }
+  .kopf { margin: 0 0 8px; }
+  .platzhalter p, .eingebettet p { margin: 0 0 12px; color: var(--fsg-color-text-muted); font-size: var(--fsg-text-small); }
+  .eingebettet :global(iframe) { display: block; width: 100%; height: 720px; border: 0; background: #fff; }
+  [hidden] { display: none; }
+</style>

@@ -1,18 +1,16 @@
 ---
 title: "Datenschutz: Hinweise für fullstackgrant.de"
 h1: "Datenschutzhinweise für diese Website"
-description: "Datenschutzhinweise der FullStack Grant UG (haftungsbeschränkt) für fullstackgrant.de: Hosting und Server-Protokolle, keine Cookies, Online-Besprechungen."
+description: "Datenschutzhinweise der FullStack Grant UG (haftungsbeschränkt) für fullstackgrant.de: Hosting, Einwilligung, Terminbuchung, Besprechungen, Telefonate."
 url: /datenschutz/
 typ: datenschutz
-stand: 2026-11-19
+stand: 2026-11-21
 datePublished: 2026-12-01
 dateModified: 2026-12-01
 status: entwurf
 ---
 
-
-
-Information nach Art. 13 DSGVO zur Verarbeitung personenbezogener Daten beim Aufruf von fullstackgrant.de und bei Online-Besprechungen.
+Information nach Art. 13 DSGVO zur Verarbeitung personenbezogener Daten beim Aufruf von fullstackgrant.de, bei der Terminbuchung, bei Online-Besprechungen und bei Telefonaten.
 
 ## 1. Verantwortlicher
 
@@ -20,9 +18,9 @@ FullStack Grant UG (haftungsbeschränkt), vertreten durch den Geschäftsführer 
 
 ## 2. Hosting und Server-Protokolle
 
-Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA, und der GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande.
+Diese Website wird über Cloudflare bereitgestellt, einen Dienst der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare betreibt auch die Nameserver unserer Domain und schützt die Seite vor Angriffen.
 
-Beim Aufruf der Seiten übermittelt Ihr Browser technisch notwendige Daten an Server von GitHub, die dort in Protokolldateien verarbeitet werden. Dazu gehören insbesondere:
+Beim Aufruf der Seiten übermittelt Ihr Browser technisch notwendige Daten an Server von Cloudflare, die dort verarbeitet werden. Dazu gehören insbesondere:
 
 - Ihre IP-Adresse,
 - Datum und Uhrzeit des Zugriffs,
@@ -30,21 +28,27 @@ Beim Aufruf der Seiten übermittelt Ihr Browser technisch notwendige Daten an Se
 - Browsertyp, Browserversion und Betriebssystem,
 - die zuvor besuchte Seite (Referrer), soweit Ihr Browser sie übermittelt.
 
-Zweck ist die technische Auslieferung der Seiten sowie die Sicherheit und Stabilität des Dienstes, etwa die Abwehr von Angriffen und Missbrauch. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (Art. 6 Abs. 1 lit. f DSGVO). GitHub ist insoweit unser Auftragsverarbeiter (Art. 28 DSGVO).
+Zweck ist die technische Auslieferung der Seiten sowie die Sicherheit und Stabilität des Dienstes, etwa die Abwehr von Angriffen und Missbrauch. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist insoweit unser Auftragsverarbeiter (Art. 28 DSGVO).
 
-Auf diese Protokolle haben wir keinen Zugriff, und wir werten sie nicht aus. Die Speicherdauer bestimmt GitHub; eine feste Frist gibt der Anbieter in seiner Datenschutzerklärung nicht an.
+Eine Protokollierung der Zugriffe für uns haben wir ausgeschaltet; wir werten keine Zugriffsdaten einzelner Besucher aus. In unserem Cloudflare-Konto sehen wir nur zusammengefasste Zahlen, etwa die Zahl der Aufrufe. Wie lange Cloudflare Verbindungsdaten zu Sicherheitszwecken speichert, bestimmt Cloudflare.
 
 ## 3. Übermittlung in die USA
 
-GitHub verarbeitet Daten auch in den USA. GitHub ist unter dem EU-U.S. Data Privacy Framework zertifiziert; für Übermittlungen in Länder ohne Angemessenheitsbeschluss stützt sich GitHub auf die Standardvertragsklauseln der Europäischen Kommission (Art. 45 und 46 DSGVO). Eine Kopie der Garantien erhalten Sie auf Anfrage.
+Cloudflare verarbeitet Daten auch in den USA und in weiteren Ländern seines weltweiten Netzes. Cloudflare ist unter dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss, Art. 45 DSGVO); ergänzend gelten Standardvertragsklauseln der Europäischen Kommission (Art. 46 DSGVO). Eine Kopie der Garantien erhalten Sie auf Anfrage.
 
-## 4. Keine Cookies, kein Tracking, keine externen Inhalte
+## 4. Cookies, Einwilligung und externe Inhalte {#einwilligung}
 
-Diese Website setzt keine Cookies, nutzt keine Analyse-, Reichweiten- oder Werbedienste und erstellt keine Nutzungsprofile. Schriften, Bilder und Stilvorlagen liegen auf demselben Server wie die Seite; sie werden nicht von Dritten wie Google Fonts oder einem Content-Delivery-Netzwerk nachgeladen. Ein Kontaktformular gibt es nicht.
+Diese Website nutzt keine Analyse-, Reichweiten- oder Werbedienste und erstellt keine Nutzungsprofile. Schriften, Bilder und Stilvorlagen liegen auf unserem eigenen Server; sie werden nicht von Dritten wie Google Fonts oder einem Content-Delivery-Netzwerk nachgeladen. Ein Kontaktformular gibt es nicht.
+
+Externe Inhalte laden wir nur mit Ihrer Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO). Derzeit ist das nur die Terminbuchung über Google Kalender auf der Seite Kontakt (Ziffer 8). Ohne Einwilligung sehen Sie dort einen Platzhalter mit einem Link zur Buchungsseite bei Google.
+
+Beim ersten Aufruf fragt ein Hinweis nach Ihrer Wahl. Erst wenn Sie wählen, setzen wir ein einziges eigenes Cookie mit dem Namen „fsg_einwilligung“. Es speichert, welche Kategorien Sie erlaubt oder abgelehnt haben, und das Datum, wird nur an unseren Server übertragen und nach zwölf Monaten gelöscht; danach fragen wir erneut. Dieses Cookie ist unbedingt erforderlich, damit wir Ihre Wahl beachten können (§ 25 Abs. 2 Nr. 2 TDDDG); Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit Art. 7 Abs. 1 DSGVO.
+
+Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen oder ändern, über „Cookie-Einstellungen“ am Ende jeder Seite. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig.
 
 ## 5. Kontakt per E-Mail
 
-Wenn Sie uns über die angegebene Adresse schreiben, verarbeiten wir Ihre Angaben, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist unser berechtigtes Interesse an der Beantwortung (Art. 6 Abs. 1 lit. f DSGVO), bei Anfragen zu einem Vertrag oder dessen Anbahnung Art. 6 Abs. 1 lit. b DSGVO. Unser E-Mail-Dienst ist Google Workspace der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, die als Auftragsverarbeiterin für uns tätig ist.
+Wenn Sie uns über die angegebene Adresse schreiben, verarbeiten wir Ihre Angaben, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist unser berechtigtes Interesse an der Beantwortung (Art. 6 Abs. 1 lit. f DSGVO), bei Anfragen zu einem Vertrag oder dessen Anbahnung Art. 6 Abs. 1 lit. b DSGVO. Unser E-Mail-Dienst ist Google Workspace der Google Cloud EMEA Limited, Irland, die als Auftragsverarbeiterin für uns tätig ist.
 
 ## 6. Ihre Rechte
 
@@ -68,6 +72,22 @@ Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren (Art. 77 DSGV
 
 **Widerruf.** Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, im Gespräch oder per E-Mail an die Adresse in Ziffer 1. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig. Danach löschen wir Aufzeichnung, Transkript und Notizen, soweit wir sie nicht zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen (Art. 17 Abs. 3 lit. e DSGVO). Ihre weiteren Rechte stehen in Ziffer 6.
 
-## 8. Verarbeitung außerhalb der Website
+## 8. Terminbuchung über Google Kalender {#terminbuchung}
 
-Diese Hinweise betreffen den Aufruf dieser Website und Online-Besprechungen nach Ziffer 7. Für Auftraggeber, Interessenten und Projektpartner gelten im Übrigen unsere Datenschutzhinweise, die Sie mit der ersten E-Mail oder auf Anfrage erhalten.
+**Zweck.** Erstgespräche buchen Sie über die Terminbuchung von Google Kalender. Mit Ihrer Einwilligung (Ziffer 4) laden wir sie auf der Seite Kontakt direkt in die Seite; ohne Einwilligung öffnet der Link die Buchungsseite bei Google.
+
+**Daten.** Schon beim Laden der Terminbuchung überträgt Ihr Browser technische Daten wie Ihre IP-Adresse, Browserangaben und die aufrufende Seite an Google; Google kann dabei Cookies setzen. Bei einer Buchung verarbeiten wir Ihren Namen, Ihre E-Mail-Adresse, den gewählten Termin und Ihre freiwilligen Angaben; Sie erhalten eine Bestätigung und eine Einladung zu Google Meet (Ziffer 7).
+
+**Rechtsgrundlage.** Für das Laden der Terminbuchung in unsere Seite Ihre Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO); für die Buchung die Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. unser berechtigtes Interesse an der Terminvereinbarung mit Unternehmen (Art. 6 Abs. 1 lit. f DSGVO).
+
+**Empfänger und Drittland.** Google Kalender ist Teil von Google Workspace; Anbieter ist die Google Cloud EMEA Limited, Irland, als unsere Auftragsverarbeiterin (Art. 28 DSGVO). Für eine Übermittlung an die Google LLC in den USA gilt Ziffer 7 entsprechend.
+
+**Speicherdauer.** Buchungsdaten löschen wir wie die Daten aus Online-Besprechungen (Ziffer 7, Speicherdauer).
+
+## 9. Telefonate {#telefonate}
+
+Rufen Sie uns unter der Geschäftsnummer an, läuft das Gespräch über die Telefonie unseres Kundenverwaltungssystems Close (Elastic Inc., USA), das als unser Auftragsverarbeiter tätig ist. Wir zeichnen den Ton nur mit Ihrer Zustimmung auf, nach der wir zu Beginn fragen (Art. 6 Abs. 1 lit. a DSGVO); sagen Sie nein, stoppen wir die Aufnahme und löschen sie. Aufnahmen werden bei Close in den USA gespeichert und nach 30 Tagen gelöscht. Hinterlassen Sie eine Sprachnachricht, erstellt Close automatisch eine Abschrift; wir löschen beides nach dem Rückruf. Für Übermittlungen in die USA gelten Standardvertragsklauseln der Europäischen Kommission (Art. 46 DSGVO). Ihre Rechte stehen in Ziffer 6.
+
+## 10. Verarbeitung außerhalb der Website
+
+Diese Hinweise betreffen den Aufruf dieser Website, die Terminbuchung, Online-Besprechungen und Telefonate nach den Ziffern 7 bis 9. Für Auftraggeber, Interessenten und Projektpartner gelten im Übrigen unsere Datenschutzhinweise, die Sie mit der ersten E-Mail oder auf Anfrage erhalten.
