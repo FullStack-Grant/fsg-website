@@ -28,9 +28,9 @@ Beim Aufruf der Seiten übermittelt Ihr Browser technisch notwendige Daten an Se
 - Browsertyp, Browserversion und Betriebssystem,
 - die zuvor besuchte Seite (Referrer), soweit Ihr Browser sie übermittelt.
 
-Zweck ist die technische Auslieferung der Seiten sowie die Sicherheit und Stabilität des Dienstes, etwa die Abwehr von Angriffen und Missbrauch. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist insoweit unser Auftragsverarbeiter (Art. 28 DSGVO).
+Zweck ist die technische Auslieferung der Seiten sowie die Sicherheit und Stabilität des Dienstes, etwa die Abwehr von Angriffen und Missbrauch. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist insoweit unser Auftragsverarbeiter (Art. 28 DSGVO); Daten zur Erkennung und Abwehr von Angriffen auf sein Netz verarbeitet Cloudflare auch in eigener Verantwortung (https://www.cloudflare.com/privacypolicy/).
 
-Eine Protokollierung der Zugriffe für uns haben wir ausgeschaltet; wir werten keine Zugriffsdaten einzelner Besucher aus. In unserem Cloudflare-Konto sehen wir nur zusammengefasste Zahlen, etwa die Zahl der Aufrufe. Wie lange Cloudflare Verbindungsdaten zu Sicherheitszwecken speichert, bestimmt Cloudflare.
+Eine Protokollierung der Zugriffe für uns haben wir ausgeschaltet; wir werten keine Zugriffsdaten einzelner Besucher aus. In unserem Cloudflare-Konto sehen wir zusammengefasste Zahlen, etwa die Zahl der Aufrufe, und bei abgewehrten Angriffen Stichproben einzelner Anfragen mit IP-Adresse, die Cloudflare nach 31 Tagen löscht. Wie lange Cloudflare Verbindungsdaten zu Sicherheitszwecken speichert, bestimmt Cloudflare; eine feste Frist nennt Cloudflare nicht.
 
 ## 3. Übermittlung in die USA
 
@@ -38,11 +38,11 @@ Cloudflare verarbeitet Daten auch in den USA und in weiteren Ländern seines wel
 
 ## 4. Cookies, Einwilligung und externe Inhalte {#einwilligung}
 
-Diese Website nutzt keine Analyse-, Reichweiten- oder Werbedienste und erstellt keine Nutzungsprofile. Schriften, Bilder und Stilvorlagen liegen auf unserem eigenen Server; sie werden nicht von Dritten wie Google Fonts oder einem Content-Delivery-Netzwerk nachgeladen. Ein Kontaktformular gibt es nicht.
+Diese Website nutzt keine Analyse-, Reichweiten- oder Werbedienste und erstellt keine Nutzungsprofile. Schriften, Bilder und Stilvorlagen liegen auf demselben Server wie die Seite; sie werden nicht von Dritten wie Google Fonts oder einem Content-Delivery-Netzwerk nachgeladen. Ein Kontaktformular gibt es nicht.
 
 Externe Inhalte laden wir nur mit Ihrer Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO). Derzeit ist das nur die Terminbuchung über Google Kalender auf der Seite Kontakt (Ziffer 8). Ohne Einwilligung sehen Sie dort einen Platzhalter mit einem Link zur Buchungsseite bei Google.
 
-Beim ersten Aufruf fragt ein Hinweis nach Ihrer Wahl. Erst wenn Sie wählen, setzen wir ein einziges eigenes Cookie mit dem Namen „fsg_einwilligung“. Es speichert, welche Kategorien Sie erlaubt oder abgelehnt haben, und das Datum, wird nur an unseren Server übertragen und nach zwölf Monaten gelöscht; danach fragen wir erneut. Dieses Cookie ist unbedingt erforderlich, damit wir Ihre Wahl beachten können (§ 25 Abs. 2 Nr. 2 TDDDG); Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit Art. 7 Abs. 1 DSGVO.
+Beim ersten Aufruf fragt ein Hinweis nach Ihrer Wahl. Erst wenn Sie wählen, setzen wir ein einziges eigenes Cookie mit dem Namen „fsg_einwilligung“. Es speichert, welche Kategorien Sie erlaubt oder abgelehnt haben, und das Datum, wird nur beim Aufruf unserer Seiten übertragen und nach zwölf Monaten gelöscht; danach fragen wir erneut. Dieses Cookie ist unbedingt erforderlich, damit wir Ihre Wahl beachten können (§ 25 Abs. 2 Nr. 2 TDDDG); Rechtsgrundlage ist unser berechtigtes Interesse, Ihre Wahl umzusetzen und Sie nicht bei jedem Aufruf erneut zu fragen (Art. 6 Abs. 1 lit. f DSGVO).
 
 Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen oder ändern, über „Cookie-Einstellungen“ am Ende jeder Seite. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig.
 
@@ -80,13 +80,25 @@ Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren (Art. 77 DSGV
 
 **Rechtsgrundlage.** Für das Laden der Terminbuchung in unsere Seite Ihre Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO); für die Buchung die Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. unser berechtigtes Interesse an der Terminvereinbarung mit Unternehmen (Art. 6 Abs. 1 lit. f DSGVO).
 
-**Empfänger und Drittland.** Google Kalender ist Teil von Google Workspace; Anbieter ist die Google Cloud EMEA Limited, Irland, als unsere Auftragsverarbeiterin (Art. 28 DSGVO). Für eine Übermittlung an die Google LLC in den USA gilt Ziffer 7 entsprechend.
+**Empfänger und Drittland.** Google Kalender ist Teil von Google Workspace; Anbieter ist die Google Cloud EMEA Limited, Irland. Für Ihre Buchungsdaten ist sie unsere Auftragsverarbeiterin (Art. 28 DSGVO). Die technischen Daten beim Laden der Terminbuchung, etwa IP-Adresse und Cookie-Kennungen, verarbeitet Google auch in eigener Verantwortung, etwa für Sicherheit und Betrieb seiner Dienste; dafür gelten die Datenschutzhinweise von Google (https://cloud.google.com/terms/cloud-privacy-notice). Für eine Übermittlung an die Google LLC in den USA gilt Ziffer 7 entsprechend.
 
 **Speicherdauer.** Buchungsdaten löschen wir wie die Daten aus Online-Besprechungen (Ziffer 7, Speicherdauer).
 
 ## 9. Telefonate {#telefonate}
 
-Rufen Sie uns unter der Geschäftsnummer an, läuft das Gespräch über die Telefonie unseres Kundenverwaltungssystems Close (Elastic Inc., USA), das als unser Auftragsverarbeiter tätig ist. Wir zeichnen den Ton nur mit Ihrer Zustimmung auf, nach der wir zu Beginn fragen (Art. 6 Abs. 1 lit. a DSGVO); sagen Sie nein, stoppen wir die Aufnahme und löschen sie. Aufnahmen werden bei Close in den USA gespeichert und nach 30 Tagen gelöscht. Hinterlassen Sie eine Sprachnachricht, erstellt Close automatisch eine Abschrift; wir löschen beides nach dem Rückruf. Für Übermittlungen in die USA gelten Standardvertragsklauseln der Europäischen Kommission (Art. 46 DSGVO). Ihre Rechte stehen in Ziffer 6.
+**Zweck und Daten.** Anrufe über unsere Geschäftsnummer, eingehend wie ausgehend, laufen über die Telefonie unseres Kundenverwaltungssystems Close. Dabei verarbeiten wir Ihre Rufnummer, Zeitpunkt und Dauer des Anrufs und unseren Vermerk zum Gespräch. Mit Ihrer Zustimmung zeichnen wir den Ton auf, damit Ihre Angaben vollständig erfasst werden; eine Abschrift oder KI-Auswertung der Aufnahme erstellen wir nicht.
+
+**Rechtsgrundlage.** Das Gespräch selbst führen wir zur Anbahnung oder Durchführung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. in unserem berechtigten Interesse an der Kommunikation mit Unternehmen (Art. 6 Abs. 1 lit. f DSGVO). Die Aufnahme beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); das gesprochene Wort nehmen wir nur mit Zustimmung der Gesprächsteilnehmer auf (§ 201 StGB).
+
+**Ablauf.** Die Aufnahme startet technisch mit der Verbindung. Im ersten Satz weisen wir darauf hin und fragen alle Gesprächsteilnehmer nach ihrer Zustimmung. Sagt jemand nein, stoppen wir die Aufnahme sofort, löschen sie nach dem Anruf vollständig und führen das Gespräch ohne Aufnahme weiter.
+
+**Sprachnachrichten.** Hinterlassen Sie eine Sprachnachricht, speichert Close den Ton und erstellt automatisch eine Abschrift. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. unser berechtigtes Interesse, Ihr Anliegen zu bearbeiten (Art. 6 Abs. 1 lit. f DSGVO).
+
+**Empfänger und Drittland.** Close (Elastic Inc., USA) ist unser Auftragsverarbeiter (Art. 28 DSGVO) und setzt weitere Dienstleister in den USA ein. Für die Übermittlung in die USA gelten Standardvertragsklauseln der Europäischen Kommission (Art. 46 DSGVO); eine Kopie erhalten Sie auf Anfrage.
+
+**Speicherdauer.** Aufnahmen löscht Close nach 30 Tagen. Rufnummer, Zeitpunkt, Dauer und Vermerk speichern wir wie die übrigen Daten aus Gesprächen (Ziffer 7, Speicherdauer). Aufnahmen bewahren wir länger auf, soweit wir sie zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen (Art. 17 Abs. 3 lit. e DSGVO).
+
+**Freiwilligkeit und Widerruf.** Ihre Zustimmung zur Aufnahme ist freiwillig; ohne sie führen wir das Gespräch ohne Aufnahme. Sie können sie jederzeit mit Wirkung für die Zukunft widerrufen, im Gespräch oder per E-Mail an die Adresse in Ziffer 1. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig. Ihre weiteren Rechte stehen in Ziffer 6.
 
 ## 10. Verarbeitung außerhalb der Website
 

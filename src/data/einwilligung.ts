@@ -15,6 +15,6 @@ export const kategorien: Kategorie[] = [
   {
     id: 'extern',
     titel: 'Externe Inhalte: Google Kalender',
-    text: 'Lädt die Terminbuchung von Google (Google Cloud EMEA Limited, Irland) direkt in die Seite. Dabei überträgt dein Browser unter anderem deine IP-Adresse an Google.',
+    text: 'Lädt die Terminbuchung von Google direkt in die Seite. Dabei überträgt dein Browser unter anderem deine IP-Adresse an Google, auch in die USA, und Google kann Cookies setzen.',
   },
 ];

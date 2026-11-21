@@ -51,7 +51,7 @@ Zu Beginn fragen wir dich, ob wir das Gespräch mit Bild und Ton aufzeichnen, tr
 ## Andere Wege
 
 - **E-Mail:** [info@fullstackgrant.de](mailto:info@fullstackgrant.de)
-- **Telefon:** [+49 40 89741524](tel:+494089741524). Anrufe zeichnen wir nur mit deiner Zustimmung auf, die wir zu Beginn erfragen; Einzelheiten in der Datenschutzerklärung.
+- **Telefon:** [+49 40 89741524](tel:+494089741524). Anrufe zeichnen wir mit deiner Zustimmung auf: Die Aufnahme startet mit der Verbindung, im ersten Satz fragen wir dich; sagst du nein, stoppen und löschen wir sie. Einzelheiten in der [Datenschutzerklärung](/datenschutz/#telefonate).
 - **Anschrift:** siehe [Impressum](/impressum/)
 
 [Vorgehen und Compliance](/vorgehen/) · [Kosten einer Förderberatung](/verguetung/)
