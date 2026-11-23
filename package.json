@@ -43,7 +43,7 @@
     "schema-dts": "2.1.0",
     "typescript": "5.9.3",
     "vnu-jar": "26.11.9",
-    "wrangler": "4.165.0",
+    "wrangler": "4.166.0",
     "xmllint-wasm": "5.3.0"
   },
   "overrides": {
