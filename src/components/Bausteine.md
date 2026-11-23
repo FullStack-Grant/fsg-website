@@ -5,8 +5,8 @@ Neue Komponenten nur mit Felix' Designfreigabe (Design E2 „Kapitalsäule“).
 | Komponente | Zweck | Pflicht auf |
 |---|---|---|
 | `Kopf`, `Fuss` | Kopfzeile mit Navigation und Termin-Button, Fußzeile mit Slogan und Rechtslinks | allen Seiten (über `Basis`) |
-| `Zeile` | Abschnitt im Zeilenraster (Marginalie links, Inhalt rechts) | Start, Kernseiten |
-| `Personenkarte` | benannter Gründer im Hero | Start |
+| `Zeile` | Abschnitt der Startseite: Label über dem Inhalt, volle Breite | Start |
+| `Personenkarte` | Gründer mit Porträt und KI-Vermerk, nicht im Hero | Start (Über uns), Über uns |
 | `Kapitalsaeule` | Finanzierungsmix nach Kapitalkosten mit Compliance-Rahmen | Start, Leistungen |
 | `Zustaendigkeiten` | drei Spalten: FullStack Grant, dein Unternehmen, bewusst nicht bei uns | Start, Vorgehen |
 | `Schritte` | nummerierter Ablauf | Start, Vorgehen |

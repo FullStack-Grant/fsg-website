@@ -56,6 +56,7 @@ export function personKnoten(): Person {
     name: person.name,
     url: person.url,
     jobTitle: person.rolle,
+    image: `${URL_BASIS}${person.bild.basis}.jpg`,
     worksFor: { '@id': ids.organisation },
     ...(person.sameAs.length ? { sameAs: [...person.sameAs] } : {}),
   };

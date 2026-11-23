@@ -29,7 +29,6 @@ Der Fördercheck ist kostenlos. Bei der Forschungszulage gilt: Bescheinigt die B
 | Erstgespräch und Fördercheck | kostenlos |
 | Forschungszulage (BSFZ-Antrag) <!-- T9 ab Fassung 1.1: „Forschungszulage (BSFZ-Antrag, Projektdokumentation, Unterlagenmappe)“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ. Einzelheiten im Angebot. <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
 | Zuschüsse und Grants, Förderkredite | Erfolgshonorar oder festes Honorar, je nach Programm; Einzelheiten im Angebot |
-| Beteiligungskapital (EIC) | Beratungshonorar, nur in Geld, nie in Anteilen |
 | Nach der Bewilligung, EXIST, Zusatzleistungen | Zeithonorar nach Aufwandsschätzung und deiner Freigabe, monatlich mit Tätigkeitsnachweis |
 
 Alle Beträge verstehen sich netto zuzüglich Umsatzsteuer.
@@ -62,4 +61,4 @@ Weil Aufwand und Wert je Programm und Vorhaben sehr unterschiedlich sind. Nach d
 
 **So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
-[Leistungen nach Finanzierungsinstrument](/leistungen/) · [Vorgehen und Compliance](/vorgehen/) · [Häufige Fragen](/wissen/faq/)
+[Leistungen nach Finanzierungsinstrument](/leistungen/) · [Vorgehen und Compliance](/vorgehen/)

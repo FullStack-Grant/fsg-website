@@ -3,8 +3,6 @@
 @import './kit/tokens.css';
 
 :root {
-  --rand: minmax(0, 3fr);
-  --text: minmax(0, 7fr);
   --max: 1180px;
   --rule: 1px solid var(--fsg-color-text);
   color-scheme: light dark;
@@ -72,11 +70,10 @@ p { max-width: 66ch; }
 .cta-zeile { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
 .cta-zeile a.link { font-weight: 600; }
 
-/* Zeilenraster: Marginalie links, Text rechts */
-.zeile { display: grid; grid-template-columns: var(--rand) var(--text); gap: 48px; padding: 72px 0; border-bottom: 1px solid var(--fsg-color-border); }
-.zeile > .rand { padding-top: 6px; }
-.zeile > .rand .nr { font: 700 13px var(--fsg-font-mono); color: var(--fsg-color-accent-text); display: block; margin-bottom: 6px; }
-.zeile > .rand p { margin: 14px 0 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); max-width: 28ch; }
+/* Abschnitte der Startseite: Label über dem Inhalt, volle Breite (Felix 23.11.2026) */
+.zeile { padding: 72px 0; border-bottom: 1px solid var(--fsg-color-border); }
+.zeile > .label { display: block; margin-bottom: 14px; }
+.zeile > p { max-width: 72ch; }
 .zeile.hero { padding-top: 88px; }
 
 /* Fließtext aus Markdown */
@@ -103,10 +100,8 @@ p { max-width: 66ch; }
 .vorschau-band { font: 500 11px/1.4 var(--fsg-font-mono); letter-spacing: 0.08em; text-transform: uppercase; background: var(--fsg-color-bg-subtle); color: var(--fsg-color-text-muted); text-align: center; padding: 6px 16px; border-bottom: 1px solid var(--fsg-color-border); }
 
 @media (max-width: 820px) {
-  .zeile { grid-template-columns: 1fr; gap: 20px; padding: 48px 0; }
+  .zeile { padding: 48px 0; }
   .zeile.hero { padding-top: 48px; }
-  .zeile.hero > aside { order: 2; }
-  .zeile > .rand p { max-width: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

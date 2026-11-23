@@ -7,7 +7,7 @@ import { istExtern } from './seiten';
 const VORLAGEN = [
   '/', '/leistungen/', '/vorgehen/', '/ueber-uns/', '/kontakt/', '/verguetung/',
   '/foerderung/', '/foerderung/programme/', '/foerderung/programme/forschungszulage/', '/foerderung/muster-thema/',
-  '/wissen/', '/wissen/artikel/foerderberatung-aus-finance-sicht/', '/wissen/faq/', '/wissen/glossar/', '/impressum/', '/gibt-es-nicht/',
+  '/wissen/', '/wissen/artikel/foerderberatung-aus-finance-sicht/', '/wissen/glossar/', '/impressum/', '/gibt-es-nicht/',
 ];
 
 test.describe('Visuell', () => {

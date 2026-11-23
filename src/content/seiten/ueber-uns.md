@@ -51,6 +51,6 @@ Ich empfehle nur, was ich fachlich für tragfähig halte, auch mit Blick auf sp�
 
 ## Was ist FullStack Grant?
 
-FullStack Grant UG (haftungsbeschränkt) ist eine Förderberatung mit Sitz in Hamburg, gegründet 2026 von Felix Hinkelmann, der sie als Geschäftsführer führt. FullStack Grant berät Tech-Startups in ganz Deutschland zu steuerlicher Förderung, Zuschüssen und Grants, Förderkrediten und Beteiligungskapital mit Förderantrag (EIC Accelerator), und begleitet auf Wunsch auch nach der Bewilligung.
+FullStack Grant UG (haftungsbeschränkt) ist eine Förderberatung mit Sitz in Hamburg, gegründet 2026 von Felix Hinkelmann, der sie als Geschäftsführer führt. FullStack Grant berät Tech-Startups in ganz Deutschland zu steuerlicher Förderung, Zuschüssen und Grants und Förderkrediten und begleitet auf Wunsch auch nach der Bewilligung.
 
 [Leistungen nach Finanzierungsinstrument](/leistungen/) · [Erstgespräch mit Felix Hinkelmann buchen](/kontakt/)

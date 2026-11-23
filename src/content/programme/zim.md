@@ -101,7 +101,7 @@ Die naheliegende Alternative ist die Forschungszulage: ohne Budgetdeckel und ohn
 |---|---|---|---|
 | [Forschungszulage](/foerderung/programme/forschungszulage/) | steuerliche Zulage, 35 % für KMU, Bemessungsgrundlage bis 12 Mio. € | laufend, jederzeit | §§ 3, 4 FZulG |
 | KMU-innovativ IKT (BMFTR) | Zuschuss in der Regel 50 %, für KMU Bonus möglich; Skizze und Vollantrag, im Wettbewerb | Skizzen jederzeit, nächster Bewertungsstichtag 15.04.2027 | bmftr.bund.de; Förderdatenbank des Bundes |
-| EIC Accelerator (EU) | Zuschuss 70 % bis rund 2,5 Mio. €, dazu Beteiligung 1 bis 10 Mio. € über den EIC Fund | Kurzantrag laufend, nächster Vollantrag 20.01.2027 | eic.ec.europa.eu |
+| EIC Accelerator (EU) | Zuschuss 70 % bis rund 2,5 Mio. € | Kurzantrag laufend, nächster Vollantrag 20.01.2027 | eic.ec.europa.eu |
 | InnoRampUp (IFB Hamburg) | Zuschuss bis 90 %, bis 150.000 €, für junge Tech-Startups in Hamburg | laufend | ifbhh.de |
 | Weitere Landesprogramme | z. B. PROFI (Hamburg), BayTP+ (Bayern), Quoten je Programm | überwiegend laufend | Programmseiten der Länder |
 

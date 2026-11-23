@@ -12,7 +12,7 @@ pruefintervall_tage: 90
 grenzenImText: true
 status: entwurf
 freigabe: "18.11.2026, Felix; T9 19.11.2026"
-antwort: "Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Ein Zuschuss mit höherer Förderquote kann mehr bringen, auch wenn er mehr Arbeit macht. Förderung außer der Forschungszulage heißt für ein Tech-Startup vor allem: Zuschüsse und EU-Grants mit 40 bis 90 % Förderquote, Förderkredite und, beim EIC Accelerator, Beteiligungskapital mit Förderantrag."
+antwort: "Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Ein Zuschuss mit höherer Förderquote kann mehr bringen, auch wenn er mehr Arbeit macht. Förderung außer der Forschungszulage heißt für ein Tech-Startup vor allem: Zuschüsse und EU-Grants mit 40 bis 90 % Förderquote sowie Förderkredite."
 hauptbegriff: Förderung außer der Forschungszulage
 nebenbegriffe: [Förderung kombinieren, Finanzierungsmix Startup, Boutique oder großer Fördermittelberater, Zuschuss oder Darlehen, Förderquote Zuschuss, Kumulierung]
 fragen:
@@ -31,20 +31,19 @@ quellen:
   - {titel: "Förderdatenbank des Bundes, KMU-innovativ IKT", url: "https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BMBF/kmu-innovativ-ikt-30771.html", abruf: 2026-11-18}
   - {titel: "EIC Work Programme 2026, S. 75 f.", url: "https://eic.ec.europa.eu/system/files/2025-11/EIC-Work-Programme-2026.pdf", abruf: 2026-11-17}
   - {titel: "EIC, Meldung vom 16.11.2026", url: "https://eic.ec.europa.eu/news/european-innovation-council-selects-35-deep-tech-companies-its-accelerator-support-2026-11-16_en", abruf: 2026-11-18}
-  - {titel: "EIC Fund Investment Guidelines 2026", url: "https://eic.ec.europa.eu/document/download/6df458e7-fa47-4ace-93fa-86099606bdb0_en?filename=EIC_Fund_Investment_2026_guidelines_f.pdf", abruf: 2026-11-17}
   - {titel: "IFB Hamburg, InnoRampUp", url: "https://www.ifbhh.de/foerderprogramm/innorampup", abruf: 2026-11-17}
   - {titel: "KfW, ERP-Gründerkredit StartGeld (067)", url: "https://www.kfw.de/inlandsfoerderung/Unternehmen/Gr%C3%BCnden-Nachfolgen/F%C3%B6rderprodukte/ERP-Gr%C3%BCnderkredit-Startgeld-(067)/", abruf: 2026-11-17}
   - {titel: "LIFE-Programm (CINEA)", url: "https://cinea.ec.europa.eu/programmes/life_en", abruf: 2026-11-18}
   - {titel: "EIC Accelerator, Programmseite (Vorfinanzierung)", url: "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en", abruf: 2026-11-18}
   - {titel: "ANBest-P, Fassung ab 08.09.2026, Nr. 1.4", url: "https://foerderportal.bund.de/easy/module/profi_formularschrank/download.php?datei1=4708", abruf: 2026-11-18}
   - {titel: "AGVO, Art. 8", url: "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:02014R0651-20230701", abruf: 2026-11-17}
-links_intern: [/leistungen/, /leistungen/#steuerliche-foerderung, /leistungen/#zuschuesse, /leistungen/#foerderkredite, /leistungen/#beteiligungskapital, /foerderung/programme/forschungszulage/, /foerderung/programme/zim/, /wissen/artikel/foerderberatung-aus-finance-sicht/, /kontakt/]
+links_intern: [/leistungen/, /leistungen/#steuerliche-foerderung, /leistungen/#zuschuesse, /leistungen/#foerderkredite, /foerderung/programme/forschungszulage/, /foerderung/programme/zim/, /wissen/artikel/foerderberatung-aus-finance-sicht/, /kontakt/]
 ---
 
 
 ## Welche Förderung gibt es außer der Forschungszulage?
 
-Außer der Forschungszulage gibt es drei weitere Ebenen im Finanzierungsmix: Zuschüsse und Grants, geförderte Kredite, bei Bedarf mit einer Bürgschaft, sowie Beteiligungskapital mit Förderantrag. Die Quoten unterscheiden sich deutlich (Stand 17.11.2026, kleines Unternehmen unter 50 Beschäftigten):
+Außer der Forschungszulage gibt es zwei weitere Ebenen im Finanzierungsmix: Zuschüsse und Grants sowie geförderte Kredite, bei Bedarf mit einer Bürgschaft. Die Quoten unterscheiden sich deutlich (Stand 17.11.2026, kleines Unternehmen unter 50 Beschäftigten):
 
 | Programm | Art | Quote | Obergrenze | Wettbewerb | Status |
 |---|---|---|---|---|---|
@@ -54,9 +53,8 @@ Außer der Forschungszulage gibt es drei weitere Ebenen im Finanzierungsmix: Zus
 | EIC Accelerator, Grant | Zuschuss (EU) | 70 % | bis 2,5 Mio. € | ja | laufend |
 | InnoRampUp (IFB Hamburg) | Zuschuss | bis 90 % | 150.000 € | ja | laufend |
 | ERP-Gründerkredit StartGeld (KfW) | Förderkredit | Kredit, KfW trägt 80 % des Risikos | 200.000 € | nein | laufend |
-| EIC Accelerator, Investment | Beteiligungskapital | Anteile, in der Regel 10 bis 20 % | 1 bis 10 Mio. € | ja | laufend |
 
-Quellen: §§ 3, 4 FZulG; BT-Drs. 21/7999, S. 134; ZIM-Richtlinie Nr. 5.2.1, 5.4.1; Förderdatenbank des Bundes, KMU-innovativ IKT; EIC Work Programme 2026, S. 75 f.; EIC Fund Investment Guidelines 2026; IFB Hamburg; KfW 067. Details zum ZIM auf der [Programmseite ZIM](/foerderung/programme/zim/).
+Quellen: §§ 3, 4 FZulG; BT-Drs. 21/7999, S. 134; ZIM-Richtlinie Nr. 5.2.1, 5.4.1; Förderdatenbank des Bundes, KMU-innovativ IKT; EIC Work Programme 2026, S. 75 f.; IFB Hamburg; KfW 067. Details zum ZIM auf der [Programmseite ZIM](/foerderung/programme/zim/).
 
 Die Forschungszulage hat zwei Stärken, die kein Zuschuss hat: Rechtsanspruch und kein Budgetdeckel. Ihre Grenze: Sie fördert vor allem Personal. Material, Prototypen, Markteinführung und vieles, was ein Tech-Startup im ersten Produktjahr ausgibt, deckt sie nicht. Genau dort setzen Zuschüsse an.
 
@@ -77,7 +75,6 @@ Wir ordnen Förderung nach Kapitalkosten, wie jede andere Finanzierung: erst, wo
 1. **Steuerliche Förderung:** Forschungszulage auf das, was sie abdeckt. Kein Wettbewerb, keine Verwässerung. [Leistung](/leistungen/#steuerliche-foerderung)
 2. **Zuschüsse und Grants:** für Vorhaben und Kosten, bei denen die Quote höher liegt oder die Zulage nicht greift. [Leistung](/leistungen/#zuschuesse)
 3. **Förderkredite:** für Vorfinanzierung und Investitionen, oft günstiger als ein reiner Bankkredit; eine Bürgschaft kommt dazu, wenn die Hausbank sie verlangt. [Leistung](/leistungen/#foerderkredite)
-4. **Beteiligungskapital mit Förderantrag:** beim EIC Accelerator, wenn ein Grant allein nicht reicht. [Leistung](/leistungen/#beteiligungskapital)
 
 **Kombinieren geht, aber nicht doppelt.** Forschungszulage und Zuschuss sind für dasselbe Vorhaben möglich, nicht für dieselben Kosten (§ 7 FZulG). Was in einen Zuschuss eingeflossen ist, fällt ganz aus der Bemessungsgrundlage der Zulage; der Rest bleibt zulagefähig. Das BMF zeigt es an einem Beispiel: Der Zuschuss deckt einen Teil der Personalkosten, die übrigen Löhne und die Auftragsforschung gehen in die Zulage (BMF-Schreiben vom 27.10.2026, Rn. 157, 161). Beihilferechtlich gilt dasselbe Prinzip: Verschiedene Beihilfen für verschiedene Kosten sind kumulierbar, für dieselben Kosten nur bis zur Höchstintensität (AGVO Art. 8 Abs. 3). Manche Programme sind strenger: ZIM schließt andere FuE-Förderung für dasselbe Projekt aus (Richtlinie Nr. 4.5.2).
 

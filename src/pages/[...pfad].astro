@@ -9,6 +9,7 @@ import Vergleichstabelle from '../components/Vergleichstabelle.astro';
 import Faq from '../components/Faq.astro';
 import Impressum from '../components/Impressum.astro';
 import Terminbuchung from '../components/Terminbuchung.astro';
+import Personenkarte from '../components/Personenkarte.astro';
 import { alleEintraege, pfadVon, datumDe, type Eintrag } from '../lib/inhalte';
 import * as ld from '../lib/jsonld';
 
@@ -41,7 +42,7 @@ const kurz = (d.title.split(':')[0] ?? d.title).trim();
 const segmente = pfad.split('/').filter(Boolean);
 const krumen = [{ name: 'Start', pfad: '/' }];
 // Zwischenstufen nur, wenn es dort eine Seite gibt (z. B. kein Hub /wissen/artikel/; Befund WEB T11).
-const HUBS = new Set(['/leistungen/', '/foerderung/', '/foerderung/programme/', '/wissen/', '/wissen/faq/', '/wissen/glossar/']);
+const HUBS = new Set(['/leistungen/', '/foerderung/', '/foerderung/programme/', '/wissen/', '/wissen/glossar/']);
 segmente.forEach((s, i) => {
   const p = `/${segmente.slice(0, i + 1).join('/')}/`;
   const letzte = i === segmente.length - 1;
@@ -127,6 +128,7 @@ if (eintrag.collection === 'referenz' && eintrag.data.typ === 'faq' && eintrag.b
   )}
   {eintrag.collection === 'recht' && eintrag.data.typ === 'impressum' && <Impressum slot="kopf" />}
   {eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'kontakt' && <Terminbuchung slot="kopf" />}
+  {eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'profil' && <Personenkarte slot="kopf" />}
 
   <Content />
 

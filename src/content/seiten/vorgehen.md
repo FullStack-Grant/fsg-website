@@ -90,4 +90,4 @@ Ein Förderantrag muss auch Jahre später noch erklärbar sein. Deshalb legen wi
 
 **So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
-[Leistungen nach Finanzierungsinstrument](/leistungen/) · [Kosten einer Förderberatung](/verguetung/) · [Forschungszulage: Zuständigkeiten](/foerderung/programme/forschungszulage/) · [Häufige Fragen](/wissen/faq/)
+[Leistungen nach Finanzierungsinstrument](/leistungen/) · [Kosten einer Förderberatung](/verguetung/) · [Forschungszulage: Zuständigkeiten](/foerderung/programme/forschungszulage/)

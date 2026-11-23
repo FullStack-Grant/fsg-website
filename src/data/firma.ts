@@ -32,4 +32,13 @@ export const person = {
   url: `${firma.url}/ueber-uns/`,
   // LinkedIn-Profil live und am 17.11.2026 angeglichen (T14 sameAs-Liste).
   sameAs: ['https://www.linkedin.com/in/felix-hinkelmann'] as string[],
+  // Porträt (Felix 23.11.2026): KI-bearbeitetes Foto, Original in Meine Ablage 20_AREAS\00_Identifikation\60_Fotos\
+  // 2026-11-23_Beraterbilder (navy-weiss_blur_v1), Webfassung 480×600 in public/bilder/ als AVIF, WebP, JPEG.
+  bild: {
+    basis: '/bilder/felix-hinkelmann',
+    alt: 'Porträt von Felix Hinkelmann im dunkelblauen Sakko',
+    breite: 480,
+    hoehe: 600,
+    vermerk: 'Foto mit KI bearbeitet',
+  },
 } as const;

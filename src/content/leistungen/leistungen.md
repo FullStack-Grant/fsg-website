@@ -16,7 +16,7 @@ fragen:
   - "Was kostet mich die Förderung intern an Zeit?"
   - "Was ist der Fördercheck?"
   - "Was macht FullStack Grant nicht?"
-antwort: "FullStack Grant berät Tech-Startups zu allen Ebenen des Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite und Bürgschaften, Beteiligungskapital nur mit Förderantrag (EIC Accelerator). Wir bereiten Anträge und Nachweise vor, eingereicht wird von deinem Unternehmen. Der Einstieg ist ein kostenloser Fördercheck."
+antwort: "FullStack Grant berät Tech-Startups zu allen Ebenen des Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite und Bürgschaften. Beteiligungskapital gehört nicht zu unserem Angebot. Wir bereiten Anträge und Nachweise vor, eingereicht wird von deinem Unternehmen. Der Einstieg ist ein kostenloser Fördercheck."
 registerModul: ["B0", "B1", "B2", "B3", "B4", "B5"]
 programme: ["forschungszulage", "zim"]
 ---
@@ -29,7 +29,6 @@ programme: ["forschungszulage", "zim"]
 | 01 Steuerliche Förderung | Forschungszulage | nichts an Kapital | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
 | 02 Zuschüsse und Grants | ZIM, Landesprogramme, EIC Accelerator, Horizon Europe | Eigenanteil, Nachweispflichten | Auswahl, Skizze, Antrag, Finanzplan | Erfolgshonorar oder festes Honorar, je nach Programm |
 | 03 Förderkredite und Bürgschaften | Programme von KfW und Landesförderbanken | Zins und Tilgung | Einordnung, Unterlagen für Hausbank und Förderbank | Erfolgshonorar oder festes Honorar, je nach Programm |
-| 04 Beteiligungskapital mit Förderantrag | Equity-Teil des EIC Accelerator | Anteile an den EIC Fund | EIC-Antrag mit Equity-Teil | Beratungshonorar, nur in Geld |
 | Rahmen: Nach der Bewilligung | alle Zuschüsse und Grants | Belege, Fristen, Einreichung | auf Wunsch Nachweise, Änderungsanträge, Durchsicht vor Prüfungen des Fördergebers, ohne Testat | nach Aufwand |
 
 Einzelheiten zur Vergütung stehen auf der Seite [Kosten einer Förderberatung](/verguetung/) und im Angebot.
@@ -117,17 +116,9 @@ Förderkredite von KfW und Landesförderbanken sind Fremdkapital zu Förderkondi
 
 **Grenze:** nur für Unternehmen. Verträge mit Bank oder Förderbank verhandeln wir nicht, Kreditgeber zahlen uns nichts.
 
-## 04 Beteiligungskapital mit Förderantrag: nur EIC {#beteiligungskapital}
+## Nicht bei uns: Beteiligungskapital und VC-Fundraising {#beteiligungskapital}
 
-Beteiligungskapital gehört bei uns nur dorthin, wo es an einem Förderantrag hängt: zum Equity-Teil des EIC Accelerator. Er wird zusammen mit dem Grant beantragt; investiert wird über den EIC Fund.
-
-**Wir bereiten vor**
-- den EIC-Antrag mit Equity-Teil
-- nach Vereinbarung und nach Aufwand Zuarbeit für dich in der Prüfung durch den EIC Fund, ohne eigenen Kontakt zum Fonds
-
-**Grenze:** Wir vermitteln nicht, haben keinen Investorenkontakt und verhandeln keine Beteiligungsverträge. Honorar nur in Geld, nie in Anteilen.
-
-**Nicht bei uns:** VC-Fundraising, auch bei öffentlichen Fonds wie dem HTGF.
+Beteiligungskapital gehört nicht zu unserem Angebot, auch nicht bei öffentlichen Fonds wie dem HTGF. Wir vermitteln nicht, haben keinen Investorenkontakt und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor den Anteilen: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst.
 
 ## Nach der Bewilligung: Nachweise, Änderungsanträge, Durchsicht vor Prüfungen {#nach-der-bewilligung}
 
@@ -168,7 +159,7 @@ Erfahrungswerte, keine Zusage: Für einen BSFZ-Antrag rechnen Teams meist mit 6 
 - Steuerberatung und den Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
 - Einreichen in deinem Namen oder Vertretung gegenüber Behörden
 - Mittelabrufe, Testate und Stundennachweise
-- VC-Fundraising, auch beim HTGF
+- Beteiligungskapital und VC-Fundraising, auch beim HTGF
 - eine Garantie, dass bewilligt wird
 
 **So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)

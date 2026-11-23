@@ -53,7 +53,7 @@ Bei der Ibeo Automotive Systems GmbH in Hamburg habe ich ZIM-Projekte in der Abw
 
 Nein. Ein Finance-Hintergrund macht noch keinen guten Förderberater. Wer fragt, ob ehemalige Startup-CFOs gute Fördermittelberater sind, bekommt deshalb zu Recht ein „nicht automatisch“ zu hören. Vier Einwände halte ich für berechtigt, und so gehe ich mit ihnen um:
 
-**1. Programmbreite.** Wer Förderung nur beim eigenen Arbeitgeber gemacht hat, kennt oft nur dessen Programme. Deshalb prüfen wir im Fördercheck alle Ebenen deines Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite, zu denen eine Bürgschaft kommt, wenn die Hausbank sie verlangt, und Beteiligungskapital nur mit Förderantrag beim EIC Accelerator. Programmzahlen nennen wir mit Quelle und Stand.
+**1. Programmbreite.** Wer Förderung nur beim eigenen Arbeitgeber gemacht hat, kennt oft nur dessen Programme. Deshalb prüfen wir im Fördercheck alle Ebenen deines Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants und Förderkredite, zu denen eine Bürgschaft kommt, wenn die Hausbank sie verlangt. Programmzahlen nennen wir mit Quelle und Stand.
 
 **2. Zuwendungsrecht.** Nebenbestimmungen, Mittelabruf, Verwendungsnachweis und Änderungsantrag folgen eigenen Regeln. Die habe ich in der ZIM-Abwicklung auf Unternehmensseite gelernt. Wo eine Frage zur Rechtsfrage wird, etwa bei einem drohenden Widerruf, gehört sie zu einer Anwältin oder einem Anwalt. Rechtsberatung leisten wir nicht.
 

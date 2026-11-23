@@ -1,24 +1,15 @@
 ---
-// Abschnitt im Zeilenraster: Marginalie (Nummer, Label, Kurztext) links, Inhalt rechts.
-// Marginalie als div, nicht aside: mehrere unbenannte complementary-Landmarks je Seite (Befund WEB T11, html-validate unique-landmark).
+// Abschnitt der Startseite: kleines Label über dem Inhalt, Inhalt in voller Breite.
+// Ohne Nummern und ohne Marginalspalte (Felix 23.11.2026: Spalte nahm zu viel Breite).
 interface Props {
-  nr?: string;
   label?: string;
-  notiz?: string;
   id?: string;
   ueberschriftId?: string;
   hero?: boolean;
 }
-const { nr, label, notiz, id, ueberschriftId, hero = false } = Astro.props;
+const { label, id, ueberschriftId, hero = false } = Astro.props;
 ---
 <section class:list={['zeile', { hero }]} id={id} aria-labelledby={ueberschriftId}>
-  <div class="rand">
-    {nr && <span class="nr">{nr}</span>}
-    {label && <span class="label">{label}</span>}
-    {notiz && <p>{notiz}</p>}
-    <slot name="rand" />
-  </div>
-  <div>
-    <slot />
-  </div>
+  {label && <span class="label">{label}</span>}
+  <slot />
 </section>
