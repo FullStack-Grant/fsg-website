@@ -1,5 +1,5 @@
 ---
-// Inhaltsseite: Brotkrumen, H1, Byline, Antwortblock, Kopfteil (Steckbrief, Vergleich), Text, Compliance, Quellen, CTA.
+// Inhaltsseite: Seitenkopf als Ink-Band (Brotkrumen, H1; Design K3b), darunter Byline, Antwortblock, Kopfteil (Steckbrief, Vergleich), Text, Compliance, Quellen, CTA.
 // Die Templates (Leistung, Artikel, Programm, Thema, Region, FAQ, Glossar, Rechtliches, Seite) setzen nur die Schalter.
 import Basis from './Basis.astro';
 import Brotkrumen from '../components/Brotkrumen.astro';
@@ -31,25 +31,33 @@ const ctaProps = typeof cta === 'object' ? cta : {};
 ---
 <Basis titel={titel} beschreibung={beschreibung} pfad={pfad} status={status} ogTyp={ogTyp}
   jsonld={[...jsonld, brotkrumen(krumen)]}>
-  <Brotkrumen teile={krumen} />
-  <article class="inhalt">
-    <header>
-      <h1 class="klein">{h1}</h1>
-      <slot name="kopf-oben" />
-      {antwort && <Antwortblock text={antwort} />}
-      <slot name="kopf" />
+  <article>
+    <header class="seitenkopf auf-ink">
+      <div class="wrap">
+        <Brotkrumen teile={krumen} />
+        <h1 class="klein">{h1}</h1>
+      </div>
     </header>
-    <div class="prosa">
-      <slot />
+    <div class="wrap">
+      <div class="inhalt">
+        <div class="kopfteil">
+          <slot name="kopf-oben" />
+          {antwort && <Antwortblock text={antwort} />}
+          <slot name="kopf" />
+        </div>
+        <div class="prosa">
+          <slot />
+        </div>
+        <slot name="nach-text" />
+        {compliance && <ComplianceHinweis />}
+        <Quellen quellen={quellen} />
+      </div>
     </div>
-    <slot name="nach-text" />
-    {compliance && <ComplianceHinweis />}
-    <Quellen quellen={quellen} />
   </article>
-  {cta && <CtaTermin {...ctaProps} />}
+  {cta && <div class="wrap"><CtaTermin {...ctaProps} /></div>}
 </Basis>
 
 <style>
-  .inhalt { max-width: 780px; padding: 40px 0 0; }
-  header { margin-bottom: 8px; }
+  .inhalt { max-width: 780px; }
+  .kopfteil { margin-bottom: 8px; }
 </style>

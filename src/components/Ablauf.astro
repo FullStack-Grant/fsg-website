@@ -1,0 +1,146 @@
+---
+// Ablauf (Design K3b, ersetzt die Kapitalsäule E2): Finanzierungsmix als Ablauf in Stationen, in der Reihenfolge der
+// Prüfung, ohne Kostenskala. Achse mit Pfeil, Schiene mit Knoten (einzige Ziffern), Station 1 gefüllt mit „Zuerst prüfen“,
+// weitere Stationen gleich getönt, damit nichts nach Rang aussieht. Was nicht bei uns liegt (Felix 23.11.2026:
+// Beteiligungskapital), steht schraffiert hinter einer gestrichelten Trennlinie ohne Schienenanschluss.
+// Desktop: CSS-Subgrid, Köpfe gleich hoch; Tablet und mobil läuft die Schiene senkrecht links.
+import Icon, { type IconName } from './Icon.astro';
+
+export interface Ebene {
+  kurz: string;
+  titel: string;
+  anker: string;
+  /** Aus der Kapitalsäule übernommen, im Ablauf nicht angezeigt. */
+  kosten?: 1 | 2 | 3 | 4;
+  text: string;
+  zuerst?: boolean;
+  zeilen: { label: string; wert: string; art?: 'gold' | 'nicht' }[];
+  tags?: string[];
+}
+export interface Ausgeschlossen { kurz: string; titel: string; text: string; anker?: string }
+interface Props { ebenen: Ebene[]; ausgeschlossen?: Ausgeschlossen }
+const { ebenen, ausgeschlossen } = Astro.props;
+const ICONS: IconName[] = ['prozent', 'muenzen', 'bank'];
+---
+<div class:list={['ablauf', { 'mit-aus': !!ausgeschlossen }]}>
+  <p class="achse" aria-hidden="true"><span class="achse-text">Reihenfolge im Fördercheck</span><span class="achse-linie"></span><Icon name="pfeil" class="achse-pfeil" /></p>
+
+  {ebenen.map((e, i) => (
+    <div class:list={['station', { erste: i === 0, verbunden: i < ebenen.length - 1, letzte: i === ebenen.length - 1 }]} id={e.anker}>
+      <div class="schiene" aria-hidden="true"><span class="knoten">{i + 1}</span></div>
+      <div class="st-kopf">
+        <div class="st-kopf-oben">
+          <span class="kachel"><Icon name={ICONS[i] ?? 'dokument'} /></span>
+          {e.zuerst && <span class="chip">Zuerst prüfen</span>}
+        </div>
+        <h3>{e.titel}</h3>
+      </div>
+      <div class="karte">
+        <p class="text">{e.text}</p>
+        <dl>
+          {e.zeilen.map((z) => (
+            <div class:list={{ compliance: z.art === 'gold', nicht: z.art === 'nicht' }}>
+              <dt>{z.art === 'gold' && <Icon name="schild" />}{z.label}</dt>
+              <dd>{z.wert}</dd>
+            </div>
+          ))}
+        </dl>
+        {e.tags && <p class="tags">{e.tags.map((t) => <span>{t}</span>)}</p>}
+      </div>
+    </div>
+  ))}
+
+  {ausgeschlossen && (
+    <div class="station aus" id={ausgeschlossen.anker}>
+      <div class="schiene" aria-hidden="true"><span class="knoten knoten-nicht"><Icon name="verbot" /></span></div>
+      <div class="st-kopf">
+        <div class="st-kopf-oben">
+          <span class="kachel kachel-leer"><Icon name="anteile" /></span>
+        </div>
+        <p class="nicht-label"><Icon name="verbot" />Nicht bei uns</p>
+      </div>
+      <div class="karte">
+        <h3>{ausgeschlossen.titel}</h3>
+        <p>{ausgeschlossen.text}</p>
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+  .ablauf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto 1fr; column-gap: 16px; }
+  .ablauf.mit-aus { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 0.82fr); }
+  .achse { grid-column: 1 / 4; grid-row: 1; display: flex; align-items: center; gap: 12px; margin: 0 0 18px; padding-left: 20px; color: var(--ui-subtle); max-width: none; }
+  .achse-text { font: 500 0.75rem/1 var(--fsg-font-mono); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+  .achse-linie { flex: 1; height: 0; border-top: 1.5px solid var(--ui-rand-leer); }
+  .achse :global(.achse-pfeil) { width: 18px; height: 18px; margin-left: -14px; color: var(--ui-rand-leer); }
+
+  .station { grid-row: 2 / span 3; display: grid; grid-template-rows: subgrid; min-width: 0; }
+  .schiene { position: relative; display: flex; align-items: center; height: 56px; padding-left: 20px; margin-bottom: 14px; }
+  .station.verbunden .schiene::after { content: ''; position: absolute; left: 40px; top: 27px; width: calc(100% + 16px); border-top: 2px solid var(--ui-goldlinie); }
+  .knoten { position: relative; z-index: 1; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+            font: 700 1rem/1 var(--fsg-font-sans); background: var(--fsg-color-bg); color: var(--ui-gold-text); box-shadow: inset 0 0 0 2px var(--ui-goldlinie); }
+  .erste .knoten { background: var(--fsg-gold-400); color: var(--fsg-ink); box-shadow: 0 0 0 7px rgb(255 176 32 / 0.22); }
+  .knoten-nicht { color: var(--ui-subtle); box-shadow: inset 0 0 0 1.5px var(--ui-rand-leer);
+                  background: repeating-linear-gradient(135deg, var(--fsg-color-bg) 0 5px, var(--ui-schraffur) 5px 7px); }
+  .knoten-nicht :global(.ic) { width: 18px; height: 18px; }
+
+  .st-kopf { display: flex; flex-direction: column; justify-content: space-between; gap: 16px; padding: 18px 20px 20px; border-radius: var(--ui-radius-karte) var(--ui-radius-karte) 0 0; background: var(--ui-st-ton); }
+  .st-kopf-oben { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .st-kopf h3 { font-size: 1.375rem; margin: 0; }
+  .erste .st-kopf { background: var(--fsg-gold-400); color: var(--fsg-ink); }
+  .kachel { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; flex: none; background: var(--ui-kachel-weiss); color: var(--fsg-color-text); }
+  .erste .kachel { background: rgb(255 255 255 / 0.72); color: var(--fsg-ink); }
+  .kachel-leer { background: transparent; color: var(--ui-subtle); box-shadow: inset 0 0 0 1.5px var(--ui-rand-leer); }
+  .chip { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: var(--ui-radius-pille); background: var(--fsg-ink); color: var(--fsg-paper); font: 500 0.75rem/1 var(--fsg-font-sans); letter-spacing: 0.01em; white-space: nowrap; }
+
+  .karte { background: var(--ui-flaeche-gold-1); border-radius: 0 0 var(--ui-radius-karte) var(--ui-radius-karte); padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 16px; font-size: 0.9375rem; }
+  .karte p { margin: 0; }
+  .karte .text { color: var(--ui-text-muted); }
+  .erste .karte { box-shadow: inset 0 0 0 2px var(--fsg-gold-400); }
+  dl { margin: 0; display: grid; gap: 12px; }
+  dl div { background: var(--ui-karte); border-radius: 12px; padding: 12px 14px; }
+  dt { font: 500 0.6875rem/1.4 var(--fsg-font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ui-subtle); display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  dd { margin: 0; line-height: 1.5; }
+  .compliance { background: var(--ui-flaeche-gold-2); }
+  .compliance dt { color: var(--ui-gold-text); }
+  .compliance dt :global(.ic) { width: 15px; height: 15px; }
+  .nicht dd { color: var(--ui-text-muted); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto !important; }
+  .tags span { font: 500 0.6875rem/1 var(--fsg-font-mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 9px; border-radius: var(--ui-radius-pille); background: var(--ui-flaeche-gold-3); }
+
+  /* Nicht bei uns: hinter der gestrichelten Trennlinie, schraffiert, ohne Schienenanschluss */
+  .aus { margin-left: 26px; position: relative; }
+  .aus::before { content: ''; position: absolute; left: -21px; top: -44px; bottom: 0; border-left: 2px dashed var(--ui-rand-leer); }
+  .aus .st-kopf { justify-content: flex-start; background: repeating-linear-gradient(135deg, transparent 0 9px, var(--ui-schraffur) 9px 11px); box-shadow: inset 0 0 0 1.5px var(--ui-rand-leer); }
+  .aus .karte { background: var(--ui-flaeche-neutral); align-self: start; }
+  .aus .karte h3 { font-size: 1.125rem; color: var(--ui-text-muted); margin: 0; }
+  .aus .karte p { color: var(--ui-subtle); }
+  .nicht-label { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin: 18px 0 0; padding: 6px 10px; border-radius: var(--ui-radius-pille);
+                 background: var(--ui-karte); box-shadow: inset 0 0 0 1px var(--ui-rand-leer);
+                 font: 500 0.75rem/1.3 var(--fsg-font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ui-subtle); }
+  .nicht-label :global(.ic) { width: 16px; height: 16px; }
+
+  /* Tablet und mobil: Schiene senkrecht links */
+  @media (max-width: 1080px) {
+    .ablauf, .ablauf.mit-aus { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+    .achse { grid-column: 1; grid-row: auto; padding-left: 0; }
+    .achse-linie { display: none; }
+    .achse :global(.achse-pfeil) { margin-left: 0; transform: rotate(90deg); }
+    .station { grid-row: auto; grid-template-rows: auto 1fr; grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; padding-bottom: 20px; }
+    .schiene { grid-column: 1; grid-row: 1 / span 2; height: auto; padding-left: 0; margin-bottom: 0; align-items: flex-start; }
+    .station.verbunden .schiene::after, .station.letzte .schiene::after { content: ''; left: 19px; top: 40px; width: 0; height: calc(100% - 20px); border-top: 0; border-left: 2px solid var(--ui-goldlinie); }
+    .station.letzte .schiene::after { border-left-style: dashed; border-left-color: var(--ui-rand-leer); }
+    .st-kopf { grid-column: 2; grid-row: 1; }
+    .karte { grid-column: 2; grid-row: 2; }
+    .aus { margin-left: 0; padding-top: 4px; }
+    .aus::before { display: none; }
+    .aus .schiene::after { display: none; }
+  }
+  @media (max-width: 720px) {
+    .station { column-gap: 12px; }
+    .st-kopf { padding: 16px 16px 18px; }
+    .st-kopf h3 { font-size: 1.25rem; }
+    .karte { padding: 18px 16px 20px; }
+  }
+</style>

@@ -26,9 +26,9 @@ programme: ["forschungszulage", "zim"]
 | Ebene | Typische Programme | Du gibst ab | Wir bereiten vor | Vergütung |
 |---|---|---|---|---|
 | Vorab: Fördercheck | alle | 20 Minuten und deine Eckdaten | Programmauswahl und Reihenfolge, schriftlich | kostenlos |
-| 01 Steuerliche Förderung | Forschungszulage | nichts an Kapital | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
-| 02 Zuschüsse und Grants | ZIM, Landesprogramme, EIC Accelerator, Horizon Europe | Eigenanteil, Nachweispflichten | Auswahl, Skizze, Antrag, Finanzplan | Erfolgshonorar oder festes Honorar, je nach Programm |
-| 03 Förderkredite und Bürgschaften | Programme von KfW und Landesförderbanken | Zins und Tilgung | Einordnung, Unterlagen für Hausbank und Förderbank | Erfolgshonorar oder festes Honorar, je nach Programm |
+| Steuerliche Förderung | Forschungszulage | nichts an Kapital | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
+| Zuschüsse und Grants | ZIM, Landesprogramme, EIC Accelerator, Horizon Europe | Eigenanteil, Nachweispflichten | Auswahl, Skizze, Antrag, Finanzplan | Erfolgshonorar oder festes Honorar, je nach Programm |
+| Förderkredite und Bürgschaften | Programme von KfW und Landesförderbanken | Zins und Tilgung | Einordnung, Unterlagen für Hausbank und Förderbank | Erfolgshonorar oder festes Honorar, je nach Programm |
 | Rahmen: Nach der Bewilligung | alle Zuschüsse und Grants | Belege, Fristen, Einreichung | auf Wunsch Nachweise, Änderungsanträge, Durchsicht vor Prüfungen des Fördergebers, ohne Testat | nach Aufwand |
 
 Einzelheiten zur Vergütung stehen auf der Seite [Kosten einer Förderberatung](/verguetung/) und im Angebot.
@@ -42,7 +42,7 @@ Der Fördercheck zeigt dir, welche Programme zu Vorhaben, Unternehmensgröße un
 - **Was er nicht ist:** keine Prognose für deinen Einzelfall, keine Rechtsberatung, keine Steuerberatung, kein Vertrag. Bevor du uns Finanz- oder Projektdaten gibst, schließen wir eine Vertraulichkeitsvereinbarung.
 - **Ehrlich:** Passt ein Programm nicht zu dir, sagen wir es im Fördercheck, auch wenn wir dann nichts verdienen.
 
-## 01 Steuerliche Förderung: BSFZ-Antrag für die Forschungszulage {#steuerliche-foerderung}
+## Steuerliche Förderung: BSFZ-Antrag für die Forschungszulage {#steuerliche-foerderung}
 
 Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind, und sie kostet kein Kapital. FullStack Grant bereitet deinen Antrag im Bescheinigungsverfahren bei der Bescheinigungsstelle Forschungszulage (BSFZ) vor. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
 
@@ -79,7 +79,7 @@ In diesem Beispiel vergehen vom Auftakt bis zur Auszahlung rund sechs bis neun M
 
 [Forschungszulage für Startups: Voraussetzungen, Höhe, Ablauf](/foerderung/programme/forschungszulage/)
 
-## 02 Zuschüsse und Grants: höhere Förderquote, mehr Aufwand {#zuschuesse}
+## Zuschüsse und Grants: höhere Förderquote, mehr Aufwand {#zuschuesse}
 
 Zuschüsse und Grants von Bund, Ländern und EU fördern einen Teil deiner Projektkosten, ohne dass du Anteile abgibst. Dafür konkurrierst du um ein Budget, trägst einen Eigenanteil und musst die Verwendung nachweisen.
 
@@ -103,7 +103,7 @@ Zuschüsse und Grants von Bund, Ländern und EU fördern einen Teil deiner Proje
 
 [ZIM Förderung 2026](/foerderung/programme/zim/)
 
-## 03 Förderkredite und Bürgschaften für Startups {#foerderkredite}
+## Förderkredite und Bürgschaften für Startups {#foerderkredite}
 
 Förderkredite von KfW und Landesförderbanken sind Fremdkapital zu Förderkonditionen; Bürgschaften und Haftungsfreistellungen senken das Risiko deiner Hausbank. Du gibst keine Anteile ab, zahlst aber Zins und Tilgung.
 
@@ -147,7 +147,7 @@ Die Phase bestimmt, welche Ebene zuerst trägt. Welche Programme im Einzelfall p
 
 ## In welcher Reihenfolge prüft man Förderung?
 
-Nach Kapitalkosten: erst, worauf du Anspruch hast (Forschungszulage), dann Zuschüsse, dann Förderkredite, Anteile zuletzt. So bleibt die Verwässerung so gering wie möglich, und jede Ebene finanziert, was die vorherige nicht abdeckt.
+Nach Kapitalkosten: erst, worauf du Anspruch hast (Forschungszulage), dann Zuschüsse, dann Förderkredite. So finanziert jede Ebene, was die vorherige nicht abdeckt; Beteiligungskapital gehört nicht zu unserem Angebot.
 
 ## Was kostet dich die Förderung intern an Zeit?
 

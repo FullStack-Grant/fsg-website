@@ -1,12 +1,13 @@
 ---
 // Personenkarte: benannter Gründer mit Porträt, nur im Abschnitt „Über uns“ der Startseite und auf /ueber-uns/
 // (Felix 23.11.2026: nicht im Hero). Porträt KI-bearbeitet, deshalb sichtbarer Vermerk (KI-VO Art. 50 Abs. 4).
+// `gross`: Porträt in voller Spaltenbreite (Startseite, Design K3b), sonst kompakt neben Name und Rolle (/ueber-uns/).
 import { person } from '../data/firma';
-interface Props { text?: string }
-const { text } = Astro.props;
+interface Props { text?: string; gross?: boolean }
+const { text, gross = false } = Astro.props;
 const b = person.bild;
 ---
-<figure class="person">
+<figure class:list={['person', { gross }]}>
   <picture>
     <source srcset={`${b.basis}.avif`} type="image/avif">
     <source srcset={`${b.basis}.webp`} type="image/webp">
@@ -21,13 +22,21 @@ const b = person.bild;
 
 <style>
   .person { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: end; margin: 28px 0; }
-  .bild { display: block; width: 160px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+  .bild { display: block; width: 160px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--ui-radius-zeile); }
   strong { display: block; font-size: var(--fsg-text-body-lg); }
-  span { display: block; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); margin-top: 2px; }
-  p { margin: 10px 0 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); max-width: 60ch; }
-  small { display: block; margin-top: 10px; font: 500 var(--fsg-text-label) / 1.4 var(--fsg-font-mono); color: var(--fsg-color-text-muted); }
+  span { display: block; font-size: var(--fsg-text-small); color: var(--ui-text-muted); margin-top: 2px; }
+  p { margin: 10px 0 0; font-size: var(--fsg-text-small); color: var(--ui-text-muted); max-width: 60ch; }
+  small { display: block; margin-top: 10px; font: 500 var(--fsg-text-label) / 1.4 var(--fsg-font-mono); color: var(--ui-text-muted); }
+
+  .gross { grid-template-columns: minmax(0, 1fr); gap: 14px; align-items: start; margin: 0; }
+  .gross .bild { width: 100%; border-radius: var(--ui-radius-karte); }
+  .gross figcaption { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
+  .gross strong { font-size: 1rem; }
+  .gross span { margin-top: 0; }
+  .gross small { flex-basis: 100%; margin-top: 4px; }
+
   @media (max-width: 520px) {
-    .person { grid-template-columns: 112px 1fr; gap: 16px; }
-    .bild { width: 112px; }
+    .person:not(.gross) { grid-template-columns: 112px 1fr; gap: 16px; }
+    .person:not(.gross) .bild { width: 112px; }
   }
 </style>

@@ -1,5 +1,6 @@
 ---
 // Zitat von Felix aus eigener Praxis, als Perspektive gekennzeichnet (T6 4.3 Nr. 5). Nur freigegebene Zitate.
+// Design K3b: Goldkarte mit Goldkante links.
 import { person } from '../data/firma';
 // `rolle` ersetzt die Funktion in der Bildunterschrift, z. B. „Perspektive“ bei wertenden Aussagen (UWG, T9).
 interface Props { text: string; rolle?: string }
@@ -11,8 +12,11 @@ const { text, rolle = person.rolle } = Astro.props;
 </figure>
 
 <style>
-  .zitat { margin: 40px 0; }
-  blockquote { margin: 0 0 12px; padding-left: 24px; border-left: 3px solid var(--fsg-color-accent); font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); font-weight: 300; line-height: 1.3; letter-spacing: -0.015em; max-width: 30ch; }
-  blockquote p { margin: 0; }
-  figcaption { padding-left: 27px; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+  .zitat { margin: 40px 0; padding: 32px 36px; border-radius: var(--ui-radius-karte); background: var(--ui-flaeche-gold-2); box-shadow: inset 4px 0 0 var(--ui-goldlinie); }
+  blockquote { margin: 0 0 14px; font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); font-weight: 400; line-height: 1.5; letter-spacing: -0.01em; }
+  blockquote p { margin: 0; max-width: 56ch; }
+  figcaption { font-size: var(--fsg-text-small); color: var(--ui-text-muted); }
+  @media (max-width: 720px) {
+    .zitat { padding: 24px 22px; }
+  }
 </style>

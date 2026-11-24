@@ -1,11 +1,11 @@
 ---
-// Start (Home, Design E2). Text: T7 01_Start in der T9-Fassung vom 19.11.2026 (Drive `T9_Rechtspruefung\korrigiert\`),
+// Start (Home, Design K3b „Gold auf Ink“, WEB T12; vorher E2). Text: T7 01_Start in der T9-Fassung vom 19.11.2026 (Drive `T9_Rechtspruefung\korrigiert\`),
 // freigegeben 18.11.2026 von Felix, korrigiert von T9. Go-live-Rückfall: Kommentare „T9 ab Fassung 1.1“ erst nach
 // LEGAL-Meldung zum Einfrieren von AGB 1.1 und Vorlage 1.1 umschalten, auf allen Seiten zugleich.
 import Basis from '../layouts/Basis.astro';
-import Zeile from '../components/Zeile.astro';
 import Personenkarte from '../components/Personenkarte.astro';
-import Kapitalsaeule, { type Ebene, type Ausgeschlossen } from '../components/Kapitalsaeule.astro';
+import Ablauf, { type Ebene, type Ausgeschlossen } from '../components/Ablauf.astro';
+import Icon, { type IconName } from '../components/Icon.astro';
 import Zustaendigkeiten from '../components/Zustaendigkeiten.astro';
 import Schritte from '../components/Schritte.astro';
 import Zitat from '../components/Zitat.astro';
@@ -49,97 +49,330 @@ const ebenen: Ebene[] = [
   },
 ];
 
-// Beteiligungskapital nicht im Angebot (Felix 23.11.2026), sichtbar abgegrenzt unter der Säule, außerhalb des Rahmens.
+// Beteiligungskapital nicht im Angebot (Felix 23.11.2026), im Ablauf abgesetzt hinter der Trennlinie.
 const ausgeschlossen: Ausgeschlossen = {
   kurz: 'Beteiligung',
   titel: 'Beteiligungskapital und VC-Fundraising',
   text: 'Gehört nicht zu unserem Angebot. Wir vermitteln keine Beteiligungen und haben keinen Investorenkontakt. Der Finanzierungsmix endet bei uns vor den Anteilen.',
 };
+
+// Produktkarte im Hero (Design K3b): Kurzzeilen je Ebene, Texte aus dem Konzept.
+const karteUnter = ['Forschungszulage des Bundes', 'Bund, Länder und EU', 'KfW und Landesförderbanken'];
+const karteIcon: IconName[] = ['prozent', 'muenzen', 'bank'];
+
+// Über uns: Technologie-Bereiche statt Firmennamen (Felix 24.11.2026); Firmennamen stehen auf /ueber-uns/.
+const bereiche = [
+  { titel: 'Cloud: Storage und Compute', text: 'Als Director und VP Finance die Forschungszulage für drei Wirtschaftsjahre verantwortet, die BSFZ-Anträge selbst geschrieben und ein Verfahren bis durch die steuerliche Außenprüfung begleitet.' },
+  { titel: 'EdTech', text: 'Als Director Finance die BSFZ-Anträge geschrieben und die Forschungszulage verantwortet, dazu Mittel aus Start-up Shield Bayern beantragt.' },
+  { titel: 'Lidar für autonomes Fahren', text: 'ZIM-Projekte in der Abwicklung betreut: Mittelabrufe, Zwischennachweise und Verwendungsnachweis.' },
+  { titel: 'Kommunikationsaufklärung', text: 'Preiskalkulation und Projektcontrolling internationaler Großprojekte für öffentliche Auftraggeber, einschließlich Preisprüfungen nach öffentlichem Preisrecht.' },
+];
 ---
 <Basis titel="FullStack Grant: Förderberatung für Tech-Startups, Hamburg" pfad="/" vollerGraph
   beschreibung="FullStack Grant ist eine Förderberatung für Tech-Startups: Forschungszulage, Zuschüsse, EU-Grants und Förderkredite, geführt von einem Finance Lead."
   jsonld={[personKnoten()]}>
 
-  <Zeile hero label={`${firma.name} · ${firma.anschrift.ort}`} ueberschriftId="h-hero">
-    <h1 id="h-hero">Förderung, belastbar dokumentiert und auch Jahre später nachvollziehbar.</h1>
-    <p class="lead">FullStack Grant ist eine Förderberatung aus Hamburg für Tech-Startups in ganz Deutschland. Wir bereiten für dein Startup die Anträge vor, die zu deiner Finanzierung passen, und begleiten dich auf Wunsch auch nach der Bewilligung. Mit dem Blick eines Finance Leads, der Förderung im Startup selbst verantwortet hat.</p>
-    <div class="cta-zeile">
-      <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <span class="pfeil" aria-hidden="true">→</span></a>
-      <a class="link" href="#finanzierungsmix">Finanzierungsmix ansehen</a>
+  <section class="hero auf-ink" aria-labelledby="h-hero">
+    <div class="wrap hero-raster">
+      <div class="hero-text">
+        <p class="pille"><span class="pille-punkt" aria-hidden="true"></span>{`${firma.name} · ${firma.anschrift.ort}`}</p>
+        <h1 id="h-hero">Förderung, belastbar dokumentiert und auch Jahre später nachvollziehbar.</h1>
+        <p class="lead">FullStack Grant ist eine Förderberatung aus Hamburg für Tech-Startups in ganz Deutschland. Wir bereiten für dein Startup die Anträge vor, die zu deiner Finanzierung passen, und begleiten dich auf Wunsch auch nach der Bewilligung. Mit dem Blick eines Finance Leads, der Förderung im Startup selbst verantwortet hat.</p>
+        <div class="cta-zeile">
+          <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <Icon name="pfeil" /></a>
+          <a class="btn btn-linie" href="#finanzierungsmix">Finanzierungsmix ansehen</a>
+        </div>
+        <ul class="hero-haken">
+          <li><Icon name="haken" />Fördercheck kostenlos</li>
+          <li><Icon name="haken" />Du entscheidest und reichst selbst ein</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-karte">
+          <div class="hk-kopf">
+            <p class="hk-titel" id="h-hk">Dein Finanzierungsmix</p>
+            <p class="hk-sub">In dieser Reihenfolge prüfen wir</p>
+          </div>
+          <ol class="hk-liste" aria-labelledby="h-hk">
+            {ebenen.map((e, i) => (
+              <li><a href={`#${e.anker}`}>
+                <span class:list={['kachel', i === 0 ? 'kachel-gold' : 'kachel-ton']}><Icon name={karteIcon[i] ?? 'dokument'} /></span>
+                <span class="hk-name"><b>{e.titel}</b><small>{karteUnter[i]}</small></span>
+                {e.zuerst ? <span class="chip">Zuerst prüfen</span> : <Icon name="pfeil" class="hk-pfeil" />}
+              </a></li>
+            ))}
+          </ol>
+          <p class="hk-nicht"><Icon name="verbot" />Nicht bei uns: {ausgeschlossen.titel}</p>
+        </div>
+        <p class="hero-badge"><span class="kachel kachel-klein"><Icon name="schild" /></span>Auf Wunsch Nachweise über die Laufzeit</p>
+      </div>
     </div>
-  </Zeile>
+  </section>
 
-  <Zeile label="Finanzierungsmix" id="finanzierungsmix" ueberschriftId="h-mix">
-    <h2 id="h-mix">Das ganze Förderportfolio, sortiert nach Kapitalkosten</h2>
-    <p class="regel">Erst, worauf du Anspruch hast, dann Zuschüsse, dann günstiges Fremdkapital. <b>Anteile zuletzt.</b></p>
-    <Kapitalsaeule ebenen={ebenen} ausgeschlossen={ausgeschlossen} />
-    <p class="weiter">Im Detail:
-      <a href="/leistungen/#steuerliche-foerderung">Steuerliche Förderung</a> ·
-      <a href="/leistungen/#zuschuesse">Zuschüsse und Grants</a> ·
-      <a href="/leistungen/#foerderkredite">Förderkredite</a> ·
-      <a href="/leistungen/#nach-der-bewilligung">Nach der Bewilligung</a>
-    </p>
-  </Zeile>
+  <section class="abschnitt wrap" id="finanzierungsmix" aria-labelledby="h-mix">
+    <div class="kopfzeile">
+      <p class="eyebrow">Finanzierungsmix</p>
+      <h2 id="h-mix">Das ganze Förderportfolio, in einer klaren Reihenfolge</h2>
+      <p class="regel">Erst, worauf du Anspruch hast, dann Zuschüsse, dann günstiges Fremdkapital.</p>
+    </div>
+    <Ablauf ebenen={ebenen} ausgeschlossen={ausgeschlossen} />
+    <div class="detail">
+      <p class="detail-titel">Im Detail:</p>
+      <ul>
+        <li><a href="/leistungen/#steuerliche-foerderung">Steuerliche Förderung <Icon name="pfeil" /></a></li>
+        <li><a href="/leistungen/#zuschuesse">Zuschüsse und Grants <Icon name="pfeil" /></a></li>
+        <li><a href="/leistungen/#foerderkredite">Förderkredite <Icon name="pfeil" /></a></li>
+        <li><a href="/leistungen/#nach-der-bewilligung">Nach der Bewilligung <Icon name="pfeil" /></a></li>
+      </ul>
+    </div>
+  </section>
 
-  <Zeile label="Zuständigkeiten" ueberschriftId="h-zust">
-    <h2 id="h-zust">Wer was tut. Schwarz auf weiß.</h2>
+  <section class="abschnitt wrap" id="mehr-als-forschungszulage" aria-labelledby="h-mehr">
+    <div class="kopfzeile">
+      <p class="eyebrow">Mehr als die Forschungszulage</p>
+      <h2 id="h-mehr">Welche Förderung gibt es außer der Forschungszulage?</h2>
+      <p class="unter">Neben der Forschungszulage gibt es Zuschüsse von Bund, Ländern und EU, Förderkredite mit Bürgschaften. Welche Kombination passt, hängt von Vorhaben, Phase und Finanzierung ab; die Regeln zur Kombination legt jedes Programm selbst fest.</p>
+    </div>
+    <div class="mix-unten">
+      <Zitat rolle="Perspektive" text="Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Oft bringt ein Zuschuss mit höherer Förderquote mehr, auch wenn er mehr Arbeit macht." />
+      <ul class="linkkarte">
+        <li><a href="/foerderung/programme/forschungszulage/">Forschungszulage für Startups <Icon name="pfeil" /></a></li>
+        <li><a href="/foerderung/programme/zim/">ZIM Förderung <Icon name="pfeil" /></a></li>
+        <li><a href="/wissen/artikel/mehr-als-forschungszulage/">Perspektive: Warum Förderberatung nicht bei der Forschungszulage aufhören sollte <Icon name="pfeil" /></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="abschnitt wrap" id="zustaendigkeiten" aria-labelledby="h-zust">
+    <div class="kopfzeile">
+      <p class="eyebrow">Zuständigkeiten</p>
+      <h2 id="h-zust">Wer was tut. Schwarz auf weiß.</h2>
+    </div>
     <Zustaendigkeiten spalten={[
       { titel: 'FullStack Grant', punkte: ['findet die passenden Programme, nicht nur die Forschungszulage', 'entwirft Antrag und Finanzplan aus deinen Zahlen', 'bereitet auf Wunsch Nachweise über die Laufzeit vor'] },
       { titel: 'Du', punkte: ['entscheidest und reichst selbst ein', 'lieferst Zahlen und Projektwissen', 'prüfst jede Fassung, bestätigst sie in Textform und behältst die Fristen im Blick'] },
       { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung', 'Steuerberatung und Antrag beim Finanzamt zur Forschungszulage (dein Unternehmen bzw. dein Steuerberater)', 'Einreichen in deinem Namen, Garantie einer Bewilligung, Beteiligungskapital und VC-Fundraising'] },
     ]} />
-    <p class="weiter"><a href="/vorgehen/">So läuft eine Förderberatung bei uns</a></p>
-  </Zeile>
+    <p class="weiter"><a href="/vorgehen/">So läuft eine Förderberatung bei uns <Icon name="pfeil" /></a></p>
+  </section>
 
-  <Zeile label="Über uns" id="gruender" ueberschriftId="h-gruender">
-    <h2 id="h-gruender">Warum Förderberatung aus der Finance-Leitung kommt</h2>
-    <Personenkarte />
-    <p>Förderung landet am Ende im Liquiditätsplan, im Jahresabschluss und in späteren Prüfungen. Felix Hinkelmann hat sie als Finance Lead selbst verantwortet. Bei der Impossible Cloud GmbH hat er als Director und VP Finance die Forschungszulage für drei Wirtschaftsjahre verantwortet, die BSFZ-Anträge selbst geschrieben und ein Verfahren bis durch die steuerliche Außenprüfung begleitet. Davor hat er bei der Easy-Tutor GmbH als Director Finance die BSFZ-Anträge geschrieben und die Forschungszulage im Unternehmen verantwortet, dazu Mittel aus Start-up Shield Bayern beantragt. Bei der Ibeo Automotive Systems GmbH hat er zuvor ZIM-Projekte in der Abwicklung betreut. Heute bereitet er Anträge vor; steuerliche Prüfungen begleitet dein Steuerberater.</p>
-    <p>Jedes Mandat führt er persönlich.</p>
-    <Zitat text="Ich habe Förderung als Finance Lead selbst verantwortet. Deshalb behandle ich sie wie Finanzierung: mit Plan, Belegen und Blick auf die Prüfung." />
-    <p class="weiter">
-      <a href="/ueber-uns/">Mehr über Felix Hinkelmann</a> ·
-      <a href="/wissen/artikel/foerderberatung-aus-finance-sicht/">Perspektive: Warum Förderberatung aus der Finance-Leitung kommen sollte</a>
-    </p>
-  </Zeile>
+  <section class="band auf-ink" id="vorgehen" aria-labelledby="h-vorg">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <p class="eyebrow">Vorgehen</p>
+        <h2 id="h-vorg">Von der ersten Frage bis zum letzten Nachweis</h2>
+      </div>
+      <Schritte schritte={[
+        { titel: 'Fördercheck', text: 'Welche Programme passen zu Vorhaben, Größe und Finanzierung, in welcher Reihenfolge. Kostenlos und unverbindlich.' },
+        { titel: 'Antrag vorbereiten', text: 'Wir entwerfen, du prüfst, bestätigst und reichst ein.' },
+        { titel: 'Laufzeit begleiten', text: 'Auf Wunsch und nach Aufwand Zwischen- und Verwendungsnachweise, Änderungsanträge und die Durchsicht vor Prüfungen des Fördergebers, ohne Testat.' },
+      ]} />
+      <p class="weiter"><a href="/vorgehen/">Vorgehen und Compliance <Icon name="pfeil" /></a></p>
+    </div>
+  </section>
 
-  <Zeile label="Mehr als die Forschungszulage" id="mehr-als-forschungszulage" ueberschriftId="h-mehr">
-    <h2 id="h-mehr">Welche Förderung gibt es außer der Forschungszulage?</h2>
-    <p>Neben der Forschungszulage gibt es Zuschüsse von Bund, Ländern und EU, Förderkredite mit Bürgschaften. Welche Kombination passt, hängt von Vorhaben, Phase und Finanzierung ab; die Regeln zur Kombination legt jedes Programm selbst fest.</p>
-    <Zitat rolle="Perspektive" text="Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Oft bringt ein Zuschuss mit höherer Förderquote mehr, auch wenn er mehr Arbeit macht." />
-    <p class="weiter">
-      <a href="/foerderung/programme/forschungszulage/">Forschungszulage für Startups</a> ·
-      <a href="/foerderung/programme/zim/">ZIM Förderung</a> ·
-      <a href="/wissen/artikel/mehr-als-forschungszulage/">Perspektive: Warum Förderberatung nicht bei der Forschungszulage aufhören sollte</a>
-    </p>
-  </Zeile>
+  <section class="abschnitt wrap" id="gruender" aria-labelledby="h-gruender">
+    <div class="ueber">
+      <div class="portraet"><Personenkarte gross /></div>
+      <div class="ueber-text">
+        <p class="eyebrow">Über uns</p>
+        <h2 id="h-gruender">Warum Förderberatung aus der Finance-Leitung kommt</h2>
+        <p>Förderung landet am Ende im Liquiditätsplan, im Jahresabschluss und in späteren Prüfungen. Felix Hinkelmann hat sie als Finance Lead selbst verantwortet, in Tech-Unternehmen aus diesen Bereichen:</p>
+        <ul class="bereiche">
+          {bereiche.map((b) => <li><b>{b.titel}</b><span>{b.text}</span></li>)}
+        </ul>
+        <p>Heute bereitet er Anträge vor; steuerliche Prüfungen begleitet dein Steuerberater. Jedes Mandat führt er persönlich.</p>
+        <Zitat text="Ich habe Förderung als Finance Lead selbst verantwortet. Deshalb behandle ich sie wie Finanzierung: mit Plan, Belegen und Blick auf die Prüfung." />
+        <ul class="weiter-liste">
+          <li><a href="/ueber-uns/">Mehr über uns <Icon name="pfeil" /></a></li>
+          <li><a href="/wissen/artikel/foerderberatung-aus-finance-sicht/">Perspektive: Warum Förderberatung aus der Finance-Leitung kommen sollte <Icon name="pfeil" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <Zeile label="Vorgehen" id="vorgehen" ueberschriftId="h-vorg">
-    <h2 id="h-vorg">Von der ersten Frage bis zum letzten Nachweis</h2>
-    <Schritte schritte={[
-      { titel: 'Fördercheck', text: 'Welche Programme passen zu Vorhaben, Größe und Finanzierung, in welcher Reihenfolge. Kostenlos und unverbindlich.' },
-      { titel: 'Antrag vorbereiten', text: 'Wir entwerfen, du prüfst, bestätigst und reichst ein.' },
-      { titel: 'Laufzeit begleiten', text: 'Auf Wunsch und nach Aufwand Zwischen- und Verwendungsnachweise, Änderungsanträge und die Durchsicht vor Prüfungen des Fördergebers, ohne Testat.' },
-    ]} />
-    <p class="weiter"><a href="/vorgehen/">Vorgehen und Compliance</a></p>
-  </Zeile>
-
-  <Zeile label="Vergütung" id="verguetung" ueberschriftId="h-verg">
-    <h2 id="h-verg">Vergütung je nach Programm, vorab im Angebot</h2>
+  <section class="abschnitt wrap" id="verguetung" aria-labelledby="h-verg">
+    <div class="kopfzeile">
+      <p class="eyebrow">Vergütung</p>
+      <h2 id="h-verg">Vergütung je nach Programm, vorab im Angebot</h2>
+    </div>
     {/* T9 ab Fassung 1.1: letzter Satz „Was nach der Bewilligung anfällt, rechnen wir nach Aufwand ab, mit Schätzung vorab; bei der Forschungszulage sind Projektdokumentation und Unterlagenmappe enthalten, eine Stundenübersicht und die Begleitung einer Betriebsprüfung laufen nach Stunden.“ */}
-    <p>Der Fördercheck ist kostenlos. Bei der Forschungszulage gilt: Bescheinigt die BSFZ dein Vorhaben nicht, zahlst du nichts. Bei anderen Programmen: Erfolgshonorar oder festes Honorar, je nach Programm; Einzelheiten im Angebot. Was nach der Bewilligung anfällt, rechnen wir nach Aufwand ab, mit Schätzung vorab.</p>
-    <p class="weiter"><a href="/verguetung/">So rechnet FullStack Grant ab</a></p>
-  </Zeile>
+    <div class="preise">
+      <div class="p-karte p1">
+        <p class="p-label">Fördercheck</p>
+        <p class="p-wert">Kostenlos</p>
+        <p>Der Fördercheck ist kostenlos.</p>
+      </div>
+      <div class="p-karte p2">
+        <p class="p-label">Forschungszulage</p>
+        <p class="p-wert">Ohne BSFZ-Bescheinigung kein Honorar</p>
+        <p>Bei der Forschungszulage gilt: Bescheinigt die BSFZ dein Vorhaben nicht, zahlst du nichts.</p>
+      </div>
+      <div class="p-karte p3">
+        <p class="p-label">Andere Programme</p>
+        <p class="p-wert">Erfolgs&shy;honorar oder festes Honorar</p>
+        <p>Bei anderen Programmen: Erfolgshonorar oder festes Honorar, je nach Programm; Einzelheiten im Angebot.</p>
+      </div>
+    </div>
+    <p class="weiter"><a href="/verguetung/">So rechnet FullStack Grant ab <Icon name="pfeil" /></a></p>
+  </section>
 
-  <Zeile label="Erstgespräch" id="termin" ueberschriftId="h-termin">
-    <h2 id="h-termin">Ein Gespräch, danach kennst du deine nächsten Schritte</h2>
-    <p class="lead">Im Erstgespräch sprichst du 20 Minuten direkt mit Felix Hinkelmann über Vorhaben und Finanzierung. Danach bekommst du auf Wunsch den Fördercheck: welche Programme passen und in welcher Reihenfolge. Kostenlos und unverbindlich.</p>
-    <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <span class="pfeil" aria-hidden="true">→</span></a>
-  </Zeile>
+  <section class="abschnitt wrap" id="termin" aria-labelledby="h-termin">
+    <div class="cta-panel auf-ink">
+      <div class="cta-text">
+        <p class="eyebrow">Erstgespräch</p>
+        <h2 id="h-termin">Ein Gespräch, danach kennst du deine nächsten Schritte</h2>
+        <p class="lead">Im Erstgespräch sprichst du 20 Minuten direkt mit Felix Hinkelmann über Vorhaben und Finanzierung. Danach bekommst du auf Wunsch den Fördercheck: welche Programme passen und in welcher Reihenfolge. Kostenlos und unverbindlich.</p>
+        <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <Icon name="pfeil" /></a>
+      </div>
+      <ul class="cta-liste">
+        <li><span class="kachel kachel-gold"><Icon name="uhr" /></span>20 Minuten</li>
+        <li><span class="kachel kachel-gold"><Icon name="sprechblase" /></span>Vorhaben und Finanzierung</li>
+        <li><span class="kachel kachel-gold"><Icon name="etikett" /></span>Kostenlos und unverbindlich</li>
+      </ul>
+    </div>
+  </section>
 </Basis>
 
 <style>
-  .regel { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); font-weight: 300; letter-spacing: -0.01em; line-height: 1.35; margin: 0 0 36px; max-width: 40ch; }
+  /* Hero: Ink-Fläche mit sparsamem Goldglühen hinter der Produktkarte */
+  .hero { overflow: clip; border-radius: 0 0 var(--ui-radius-band) var(--ui-radius-band); border: 1px solid var(--ui-ink-rand); border-top: 0;
+          background-image: radial-gradient(46% 64% at 79% 58%, var(--ui-glow), rgb(224 154 0 / 0) 72%); }
+  .hero-raster { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 64px; align-items: center; padding-top: 48px; padding-bottom: 104px; }
+  .pille { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: var(--ui-radius-pille); background: rgb(255 255 255 / 0.07);
+           box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14); color: var(--ui-ink-muted); font-size: 0.875rem; font-weight: 500; margin: 0 0 28px; }
+  .pille-punkt { width: 8px; height: 8px; border-radius: 50%; background: var(--fsg-gold-400); box-shadow: 0 0 0 4px rgb(255 176 32 / 0.22); }
+  .hero h1 { color: var(--ui-ink-text); margin: 0; }
+  .hero .lead { margin: 24px 0 0; font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); max-width: 50ch; }
+  .hero .cta-zeile { margin-top: 36px; }
+  .hero-haken { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 0.9375rem; font-weight: 500; color: var(--ui-ink-lead); }
+  .hero-haken li { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-haken :global(.ic) { color: var(--ui-ink-akzent); width: 18px; height: 18px; stroke-width: 2.25; }
+
+  .hero-visual { position: relative; padding: 20px 0 36px 28px; }
+  /* Goldplatte: gedrehte Fläche hinter der Karte */
+  .hero-visual::before { content: ''; position: absolute; inset: 0 -24px 60px 76px; border-radius: 28px; transform: rotate(3deg);
+                         background: linear-gradient(140deg, var(--fsg-gold-300), var(--fsg-gold-500) 55%, var(--fsg-gold-600)); }
+  .hero-karte { position: relative; background: var(--ui-hk-bg); color: var(--ui-hk-text); border-radius: 24px; box-shadow: var(--ui-schatten-ink); padding: 26px 24px 20px; }
+  .hk-kopf { padding: 0 4px 16px; }
+  .hk-kopf p { margin: 0; }
+  .hk-titel { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
+  .hk-sub { font-size: 0.875rem; color: var(--ui-hk-subtle); margin-top: 2px !important; }
+  .hk-liste { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .hero .hk-liste a { display: flex; align-items: center; gap: 14px; padding: 12px; min-height: 68px; border-radius: var(--ui-radius-zeile); text-decoration: none; color: var(--ui-hk-text); background: var(--ui-hk-row); transition: background-color .15s ease; }
+  .hero .hk-liste a:hover { background: var(--ui-hk-row-hover); }
+  .hk-liste li:first-child a { box-shadow: inset 0 0 0 1.5px var(--fsg-gold-400); }
+  .hero-karte :global(:focus-visible) { outline-color: var(--fsg-gold-600); }
+  .hk-name { display: grid; flex: 1; min-width: 0; }
+  .hk-name b { font-weight: 600; font-size: 1rem; line-height: 1.3; }
+  .hk-name small { font-size: 0.8125rem; color: var(--ui-hk-subtle); line-height: 1.4; }
+  .hk-liste :global(.hk-pfeil) { color: var(--ui-hk-subtle); margin-right: 6px; }
+  .hk-nicht { display: flex; align-items: center; gap: 10px; margin: 12px 0 0; padding: 12px 14px; border-radius: 14px; font-size: 0.875rem; color: var(--ui-hk-subtle);
+              background: repeating-linear-gradient(135deg, transparent 0 7px, var(--ui-hk-row) 7px 14px); box-shadow: inset 0 0 0 1.5px var(--ui-hk-linie); }
+  .hero-badge { position: absolute; left: -8px; bottom: 0; display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 10px 16px 10px 10px; border-radius: var(--ui-radius-zeile);
+                background: var(--ui-hk-bg); color: var(--ui-hk-text); box-shadow: var(--ui-schatten-ink); font-size: 0.875rem; font-weight: 600; }
+
+  .kachel { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; flex: none; }
+  .kachel-gold { background: var(--fsg-gold-400); color: var(--fsg-ink); }
+  .kachel-ton { background: var(--ui-hk-ton); color: var(--ui-hk-ton-icon); }
+  .kachel-klein { width: 32px; height: 32px; border-radius: 9px; background: var(--fsg-gold-400); color: var(--fsg-ink); }
+  .kachel-klein :global(.ic) { width: 18px; height: 18px; }
+  .chip { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: var(--ui-radius-pille); background: var(--ui-hk-chip-bg); color: var(--ui-hk-chip-text);
+          font: 600 0.75rem/1 var(--fsg-font-sans); white-space: nowrap; }
+
+  /* Abschnitte */
+  .abschnitt { padding-top: 112px; }
+  .kopfzeile { max-width: 760px; margin-bottom: 40px; }
+  .kopfzeile h2 { margin: 0; }
+  .unter { margin: 14px 0 0; font-size: 1.125rem; color: var(--ui-text-muted); }
+  .regel { margin: 16px 0 0; font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.625rem); font-weight: 300; line-height: 1.35; letter-spacing: -0.01em; max-width: 40ch; }
   .regel b { font-weight: 700; }
-  .weiter { font-size: var(--fsg-text-small); margin-top: 24px; }
+  .weiter :global(.ic), .linkkarte :global(.ic), .detail :global(.ic), .weiter-liste :global(.ic) { width: 18px; height: 18px; }
+
+  /* Finanzierungsmix: Detail-Links als Pillen */
+  .detail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 24px; }
+  .detail-titel { margin: 0; font-weight: 650; }
+  .detail ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .detail a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: var(--ui-radius-pille); background: var(--ui-flaeche-neutral); text-decoration: none; font-size: 0.9375rem; font-weight: 500; }
+  .detail a:hover { background: var(--ui-flaeche-gold-1); color: var(--ui-gold-text); }
+
+  /* Mehr als die Forschungszulage: Perspektive und Links */
+  .mix-unten { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+  .mix-unten :global(.zitat) { margin: 0; }
+  .linkkarte { list-style: none; margin: 0; padding: 14px 26px; border-radius: var(--ui-radius-karte); background: var(--ui-flaeche-neutral); align-self: stretch; }
+  .linkkarte a { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; padding: 8px 0; text-decoration: none; border-bottom: 1px solid var(--ui-linie); font-size: 0.9375rem; font-weight: 500; }
+  .linkkarte li:last-child a { border-bottom: 0; }
+  .linkkarte a:hover { color: var(--ui-gold-text); }
+
+  /* Vorgehen: Ink-Band */
+  .band { margin-top: 112px; padding: 96px 0 88px; border-radius: var(--ui-radius-band); border: 1px solid var(--ui-ink-rand); }
+  .band h2 { color: var(--ui-ink-text); }
+
+  /* Über uns: Porträt und Technologie-Kacheln */
+  .ueber { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 56px; align-items: start; background: var(--ui-flaeche-neutral); border-radius: var(--ui-radius-flaeche); padding: 40px; }
+  .ueber-text h2 { margin: 0 0 20px; max-width: 20ch; }
+  .ueber-text > p:not(.eyebrow) { color: var(--ui-text-muted); max-width: 62ch; margin: 0; }
+  .bereiche { list-style: none; padding: 0; margin: 24px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .bereiche li { display: flex; flex-direction: column; gap: 6px; background: var(--ui-karte); border-radius: var(--ui-radius-zeile); padding: 18px 20px; font-size: 0.9375rem; box-shadow: inset 3px 0 0 var(--ui-goldlinie); }
+  .bereiche b { font-weight: 650; }
+  .bereiche span { color: var(--ui-text-muted); }
+  .ueber-text :global(.zitat) { margin: 28px 0 0; background: var(--ui-flaeche-gold-1); }
+  .weiter-liste { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; font-weight: 600; }
+  .weiter-liste a { display: inline; line-height: 1.6; }
+  .weiter-liste a :global(.ic) { vertical-align: -3px; margin-left: 6px; }
+
+  /* Vergütung: getönte Goldkarten */
+  .preise { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .p-karte { border-radius: var(--ui-radius-karte); padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; }
+  .p-karte p { margin: 0; }
+  .p1 { background: var(--ui-flaeche-gold-3); } .p2 { background: var(--ui-flaeche-gold-2); } .p3 { background: var(--ui-flaeche-neutral); }
+  .p-label { font: 500 0.75rem/1.3 var(--fsg-font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ui-subtle); }
+  .p1 .p-label, .p2 .p-label { color: var(--fsg-color-text); }
+  .p-wert { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 6px !important; hyphens: manual; }
+  .p-karte p:last-child { color: var(--ui-text-muted); font-size: 0.9375rem; }
+
+  /* Erstgespräch: Ink-Panel mit Goldbutton und Goldglühen */
+  .cta-panel { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: center; border-radius: var(--ui-radius-band); padding: 64px;
+               border: 1px solid var(--ui-ink-rand); background-image: radial-gradient(48% 80% at 100% 100%, var(--ui-glow), rgb(224 154 0 / 0) 70%); }
+  .cta-text h2 { max-width: 18ch; margin: 0; color: var(--ui-ink-text); }
+  .cta-panel .lead { margin: 20px 0 32px; }
+  .cta-liste { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .cta-liste li { display: flex; align-items: center; gap: 14px; padding: 12px 18px 12px 12px; border-radius: 18px; background: var(--ui-ink-karte);
+                  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08); font-weight: 600; }
+
+  /* Tablet */
+  @media (max-width: 1080px) {
+    .hero-raster { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-bottom: 72px; }
+    .hero-visual { max-width: 560px; }
+    .hero { background-image: radial-gradient(70% 40% at 60% 78%, var(--ui-glow), rgb(224 154 0 / 0) 72%); }
+    .mix-unten, .preise { grid-template-columns: minmax(0, 1fr); }
+    .ueber { grid-template-columns: minmax(0, 1fr); padding: 28px; gap: 32px; }
+    .portraet { max-width: 320px; }
+    .cta-panel { grid-template-columns: minmax(0, 1fr); padding: 48px 40px; }
+  }
+
+  /* Mobil */
+  @media (max-width: 720px) {
+    .hero { border-radius: 0 0 28px 28px; }
+    .hero-raster { padding-top: 24px; padding-bottom: 56px; gap: 40px; }
+    .pille { margin-bottom: 20px; font-size: 0.8125rem; }
+    .hero .cta-zeile .btn { width: 100%; }
+    .hero-visual { padding: 12px 0 0 0; }
+    .hero-visual::before { inset: 0 -8px 40px 40px; }
+    .hk-liste a { gap: 12px; }
+    .hero-karte { padding: 22px 16px 16px; }
+    .hk-liste .chip { display: none; }
+    .hero-badge { position: relative; left: auto; bottom: auto; margin: -16px 0 0 12px; }
+    .abschnitt { padding-top: 80px; }
+    .kopfzeile { margin-bottom: 28px; }
+    .band { margin-top: 80px; padding: 64px 0 56px; border-radius: 28px; }
+    .ueber { padding: 20px; border-radius: 24px; }
+    .bereiche { grid-template-columns: minmax(0, 1fr); }
+    .portraet { max-width: 240px; }
+    .p-karte { padding: 24px 20px; }
+    .linkkarte { padding: 8px 20px; }
+    .cta-panel { padding: 40px 22px; border-radius: 28px; }
+    .cta-panel .btn { width: 100%; }
+  }
 </style>

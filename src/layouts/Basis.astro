@@ -1,5 +1,6 @@
 ---
-// Grundlayout aller Seiten: Head (SEO, OG, Icons, Fonts), Kopf, Fuß, JSON-LD.
+// Grundlayout aller Seiten: Head (SEO, OG, Icons, Fonts), Kopf, Fuß, JSON-LD. Kopf und Fuß volle Breite;
+// die Seiten setzen ihre Breite selbst (.wrap), damit Ink-Flächen bis an den Rand reichen (Design K3b).
 // Kein Inline-Skript, kein Fremd-Request (CSP und Datenschutz, T4 2.3 und 6.2).
 import '../styles/global.css';
 import Kopf from '../components/Kopf.astro';
@@ -48,7 +49,7 @@ const knoten = [website(), organisation(vollerGraph), ...jsonld];
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
 
 <link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -76,13 +77,11 @@ const knoten = [website(), organisation(vollerGraph), ...jsonld];
     Vorschau, nicht veröffentlicht{status === 'entwurf' ? ' · Entwurf' : ''}
   </div>
 )}
-<div class="wrap">
-  <Kopf />
-  <main id="inhalt">
-    <slot />
-  </main>
-  <Fuss />
-</div>
+<Kopf />
+<main id="inhalt">
+  <slot />
+</main>
+<Fuss />
 <Einwilligung />
 </body>
 </html>

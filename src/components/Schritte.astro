@@ -1,14 +1,35 @@
 ---
+// Schritte (Design K3b): Ablauf als Karten auf einer Ink-Fläche, verbunden durch eine Goldlinie.
+// Ohne Ziffern (Felix 23.11.2026); die Reihenfolge trägt die geordnete Liste, sichtbar das Icon je Schritt.
+import Icon, { type IconName } from './Icon.astro';
 interface Props { schritte: { titel: string; text: string }[] }
 const { schritte } = Astro.props;
+const ICON: IconName[] = ['lupe', 'dokument', 'kalender'];
 ---
 <ol class="schritte">
-  {schritte.map((s) => <li><div><h3>{s.titel}</h3><p>{s.text}</p></div></li>)}
+  {schritte.map((s, i) => (
+    <li>
+      <span class="kachel"><Icon name={ICON[i] ?? 'haken'} /></span>
+      <h3>{s.titel}</h3>
+      <p>{s.text}</p>
+    </li>
+  ))}
 </ol>
 
 <style>
-  .schritte { counter-reset: s; list-style: none; padding: 0; margin: 24px 0 32px; }
-  li { counter-increment: s; display: grid; grid-template-columns: 48px 1fr; padding: 14px 0; border-top: 1px solid var(--fsg-color-border); }
-  li::before { content: counter(s, decimal-leading-zero); font: 700 13px var(--fsg-font-mono); color: var(--fsg-color-accent-text); padding-top: 3px; }
-  p { margin: 6px 0 0; color: var(--fsg-color-text-muted); }
+  .schritte { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  li { position: relative; background: var(--ui-ink-karte); color: var(--ui-ink-text); border-radius: var(--ui-radius-karte); padding: 26px; box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06); }
+  li:first-child { box-shadow: inset 0 0 0 1.5px rgb(255 176 32 / 0.55); }
+  li:not(:last-child)::after { content: ''; position: absolute; top: 48px; right: -16px; width: 16px; border-top: 2px solid var(--ui-goldlinie); }
+  .kachel { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--fsg-gold-400); color: var(--fsg-ink); margin-bottom: 24px; }
+  h3 { margin: 0 0 8px; }
+  p { margin: 0; color: var(--ui-ink-muted); font-size: 0.9375rem; }
+  @media (max-width: 1080px) {
+    .schritte { grid-template-columns: minmax(0, 1fr); }
+    li:not(:last-child)::after { top: auto; bottom: -16px; right: auto; left: 47px; width: 0; height: 16px; border-top: 0; border-left: 2px solid var(--ui-goldlinie); }
+  }
+  @media (max-width: 720px) {
+    li { padding: 24px 20px; }
+    li:not(:last-child)::after { left: 41px; }
+  }
 </style>

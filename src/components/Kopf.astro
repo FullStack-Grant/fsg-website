@@ -1,32 +1,40 @@
 ---
+// Kopf (Design K3b): Ink-Leiste auf allen Seiten, sticky, damit „Erstgespräch buchen“ beim Scrollen sichtbar bleibt.
+// Logo immer `logo-dunkel.svg`, weil die Leiste in beiden Modi dunkel ist. Höhe als --kopf-hoehe in global.css
+// (scroll-padding-top für Sprunganker).
 import { hauptnavigation } from '../data/navigation';
 import { firma } from '../data/firma';
+import Icon from './Icon.astro';
 const aktuell = Astro.url.pathname;
 ---
-<header class="kopf">
-  <a href="/" class="logo" aria-label="FullStack Grant, Startseite">
-    <img class="lt" src="/logo.svg" alt="FullStack Grant" width="192" height="32">
-    <img class="dk" src="/logo-dunkel.svg" alt="FullStack Grant" width="192" height="32">
-  </a>
-  <nav aria-label="Hauptnavigation">
-    {hauptnavigation.map((n) => (
-      <a class="nav-link" href={n.pfad} aria-current={aktuell.startsWith(n.pfad) ? 'page' : undefined}>{n.titel}</a>
-    ))}
-    <a class="btn" href={firma.terminUrl}>Erstgespräch<span class="lang"> buchen</span> <span class="pfeil" aria-hidden="true">→</span></a>
-  </nav>
+<header class="kopf auf-ink">
+  <div class="wrap innen">
+    <a href="/" class="logo" aria-label="FullStack Grant, Startseite">
+      <img src="/logo-dunkel.svg" alt="FullStack Grant" width="192" height="32">
+    </a>
+    <nav aria-label="Hauptnavigation">
+      {hauptnavigation.map((n) => (
+        <a class="nav-link" href={n.pfad} aria-current={aktuell.startsWith(n.pfad) ? 'page' : undefined}>{n.titel}</a>
+      ))}
+      <a class="btn btn-klein" href={firma.terminUrl}><span>Erstgespräch<span class="lang"> buchen</span></span><Icon name="pfeil" class="pfeil" /></a>
+    </nav>
+  </div>
 </header>
 
 <style>
-  .kopf { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 0; border-bottom: var(--rule); }
+  .kopf { position: sticky; top: 0; z-index: 40; border-bottom: 1px solid var(--ui-ink-linie); }
+  .innen { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: var(--kopf-hoehe); }
+  .logo { display: inline-flex; min-height: 44px; align-items: center; }
   .logo img { height: 32px; width: auto; display: block; }
-  nav { display: flex; gap: 28px; align-items: center; font-size: var(--fsg-text-small); }
-  .nav-link { text-decoration: none; }
-  .nav-link:hover, .nav-link[aria-current='page'] { text-decoration: underline; text-decoration-color: var(--fsg-color-accent); }
-  .btn { color: var(--fsg-color-bg); }
+  nav { display: flex; gap: 30px; align-items: center; font-size: 0.9375rem; font-weight: 500; }
+  .kopf .nav-link { color: var(--ui-ink-muted); text-decoration: none; min-height: 24px; display: inline-flex; align-items: center; }
+  .kopf .nav-link:hover, .kopf .nav-link[aria-current='page'] { color: var(--ui-ink-text); text-decoration: underline; text-decoration-color: var(--ui-ink-akzent); }
+  .btn-klein { min-height: 40px; padding: 0 18px; font-size: 0.9375rem; gap: 8px; }
+  .btn-klein :global(.ic) { width: 18px; height: 18px; }
   @media (max-width: 820px) {
-    .kopf { gap: 12px; }
-    .nav-link, .lang { display: none; }
+    .innen { gap: 12px; }
+    .kopf .nav-link, .lang { display: none; }
     .logo img { height: 26px; }
-    .btn { font-size: 13px; padding: 0 12px; min-height: 40px; }
+    .btn-klein { min-height: 40px; padding: 0 14px; font-size: 0.875rem; }
   }
 </style>
