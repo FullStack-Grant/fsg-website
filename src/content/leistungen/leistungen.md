@@ -116,9 +116,9 @@ Förderkredite von KfW und Landesförderbanken sind Fremdkapital zu Förderkondi
 
 **Grenze:** nur für Unternehmen. Verträge mit Bank oder Förderbank verhandeln wir nicht, Kreditgeber zahlen uns nichts.
 
-## Nicht bei uns: Beteiligungskapital und VC-Fundraising {#beteiligungskapital}
+## Nicht bei uns: Equity und VC-Fundraising {#beteiligungskapital}
 
-Beteiligungskapital gehört nicht zu unserem Angebot, auch nicht bei öffentlichen Fonds wie dem HTGF. Wir vermitteln nicht, haben keinen Investorenkontakt und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor den Anteilen: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst.
+Equity (Beteiligungskapital) gehört nicht zu unserem Angebot, auch nicht bei öffentlichen Fonds wie dem HTGF. Wir vermitteln nicht, haben keinen Investorenkontakt und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor dem Equity: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.
 
 ## Nach der Bewilligung: Nachweise, Änderungsanträge, Durchsicht vor Prüfungen {#nach-der-bewilligung}
 
@@ -159,7 +159,7 @@ Erfahrungswerte, keine Zusage: Für einen BSFZ-Antrag rechnen Teams meist mit 6 
 - Steuerberatung und den Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
 - Einreichen in deinem Namen oder Vertretung gegenüber Behörden
 - Mittelabrufe, Testate und Stundennachweise
-- Beteiligungskapital und VC-Fundraising, auch beim HTGF
+- Equity und VC-Fundraising, auch beim HTGF
 - eine Garantie, dass bewilligt wird
 
 **So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)

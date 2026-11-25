@@ -34,11 +34,11 @@ export const person = {
   sameAs: ['https://www.linkedin.com/in/felix-hinkelmann'] as string[],
   // Porträt (Felix 23.11.2026): KI-bearbeitetes Foto, Original in Meine Ablage 20_AREAS\00_Identifikation\60_Fotos\
   // 2026-11-23_Beraterbilder (navy-weiss_blur_v1), Webfassung 480×600 in public/bilder/ als AVIF, WebP, JPEG.
+  // Ohne sichtbaren KI-Vermerk: Felix 25.11.2026, Risiko bewusst getragen (Person selbst unbearbeitet).
   bild: {
     basis: '/bilder/felix-hinkelmann',
     alt: 'Porträt von Felix Hinkelmann im dunkelblauen Sakko',
     breite: 480,
     hoehe: 600,
-    vermerk: 'Foto mit KI bearbeitet',
   },
 } as const;

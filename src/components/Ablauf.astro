@@ -16,6 +16,8 @@ export interface Ebene {
   zuerst?: boolean;
   zeilen: { label: string; wert: string; art?: 'gold' | 'nicht' }[];
   tags?: string[];
+  /** Link zur Detailseite, unten in der Karte (Felix 25.11.2026: statt Pillenzeile unter dem Ablauf). */
+  detail?: { href: string; label: string };
 }
 export interface Ausgeschlossen { kurz: string; titel: string; text: string; anker?: string }
 interface Props { ebenen: Ebene[]; ausgeschlossen?: Ausgeschlossen }
@@ -45,7 +47,10 @@ const ICONS: IconName[] = ['prozent', 'muenzen', 'bank'];
             </div>
           ))}
         </dl>
-        {e.tags && <p class="tags">{e.tags.map((t) => <span>{t}</span>)}</p>}
+        <div class="fuss">
+          {e.tags && <p class="tags">{e.tags.map((t) => <span>{t}</span>)}</p>}
+          {e.detail && <a class="mehr" href={e.detail.href}>{e.detail.label}<span class="sr-only">: {e.titel}</span><Icon name="pfeil" /></a>}
+        </div>
       </div>
     </div>
   ))}
@@ -106,7 +111,11 @@ const ICONS: IconName[] = ['prozent', 'muenzen', 'bank'];
   .compliance dt { color: var(--ui-gold-text); }
   .compliance dt :global(.ic) { width: 15px; height: 15px; }
   .nicht dd { color: var(--ui-text-muted); }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto !important; }
+  .fuss { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .mehr { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 0.9375rem; font-weight: 600; text-decoration: none; color: var(--ui-gold-text); }
+  .mehr:hover { text-decoration: underline; }
+  .mehr :global(.ic) { width: 18px; height: 18px; }
   .tags span { font: 500 0.6875rem/1 var(--fsg-font-mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 9px; border-radius: var(--ui-radius-pille); background: var(--ui-flaeche-gold-3); }
 
   /* Nicht bei uns: hinter der gestrichelten Trennlinie, schraffiert, ohne Schienenanschluss */
