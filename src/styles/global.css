@@ -241,16 +241,16 @@ p { max-width: 66ch; }
 .tabelle-rahmen { overflow-x: auto; }
 .prosa code { font-family: var(--fsg-font-mono); font-size: 0.9em; }
 
-/* Zeitleiste (Leistungen, Beispiel bis zur Auszahlung): senkrechte Goldlinie, Punkt je Schritt, Zeit über dem Schritt */
+/* Zeitleiste (Leistungen, Beispiel bis zur Auszahlung): Markdown-Liste mit `{.zeitleiste}`; erstes **fett** = Zeitraum über
+   dem Schritt, letztes *kursiv* = wer. Senkrechte Goldlinie, Punkt je Schritt. */
 .prosa ol.zeitleiste { list-style: none; padding: 0; margin: 28px 0; max-width: 66ch; position: relative; }
 .zeitleiste::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; border-left: 2px solid var(--ui-goldlinie); }
-.zeitleiste li { position: relative; display: grid; gap: 4px; padding: 0 0 22px 36px; margin: 0; }
+.zeitleiste li { position: relative; padding: 0 0 22px 36px; margin: 0; line-height: 1.55; }
 .zeitleiste li:last-child { padding-bottom: 0; }
 .zeitleiste li::before { content: ''; position: absolute; left: 0; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--fsg-color-bg); box-shadow: inset 0 0 0 3px var(--ui-goldlinie); }
 .zeitleiste li:last-child::before { background: var(--fsg-gold-400); box-shadow: 0 0 0 5px rgb(255 176 32 / 0.22); }
-.zl-zeit { font: 500 var(--fsg-text-label) / 1.4 var(--fsg-font-mono); letter-spacing: var(--fsg-tracking-label); text-transform: uppercase; color: var(--ui-gold-text); }
-.zl-schritt { line-height: 1.55; }
-.zl-wer { font-size: var(--fsg-text-small); color: var(--ui-text-muted); }
+.zeitleiste li > strong:first-child { display: block; margin-bottom: 4px; font: 500 var(--fsg-text-label) / 1.4 var(--fsg-font-mono); letter-spacing: var(--fsg-tracking-label); text-transform: uppercase; color: var(--ui-gold-text); }
+.zeitleiste li > em:last-child { display: block; margin-top: 4px; font-style: normal; font-size: var(--fsg-text-small); color: var(--ui-text-muted); }
 
 /* Kasten (Compliance, Hinweise): getönte Karte mit Goldkante */
 .kasten { border-radius: var(--ui-radius-karte); background: var(--ui-flaeche-gold-1); box-shadow: inset 4px 0 0 var(--ui-goldlinie); padding: 22px 26px; margin: 40px 0; }

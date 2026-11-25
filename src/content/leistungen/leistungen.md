@@ -65,13 +65,12 @@ Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspr
 
 Ein Startup, Geschäftsjahr gleich Kalenderjahr, beantragt die Forschungszulage für 2026 und stimmt den BSFZ-Antrag auf Jahresabschluss und Körperschaftsteuererklärung ab:
 
-<ol class="zeitleiste">
-<li><span class="zl-zeit">Januar 2027</span><span class="zl-schritt"><strong>Auftakt und BSFZ-Antrag.</strong> Vorhabenbeschreibung und Antrag; Einreichung meist drei bis vier Wochen nach dem Auftakt.</span><span class="zl-wer">Wir bereiten vor, du reichst ein</span></li>
-<li><span class="zl-zeit">Februar bis April 2027</span><span class="zl-schritt"><strong>Bescheinigung der BSFZ.</strong> Meist zwei bis drei Monate (Erfahrungswert; amtlich spätestens drei Monate ab der Eingangsbestätigung); danach liegt die Bescheinigung vor.</span><span class="zl-wer">BSFZ</span></li>
-<li><span class="zl-zeit">Parallel, Februar bis April 2027</span><span class="zl-schritt"><strong>Jahresabschluss 2026.</strong> Läuft parallel zum Verfahren bei der BSFZ.</span><span class="zl-wer">Dein Steuerberater</span></li>
-<li><span class="zl-zeit">Mai 2027</span><span class="zl-schritt"><strong>Antrag auf Forschungszulage beim Finanzamt.</strong> Zusammen mit der Körperschaftsteuererklärung 2026.</span><span class="zl-wer">Dein Unternehmen bzw. dein Steuerberater</span></li>
-<li><span class="zl-zeit">Juni bis September 2027</span><span class="zl-schritt"><strong>Festsetzung und Auszahlung.</strong> Anrechnung auf die Körperschaftsteuer 2026; was die Steuer übersteigt, wird ausgezahlt.</span><span class="zl-wer">Finanzamt</span></li>
-</ol>
+1. **Januar 2027** Auftakt und BSFZ-Antrag: Vorhabenbeschreibung und Antrag; Einreichung meist drei bis vier Wochen nach dem Auftakt. *Wir bereiten vor, du reichst ein.*
+2. **Februar bis April 2027** Bescheinigung der BSFZ: meist zwei bis drei Monate (Erfahrungswert; amtlich spätestens drei Monate ab der Eingangsbestätigung); danach liegt die Bescheinigung vor. *BSFZ*
+3. **Parallel, Februar bis April 2027** Jahresabschluss 2026, parallel zum Verfahren bei der BSFZ. *Dein Steuerberater*
+4. **Mai 2027** Antrag auf Forschungszulage beim Finanzamt, zusammen mit der Körperschaftsteuererklärung 2026. *Dein Unternehmen bzw. dein Steuerberater*
+5. **Juni bis September 2027** Festsetzung und Auszahlung: Anrechnung auf die Körperschaftsteuer 2026; was die Steuer übersteigt, wird ausgezahlt. *Finanzamt*
+{.zeitleiste}
 
 In diesem Beispiel vergehen vom Auftakt bis zur Auszahlung rund sechs bis neun Monate. Wie schnell das Finanzamt festsetzt, ist von Amt zu Amt verschieden. Reichst du den BSFZ-Antrag schon im laufenden Jahr ein, liegt die Bescheinigung meist vor, wenn der Jahresabschluss fertig ist.
 
