@@ -93,7 +93,7 @@ Der Antrag läuft in zwei Stufen: Erst bescheinigt die BSFZ, dass dein Vorhaben 
 | 1 BSFZ-Antrag | Vorhabenbeschreibung im Portal der BSFZ, jederzeit vor, während oder nach dem Vorhaben. Mit einem Bescheid ist laut BSFZ spätestens drei Monate nach Eingangsbestätigung zu rechnen. Kostenfrei. | FullStack Grant entwirft den Antrag mit deinem CTO und die Antworten auf Rückfragen der BSFZ. Einreichen kann nur dein Unternehmen selbst (BMF Rn. 229). |
 | 2 Antrag beim Finanzamt | Antrag über ELSTER nach Ablauf des Wirtschaftsjahres, ein Antrag je Wirtschaftsjahr für alle Vorhaben. Die BSFZ übermittelt die Bescheinigung direkt ans Finanzamt. | Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Hilfe beim Antrag beim Finanzamt ist Hilfeleistung in Steuersachen, die nur dazu befugte Personen wie Steuerberater leisten dürfen (BMF Rn. 208). <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür. Hilfe beim Antrag beim Finanzamt ist Hilfeleistung in Steuersachen, die nur dazu befugte Personen wie Steuerberater leisten dürfen (BMF Rn. 208).“ --> |
 
-Für den BSFZ-Antrag brauchst du ein ELSTER-Organisationszertifikat; die Registrierung kann bis zu 14 Tage dauern (BSFZ, FAQ). Die BSFZ bewertet nur die Angaben im Formular, die Vorhabenbeschreibung hat 4.000 Zeichen. Jedes Wort zählt.
+Für den BSFZ-Antrag brauchst du ein ELSTER-Organisationszertifikat; die Registrierung kann bis zu 14 Tage dauern (BSFZ, FAQ). Die BSFZ bewertet nur die Angaben im Formular. Jedes Wort zählt.
 
 ## Wie lange kann ich rückwirkend beantragen?
 

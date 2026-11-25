@@ -12,7 +12,7 @@ pruefintervall_tage: 90
 grenzenImText: true
 status: entwurf
 freigabe: "18.11.2026, Felix; T9 19.11.2026"
-antwort: "Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Ein Zuschuss mit höherer Förderquote kann mehr bringen, auch wenn er mehr Arbeit macht. Förderung außer der Forschungszulage heißt für ein Tech-Startup vor allem: Zuschüsse und EU-Grants mit 40 bis 90 % Förderquote sowie Förderkredite."
+antwort: "Viele Förderberatungen beginnen mit der Forschungszulage, weil sie planbar ist. Wir beginnen mit deiner Finanzierung: Ein Zuschuss mit höherer Förderquote kann mehr bringen, auch wenn er mehr Arbeit macht. Förderung außer der Forschungszulage heißt für ein Tech-Startup vor allem: Zuschüsse und EU-Grants mit 40 bis 90 % Förderquote (ZIM, KMU-innovativ, EIC Accelerator, InnoRampUp; Stand 17.11.2026) sowie Förderkredite."
 hauptbegriff: Förderung außer der Forschungszulage
 nebenbegriffe: [Förderung kombinieren, Finanzierungsmix Startup, Boutique oder großer Fördermittelberater, Zuschuss oder Darlehen, Förderquote Zuschuss, Kumulierung]
 fragen:

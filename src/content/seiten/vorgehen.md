@@ -6,6 +6,8 @@ url: /vorgehen/
 datePublished: 2026-12-01
 dateModified: 2026-12-01
 status: entwurf
+quellen:
+  - {titel: "BSFZ, FAQ", url: "https://www.bescheinigung-forschungszulage.de/faq", abruf: 2026-11-25}
 freigabe: "18.11.2026, Felix; T9 19.11.2026"
 hauptbegriff: "Ablauf Förderberatung"
 nebenbegriffe: ["seriöse Förderberatung", "Fördermittelberater auswählen", "wer reicht den Förderantrag ein", "Forschungszulage Steuerberater Rolle", "Verwendungsnachweis", "Datenschutz und KI-Einsatz"]
@@ -29,7 +31,7 @@ antwort: "Bei FullStack Grant bereiten wir vor, du entscheidest und reichst ein.
 | 4 Auftakt | du benennst Vorhaben und Fachperson, wir fordern die Unterlagen an | beide | in der ersten Woche nach Vertragsschluss |
 | 5 Entwürfe | Texte mit Korrekturschleifen | FullStack Grant | erste Entwürfe rund zwei Wochen nach Eingang der Unterlagen |
 | 6 Freigabe und Einreichung | du prüfst, bestätigst Richtigkeit und Vollständigkeit in Textform und reichst selbst ein | du | meist drei bis vier Wochen nach dem Auftakt, Endfassung einige Tage vor dem Termin |
-| 7 Bescheid und Laufzeit | Bescheid des Fördergebers; danach auf Wunsch Nachweise und Änderungsanträge | Fördergeber; FullStack Grant bereitet vor, du reichst ein | bei der BSFZ meist zwei bis drei Monate (Erfahrungswert; amtlich spätestens drei Monate ab der Eingangsbestätigung), bei Zuschüssen je Programm |
+| 7 Bescheid und Laufzeit | Bescheid des Fördergebers; danach auf Wunsch Nachweise und Änderungsanträge | Fördergeber; FullStack Grant bereitet vor, du reichst ein | bei der Bescheinigungsstelle Forschungszulage (BSFZ) meist zwei bis drei Monate (Erfahrungswert; laut BSFZ spätestens drei Monate ab der Eingangsbestätigung, Stand: 25.11.2026), bei Zuschüssen je Programm |
 
 Termine sind Zielgrößen: Kommen Unterlagen später, verschiebt sich der Plan entsprechend. Wir sagen es dir dann sofort.
 
