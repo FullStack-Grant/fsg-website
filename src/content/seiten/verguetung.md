@@ -35,7 +35,7 @@ Alle Beträge verstehen sich netto zuzüglich Umsatzsteuer.
 
 ## Was ist im Honorar für den Antrag enthalten, und was nicht?
 
-**Enthalten** ist die Arbeit von der Programmwahl bis zum Bescheid: Abgleich mit den Programmvoraussetzungen, Entwürfe aller inhaltlichen Teile, bis zu zwei Korrekturschleifen, bei der Forschungszulage die Entwürfe der Antworten auf Rückfragen der BSFZ bis zur Bescheinigung. <!-- T9 ab Fassung 1.1: „…, bei der Forschungszulage die Entwürfe der Antworten auf Rückfragen der BSFZ bis zur Bescheinigung, zudem eine nachvollziehbare Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe und Vorlage für die Stundenaufzeichnung.“ --> Beim EIC Accelerator gehören Probeinterviews und eine Überarbeitung für die Wiedereinreichung dazu, wenn noch ein Termin erreichbar ist.
+**Enthalten** ist die Arbeit von der Programmwahl bis zum Bescheid: Abgleich mit den Programmvoraussetzungen, Entwürfe aller inhaltlichen Teile mit Korrekturschleifen, bei der Forschungszulage die Entwürfe der Antworten auf Rückfragen der BSFZ bis zur Bescheinigung. <!-- T9 ab Fassung 1.1: „…, bei der Forschungszulage die Entwürfe der Antworten auf Rückfragen der BSFZ bis zur Bescheinigung, zudem eine nachvollziehbare Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe und Vorlage für die Stundenaufzeichnung.“ --> Beim EIC Accelerator gehören Probeinterviews und eine Überarbeitung für die Wiedereinreichung dazu, wenn noch ein Termin erreichbar ist.
 
 **Nicht enthalten** sind Leistungen nach der Bewilligung: Zwischen- und Verwendungsnachweise, Änderungs- und Verlängerungsanträge, Controlling und die Durchsicht vor Prüfungen des Fördergebers, ohne Testat; bei der Forschungszulage auch eine Projektdokumentation je Wirtschaftsjahr, die du auf Wunsch beauftragst. <!-- T9 ab Fassung 1.1: „**Nicht enthalten** sind Leistungen nach der Bewilligung: Zwischen- und Verwendungsnachweise, Änderungs- und Verlängerungsanträge, Controlling und die Durchsicht vor Prüfungen des Fördergebers, ohne Testat; bei der Forschungszulage sind Projektdokumentation und Unterlagenmappe enthalten, eine Stundenübersicht und die Begleitung einer Betriebsprüfung laufen nach Stunden.“ --> Diese Leistungen kosten Zeithonorar, und du bekommst vorher eine Schätzung. So weißt du vorab, was das Erfolgshonorar abdeckt, und zahlst für Nachweise nur, was du beauftragst.
 
@@ -59,6 +59,6 @@ Das Erstgespräch und der Fördercheck. Beides ist unverbindlich, ohne Vertrag u
 
 Weil Aufwand und Wert je Programm und Vorhaben sehr unterschiedlich sind. Nach dem Fördercheck bekommst du ein schriftliches Angebot mit allen Sätzen, Auslösern und Fälligkeiten. Erst dann entscheidest du.
 
-**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
+**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
 [Leistungen nach Finanzierungsinstrument](/leistungen/) · [Vorgehen und Compliance](/vorgehen/)

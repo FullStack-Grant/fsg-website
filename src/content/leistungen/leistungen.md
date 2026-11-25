@@ -16,7 +16,7 @@ fragen:
   - "Was kostet mich die Förderung intern an Zeit?"
   - "Was ist der Fördercheck?"
   - "Was macht FullStack Grant nicht?"
-antwort: "FullStack Grant berät Tech-Startups zu allen Ebenen des Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite und Bürgschaften. Beteiligungskapital gehört nicht zu unserem Angebot. Wir bereiten Anträge und Nachweise vor, eingereicht wird von deinem Unternehmen. Der Einstieg ist ein kostenloser Fördercheck."
+antwort: "FullStack Grant berät Tech-Startups zu allen Ebenen des Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite und Bürgschaften. Equity (Beteiligungskapital) gehört nicht zu unserem Angebot. Wir bereiten Anträge und Nachweise vor, eingereicht wird von deinem Unternehmen. Der Einstieg ist ein kostenloser Fördercheck."
 registerModul: ["B0", "B1", "B2", "B3", "B4", "B5"]
 programme: ["forschungszulage", "zim"]
 ---
@@ -26,8 +26,8 @@ programme: ["forschungszulage", "zim"]
 | Ebene | Typische Programme | Du gibst ab | Wir bereiten vor | Vergütung |
 |---|---|---|---|---|
 | Vorab: Fördercheck | alle | 20 Minuten und deine Eckdaten | Programmauswahl und Reihenfolge, schriftlich | kostenlos |
-| Steuerliche Förderung | Forschungszulage | nichts an Kapital | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
-| Zuschüsse und Grants | ZIM, Landesprogramme, EIC Accelerator, Horizon Europe | Eigenanteil, Nachweispflichten | Auswahl, Skizze, Antrag, Finanzplan | Erfolgshonorar oder festes Honorar, je nach Programm |
+| Steuerliche Förderung | Forschungszulage | nichts an Kapital; Nachweispflicht: Arbeitszeiten je Vorhaben aufzeichnen | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
+| Zuschüsse und Grants | ZIM, KMU-innovativ, Landesprogramme, EIC Accelerator | Eigenanteil, Nachweispflichten | Auswahl, Skizze, Antrag | Erfolgshonorar oder festes Honorar, je nach Programm |
 | Förderkredite und Bürgschaften | Programme von KfW und Landesförderbanken | Zins und Tilgung | Einordnung, Unterlagen für Hausbank und Förderbank | Erfolgshonorar oder festes Honorar, je nach Programm |
 | Rahmen: Nach der Bewilligung | alle Zuschüsse und Grants | Belege, Fristen, Einreichung | auf Wunsch Nachweise, Änderungsanträge, Durchsicht vor Prüfungen des Fördergebers, ohne Testat | nach Aufwand |
 
@@ -44,38 +44,38 @@ Der Fördercheck zeigt dir, welche Programme zu Vorhaben, Unternehmensgröße un
 
 ## Steuerliche Förderung: BSFZ-Antrag für die Forschungszulage {#steuerliche-foerderung}
 
-Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind, und sie kostet kein Kapital. FullStack Grant bereitet deinen Antrag im Bescheinigungsverfahren bei der Bescheinigungsstelle Forschungszulage (BSFZ) vor. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
+Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind, und sie kostet kein Kapital. FullStack Grant bereitet deinen Antrag im Bescheinigungsverfahren bei der Bescheinigungsstelle Forschungszulage (BSFZ) vor. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
 
 **Wir bereiten vor**
 - Abgleich deines Vorhabens mit den Merkmalen begünstigter Forschung und Entwicklung
-- Vorhabenbeschreibung, Arbeitspakete und die übrigen inhaltlichen Angaben des BSFZ-Antrags mit der FuE-Argumentation, als Entwurf mit bis zu zwei Korrekturschleifen
+- Vorhabenbeschreibung, Arbeitspakete und die übrigen inhaltlichen Angaben des BSFZ-Antrags mit der FuE-Argumentation, als Entwurf mit Korrekturschleifen
 - Entwürfe für Antworten auf Rückfragen der BSFZ bis zur Bescheinigung
 - auf Wunsch eine nachvollziehbare Projektdokumentation je Wirtschaftsjahr, nach Aufwand <!-- T9 ab Fassung 1.1: „Eine nachvollziehbare Projektdokumentation für jedes Wirtschaftsjahr, eine Unterlagenmappe zu den FuE-Inhalten für dich und deinen Steuerberater und eine Vorlage, mit der euer Team die Stunden zeitnah und lückenlos erfassen kann, sind im Erfolgshonorar enthalten.“ -->
 - Hinweise, wie dein Team Arbeitszeiten zeitnah und vorhabenbezogen erfasst <!-- T9 ab Fassung 1.1: „Eure Stunden erfasst euer Team selbst, am besten täglich; die Vorlage dafür bekommst du von uns zum Start.“ -->
 
 **Du machst**
 - Fachperson benennen, die das Vorhaben kennt
-- Personal- und Kostenangaben liefern, abgestimmt mit deinem Steuerberater
+- Personal- und Kostenangaben liefern
 - Antrag über dein eigenes Konto bei der BSFZ einreichen
-- Arbeitszeiten im Vorhaben zeitnah erfassen lassen; die Stundennachweise führt dein Team selbst <!-- T9 ab Fassung 1.1: „Eure Stunden erfasst euer Team selbst, am besten täglich; die Vorlage dafür bekommst du von uns zum Start.“ -->
+- Arbeitszeiten im Vorhaben zeitnah erfassen lassen <!-- T9 ab Fassung 1.1: „Eure Stunden erfasst euer Team selbst, am besten täglich; die Vorlage dafür bekommst du von uns zum Start.“ -->
 
-**Grenze:** Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Bemessungsgrundlage, Zuordnung von Aufwendungen und KMU-Status beurteilen du und dein Steuerberater.
+**Grenze:** Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Bemessungsgrundlage, Zuordnung von Aufwendungen und KMU-Status beurteilen du und dein Steuerberater.
 
 **Wie lange dauert es bis zur Auszahlung? Ein Beispiel**
 
 Ein Startup, Geschäftsjahr gleich Kalenderjahr, beantragt die Forschungszulage für 2026 und stimmt den BSFZ-Antrag auf Jahresabschluss und Körperschaftsteuererklärung ab:
 
-| Zeitraum | Schritt | Wer |
-|---|---|---|
-| Januar 2027 | Auftakt, Vorhabenbeschreibung und BSFZ-Antrag; Einreichung meist drei bis vier Wochen nach dem Auftakt | wir bereiten vor, du reichst ein |
-| Februar bis April 2027 | Prüfung durch die BSFZ, meist zwei bis drei Monate (Erfahrungswert; amtlich spätestens drei Monate ab der Eingangsbestätigung); danach liegt die Bescheinigung vor | BSFZ |
-| Februar bis April 2027 | Jahresabschluss 2026, parallel zur BSFZ-Prüfung | dein Steuerberater |
-| Mai 2027 | Antrag auf Forschungszulage beim Finanzamt, zusammen mit der Körperschaftsteuererklärung 2026 | dein Unternehmen bzw. dein Steuerberater |
-| Juni bis September 2027 | Festsetzung der Forschungszulage, Anrechnung auf die Körperschaftsteuer 2026; was die Steuer übersteigt, wird ausgezahlt | Finanzamt |
+<ol class="zeitleiste">
+<li><span class="zl-zeit">Januar 2027</span><span class="zl-schritt"><strong>Auftakt und BSFZ-Antrag.</strong> Vorhabenbeschreibung und Antrag; Einreichung meist drei bis vier Wochen nach dem Auftakt.</span><span class="zl-wer">Wir bereiten vor, du reichst ein</span></li>
+<li><span class="zl-zeit">Februar bis April 2027</span><span class="zl-schritt"><strong>Bescheinigung der BSFZ.</strong> Meist zwei bis drei Monate (Erfahrungswert; amtlich spätestens drei Monate ab der Eingangsbestätigung); danach liegt die Bescheinigung vor.</span><span class="zl-wer">BSFZ</span></li>
+<li><span class="zl-zeit">Parallel, Februar bis April 2027</span><span class="zl-schritt"><strong>Jahresabschluss 2026.</strong> Läuft parallel zum Verfahren bei der BSFZ.</span><span class="zl-wer">Dein Steuerberater</span></li>
+<li><span class="zl-zeit">Mai 2027</span><span class="zl-schritt"><strong>Antrag auf Forschungszulage beim Finanzamt.</strong> Zusammen mit der Körperschaftsteuererklärung 2026.</span><span class="zl-wer">Dein Unternehmen bzw. dein Steuerberater</span></li>
+<li><span class="zl-zeit">Juni bis September 2027</span><span class="zl-schritt"><strong>Festsetzung und Auszahlung.</strong> Anrechnung auf die Körperschaftsteuer 2026; was die Steuer übersteigt, wird ausgezahlt.</span><span class="zl-wer">Finanzamt</span></li>
+</ol>
 
 In diesem Beispiel vergehen vom Auftakt bis zur Auszahlung rund sechs bis neun Monate. Wie schnell das Finanzamt festsetzt, ist von Amt zu Amt verschieden. Reichst du den BSFZ-Antrag schon im laufenden Jahr ein, liegt die Bescheinigung meist vor, wenn der Jahresabschluss fertig ist.
 
-**Gut zu wissen:** Die Forschungszulage wird bei der nächsten erstmaligen Steuerfestsetzung nach dem Bescheid über die Forschungszulage angerechnet (§ 10 Abs. 1 FZulG). Ergeht der Körperschaftsteuerbescheid vorher, kann sich die Anrechnung um rund ein Jahr verschieben. Wie das in der Steuererklärung berücksichtigt wird, klärst du mit deinem Steuerberater.
+**Gut zu wissen:** Die Forschungszulage wird bei der nächsten erstmaligen Steuerfestsetzung nach dem Bescheid über die Forschungszulage angerechnet (§ 10 Abs. 1 FZulG). Ergeht der Körperschaftsteuerbescheid vorher, kann sich die Anrechnung um rund ein Jahr verschieben. Weise deshalb deinen Steuerberater bei der Abgabe der Körperschaftsteuererklärung auf die beantragte Forschungszulage hin.
 
 [Forschungszulage für Startups: Voraussetzungen, Höhe, Ablauf](/foerderung/programme/forschungszulage/)
 
@@ -90,13 +90,13 @@ Zuschüsse und Grants von Bund, Ländern und EU fördern einen Teil deiner Proje
 
 **Wir bereiten vor**
 - Auswahl und Kombination der Programme, abgestimmt auf deine Finanzierung
-- Projektskizze, Antrag und Finanzplan aus deinen Zahlen
-- EIC Accelerator: Kurzantrag mit englischen Texten und Videoskript; nach dem GO der Vollantrag mit Geschäftsplan, Arbeits- und Meilensteinplan und Budget, zwei Probeinterviews per Video und eine Überarbeitung für die Wiedereinreichung, wenn noch ein Termin erreichbar ist
+- Projektskizze und Antrag
+- EIC Accelerator: Kurzantrag mit englischen Texten und Videoskript; nach dem GO der Vollantrag mit Geschäftsplan, Arbeits- und Meilensteinplan und Budget, zwei Probeinterviews per Video und eine Überarbeitung für die Wiedereinreichung
 - Horizon Europe: Suche nach einem Konsortium und dein Partnerbeitrag bis zur Einreichung
 
 **Du machst**
 - Vorhaben benennen und Fachperson stellen
-- Zahlen und frühere Förderungen offenlegen, damit nichts doppelt gefördert wird
+- Zahlen und frühere Förderungen im Sinne der Compliance offenlegen, damit nichts doppelt gefördert wird
 - Endfassung freigeben und selbst einreichen, im Verbund der Koordinator; im Interview trittst du mit deinem Team auf
 
 **Grenze:** Die Kombination planen wir nach den Regeln, die jedes Programm selbst festlegt; eine rechtliche Würdigung im Einzelfall ist keine Leistung. Die Kumulierung mit der Forschungszulage beurteilt dein Steuerberater. Bei EXIST beraten wir Gründungsteams, die die Gründung beschlossen haben, und rechnen nach Aufwand ab.
@@ -109,7 +109,7 @@ Förderkredite von KfW und Landesförderbanken sind Fremdkapital zu Förderkondi
 
 **Wir bereiten vor**
 - Einordnung in deinen Finanzierungsplan: welcher Kredit, wann, in welcher Höhe neben Zuschüssen und Eigenkapital
-- Unterlagen für Hausbank und Förderbank, etwa Finanzplan und Vorhabenbeschreibung
+- Unterlagen für Hausbank und Förderbank, etwa die Vorhabenbeschreibung
 
 **Du machst**
 - Gespräch mit der Hausbank, Antrag über die Hausbank, Kreditvertrag
@@ -118,7 +118,7 @@ Förderkredite von KfW und Landesförderbanken sind Fremdkapital zu Förderkondi
 
 ## Nicht bei uns: Equity und VC-Fundraising {#beteiligungskapital}
 
-Equity (Beteiligungskapital) gehört nicht zu unserem Angebot, auch nicht bei öffentlichen Fonds wie dem HTGF. Wir vermitteln nicht, haben keinen Investorenkontakt und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor dem Equity: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.
+Equity (Beteiligungskapital) gehört nicht zu unserem Angebot, auch nicht bei öffentlichen Fonds wie dem HTGF. Wir vermitteln nicht und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor dem Equity: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.
 
 ## Nach der Bewilligung: Nachweise, Änderungsanträge, Durchsicht vor Prüfungen {#nach-der-bewilligung}
 
@@ -147,7 +147,7 @@ Die Phase bestimmt, welche Ebene zuerst trägt. Welche Programme im Einzelfall p
 
 ## In welcher Reihenfolge prüft man Förderung?
 
-Nach Kapitalkosten: erst, worauf du Anspruch hast (Forschungszulage), dann Zuschüsse, dann Förderkredite. So finanziert jede Ebene, was die vorherige nicht abdeckt; Beteiligungskapital gehört nicht zu unserem Angebot.
+Nach Kapitalkosten: erst, worauf du Anspruch hast (Forschungszulage), dann Zuschüsse, dann Förderkredite. So finanziert jede Ebene, was die vorherige nicht abdeckt; Equity gehört nicht zu unserem Angebot.
 
 ## Was kostet dich die Förderung intern an Zeit?
 
@@ -156,10 +156,10 @@ Erfahrungswerte, keine Zusage: Für einen BSFZ-Antrag rechnen Teams meist mit 6 
 ## Was macht FullStack Grant nicht?
 
 - Rechtsberatung
-- Steuerberatung und den Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
+- Steuerberatung und den nachgelagerten Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
 - Einreichen in deinem Namen oder Vertretung gegenüber Behörden
 - Mittelabrufe, Testate und Stundennachweise
 - Equity und VC-Fundraising, auch beim HTGF
 - eine Garantie, dass bewilligt wird
 
-**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)
+**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)

@@ -16,7 +16,7 @@ fragen:
   - "Was gehört nicht zur Leistung?"
   - "Woran erkennt man eine seriöse Förderberatung?"
   - "Wie geht FullStack Grant mit Daten und KI um?"
-antwort: "Bei FullStack Grant bereiten wir vor, du entscheidest und reichst ein. Jeder Schritt hat eine Zuständigkeit und einen geplanten Termin, vom kostenlosen Fördercheck über den Antrag bis zu den Nachweisen nach der Bewilligung. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater."
+antwort: "Bei FullStack Grant bereiten wir vor, du entscheidest und reichst ein. Jeder Schritt hat eine Zuständigkeit und einen geplanten Termin, vom kostenlosen Fördercheck über den Antrag bis zu den Nachweisen nach der Bewilligung. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater."
 ---
 
 ## Welche Schritte gibt es vom Erstgespräch bis zum Nachweis?
@@ -27,7 +27,7 @@ antwort: "Bei FullStack Grant bereiten wir vor, du entscheidest und reichst ein.
 | 2 Fördercheck | passende Programme und Reihenfolge, schriftlich | FullStack Grant | nach dem Gespräch, kostenlos |
 | 3 Angebot und Vertrag | Leistung und Vergütung je Programm, schriftlich vorab | du entscheidest | vor jeder Arbeit am Antrag |
 | 4 Auftakt | du benennst Vorhaben und Fachperson, wir fordern die Unterlagen an | beide | in der ersten Woche nach Vertragsschluss |
-| 5 Entwürfe | Texte, Finanzplan, bis zu zwei Korrekturschleifen | FullStack Grant | erste Entwürfe rund zwei Wochen nach Eingang der Unterlagen |
+| 5 Entwürfe | Texte mit Korrekturschleifen | FullStack Grant | erste Entwürfe rund zwei Wochen nach Eingang der Unterlagen |
 | 6 Freigabe und Einreichung | du prüfst, bestätigst Richtigkeit und Vollständigkeit in Textform und reichst selbst ein | du | meist drei bis vier Wochen nach dem Auftakt, Endfassung einige Tage vor dem Termin |
 | 7 Bescheid und Laufzeit | Bescheid des Fördergebers; danach auf Wunsch Nachweise und Änderungsanträge | Fördergeber; FullStack Grant bereitet vor, du reichst ein | bei der BSFZ meist zwei bis drei Monate (Erfahrungswert; amtlich spätestens drei Monate ab der Eingangsbestätigung), bei Zuschüssen je Programm |
 
@@ -41,7 +41,7 @@ Deshalb bleibt das Einreichen bei dir, und vor jeder Einreichung bestätigst du 
 
 ## Was macht dein Steuerberater bei der Forschungszulage?
 
-Die Forschungszulage hat zwei Stufen. In der ersten bescheinigt die Bescheinigungsstelle Forschungszulage (BSFZ), dass dein Vorhaben Forschung und Entwicklung ist; diesen Antrag bereiten wir vor. In der zweiten setzt das Finanzamt die Zulage fest. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
+Die Forschungszulage hat zwei Stufen. In der ersten bescheinigt die Bescheinigungsstelle Forschungszulage (BSFZ), dass dein Vorhaben Forschung und Entwicklung ist; diesen Antrag bereiten wir vor. In der zweiten setzt das Finanzamt die Zulage fest. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
 
 Dein Steuerberater beurteilt auch Bemessungsgrundlage, Zuordnung der Aufwendungen, KMU-Status und Unternehmensverbindungen. Personal- und Kostenangaben übernehmen wir von dir bzw. ihm, ohne sie zu prüfen. Mit dem Finanzamt führen wir keinen Schriftverkehr.
 
@@ -52,7 +52,7 @@ Dein Steuerberater beurteilt auch Bemessungsgrundlage, Zuordnung der Aufwendunge
 - **Einreichen und Vertretung:** Wir reichen nichts in deinem Namen ein und vertreten dich nicht gegenüber Behörden.
 - **Testate und Mittelabrufe:** keine Prüfungsvermerke, keine Bestätigungen gegenüber Dritten, keine Mittelabrufe.
 - **Belege und Stundennachweise:** Belege prüfen wir nicht; die Stundennachweise führt dein Team zeitnah selbst. <!-- T9 ab Fassung 1.1: „Eure Stunden erfasst euer Team selbst, am besten täglich; die Vorlage dafür bekommst du von uns zum Start.“ -->
-- **VC-Fundraising:** Wir vermitteln keine Beteiligungen und haben keinen Investorenkontakt.
+- **VC-Fundraising:** Wir vermitteln keine Beteiligungen; auf Wunsch empfehlen wir dir kompetente Partner.
 - **Garantien:** Wir schulden sorgfältige Arbeit, keine Bewilligung und keine bestimmte Förderhöhe.
 
 Bei steuerlichen oder rechtlichen Fragen sagen wir es dir und verweisen an deinen Steuerberater oder eine Kanzlei. Für die Empfehlung nehmen wir kein Geld.
@@ -88,6 +88,6 @@ Ein Förderantrag muss auch Jahre später noch erklärbar sein. Deshalb legen wi
 - **EU-Programme:** Bei EU-Anträgen dokumentieren wir den KI-Einsatz in einem Protokoll. Ob und wie du ihn angibst, richtet sich nach den Regeln des Programms; die Angabe machst du als Antragsteller.
 - **Datenschutz:** Wie wir personenbezogene Daten verarbeiten, steht in der [Datenschutzerklärung](/datenschutz/).
 
-**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
+**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
 [Leistungen nach Finanzierungsinstrument](/leistungen/) · [Kosten einer Förderberatung](/verguetung/) · [Forschungszulage: Zuständigkeiten](/foerderung/programme/forschungszulage/)

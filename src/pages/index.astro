@@ -12,14 +12,14 @@ import Zitat from '../components/Zitat.astro';
 import { firma } from '../data/firma';
 import { personKnoten } from '../lib/jsonld';
 
-const FINANZAMT = 'Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater.';
+const FINANZAMT = 'Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater.';
 
 const ebenen: Ebene[] = [
   {
     kurz: 'Steuer', titel: 'Steuerliche Förderung', anker: 'steuerliche-foerderung', kosten: 1, zuerst: true,
     text: 'Auf die Forschungszulage besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind; es gibt keinen Wettbewerb um ein Budget.',
     zeilen: [
-      // T9 ab Fassung 1.1: „Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“
+      // T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“
       { label: 'Du gibst ab', wert: `Nichts an Kapital. ${FINANZAMT}` },
       { label: 'Wir bereiten vor', wert: 'Programmcheck, BSFZ-Antrag mit FuE-Argumentation, Vorhabenbeschreibung und Arbeitspaketen, Entwürfe der Antworten auf Rückfragen der BSFZ.' },
       // T9 ab Fassung 1.1: „Compliance: eine nachvollziehbare Projektdokumentation für jedes Wirtschaftsjahr und eine Unterlagenmappe für dich und deinen Steuerberater, im Erfolgshonorar.“
@@ -30,10 +30,10 @@ const ebenen: Ebene[] = [
   },
   {
     kurz: 'Zuschuss', titel: 'Zuschüsse und Grants', anker: 'zuschuesse', kosten: 1,
-    text: 'Programme von Bund, Ländern und EU, etwa ZIM, Landesprogramme, EIC Accelerator und Horizon Europe.',
+    text: 'Programme von Bund, Ländern und EU, etwa ZIM, KMU-innovativ, Landesprogramme und EIC Accelerator.',
     zeilen: [
       { label: 'Du gibst ab', wert: 'Keine Anteile, dafür Wettbewerb um Budget, Eigenanteil und Nachweispflichten.' },
-      { label: 'Wir bereiten vor', wert: 'Auswahl und Kombination, Entwürfe für Skizze, Antrag und Finanzplan aus deinen Zahlen.' },
+      { label: 'Wir bereiten vor', wert: 'Auswahl und Kombination, Entwürfe für Skizze und Antrag.' },
       { label: 'Compliance', wert: 'Zwischen- und Verwendungsnachweise und Änderungsanträge, auf Wunsch und nach Aufwand von uns vorbereitet, von dir eingereicht.', art: 'gold' },
     ],
     tags: ['EU', 'Bund', 'Land'],
@@ -56,7 +56,7 @@ const ebenen: Ebene[] = [
 const ausgeschlossen: Ausgeschlossen = {
   kurz: 'Beteiligung',
   titel: 'Equity und VC-Fundraising',
-  text: 'Der Finanzierungsmix endet bei uns vor dem Equity. Wir vermitteln keine Beteiligungen und haben keinen Investorenkontakt. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.',
+  text: 'Der Finanzierungsmix endet bei uns vor dem Equity. Wir vermitteln keine Beteiligungen. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.',
 };
 
 // Produktkarte im Hero (Design K3b): Kurzzeilen je Ebene, Texte aus dem Konzept.
@@ -101,7 +101,7 @@ const bereiche = [
               <li><a href={`#${e.anker}`}>
                 <span class:list={['kachel', i === 0 ? 'kachel-gold' : 'kachel-ton']}><Icon name={karteIcon[i] ?? 'dokument'} /></span>
                 <span class="hk-name"><b>{e.titel}</b><small>{karteUnter[i]}</small></span>
-                {e.zuerst ? <span class="chip">Zuerst prüfen</span> : <Icon name="pfeil" class="hk-pfeil" />}
+                {e.zuerst ? <span class="chip">Auch rückwirkend</span> : <Icon name="pfeil" class="hk-pfeil" />}
               </a></li>
             ))}
           </ol>
@@ -115,7 +115,7 @@ const bereiche = [
   <section class="abschnitt wrap" id="finanzierungsmix" aria-labelledby="h-mix">
     <div class="kopfzeile">
       <p class="eyebrow">Finanzierungsmix</p>
-      <h2 id="h-mix">Das ganze Förderportfolio, in einer klaren Reihenfolge</h2>
+      <h2 id="h-mix">Das ganze Förderportfolio aus rund 2.500 Programmen, in einer klaren Reihenfolge</h2>
       <p class="regel">Erst, worauf du Anspruch hast, dann Zuschüsse, dann günstiges Fremdkapital.</p>
     </div>
     <Ablauf ebenen={ebenen} ausgeschlossen={ausgeschlossen} />
@@ -159,9 +159,9 @@ const bereiche = [
       <h2 id="h-zust">Wer was tut. Schwarz auf weiß.</h2>
     </div>
     <Zustaendigkeiten spalten={[
-      { titel: 'FullStack Grant', punkte: ['findet die passenden Programme, nicht nur die Forschungszulage', 'entwirft Antrag und Finanzplan aus deinen Zahlen', 'bereitet auf Wunsch Nachweise über die Laufzeit vor'] },
+      { titel: 'FullStack Grant', punkte: ['findet die passenden Programme, nicht nur die Forschungszulage', 'entwirft Skizze und Antrag aus deinen Zahlen', 'bereitet auf Wunsch Nachweise über die Laufzeit vor'] },
       { titel: 'Du', punkte: ['entscheidest und reichst selbst ein', 'lieferst Zahlen und Projektwissen', 'prüfst jede Fassung und bestätigst sie in Textform'] },
-      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung', 'Steuerberatung und Antrag beim Finanzamt zur Forschungszulage (dein Unternehmen bzw. dein Steuerberater); für die Einreichung empfehlen wir dir gern kompetente und erfahrene Steuerberater', 'Einreichen in deinem Namen, Garantie einer Bewilligung, Equity und VC-Fundraising'] },
+      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung', 'Steuerberatung und den nachgelagerten Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater); für die Einreichung empfehlen wir dir gern kompetente und erfahrene Steuerberater', 'Einreichen in deinem Namen, Garantie einer Bewilligung, Equity und VC-Fundraising'] },
     ]} />
     <p class="weiter"><a href="/vorgehen/">So läuft eine Förderberatung bei uns <Icon name="pfeil" /></a></p>
   </section>

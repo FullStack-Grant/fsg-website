@@ -6,7 +6,7 @@ Neue Komponenten nur mit Felix' Designfreigabe. Aktuelles Design: K3b „Gold au
 |---|---|---|
 | `Kopf`, `Fuss` | Kopf: Ink-Leiste, sticky (Höhe `--kopf-hoehe`, Sprunganker über `scroll-padding-top`), Logo dunkel, Navigation, Goldbutton „Erstgespräch buchen“ (mobil kompakt). Fuß: Goldlinie, Marke, Slogan, Seiten- und Rechtsnavigation | allen Seiten (über `Basis`) |
 | `Personenkarte` | Gründer mit Porträt und KI-Vermerk, nicht im Hero; `gross` = Porträt in Spaltenbreite (Start) | Start (Über uns), Über uns |
-| `Ablauf` | Finanzierungsmix als Ablauf in Stationen in der Reihenfolge der Prüfung (ersetzt `Kapitalsaeule`): Achse, Schiene mit Knoten, Station 1 „Zuerst prüfen“, „Nicht bei uns“ hinter gestrichelter Trennlinie; Daten `Ebene[]` und `Ausgeschlossen` | Start |
+| `Ablauf` | Finanzierungsmix als Ablauf in Stationen in der Reihenfolge der Prüfung (ersetzt `Kapitalsaeule`): Achse, Schiene mit Knoten, Station 1 „Auch rückwirkend“, „Nicht bei uns“ hinter gestrichelter Trennlinie; Daten `Ebene[]` und `Ausgeschlossen` | Start |
 | `Zustaendigkeiten` | drei Karten: FullStack Grant (Gold, Goldoberkante), dein Unternehmen, bewusst nicht bei uns (neutral, Kreuze) | Start, Vorgehen |
 | `Schritte` | geordneter Ablauf als Karten mit Icon, ohne Ziffern, für Ink-Flächen | Start, Vorgehen |
 | `Faq` | aufklappbare Fragen (Antwort steht im Server-HTML) | Start, Leistungen |

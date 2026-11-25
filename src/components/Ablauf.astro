@@ -1,6 +1,6 @@
 ---
 // Ablauf (Design K3b, ersetzt die Kapitalsäule E2): Finanzierungsmix als Ablauf in Stationen, in der Reihenfolge der
-// Prüfung, ohne Kostenskala. Achse mit Pfeil, Schiene mit Knoten (einzige Ziffern), Station 1 gefüllt mit „Zuerst prüfen“,
+// Prüfung, ohne Kostenskala. Achse mit Pfeil, Schiene mit Knoten (einzige Ziffern), Station 1 gefüllt mit „Auch rückwirkend“ (Felix 25.11.2026, statt „Zuerst prüfen“),
 // weitere Stationen gleich getönt, damit nichts nach Rang aussieht. Was nicht bei uns liegt (Felix 23.11.2026:
 // Beteiligungskapital), steht schraffiert hinter einer gestrichelten Trennlinie ohne Schienenanschluss.
 // Desktop: CSS-Subgrid, Köpfe gleich hoch; Tablet und mobil läuft die Schiene senkrecht links.
@@ -33,7 +33,7 @@ const ICONS: IconName[] = ['prozent', 'muenzen', 'bank'];
       <div class="st-kopf">
         <div class="st-kopf-oben">
           <span class="kachel"><Icon name={ICONS[i] ?? 'dokument'} /></span>
-          {e.zuerst && <span class="chip">Zuerst prüfen</span>}
+          {e.zuerst && <span class="chip">Auch rückwirkend</span>}
         </div>
         <h3>{e.titel}</h3>
       </div>

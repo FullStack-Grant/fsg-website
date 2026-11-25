@@ -110,14 +110,14 @@ Die naheliegende Alternative ist die Forschungszulage: ohne Budgetdeckel und ohn
 ## Was solltest du jetzt vorbereiten?
 
 Wenn ZIM für dich infrage kommt, nutze die Pause:
-1. **Forschungszulage prüfen:** Läuft das Vorhaben schon, kannst du den BSFZ-Antrag sofort stellen. Bei Wirtschaftsjahr gleich Kalenderjahr endet die Frist für 2022 am 31.12.2026; nach geltendem Recht muss bis dahin auch der Antrag beim Finanzamt gestellt sein. Den Antrag beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Sprich dafür rechtzeitig mit deinem Steuerberater.
+1. **Forschungszulage prüfen:** Läuft das Vorhaben schon, kannst du den BSFZ-Antrag sofort stellen. Bei Wirtschaftsjahr gleich Kalenderjahr endet die Frist für 2022 am 31.12.2026; nach geltendem Recht muss bis dahin auch der Antrag beim Finanzamt gestellt sein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Sprich dafür rechtzeitig mit deinem Steuerberater.
 2. **Stundenaufzeichnung je Vorhaben einführen:** Sie brauchst du für ZIM wie für die Zulage.
 3. **Projektskizze und Finanzplan vorbereiten:** Arbeitspakete, Personalplanung, Eigenanteil. Öffnet ZIM wieder, stehen viele Anträge gleichzeitig an.
 4. **Nicht vorzeitig beginnen:** Bei Zuschüssen darf das Vorhaben in der Regel erst nach Bewilligung bzw. Zustimmung zum vorzeitigen Beginn starten.
 
 ## Was leistet FullStack Grant?
 
-Wir prüfen im Fördercheck, ob ZIM nach der Wiederaufnahme, die Forschungszulage oder ein anderes Programm für dein Vorhaben mehr bringt, und in welcher Reihenfolge. Für Zuschüsse wie ZIM entwerfen wir Skizze und Antrag und stellen den Finanzplan aus deinen Zahlen zusammen; eingereicht wird von deinem Unternehmen. Nach der Bewilligung bereiten wir Zwischen- und Verwendungsnachweise sowie Änderungsanträge vor.
+Wir prüfen im Fördercheck, ob ZIM nach der Wiederaufnahme, die Forschungszulage oder ein anderes Programm für dein Vorhaben mehr bringt, und in welcher Reihenfolge. Für Zuschüsse wie ZIM entwerfen wir Skizze und Antrag; eingereicht wird von deinem Unternehmen. Nach der Bewilligung bereiten wir Zwischen- und Verwendungsnachweise sowie Änderungsanträge vor.
 
 | Rolle | Interner Aufwand für Skizze und Antrag (Annahme) | Wofür |
 |---|---|---|
@@ -128,4 +128,4 @@ Die Werte sind Erfahrungswerte für ein Einzelprojekt, keine Zusage; Kooperation
 
 **So arbeitet FullStack Grant:** Wir bereiten Anträge und Nachweise vor. Du entscheidest und reichst selbst ein. Mittelabrufe stellst du selbst. Wir leisten keine Rechts- und keine Steuerberatung.
 
-**Zum Autor:** In seiner Zeit bei der damaligen Ibeo Automotive Systems GmbH in Hamburg hat Felix Hinkelmann ZIM-Projekte in der Abwicklung betreut, von Mittelabrufen bis zum Verwendungsnachweis.
+**Zum Autor:** In seiner Zeit bei der damaligen Ibeo Automotive Systems GmbH in Hamburg hat Felix Hinkelmann ZIM-Projekte verantwortet, von Mittelabrufen bis zum Verwendungsnachweis.

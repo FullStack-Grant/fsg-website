@@ -16,18 +16,18 @@ fragen:
   - "Welche Förderung hat er selbst verantwortet?"
   - "Warum die Finance-Perspektive?"
   - "Was ist FullStack Grant?"
-antwort: "Felix Hinkelmann war Director und VP Finance in Tech-Startups und hat dort Förderung selbst verantwortet: Forschungszulage einschließlich der BSFZ-Anträge und ein Verfahren bis durch die steuerliche Außenprüfung. Zuvor hat er ZIM-Projekte in der Abwicklung betreut. Seit 2026 führt er FullStack Grant, eine Förderberatung aus Hamburg für Tech-Startups, und betreut jedes Mandat persönlich."
+antwort: "Felix Hinkelmann war Director und VP Finance in Tech-Startups und hat dort Förderung selbst verantwortet: Forschungszulage einschließlich der BSFZ-Anträge und ein Verfahren bis durch die steuerliche Außenprüfung. Zuvor hat er ZIM-Projekte verantwortet. Seit 2026 führt er FullStack Grant, eine Förderberatung aus Hamburg für Tech-Startups, und betreut jedes Mandat persönlich."
 ---
 
 ## Welche Förderung hat Felix Hinkelmann selbst verantwortet?
 
-Finance-Werdegang und Förderpraxis gehören zusammen: In jeder Station hat er Förderung selbst verantwortet oder in der Abwicklung betreut.
+Finance-Werdegang und Förderpraxis gehören zusammen: In jeder Station hat er Förderung selbst verantwortet.
 
 | Station | Rolle | Förderpraxis |
 |---|---|---|
 | Impossible Cloud GmbH, Hamburg, 2024 bis 2026 (europäischer Cloud-Storage-Anbieter) | Director Finance, ab 09/2025 VP Finance; Finance, Steuern und Investor Relations, berichtend an den CEO | Forschungszulage für drei Wirtschaftsjahre, zusammen über 3 Mio. €: BSFZ-Anträge mit FuE-Argumentation selbst geschrieben, bis zur Festsetzung begleitet, ein Verfahren durch die steuerliche Außenprüfung begleitet |
 | Easy-Tutor GmbH, München, 2022 bis 2024, danach Fractional CFO bis 2025 | Director Finance | Forschungszulage über 1 bis 2 Mio. €: als Director Finance die BSFZ-Anträge geschrieben und die Forschungszulage im Unternehmen verantwortet; dazu die zweite Tranche aus Start-up Shield Bayern über 800.000 € (LfA Förderbank Bayern) selbst beantragt; Series A über 4,8 Mio. € mit Finanzmodell, Datenraum und Due Diligence zum Abschluss geführt |
-| Ibeo Automotive Systems GmbH, Hamburg, 2019 bis 2022 (Lidar, über 400 Mitarbeitende) | Finance Business Partner (Controller) mit F&E-Projektcontrolling | ZIM-Projekte in der Abwicklung betreut: Mittelabrufe, Zwischennachweise, Verwendungsnachweis, Projektcontrolling und Stundennachweise |
+| Ibeo Automotive Systems GmbH, Hamburg, 2019 bis 2022 (Lidar, über 400 Mitarbeitende) | Finance Business Partner (Controller) mit F&E-Projektcontrolling | ZIM-Projekte verantwortet: Mittelabrufe, Zwischennachweise, Verwendungsnachweis, Projektcontrolling und Stundennachweise |
 
 Bei Impossible Cloud trug die Forschungszulage maßgeblich dazu bei, den Runway um 10 Monate zu verlängern, zusammen mit Kosten- und Working-Capital-Maßnahmen.
 
