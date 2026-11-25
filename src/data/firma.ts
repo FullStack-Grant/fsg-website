@@ -4,7 +4,8 @@ export const firma = {
   name: 'FullStack Grant',
   rechtsname: 'FullStack Grant UG (haftungsbeschränkt)',
   url: 'https://fullstackgrant.de',
-  slogan: ['Fördergeld für Innovation.', 'Vom Startup bis zum Hidden Champion.'],
+  // Slogan mit „Boutique“ (Felix 25.11.2026); Logo mit Slogan und OG-Bild zieht das Kit nach (fsg-hq, Marke).
+  slogan: ['Fördergeld-Boutique für Innovation.', 'Vom Startup bis zum Hidden Champion.'],
   anschrift: {
     strasse: 'Schwenckestraße 81',
     plz: '20255',

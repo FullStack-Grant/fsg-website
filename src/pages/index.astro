@@ -20,7 +20,7 @@ const ebenen: Ebene[] = [
     text: 'Auf die Forschungszulage besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind; es gibt keinen Wettbewerb um ein Budget.',
     zeilen: [
       // T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“
-      { label: 'Du gibst ab', wert: `Nichts an Kapital. ${FINANZAMT}` },
+      { label: 'Du gibst ab', wert: `Kein Kapital. ${FINANZAMT}` },
       { label: 'Wir bereiten vor', wert: 'Programmcheck, BSFZ-Antrag mit FuE-Argumentation, Vorhabenbeschreibung und Arbeitspaketen, Entwürfe der Antworten auf Rückfragen der BSFZ.' },
       // T9 ab Fassung 1.1: „Compliance: eine nachvollziehbare Projektdokumentation für jedes Wirtschaftsjahr und eine Unterlagenmappe für dich und deinen Steuerberater, im Erfolgshonorar.“
       { label: 'Compliance', wert: 'Hinweise, wie dein Team die Stunden von Anfang an zeitnah und lückenlos je Vorhaben erfasst.', art: 'gold' },
@@ -78,8 +78,8 @@ const bereiche = [
   <section class="hero auf-ink" aria-labelledby="h-hero">
     <div class="wrap hero-raster">
       <div class="hero-text">
-        <h1 id="h-hero">Förderung, belastbar dokumentiert und auch Jahre später nachvollziehbar.</h1>
-        <p class="lead">FullStack Grant ist eine Förderberatung aus Hamburg für Tech-Startups in ganz Deutschland. Wir bereiten für dein Startup die Anträge vor, die zu deiner Finanzierung passen, und begleiten dich auf Wunsch auch nach der Bewilligung. Mit dem Blick eines Finance Leads, der Förderung im Startup selbst verantwortet hat.</p>
+        <h1 id="h-hero"><span class="h1-kicker">Förderberatung für Tech-Startups</span><span class="sr-only">: </span>Förderung, belastbar dokumentiert und auch Jahre später nachvollziehbar.</h1>
+        <p class="lead">FullStack Grant ist eine Boutique für Förderberatung aus Hamburg, für Tech-Startups in ganz Deutschland. Wir bereiten für dein Startup die Anträge vor, die zu deiner Finanzierung passen, und begleiten dich auf Wunsch auch nach der Bewilligung. Mit dem Blick eines Finance Leads, der Förderung im Startup selbst verantwortet hat.</p>
         <div class="cta-zeile">
           <a class="btn" href={firma.terminUrl}>Erstgespräch buchen <Icon name="pfeil" /></a>
           <a class="btn btn-linie" href="#finanzierungsmix">Finanzierungsmix ansehen</a>
@@ -117,6 +117,7 @@ const bereiche = [
       <p class="eyebrow">Finanzierungsmix</p>
       <h2 id="h-mix">Das ganze Förderportfolio aus rund 2.500 Programmen, in einer klaren Reihenfolge</h2>
       <p class="regel">Erst, worauf du Anspruch hast, dann Zuschüsse, dann günstiges Fremdkapital.</p>
+      <p class="quelle-zahl">Programme: unsere Auswertung der <a href="https://www.foerderdatenbank.de/">Förderdatenbank des Bundes</a>, Stand: 26.09.2026.</p>
     </div>
     <Ablauf ebenen={ebenen} ausgeschlossen={ausgeschlossen} />
   </section>
@@ -140,7 +141,7 @@ const bereiche = [
   <section class="abschnitt wrap" id="mehr-als-forschungszulage" aria-labelledby="h-mehr">
     <div class="kopfzeile">
       <p class="eyebrow">Mehr als die Forschungszulage</p>
-      <h2 id="h-mehr">Welche Förderung gibt es außer der Forschungszulage?</h2>
+      <h2 id="h-mehr">Förderung als Finanzierungsmix: Zulage, Zuschuss, Kredit</h2>
       <p class="unter">Neben der Forschungszulage gibt es Zuschüsse von Bund, Ländern und EU, Förderkredite mit Bürgschaften. Welche Kombination passt, hängt von Vorhaben, Phase und Finanzierung ab; die Regeln zur Kombination legt jedes Programm selbst fest.</p>
     </div>
     <div class="mix-unten">
@@ -148,7 +149,7 @@ const bereiche = [
       <ul class="linkkarte">
         <li><a href="/foerderung/programme/forschungszulage/">Forschungszulage für Startups <Icon name="pfeil" /></a></li>
         <li><a href="/foerderung/programme/zim/">ZIM Förderung <Icon name="pfeil" /></a></li>
-        <li><a href="/wissen/artikel/mehr-als-forschungszulage/">Perspektive: Warum Förderberatung nicht bei der Forschungszulage aufhören sollte <Icon name="pfeil" /></a></li>
+        <li><a href="/wissen/artikel/mehr-als-forschungszulage/">Perspektive: Welche Förderung es außer der Forschungszulage gibt <Icon name="pfeil" /></a></li>
       </ul>
     </div>
   </section>
@@ -245,6 +246,8 @@ const bereiche = [
           background-image: radial-gradient(46% 64% at 79% 58%, var(--ui-glow), rgb(224 154 0 / 0) 72%); }
   .hero-raster { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 64px; align-items: center; padding-top: 48px; padding-bottom: 104px; }
   .hero h1 { color: var(--ui-ink-text); margin: 0; }
+  .h1-kicker { display: block; margin-bottom: 20px; font: 500 0.8125rem/1.4 var(--fsg-font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ui-ink-akzent); }
+  .quelle-zahl { margin: 10px 0 0; font-size: 0.8125rem; color: var(--ui-subtle); }
   .hero .lead { margin: 24px 0 0; font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); max-width: 50ch; }
   .hero .cta-zeile { margin-top: 36px; }
   .hero-haken { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 0.9375rem; font-weight: 500; color: var(--ui-ink-lead); }

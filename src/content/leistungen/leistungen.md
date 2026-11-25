@@ -1,5 +1,5 @@
 ---
-title: "Leistungen: Förderung für Tech-Startups von Steuer bis EU"
+title: "Leistungen der Förderberatung für Startups: Steuer bis EU"
 h1: "Förderberatung für dein Startup, geordnet nach Kapitalkosten"
 description: "Förderberatung für Startups nach Finanzierungsinstrument: Forschungszulage, Zuschüsse, EU-Grants, Förderkredite und Nachweise nach der Bewilligung."
 url: /leistungen/
@@ -28,7 +28,7 @@ programme: ["forschungszulage", "zim"]
 | Ebene | Typische Programme | Du gibst ab | Wir bereiten vor | Vergütung |
 |---|---|---|---|---|
 | Vorab: Fördercheck | alle | 20 Minuten und deine Eckdaten | Programmauswahl und Reihenfolge, schriftlich | kostenlos |
-| Steuerliche Förderung | Forschungszulage | nichts an Kapital; Nachweispflicht: Arbeitszeiten je Vorhaben aufzeichnen | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
+| Steuerliche Förderung | Forschungszulage | kein Kapital; Nachweispflicht: Arbeitszeiten je Vorhaben aufzeichnen | BSFZ-Antrag mit FuE-Argumentation, Entwürfe der Antworten auf Rückfragen der BSFZ <!-- T9 ab Fassung 1.1: „BSFZ-Antrag, Projektdokumentation je Wirtschaftsjahr, Unterlagenmappe“ --> | Erfolgshonorar; es entsteht nur mit der Bescheinigung der BSFZ <!-- T9 ab Fassung 1.1: „Das Erfolgshonorar entsteht nur mit der Bescheinigung der BSFZ. Ein Teil wird mit der Bescheinigung bzw. zum Jahresende fällig, der Rest richtet sich nach dem Bescheid des Finanzamts. Du wählst bei der Unterschrift zwischen zwei Optionen; die Einzelheiten stehen im Angebot.“ --> |
 | Zuschüsse und Grants | ZIM, KMU-innovativ, Landesprogramme, EIC Accelerator | Eigenanteil, Nachweispflichten | Auswahl, Skizze, Antrag | Erfolgshonorar oder festes Honorar, je nach Programm |
 | Förderkredite und Bürgschaften | Programme von KfW und Landesförderbanken | Zins und Tilgung | Einordnung, Unterlagen für Hausbank und Förderbank | Erfolgshonorar oder festes Honorar, je nach Programm |
 | Rahmen: Nach der Bewilligung | alle Zuschüsse und Grants | Belege, Fristen, Einreichung | auf Wunsch Nachweise, Änderungsanträge, Durchsicht vor Prüfungen des Fördergebers, ohne Testat | nach Aufwand |

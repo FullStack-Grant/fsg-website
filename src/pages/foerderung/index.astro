@@ -5,13 +5,25 @@ import { holen, pfadVon } from '../../lib/inhalte';
 const themen = await holen('themen');
 const programme = await holen('programme');
 const karte = (e: Parameters<typeof pfadVon>[0]) => ({ titel: e.data.title, text: e.data.description, pfad: pfadVon(e) });
+// Ohne Themenseiten listet /foerderung/ die Programme nicht selbst (sonst gleicher Inhalt wie /foerderung/programme/),
+// sondern verweist auf die Programmübersicht und die Ebenen der Leistungsseite (Prüfer Sichtbarkeit, Felix 25.11.2026).
+const programmKarten = themen.length
+  ? programme.map((p) => ({ ...karte(p), label: p.data.ebene }))
+  : [{ titel: 'Förderprogramme für Tech-Startups im Überblick', text: 'Programme mit Steckbrief, Quellen und Stand, etwa Forschungszulage und ZIM.', pfad: '/foerderung/programme/' }];
+const ebenen = [
+  { titel: 'Steuerliche Förderung', text: 'Forschungszulage mit Rechtsanspruch; der BSFZ-Antrag ist der erste Schritt.', pfad: '/leistungen/#steuerliche-foerderung' },
+  { titel: 'Zuschüsse und Grants', text: 'Programme von Bund, Ländern und EU, etwa ZIM, KMU-innovativ und EIC Accelerator.', pfad: '/leistungen/#zuschuesse' },
+  { titel: 'Förderkredite und Bürgschaften', text: 'Förderkredite von KfW und Landesförderbanken, Bürgschaften für deine Hausbank.', pfad: '/leistungen/#foerderkredite' },
+  { titel: 'Nach der Bewilligung', text: 'Zwischen- und Verwendungsnachweise und Änderungsanträge, auf Wunsch nach Aufwand.', pfad: '/leistungen/#nach-der-bewilligung' },
+];
 ---
 <Hub titel="Förderung für Tech-Startups: Themen und Programme" h1="Förderung für Tech-Startups"
-  beschreibung="Förderprogramme für Tech-Startups nach Phase, Ebene, Branche und Region: Vergleiche mit Quellen und Stand, geprüft von FullStack Grant."
-  einleitung="Förderung nach Phase, Ebene, Branche und Region, mit Vergleichen, Quellen und Datum der letzten Prüfung."
+  beschreibung="Förderung für Tech-Startups nach Ebene: Forschungszulage, Zuschüsse, Förderkredite und Nachweise, mit Programmübersicht, Quellen und Stand."
+  einleitung="Förderung nach Ebene, mit Programmübersicht, Quellen und Datum der letzten Prüfung."
   pfad="/foerderung/" krumen={[{ name: 'Start', pfad: '/' }, { name: 'Förderung', pfad: '/foerderung/' }]}
   gruppen={[
     { titel: 'Themen', karten: themen.filter((t) => t.data.art === 'thema').map(karte) },
     { titel: 'Regionen', karten: themen.filter((t) => t.data.art === 'region').map(karte) },
-    { titel: 'Programme', karten: programme.map((p) => ({ ...karte(p), label: p.data.ebene })) },
+    { titel: 'Programme', karten: programmKarten },
+    { titel: 'Förderung nach Ebene', karten: ebenen },
   ]} />

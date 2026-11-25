@@ -45,7 +45,7 @@ Vier Stellen, an denen das konkret wird:
 
 Ich war Director Finance und ab September 2025 VP Finance der Impossible Cloud GmbH in Hamburg, einem europäischen Cloud-Storage-Anbieter. Dort habe ich die Forschungszulage für drei Wirtschaftsjahre selbst beantragt, die BSFZ-Anträge mit der FuE-Argumentation selbst geschrieben und bis zur Festsetzung begleitet. Als angestellter VP Finance habe ich ein Verfahren zusammen mit dem Steuerberater des Unternehmens durch die steuerliche Außenprüfung begleitet. Die Zulage hat maßgeblich dazu beigetragen, den Runway um zehn Monate zu verlängern, zusammen mit Maßnahmen bei Kosten und Working Capital.
 
-Davor war ich bei der Easy-Tutor GmbH in München angestellt. Als Director Finance habe ich dort die BSFZ-Anträge geschrieben und die Forschungszulage im Unternehmen verantwortet. Die zweite Tranche aus Start-up Shield Bayern habe ich bei der LfA Förderbank Bayern selbst beantragt. Die Beträge aus beiden Stationen stehen auf [Über uns](/ueber-uns/).
+Davor war ich bei der Easy-Tutor GmbH in München angestellt. Als Director Finance habe ich dort die BSFZ-Anträge geschrieben und die Forschungszulage im Unternehmen verantwortet. Förderkredite der LfA Förderbank Bayern habe ich selbst beantragt. Die Beträge aus beiden Stationen stehen auf [Über uns](/ueber-uns/).
 
 Bei der Ibeo Automotive Systems GmbH in Hamburg habe ich ZIM-Projekte verantwortet: Mittelabrufe, Zwischennachweise, Verwendungsnachweis, Projektcontrolling und Stundennachweise. Daher weiß ich, was nach der Bewilligung auf ein Unternehmen zukommt. Mehr zu meinem Werdegang steht auf [Über uns](/ueber-uns/).
 
