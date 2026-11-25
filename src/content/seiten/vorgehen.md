@@ -18,7 +18,7 @@ fragen:
   - "Was gehört nicht zur Leistung?"
   - "Woran erkennt man eine seriöse Förderberatung?"
   - "Wie geht FullStack Grant mit Daten und KI um?"
-antwort: "Bei FullStack Grant bereiten wir vor, du entscheidest und reichst ein. Jeder Schritt hat eine Zuständigkeit und einen geplanten Termin, vom kostenlosen Fördercheck über den Antrag bis zu den Nachweisen nach der Bewilligung. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater."
+antwort: "Bei FullStack Grant bereiten wir vor, du entscheidest und reichst ein. Jeder Schritt hat eine Zuständigkeit und einen geplanten Termin, vom kostenlosen Fördercheck über den Antrag bis zu den Nachweisen nach der Bewilligung. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater."
 ---
 
 ## Welche Schritte gibt es vom Erstgespräch bis zum Nachweis?
@@ -43,7 +43,7 @@ Deshalb bleibt das Einreichen bei dir, und vor jeder Einreichung bestätigst du 
 
 ## Was macht dein Steuerberater bei der Forschungszulage?
 
-Die Forschungszulage hat zwei Stufen. In der ersten bescheinigt die Bescheinigungsstelle Forschungszulage (BSFZ), dass dein Vorhaben Forschung und Entwicklung ist; diesen Antrag bereiten wir vor. In der zweiten setzt das Finanzamt die Zulage fest. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
+Die Forschungszulage hat zwei Stufen. In der ersten bescheinigt die Bescheinigungsstelle Forschungszulage (BSFZ), dass dein Vorhaben Forschung und Entwicklung ist; diesen Antrag bereiten wir vor. In der zweiten setzt das Finanzamt die Zulage fest. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
 
 Dein Steuerberater beurteilt auch Bemessungsgrundlage, Zuordnung der Aufwendungen, KMU-Status und Unternehmensverbindungen. Personal- und Kostenangaben übernehmen wir von dir bzw. ihm, ohne sie zu prüfen. Mit dem Finanzamt führen wir keinen Schriftverkehr.
 
@@ -90,6 +90,6 @@ Ein Förderantrag muss auch Jahre später noch erklärbar sein. Deshalb legen wi
 - **EU-Programme:** Bei EU-Anträgen dokumentieren wir den KI-Einsatz in einem Protokoll. Ob und wie du ihn angibst, richtet sich nach den Regeln des Programms; die Angabe machst du als Antragsteller.
 - **Datenschutz:** Wie wir personenbezogene Daten verarbeiten, steht in der [Datenschutzerklärung](/datenschutz/).
 
-**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
+**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
 [Leistungen nach Finanzierungsinstrument](/leistungen/) · [Kosten einer Förderberatung](/verguetung/) · [Forschungszulage: Zuständigkeiten](/foerderung/programme/forschungszulage/)

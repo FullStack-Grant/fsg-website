@@ -59,6 +59,6 @@ Das Erstgespräch und der Fördercheck. Beides ist unverbindlich, ohne Vertrag u
 
 Weil Aufwand und Wert je Programm und Vorhaben sehr unterschiedlich sind. Nach dem Fördercheck bekommst du ein schriftliches Angebot mit allen Sätzen, Auslösern und Fälligkeiten. Erst dann entscheidest du.
 
-**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
+**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
 [Leistungen nach Finanzierungsinstrument](/leistungen/) · [Vorgehen und Compliance](/vorgehen/)

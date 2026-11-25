@@ -12,14 +12,14 @@ import Zitat from '../components/Zitat.astro';
 import { firma } from '../data/firma';
 import { personKnoten } from '../lib/jsonld';
 
-const FINANZAMT = 'Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater.';
+const FINANZAMT = 'Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater.';
 
 const ebenen: Ebene[] = [
   {
     kurz: 'Steuer', titel: 'Steuerliche Förderung', anker: 'steuerliche-foerderung', kosten: 1, zuerst: true,
     text: 'Auf die Forschungszulage besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind; es gibt keinen Wettbewerb um ein Budget.',
     zeilen: [
-      // T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“
+      // T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“
       { label: 'Du gibst ab', wert: `Kein Kapital. ${FINANZAMT}` },
       { label: 'Wir bereiten vor', wert: 'Programmcheck, BSFZ-Antrag mit FuE-Argumentation, Vorhabenbeschreibung und Arbeitspaketen, Entwürfe der Antworten auf Rückfragen der BSFZ.' },
       // T9 ab Fassung 1.1: „Compliance: eine nachvollziehbare Projektdokumentation für jedes Wirtschaftsjahr und eine Unterlagenmappe für dich und deinen Steuerberater, im Erfolgshonorar.“
@@ -117,7 +117,7 @@ const bereiche = [
       <p class="eyebrow">Finanzierungsmix</p>
       <h2 id="h-mix">Das ganze Förderportfolio aus rund 2.500 Programmen, in einer klaren Reihenfolge</h2>
       <p class="regel">Erst, worauf du Anspruch hast, dann Zuschüsse, dann günstiges Fremdkapital.</p>
-      <p class="quelle-zahl">Programme: unsere Auswertung der <a href="https://www.foerderdatenbank.de/">Förderdatenbank des Bundes</a>, Stand: 26.09.2026.</p>
+      <p class="quelle-zahl">Programme: eigene Programmdatenbank von FullStack Grant, aufgebaut auf der <a href="https://www.foerderdatenbank.de/">Förderdatenbank des Bundes</a> und laufend erweitert; Stand: 26.09.2026.</p>
     </div>
     <Ablauf ebenen={ebenen} ausgeschlossen={ausgeschlossen} />
   </section>
@@ -162,7 +162,7 @@ const bereiche = [
     <Zustaendigkeiten spalten={[
       { titel: 'FullStack Grant', punkte: ['findet die passenden Programme, nicht nur die Forschungszulage', 'entwirft Skizze und Antrag aus deinen Zahlen', 'bereitet auf Wunsch Nachweise über die Laufzeit vor'] },
       { titel: 'Du', punkte: ['entscheidest und reichst selbst ein', 'lieferst Zahlen und Projektwissen', 'prüfst jede Fassung und bestätigst sie in Textform'] },
-      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung', 'Steuerberatung und den nachgelagerten Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater); für die Einreichung empfehlen wir dir gern kompetente und erfahrene Steuerberater', 'Einreichen in deinem Namen, Garantie einer Bewilligung, Equity und VC-Fundraising'] },
+      { titel: 'Bewusst nicht bei uns', punkte: ['Rechtsberatung', 'Steuerberatung und den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater); für die Einreichung empfehlen wir dir gern kompetente und erfahrene Steuerberater', 'Einreichen in deinem Namen, Garantie einer Bewilligung, Equity und VC-Fundraising'] },
     ]} />
     <p class="weiter"><a href="/vorgehen/">So läuft eine Förderberatung bei uns <Icon name="pfeil" /></a></p>
   </section>

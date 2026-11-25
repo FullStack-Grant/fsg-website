@@ -46,7 +46,7 @@ Der Fördercheck zeigt dir, welche Programme zu Vorhaben, Unternehmensgröße un
 
 ## Steuerliche Förderung: BSFZ-Antrag für die Forschungszulage {#steuerliche-foerderung}
 
-Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind, und sie kostet kein Kapital. FullStack Grant bereitet deinen Antrag im Bescheinigungsverfahren bei der Bescheinigungsstelle Forschungszulage (BSFZ) vor. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
+Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspruch, wenn die Voraussetzungen erfüllt sind, und sie kostet kein Kapital. FullStack Grant bereitet deinen Antrag im Bescheinigungsverfahren bei der Bescheinigungsstelle Forschungszulage (BSFZ) vor. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. <!-- T9 ab Fassung 1.1: „Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Wir liefern die Projektdokumentation dafür.“ -->
 
 **Wir bereiten vor**
 - Abgleich deines Vorhabens mit den Merkmalen begünstigter Forschung und Entwicklung
@@ -61,7 +61,7 @@ Die Forschungszulage (FZulG) prüfen wir zuerst: Auf sie besteht ein Rechtsanspr
 - Antrag über dein eigenes Konto bei der BSFZ einreichen
 - Arbeitszeiten im Vorhaben zeitnah erfassen lassen <!-- T9 ab Fassung 1.1: „Eure Stunden erfasst euer Team selbst, am besten täglich; die Vorlage dafür bekommst du von uns zum Start.“ -->
 
-**Grenze:** Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Bemessungsgrundlage, Zuordnung von Aufwendungen und KMU-Status beurteilen du und dein Steuerberater.
+**Grenze:** Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. Bemessungsgrundlage, Zuordnung von Aufwendungen und KMU-Status beurteilen du und dein Steuerberater.
 
 **Wie lange dauert es bis zur Auszahlung? Ein Beispiel**
 
@@ -70,7 +70,7 @@ Ein Startup, Geschäftsjahr gleich Kalenderjahr, beantragt die Forschungszulage 
 1. **Januar 2027** Auftakt und BSFZ-Antrag: Vorhabenbeschreibung und Antrag; Einreichung meist drei bis vier Wochen nach dem Auftakt. *Wir bereiten vor, du reichst ein.*
 2. **Februar bis April 2027** Bescheinigung der BSFZ: meist zwei bis drei Monate (Erfahrungswert; laut BSFZ spätestens drei Monate ab der Eingangsbestätigung, Stand: 25.11.2026); danach liegt die Bescheinigung vor. *BSFZ*
 3. **Parallel, Februar bis April 2027** Jahresabschluss 2026, parallel zum Verfahren bei der BSFZ. *Dein Steuerberater*
-4. **Mai 2027** Antrag auf Forschungszulage beim Finanzamt, zusammen mit der Körperschaftsteuererklärung 2026. *Dein Unternehmen bzw. dein Steuerberater*
+4. **Mai 2027** Antrag auf Auszahlung der Forschungszulage beim Finanzamt, zusammen mit der Körperschaftsteuererklärung 2026. *Dein Unternehmen bzw. dein Steuerberater*
 5. **Juni bis September 2027** Festsetzung und Auszahlung: Anrechnung auf die Körperschaftsteuer 2026; was die Steuer übersteigt, wird ausgezahlt. *Finanzamt*
 {.zeitleiste}
 
@@ -157,10 +157,10 @@ Erfahrungswerte, keine Zusage: Für einen BSFZ-Antrag rechnen Teams meist mit 6 
 ## Was macht FullStack Grant nicht?
 
 - Rechtsberatung
-- Steuerberatung und den nachgelagerten Antrag auf Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
+- Steuerberatung und den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
 - Einreichen in deinem Namen oder Vertretung gegenüber Behörden
 - Mittelabrufe, Testate und Stundennachweise
 - Equity und VC-Fundraising, auch beim HTGF
 - eine Garantie, dass bewilligt wird
 
-**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)
+**So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)
