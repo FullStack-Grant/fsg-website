@@ -104,4 +104,4 @@ Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren (Art. 77 DSGV
 
 ## 10. Verarbeitung außerhalb der Website
 
-Diese Hinweise betreffen den Aufruf dieser Website, den Kontakt per E-Mail, die Terminbuchung, Online-Besprechungen und Telefonate nach den Ziffern 7 bis 9. Für Auftraggeber, Interessenten und Projektpartner gelten im Übrigen unsere Datenschutzhinweise, die Sie mit der ersten E-Mail oder auf Anfrage erhalten.
+Diese Hinweise betreffen den Aufruf dieser Website, den Kontakt per E-Mail, die Terminbuchung, Online-Besprechungen und Telefonate nach den Ziffern 5 und 7 bis 9. Für Auftraggeber, Interessenten und Projektpartner gelten im Übrigen unsere Datenschutzhinweise, die Sie mit der ersten E-Mail oder auf Anfrage erhalten.
