@@ -145,12 +145,12 @@ const referenz = defineCollection({
   ),
 });
 
-// Rechtliches (Impressum, Datenschutz).
+// Rechtliches (Impressum, Datenschutz, AGB mit fester Seite je Fassung).
 const recht = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/recht' }),
   schema: mitPfad(
     basis.extend({
-      typ: z.enum(['impressum', 'datenschutz']),
+      typ: z.enum(['impressum', 'datenschutz', 'agb']),
       stand: z.coerce.date(),
     }),
   ),
