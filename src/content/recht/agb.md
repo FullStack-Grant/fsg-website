@@ -10,10 +10,10 @@ dateModified: 2026-12-01
 status: entwurf
 ---
 
-<!-- Platzhalter (WEB T12, Felix 26.11.2026). Übersicht der AGB-Fassungen; Verträge verweisen nie auf /agb/, sondern auf die feste Seite ihrer Fassung (/agb/1-1/). Archiv ohne Fassung 1.0 (Felix 26.11.2026). Freigabe und Footer-Link (src/data/navigation.ts) erst, wenn LEGAL AGB 1.1 eingefroren hat. -->
+<!-- Platzhalter (WEB T12, Felix 26.11.2026). Übersicht der AGB-Fassungen; Verträge verweisen nie auf /agb/, sondern auf die feste Seite ihrer Fassung (/agb/1-1/). Archiv ohne Fassung 1.0 (Felix 26.11.2026). AGB 1.1 ist eingefroren (26.11.2026); Freigabe dieser Übersicht und Footer-Link (src/data/navigation.ts) entscheidet Felix. -->
 
 Für Ihren Vertrag gilt die Fassung, auf die er verweist (Vertrag § 1 Abs. 3).
 
 ## Aktuelle Fassung
 
-[Allgemeine Geschäftsbedingungen für Förderberatung, Fassung 1.1 (UG)](/agb/1-1/). Das Datum der Fassung folgt mit ihrer Freigabe.
+[Allgemeine Geschäftsbedingungen für Förderberatung, Fassung 1.1 (UG)](/agb/1-1/) vom 26.11.2026.

@@ -1,6 +1,8 @@
-// Prüfung 13 (T4 6.2): Produktion nach dem Deploy. Startseite 200, Sicherheitsheader, robots.txt, Sitemap,
+// Prüfung 13 (T4 6.2): Produktion nach dem Deploy. Startseite 200, Sicherheitsheader, robots.txt, Sitemap, AGB-PDF (Hash),
 // Indexierung passend zum Ziel: workers.dev muss noindex tragen, fullstackgrant.de darf es nicht (ab T13).
 // Aufruf: node scripts/qa/smoke.mjs --url https://fsg-website.fh-1e8.workers.dev
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { Befunde, argumente } from './lib.mjs';
 
 const arg = argumente();
@@ -31,6 +33,23 @@ else if (live && /Disallow:\s*\/\s*$/m.test(robots.text)) b.fehler_('/robots.txt
 
 const sitemap = await holen('/sitemap-index.xml');
 if (sitemap.r.status !== 200) b.fehler_('/sitemap-index.xml', `HTTP ${sitemap.r.status}`);
+
+// Eingefrorene AGB-Fassungen (WEB T12): Adresse ohne Schrägstrich leitet auf die feste Seite, PDF byte-gleich (SHA-256).
+const register = JSON.parse(readFileSync(new URL('../../src/data/agb-fassungen.json', import.meta.url), 'utf8'));
+for (const f of register.fassungen) {
+  const ohne = await holen(f.seite.replace(/\/$/, ''));
+  const ziel = ohne.r.headers.get('location');
+  if (![301, 307, 308].includes(ohne.r.status) || new URL(ziel ?? '', basis).pathname !== f.seite)
+    b.fehler_(f.seite, `ohne Schrägstrich: HTTP ${ohne.r.status} nach ${ziel ?? '(kein Ziel)'}`);
+  const seite = await holen(f.seite);
+  if (seite.r.status !== 200) b.fehler_(f.seite, `HTTP ${seite.r.status}`);
+  const pdf = await fetch(basis + f.pdf, { headers: { 'user-agent': 'fsg-website-smoke' } });
+  if (pdf.status !== 200) b.fehler_(f.pdf, `HTTP ${pdf.status}`);
+  else {
+    const hash = createHash('sha256').update(Buffer.from(await pdf.arrayBuffer())).digest('hex');
+    if (hash !== f.sha256) b.fehler_(f.pdf, `SHA-256 ${hash} statt ${f.sha256}`);
+  }
+}
 
 const fehlt = await holen('/gibt-es-nicht-qa/');
 if (fehlt.r.status !== 404) b.fehler_('/gibt-es-nicht-qa/', `HTTP ${fehlt.r.status} statt 404`);

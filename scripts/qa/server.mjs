@@ -15,7 +15,7 @@ const TYPEN = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json', '.xml': 'application/xml', '.txt': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml',
   '.png': 'image/png', '.ico': 'image/x-icon', '.woff2': 'font/woff2', '.webmanifest': 'application/manifest+json',
-  '.avif': 'image/avif', '.webp': 'image/webp', '.jpg': 'image/jpeg',
+  '.avif': 'image/avif', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.pdf': 'application/pdf',
 };
 
 /** `_headers` lesen: Blöcke aus Muster und eingerückten `Name: Wert`-Zeilen. Host-Regeln (https://…) gelten hier nicht. */

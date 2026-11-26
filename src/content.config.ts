@@ -151,6 +151,8 @@ const recht = defineCollection({
   schema: mitPfad(
     basis.extend({
       typ: z.enum(['impressum', 'datenschutz', 'agb']),
+      // Feste Seite einer eingefrorenen AGB-Fassung (Schlüssel in src/data/agb-fassungen.json).
+      fassung: z.string().optional(),
       stand: z.coerce.date(),
     }),
   ),

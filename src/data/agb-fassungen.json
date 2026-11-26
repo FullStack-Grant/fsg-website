@@ -1,0 +1,14 @@
+{
+  "_hinweis": "Eingefrorene AGB-Fassungen (LEGAL). Je Fassung eine feste Seite und ein PDF, das nie ersetzt wird; eine neue Fassung bekommt eine neue Adresse. tests/agb.spec.ts und scripts/qa/smoke.mjs prüfen den Hash des ausgelieferten PDF.",
+  "fassungen": [
+    {
+      "fassung": "1.1",
+      "bezeichnung": "Fassung 1.1 (UG)",
+      "datum": "2026-11-26",
+      "seite": "/agb/1-1/",
+      "pdf": "/agb/1-1/AGB_FullStack-Grant_Foerderberatung_1.1.pdf",
+      "sha256": "d56f2552d799df541ef938c0cfddbadb1769e1c157b5152166c5f4df4c121d26",
+      "freigabe": "LEGAL T18, eingefroren 26.11.2026 (Tag legal/agb-1.1-2026-11-26); Seite nur mit Titel, Fassung, Datum, Hash und PDF (Felix 26.11.2026)"
+    }
+  ]
+}

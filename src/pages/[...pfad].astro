@@ -8,6 +8,7 @@ import ProgrammSteckbrief from '../components/ProgrammSteckbrief.astro';
 import Vergleichstabelle from '../components/Vergleichstabelle.astro';
 import Faq from '../components/Faq.astro';
 import Impressum from '../components/Impressum.astro';
+import AgbFassung from '../components/AgbFassung.astro';
 import Terminbuchung from '../components/Terminbuchung.astro';
 import Personenkarte from '../components/Personenkarte.astro';
 import { alleEintraege, pfadVon, datumDe, type Eintrag } from '../lib/inhalte';
@@ -128,6 +129,7 @@ if (eintrag.collection === 'referenz' && eintrag.data.typ === 'faq' && eintrag.b
     </dl>
   )}
   {eintrag.collection === 'recht' && eintrag.data.typ === 'impressum' && <Impressum slot="kopf" />}
+  {eintrag.collection === 'recht' && eintrag.data.fassung && <AgbFassung slot="kopf" fassung={eintrag.data.fassung} />}
   {eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'kontakt' && <Terminbuchung slot="kopf" />}
   {eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'profil' && <Personenkarte slot="kopf" />}
 
@@ -139,7 +141,7 @@ if (eintrag.collection === 'referenz' && eintrag.data.typ === 'faq' && eintrag.b
       <Faq fragen={eintrag.data.faq} />
     </section>
   )}
-  {eintrag.collection === 'recht' && <p slot="nach-text" class="stand">Stand: {datumDe(eintrag.data.stand)}</p>}
+  {eintrag.collection === 'recht' && !eintrag.data.fassung && <p slot="nach-text" class="stand">Stand: {datumDe(eintrag.data.stand)}</p>}
 </Inhalt>
 
 <style>
