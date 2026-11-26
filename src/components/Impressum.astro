@@ -1,5 +1,5 @@
 ---
-// Pflichtangaben nach § 5 DDG, nur aus src/data/firma.ts.
+// Pflichtangaben nach § 5 DDG und Verantwortlicher nach § 18 Abs. 2 MStV (Felix 26.11.2026, wegen der Artikel mit Byline), nur aus src/data/firma.ts.
 import { firma } from '../data/firma';
 const a = firma.anschrift;
 ---
@@ -17,6 +17,8 @@ const a = firma.anschrift;
     <dt>Registergericht</dt><dd>{firma.register.gericht}</dd>
     <dt>Registernummer</dt><dd>{firma.register.nummer}</dd>
   </dl>
+  <h2>Verantwortlich nach § 18 Abs. 2 MStV</h2>
+  <p>{firma.geschaeftsfuehrer}, Anschrift wie oben</p>
 </div>
 
 <style>
