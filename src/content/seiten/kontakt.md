@@ -19,7 +19,7 @@ fragen:
 antwort: "Im Erstgespräch sprichst du 20 Minuten direkt mit Felix Hinkelmann über dein Vorhaben und deine Finanzierung, per Video. Es ist kostenlos und unverbindlich. Danach bekommst du auf Wunsch den Fördercheck: welche Programme passen und in welcher Reihenfolge."
 ---
 
-Die Buchung läuft über Google Kalender. Deine Einwilligung kannst du in den [Cookie-Einstellungen](#cookie-einstellungen) jederzeit widerrufen; Einzelheiten stehen in der [Datenschutzerklärung](/datenschutz/).
+Die Buchung läuft über Google Kalender. Deine Einwilligung kannst du in den [Cookie-Einstellungen](#cookie-einstellungen) jederzeit widerrufen; Einzelheiten stehen in den [Datenschutzhinweisen](/datenschutz/).
 
 ## Was passiert im Erstgespräch?
 
@@ -46,12 +46,12 @@ In Hamburg. Wir beraten Tech-Startups in ganz Deutschland, das Erstgespräch lä
 
 ## Hinweis zur Aufzeichnung
 
-Zu Beginn fragen wir dich, ob wir das Gespräch mit Bild und Ton aufzeichnen, transkribieren und KI-gestützte Notizen erstellen dürfen. Transkript und Notizen laufen ab Gesprächsbeginn mit; sagst du nein, löschen wir alles bis dahin Entstandene, und das Gespräch läuft ohne Aufnahme weiter. Die Aufnahme wird nicht veröffentlicht. Einzelheiten: [Datenschutzerklärung, Online-Besprechungen](/datenschutz/#online-besprechungen)
+Zu Beginn fragen wir dich, ob wir das Gespräch mit Bild und Ton aufzeichnen, transkribieren und KI-gestützte Notizen erstellen dürfen. Transkript und Notizen laufen ab Gesprächsbeginn mit; sagst du nein, löschen wir alles bis dahin Entstandene, und das Gespräch läuft ohne Aufnahme weiter. Die Aufnahme wird nicht veröffentlicht. Einzelheiten: [Datenschutzhinweise, Online-Besprechungen](/datenschutz/#online-besprechungen)
 
 ## Andere Wege
 
 - **E-Mail:** [info@fullstackgrant.de](mailto:info@fullstackgrant.de)
-- **Telefon:** [+49 40 89741524](tel:+494089741524). Anrufe zeichnen wir mit deiner Zustimmung auf: Die Aufnahme startet mit der Verbindung, im ersten Satz fragen wir dich; sagst du nein, stoppen und löschen wir sie. Einzelheiten in der [Datenschutzerklärung](/datenschutz/#telefonate).
+- **Telefon:** [+49 40 89741524](tel:+494089741524). Anrufe zeichnen wir mit deiner Zustimmung auf: Die Aufnahme startet mit der Verbindung, im ersten Satz fragen wir dich; sagst du nein, stoppen und löschen wir sie. Einzelheiten in den [Datenschutzhinweisen](/datenschutz/#telefonate).
 - **Anschrift:** siehe [Impressum](/impressum/)
 
 [Vorgehen und Compliance](/vorgehen/) · [Kosten einer Förderberatung](/verguetung/)

@@ -1,107 +1,92 @@
 ---
-title: "Datenschutz: Hinweise für fullstackgrant.de"
-h1: "Datenschutzhinweise für diese Website"
-description: "Datenschutzhinweise der FullStack Grant UG (haftungsbeschränkt) für fullstackgrant.de: Hosting, Einwilligung, Terminbuchung, Besprechungen, Telefonate."
+title: "Datenschutzhinweise"
+h1: "Datenschutzhinweise"
+description: "Datenschutzhinweise der FullStack Grant UG (haftungsbeschränkt): Website, Kontakt, Terminbuchung, Besprechungen, Telefonate und Förderberatung."
 url: /datenschutz/
 typ: datenschutz
 stand: 2026-11-26
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-status: entwurf
+status: freigegeben
 ---
 
-Information nach Art. 13 DSGVO zur Verarbeitung personenbezogener Daten beim Aufruf von fullstackgrant.de, bei der Terminbuchung, bei Online-Besprechungen und bei Telefonaten.
+<!-- Wortlaut von LEGAL T21 (Seitentext v4, Freigabe Felix 26.11.2026, über WEB T1), unverändert übernommen; ersetzt die eigenen Datenschutzhinweise für Auftraggeber (jetzt Abschnitt 4, Anker #auftraggeber).
+  Abschnitt 1 und 4 bis 8 ändert WEB nur nach LEGAL-Review und Felix' Freigabe; jede inhaltliche Änderung bekommt ein neues `stand`.
+  Anker nie umbenennen: #einwilligung (Banner), #online-besprechungen (Google Meet), #telefonate (Kontakt), #kontakt, #terminbuchung, #auftraggeber (Verträge), #widerspruch; Build-Test in scripts/qa/seo.mjs. -->
+
+Information nach Art. 13 und 14 DSGVO für Besucher dieser Website, für alle, die uns schreiben, anrufen oder einen Termin buchen, und für Auftraggeber, Interessenten und Projektpartner unserer Förderberatung.
 
 ## 1. Verantwortlicher
 
-FullStack Grant UG (haftungsbeschränkt), vertreten durch den Geschäftsführer Felix Hinkelmann, Schwenckestraße 81, 20255 Hamburg, E-Mail [info@fullstackgrant.de](mailto:info@fullstackgrant.de). Einen Datenschutzbeauftragten haben wir nicht bestellt.
+FullStack Grant UG (haftungsbeschränkt), Schwenckestraße 81, 20255 Hamburg, E-Mail [info@fullstackgrant.de](mailto:info@fullstackgrant.de).
 
-## 2. Hosting und Server-Protokolle
+## 2. Website und Cookies {#einwilligung}
 
-Diese Website wird über Cloudflare bereitgestellt, einen Dienst der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare betreibt auch die Nameserver unserer Domain und schützt die Seite vor Angriffen.
+Die Website liefert Cloudflare aus; Cloudflare betreibt auch die Nameserver und schützt die Seite vor Angriffen. Beim Aufruf übermittelt Ihr Browser technisch notwendige Daten wie IP-Adresse, Zeitpunkt, aufgerufene Seite, Browserangaben und die zuvor besuchte Seite. Zweck sind Auslieferung und Sicherheit der Seite, Rechtsgrundlage ist unser berechtigtes Interesse daran (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist dafür unser Auftragsverarbeiter; Daten zur Abwehr von Angriffen auf sein Netz verarbeitet Cloudflare auch in eigener Verantwortung (https://www.cloudflare.com/privacypolicy/). Zugriffe protokollieren wir nicht; Stichproben abgewehrter Angriffe mit IP-Adresse sehen wir im Konto 31 Tage.
 
-Beim Aufruf der Seiten übermittelt Ihr Browser technisch notwendige Daten an Server von Cloudflare, die dort verarbeitet werden. Dazu gehören insbesondere:
+Wir nutzen keine Analyse- oder Werbedienste. Externe Inhalte, derzeit nur die Terminbuchung von Google auf der Seite Kontakt, laden wir nur mit Ihrer Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO); ohne sie sehen Sie dort einen Link zur Buchungsseite. Ihre Wahl speichern wir zwölf Monate im Cookie „fsg_einwilligung“, das dafür unbedingt erforderlich ist (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO). Bei einem Angriff kann Cloudflare ein Sicherheits-Cookie wie „cf_clearance“ setzen, das nach 30 Minuten abläuft (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO). Ihre Einwilligung können Sie jederzeit über „Cookie-Einstellungen“ am Ende jeder Seite für die Zukunft widerrufen.
 
-- Ihre IP-Adresse,
-- Datum und Uhrzeit des Zugriffs,
-- die aufgerufene Datei und die übertragene Datenmenge,
-- Browsertyp, Browserversion und Betriebssystem,
-- die zuvor besuchte Seite (Referrer), soweit Ihr Browser sie übermittelt.
+## 3. Kontakt, Terminbuchung, Besprechungen und Telefonate {#kontakt}
 
-Zweck ist die technische Auslieferung der Seiten sowie die Sicherheit und Stabilität des Dienstes, etwa die Abwehr von Angriffen und Missbrauch. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist insoweit unser Auftragsverarbeiter (Art. 28 DSGVO); Daten zur Erkennung und Abwehr von Angriffen auf sein Netz verarbeitet Cloudflare auch in eigener Verantwortung (https://www.cloudflare.com/privacypolicy/).
+Für Anfragen, Buchungen, Gespräche und Sprachnachrichten ist Rechtsgrundlage die Anbahnung oder Durchführung eines Vertrags mit Ihnen (Art. 6 Abs. 1 lit. b DSGVO), sonst unser berechtigtes Interesse an der Kommunikation mit Unternehmen und ihren Ansprechpartnern (lit. f).
 
-Eine Protokollierung der Zugriffe für uns haben wir ausgeschaltet; wir werten keine Zugriffsdaten einzelner Besucher aus. In unserem Cloudflare-Konto sehen wir zusammengefasste Zahlen, etwa die Zahl der Aufrufe, und bei abgewehrten Angriffen Stichproben einzelner Anfragen mit IP-Adresse, die Cloudflare nach 31 Tagen löscht. Wie lange Cloudflare Verbindungsdaten zu Sicherheitszwecken speichert, bestimmt Cloudflare; eine feste Frist nennt Cloudflare nicht.
+### E-Mail
 
-## 3. Übermittlung in die USA
+Schreiben Sie uns, verarbeiten wir Ihre Angaben, um die Anfrage zu beantworten. E-Mails mit Interessenten, Kunden und Partnern übernehmen wir in unsere Kundenverwaltung.
 
-Cloudflare verarbeitet Daten auch in den USA und in weiteren Ländern seines weltweiten Netzes. Cloudflare ist unter dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss, Art. 45 DSGVO); ergänzend gelten Standardvertragsklauseln der Europäischen Kommission (Art. 46 DSGVO). Eine Kopie der Garantien erhalten Sie auf Anfrage.
+### Terminbuchung {#terminbuchung}
 
-## 4. Cookies, Einwilligung und externe Inhalte {#einwilligung}
+Termine buchen Sie über Google Kalender. Schon beim Laden überträgt Ihr Browser technische Daten wie die IP-Adresse an Google, das dabei Cookies setzen kann und diese Daten auch in eigener Verantwortung verarbeitet (https://cloud.google.com/terms/cloud-privacy-notice). Für die Buchung brauchen wir Name und E-Mail-Adresse, dazu kommen Termin und freiwillige Angaben.
 
-Diese Website nutzt keine Analyse-, Reichweiten- oder Werbedienste und erstellt keine Nutzungsprofile. Schriften, Bilder und Stilvorlagen liegen auf demselben Server wie die Seite; sie werden nicht von Dritten wie Google Fonts oder einem Content-Delivery-Netzwerk nachgeladen. Ein Kontaktformular gibt es nicht.
+### Online-Besprechungen {#online-besprechungen}
 
-Externe Inhalte laden wir nur mit Ihrer Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO). Derzeit ist das nur die Terminbuchung über Google Kalender auf der Seite Kontakt (Ziffer 8). Ohne Einwilligung sehen Sie dort einen Platzhalter mit einem Link zur Buchungsseite bei Google.
+Gespräche führen wir über Google Meet. Mit Ihrer Einwilligung zeichnen wir Bild und Ton auf und lassen ein Transkript und mit dem KI-Dienst von Google Notizen erstellen (Art. 6 Abs. 1 lit. a DSGVO). Das beginnt technisch mit unserem Beitritt; ein Hinweis vor dem Beitritt kündigt es an, und zu Beginn fragen wir alle Teilnehmer. Lehnt jemand ab, stoppen wir und löschen das bis dahin Entstandene.
 
-Beim ersten Aufruf fragt ein Hinweis nach Ihrer Wahl. Erst wenn Sie wählen, setzen wir ein einziges eigenes Cookie mit dem Namen „fsg_einwilligung“. Es speichert, welche Kategorien Sie erlaubt oder abgelehnt haben, und das Datum, wird nur beim Aufruf unserer Seiten übertragen und nach zwölf Monaten gelöscht; danach fragen wir erneut. Dieses Cookie ist unbedingt erforderlich, damit wir Ihre Wahl beachten können (§ 25 Abs. 2 Nr. 2 TDDDG); Rechtsgrundlage ist unser berechtigtes Interesse, Ihre Wahl umzusetzen und Sie nicht bei jedem Aufruf erneut zu fragen (Art. 6 Abs. 1 lit. f DSGVO). Wehrt Cloudflare einen Angriff ab, kann es im Einzelfall ein technisch notwendiges Sicherheits-Cookie setzen (etwa „cf_clearance“), das standardmäßig nach 30 Minuten abläuft (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO).
+### Telefonate {#telefonate}
 
-Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen oder ändern, über „Cookie-Einstellungen“ am Ende jeder Seite. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig.
+Anrufe über unsere Geschäftsnummer laufen über die Telefonie unserer Kundenverwaltung; verarbeitet werden Rufnummer, Zeitpunkt, Dauer und unser Vermerk. Mit Ihrer Einwilligung zeichnen wir den Ton auf, ohne Abschrift oder KI-Auswertung (Art. 6 Abs. 1 lit. a DSGVO). Die Aufnahme startet technisch mit der Verbindung; im ersten Satz bitten wir alle Teilnehmer, auch Mithörer, um Zustimmung. Sagt jemand nein, stoppen wir sofort und löschen die Aufnahme nach dem Anruf. Sprachnachrichten speichert der Anbieter unserer Kundenverwaltung mit einer automatischen Abschrift.
 
-## 5. Kontakt per E-Mail
+### Freiwilligkeit und Widerruf
 
-Wenn Sie uns über die angegebene Adresse schreiben, verarbeiten wir Ihre Angaben, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist unser berechtigtes Interesse an der Beantwortung (Art. 6 Abs. 1 lit. f DSGVO), bei Anfragen zu einem Vertrag oder dessen Anbahnung Art. 6 Abs. 1 lit. b DSGVO. Unser E-Mail-Dienst ist Google Workspace der Google Cloud EMEA Limited, Irland, die als Auftragsverarbeiterin für uns tätig ist; für eine Übermittlung an die Google LLC in den USA gilt Ziffer 7 entsprechend. E-Mails mit Interessenten, Kunden und Partnern übernehmen wir zusätzlich in unser Kundenverwaltungssystem Close (Ziffer 9, Empfänger und Drittland). Ihre Nachrichten speichern wir wie die Daten aus Online-Besprechungen (Ziffer 7, Speicherdauer); eine gesetzliche Pflicht ist etwa die Aufbewahrung von Handelsbriefen für sechs Jahre (§ 257 HGB).
+Ihre Einwilligung zu Aufzeichnungen ist freiwillig; ohne sie findet das Gespräch ohne Aufzeichnung statt. Sie können sie jederzeit für die Zukunft widerrufen, im Gespräch oder per E-Mail. Dann löschen wir die Aufzeichnung, soweit wir sie nicht für Rechtsansprüche benötigen (Art. 17 Abs. 3 lit. e DSGVO).
 
-## 6. Ihre Rechte
+## 4. Förderberatung {#auftraggeber}
 
-Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und, soweit anwendbar, Datenübertragbarkeit (Art. 15 bis 18 und 20 DSGVO).
+Ergänzend zu den Abschnitten 1 und 5 bis 8 gilt dieser Abschnitt für Inhaber, Gesellschafter, Organe und Beschäftigte der Unternehmen, die uns mit Förderberatung beauftragen oder sich dafür interessieren (Auftraggeber), und ihrer Projektpartner. Wir verarbeiten ihre Daten als eigener Verantwortlicher.
 
-**Widerspruchsrecht.** Soweit wir Daten aufgrund berechtigter Interessen verarbeiten, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit widersprechen (Art. 21 DSGVO).
+### Daten und Herkunft
 
-Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren (Art. 77 DSGVO). Für uns zuständig ist der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit, Ludwig-Erhard-Straße 22, 20459 Hamburg.
+Verarbeitet werden Kontakt- und Projektdaten wie Name, Funktion, Rolle, Qualifikation und Zeitdaten, der Werdegang nur, soweit ein Antrag ihn verlangt, außerdem Beteiligungen, Korrespondenz, Notizen, Freigaben und Signaturdaten. Die Daten stammen von Ihnen, vom Auftraggeber, seinem Steuerberater, Projektpartnern oder aus öffentlich zugänglichen Quellen. Sie müssen keine Daten bereitstellen; ohne sie ist die Beratung nur eingeschränkt oder nicht möglich.
 
-## 7. Online-Besprechungen (Google Meet) {#online-besprechungen}
+### Zwecke und Rechtsgrundlagen
 
-**Zweck.** Erstgespräche und weitere Besprechungen führen wir über Google Meet. Mit Ihrer Zustimmung zeichnen wir das Gespräch mit Bild und Ton auf, lassen es transkribieren und von Gemini, dem KI-Dienst von Google, Notizen erstellen, damit Ihre Angaben vollständig erfasst werden.
+Wir nutzen die Daten, um Verträge über Förderberatung anzubahnen und durchzuführen, vor allem um Anträge und Unterlagen zu entwerfen und abzustimmen, und um über eigene Angebote zu informieren. Rechtsgrundlage ist bei Ihnen als Vertragspartner Art. 6 Abs. 1 lit. b DSGVO, sonst das berechtigte Interesse von uns und dem Auftraggeber an der Beratung, für Werbung stets unser berechtigtes Interesse (lit. f). Eine Handakte zu jedem Vertrag führen wir im berechtigten Interesse, unsere Leistung nachzuweisen, Ansprüche durchzusetzen und abzuwehren und die Verteidigung in Ermittlungs-, Straf- und Bußgeldverfahren zu sichern (lit. f). Rechnungen, Buchführung und Aufbewahrung beruhen auf gesetzlichen Pflichten (lit. c).
 
-**Daten.** Name und E-Mail-Adresse aus der Terminbuchung und der Einladung, das gesprochene Wort, Bild und Ton, das Transkript und die Notizen sowie Zeitpunkt und Dauer des Gesprächs.
+## 5. Empfänger und Drittländer
 
-**Rechtsgrundlage.** Das Gespräch selbst führen wir zur Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. in unserem berechtigten Interesse an der Beratung von Unternehmen (Art. 6 Abs. 1 lit. f DSGVO). Aufzeichnung, Transkript und Notizen beruhen auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Vor dem Beitritt weist ein Hinweis im Vorschaubildschirm darauf hin. Aufzeichnung, Transkription und Notizen beginnen mit unserem Beitritt; zu Beginn des Gesprächs fragen wir alle Teilnehmer nach ihrer Zustimmung. Lehnt jemand ab, stoppen wir sie und löschen das bis dahin Entstandene.
+Als Auftragsverarbeiter setzen wir ein:
 
-**Freiwilligkeit.** Ihre Einwilligung ist freiwillig. Stimmen Sie nicht zu, findet das Gespräch ohne Aufzeichnung, Transkription und Notizen statt.
+- Cloudflare: Website,
+- Google Workspace der Google Cloud EMEA Limited, Irland: E-Mail, Kalender, Online-Besprechungen mit KI-Notizen, Ablage,
+- einen Anbieter für Kundenverwaltung und Telefonie mit Sitz in den USA,
+- einen Anbieter eines KI-Werkzeugs für Entwürfe,
+- einen Druck- und Versanddienstleister mit Sitz in der Schweiz,
+- einen Anbieter für elektronische Signatur mit Sitz in Frankreich.
 
-**Empfänger und Drittland.** Google Meet und Gemini betreibt die Google Cloud EMEA Limited, Irland, als unsere Auftragsverarbeiterin (Art. 28 DSGVO). Nach den Datenschutzzusagen von Google für Workspace werden die Inhalte ohne unsere Erlaubnis nicht zum Training von KI-Modellen verwendet; diese Erlaubnis erteilen wir nicht. Daten können an die Google LLC in den USA übermittelt werden; Grundlage ist der Angemessenheitsbeschluss zum EU-US Data Privacy Framework, ergänzend Standardvertragsklauseln. Eine Kopie der Garantien erhalten Sie auf Anfrage. Weitere Empfänger sind unser Steuerberater und, soweit erforderlich, unsere Rechtsanwälte, Wirtschaftsprüfer und Versicherer; andere, auch Behörden, erhalten Daten nur auf Ihre Veranlassung, aufgrund gesetzlicher Pflichten oder soweit wir sie zur Durchsetzung oder Abwehr von Ansprüchen oder zur Verteidigung in Straf- und Bußgeldverfahren benötigen.
+Weitere Empfänger sind unser Steuerberater und, soweit erforderlich, unsere Rechtsanwälte, Wirtschaftsprüfer und Versicherer. Behörden und andere Dritte erhalten Daten nur auf Ihre Veranlassung oder mit Freigabe des Auftraggebers, außer bei gesetzlichen Pflichten, Berichtigungen, zur Wahrung eigener Rechte und zur Verteidigung in Ermittlungs-, Straf- und Bußgeldverfahren.
 
-**Speicherdauer.** Kommt ein Vertrag zustande, gehören Aufzeichnung, Transkript und die übernommenen Notizen zur Handakte, die wir zehn Jahre nach Vertragsende aufbewahren. Sonst löschen wir sie spätestens 24 Monate nach dem letzten Kontakt, soweit nicht die Abwehr von Ansprüchen, die Verteidigung in Straf- und Bußgeldverfahren oder eine gesetzliche Pflicht eine längere Aufbewahrung erfordert.
+Cloudflare, Google und die Anbieter für Kundenverwaltung und KI-Werkzeug verarbeiten Daten auch in den USA, Cloudflare zudem in weiteren Ländern seines Netzes. Cloudflare und Google sind unter dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss, Art. 45 DSGVO), ergänzend gelten Standardvertragsklauseln; für die Anbieter für Kundenverwaltung und KI-Werkzeug gelten Standardvertragsklauseln (Art. 46 DSGVO). Für den Dienstleister in der Schweiz gilt ein Angemessenheitsbeschluss. Die Namen der Dienstleister und eine Kopie der Garantien erhalten Sie auf Anfrage.
 
-**Widerruf.** Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, im Gespräch oder per E-Mail an die Adresse in Ziffer 1. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig. Danach löschen wir Aufzeichnung, Transkript und Notizen, soweit wir sie nicht zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen (Art. 17 Abs. 3 lit. e DSGVO). Ihre weiteren Rechte stehen in Ziffer 6.
+## 6. Speicherdauer
 
-## 8. Terminbuchung über Google Kalender {#terminbuchung}
+Die Handakte mit Entwürfen, eingereichten Fassungen, Freigaben, Bestätigungen, Hinweisen, Datenquellen, Korrespondenz und übernommenen Aufzeichnungen, Transkripten und Notizen bewahren wir zehn Jahre nach Vertragsende auf. Rechnungen und Buchungsbelege bewahren wir acht Jahre ab Ende des Kalenderjahres auf, Handelsbriefe sechs Jahre (§ 257 HGB, § 147 AO, § 14b UStG). Länger speichern wir nur bei gesetzlicher oder fördervertraglicher Pflicht.
 
-**Zweck.** Erstgespräche buchen Sie über die Terminbuchung von Google Kalender. Mit Ihrer Einwilligung (Ziffer 4) laden wir sie auf der Seite Kontakt direkt in die Seite; ohne Einwilligung öffnet der Link die Buchungsseite bei Google.
+Ohne Vertrag löschen wir die Daten spätestens 24 Monate nach dem letzten Kontakt, soweit nicht gesetzliche Pflichten, die Abwehr von Ansprüchen oder die Verteidigung in Ermittlungs-, Straf- und Bußgeldverfahren länger erfordern. Telefonaufnahmen löscht der Anbieter unserer Kundenverwaltung nach 30 Tagen, soweit wir sie nicht für Rechtsansprüche sichern. Nach einem Widerspruch gegen Werbung behalten wir Name, Firma und Kontaktdaten als Sperrvermerk, solange wir Werbung versenden.
 
-**Daten.** Schon beim Laden der Terminbuchung überträgt Ihr Browser technische Daten wie Ihre IP-Adresse, Browserangaben und die aufrufende Seite an Google; Google kann dabei Cookies setzen. Bei einer Buchung verarbeiten wir Ihren Namen, Ihre E-Mail-Adresse, den gewählten Termin und Ihre freiwilligen Angaben; Sie erhalten eine Bestätigung und eine Einladung zu Google Meet (Ziffer 7). Name und E-Mail-Adresse brauchen wir für die Buchung; ohne sie ist keine Buchung möglich.
+## 7. Ihre Rechte
 
-**Rechtsgrundlage.** Für das Laden der Terminbuchung in unsere Seite Ihre Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO); für die Buchung die Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. unser berechtigtes Interesse an der Terminvereinbarung mit Unternehmen (Art. 6 Abs. 1 lit. f DSGVO).
+Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und, soweit anwendbar, Datenübertragbarkeit (Art. 15 bis 18 und 20 DSGVO). Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren (Art. 77 DSGVO); für uns zuständig ist der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit.
 
-**Empfänger und Drittland.** Google Kalender ist Teil von Google Workspace; Anbieter ist die Google Cloud EMEA Limited, Irland. Für Ihre Buchungsdaten ist sie unsere Auftragsverarbeiterin (Art. 28 DSGVO). Die technischen Daten beim Laden der Terminbuchung, etwa IP-Adresse und Cookie-Kennungen, verarbeitet Google auch in eigener Verantwortung, etwa für Sicherheit und Betrieb seiner Dienste; dafür gelten die Datenschutzhinweise von Google (https://cloud.google.com/terms/cloud-privacy-notice). Für eine Übermittlung an die Google LLC in den USA gilt Ziffer 7 entsprechend.
+## 8. Widerspruchsrecht {#widerspruch}
 
-**Speicherdauer.** Buchungsdaten löschen wir wie die Daten aus Online-Besprechungen (Ziffer 7, Speicherdauer).
-
-## 9. Telefonate {#telefonate}
-
-**Zweck und Daten.** Anrufe über unsere Geschäftsnummer, eingehend wie ausgehend, laufen über die Telefonie unseres Kundenverwaltungssystems Close. Dabei verarbeiten wir Ihre Rufnummer, Zeitpunkt und Dauer des Anrufs und unseren Vermerk zum Gespräch. Mit Ihrer Zustimmung zeichnen wir den Ton auf, damit Ihre Angaben vollständig erfasst werden; eine Abschrift oder KI-Auswertung der Aufnahme erstellen wir nicht.
-
-**Rechtsgrundlage.** Das Gespräch selbst führen wir zur Anbahnung oder Durchführung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. in unserem berechtigten Interesse an der Kommunikation mit Unternehmen (Art. 6 Abs. 1 lit. f DSGVO). Die Aufnahme beruht auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-
-**Ablauf.** Die Aufnahme startet technisch mit der Verbindung. Im ersten Satz weisen wir darauf hin und bitten alle Gesprächsteilnehmer, auch Mithörer, um ihre Zustimmung. Sagt jemand nein, stoppen wir die Aufnahme sofort, notfalls durch Auflegen, löschen sie nach dem Anruf vollständig und führen das Gespräch ohne Aufnahme weiter.
-
-**Sprachnachrichten.** Hinterlassen Sie eine Sprachnachricht, speichert Close den Ton und erstellt automatisch eine Abschrift. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. unser berechtigtes Interesse, Ihr Anliegen zu bearbeiten (Art. 6 Abs. 1 lit. f DSGVO).
-
-**Empfänger und Drittland.** Close (Elastic Inc., USA) ist unser Auftragsverarbeiter (Art. 28 DSGVO) und setzt weitere Dienstleister in den USA ein. Für die Übermittlung in die USA gelten Standardvertragsklauseln der Europäischen Kommission (Art. 46 DSGVO); eine Kopie erhalten Sie auf Anfrage. Für weitere Empfänger gilt Ziffer 7.
-
-**Speicherdauer.** Aufnahmen löscht Close nach 30 Tagen. Rufnummer, Zeitpunkt, Dauer, Vermerk sowie Sprachnachrichten und ihre Abschrift speichern wir höchstens so lange wie die übrigen Daten aus Gesprächen (Ziffer 7, Speicherdauer). Aufnahmen bewahren wir länger auf, soweit wir sie zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen (Art. 17 Abs. 3 lit. e DSGVO).
-
-**Freiwilligkeit und Widerruf.** Ihre Zustimmung zur Aufnahme ist freiwillig; ohne sie führen wir das Gespräch ohne Aufnahme. Sie können sie jederzeit mit Wirkung für die Zukunft widerrufen, im Gespräch oder per E-Mail an die Adresse in Ziffer 1. Die bis dahin erfolgte Verarbeitung bleibt rechtmäßig. Ihre weiteren Rechte stehen in Ziffer 6.
-
-## 10. Verarbeitung außerhalb der Website
-
-Diese Hinweise betreffen den Aufruf dieser Website, den Kontakt per E-Mail, die Terminbuchung, Online-Besprechungen und Telefonate nach den Ziffern 5 und 7 bis 9. Für Auftraggeber, Interessenten und Projektpartner gelten im Übrigen unsere Datenschutzhinweise, die Sie mit der ersten E-Mail oder auf Anfrage erhalten.
+Soweit wir Daten aufgrund berechtigter Interessen verarbeiten, können Sie aus Gründen Ihrer besonderen Situation jederzeit widersprechen (Art. 21 Abs. 1 DSGVO). Der Nutzung Ihrer Daten für Werbung können Sie jederzeit ohne Begründung widersprechen (Art. 21 Abs. 2 DSGVO).

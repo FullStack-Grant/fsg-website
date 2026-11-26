@@ -88,7 +88,7 @@ Ein Förderantrag muss auch Jahre später noch erklärbar sein. Deshalb legen wi
 - **Vertraulichkeit:** Bevor du uns Finanz- oder Projektdaten gibst, schließen wir eine Vertraulichkeitsvereinbarung.
 - **KI-Werkzeuge:** Für deine Unterlagen und Entwürfe nutzen wir kommerzielle KI-Werkzeuge, deren Anbieter deine Daten vertraglich nicht zum Training verwenden. Übermittlungen in Drittländer nur mit Angemessenheitsbeschluss oder Standardvertragsklauseln (Art. 45, 46 DSGVO). Welche Dienste wir nutzen, sagen wir dir auf Anfrage.
 - **EU-Programme:** Bei EU-Anträgen dokumentieren wir den KI-Einsatz in einem Protokoll. Ob und wie du ihn angibst, richtet sich nach den Regeln des Programms; die Angabe machst du als Antragsteller.
-- **Datenschutz:** Wie wir personenbezogene Daten verarbeiten, steht in der [Datenschutzerklärung](/datenschutz/).
+- **Datenschutz:** Wie wir personenbezogene Daten verarbeiten, steht in den [Datenschutzhinweisen](/datenschutz/).
 
 **So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung.
 
