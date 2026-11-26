@@ -18,7 +18,7 @@ fragen:
   - "Was kostet mich die Förderung intern an Zeit?"
   - "Was ist der Fördercheck?"
   - "Was macht FullStack Grant nicht?"
-antwort: "FullStack Grant berät Tech-Startups zu allen Ebenen des Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite und Bürgschaften. Equity (Beteiligungskapital) gehört nicht zu unserem Angebot. Wir bereiten Anträge und Nachweise vor, eingereicht wird von deinem Unternehmen. Der Einstieg ist ein kostenloser Fördercheck."
+antwort: "FullStack Grant berät Tech-Startups zu allen Ebenen des Finanzierungsmix: steuerliche Förderung, Zuschüsse und Grants, Förderkredite und Bürgschaften. Staatliches Equity gehört nicht zu unserem Angebot. Wir bereiten Anträge und Nachweise vor, eingereicht wird von deinem Unternehmen. Der Einstieg ist ein kostenloser Fördercheck."
 registerModul: ["B0", "B1", "B2", "B3", "B4", "B5"]
 programme: ["forschungszulage", "zim"]
 ---
@@ -117,9 +117,9 @@ Förderkredite von KfW und Landesförderbanken sind Fremdkapital zu Förderkondi
 
 **Grenze:** nur für Unternehmen. Verträge mit Bank oder Förderbank verhandeln wir nicht, Kreditgeber zahlen uns nichts.
 
-## Nicht bei uns: Equity und VC-Fundraising {#beteiligungskapital}
+## Nicht bei uns: staatliches Equity {#beteiligungskapital}
 
-Equity (Beteiligungskapital) gehört nicht zu unserem Angebot, auch nicht bei öffentlichen Fonds wie dem HTGF. Wir vermitteln nicht und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor dem Equity: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.
+Staatliches Equity, etwa über den HTGF oder Beteiligungsfonds der Länder, gehört nicht zu unserem Angebot. Wir vermitteln nicht und verhandeln keine Beteiligungsverträge. Der Finanzierungsmix endet bei uns vor dem Equity: Wir prüfen mit dir, was Förderung abdeckt, bevor du Anteile abgibst. Für deine Equity-Runde empfehlen wir dir gern kompetente Partner.
 
 ## Nach der Bewilligung: Nachweise, Änderungsanträge, Durchsicht vor Prüfungen {#nach-der-bewilligung}
 
@@ -148,7 +148,7 @@ Die Phase bestimmt, welche Ebene zuerst trägt. Welche Programme im Einzelfall p
 
 ## In welcher Reihenfolge prüft man Förderung?
 
-Nach Kapitalkosten: erst, worauf du Anspruch hast (Forschungszulage), dann Zuschüsse, dann Förderkredite. So finanziert jede Ebene, was die vorherige nicht abdeckt; Equity gehört nicht zu unserem Angebot.
+Nach Kapitalkosten: erst, worauf du Anspruch hast (Forschungszulage), dann Zuschüsse, dann Förderkredite. So finanziert jede Ebene, was die vorherige nicht abdeckt; staatliches Equity gehört nicht zu unserem Angebot.
 
 ## Was kostet dich die Förderung intern an Zeit?
 
@@ -160,7 +160,7 @@ Erfahrungswerte, keine Zusage: Für einen BSFZ-Antrag rechnen Teams meist mit 6 
 - Steuerberatung und den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt (dein Unternehmen bzw. dein Steuerberater)
 - Einreichen in deinem Namen oder Vertretung gegenüber Behörden
 - Mittelabrufe, Testate und Stundennachweise
-- Equity und VC-Fundraising, auch beim HTGF
+- staatliches Equity, etwa über den HTGF
 - eine Garantie, dass bewilligt wird
 
 **So ist die Zuständigkeit verteilt.** FullStack Grant bereitet vor, du entscheidest und reichst ein. Den nachgelagerten Antrag auf Auszahlung der Forschungszulage beim Finanzamt stellt dein Unternehmen bzw. dein Steuerberater. FullStack Grant leistet keine Rechts- und keine Steuerberatung. [Vorgehen und Compliance](/vorgehen/)

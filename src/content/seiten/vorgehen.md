@@ -54,7 +54,7 @@ Dein Steuerberater beurteilt auch Bemessungsgrundlage, Zuordnung der Aufwendunge
 - **Einreichen und Vertretung:** Wir reichen nichts in deinem Namen ein und vertreten dich nicht gegenüber Behörden.
 - **Testate und Mittelabrufe:** keine Prüfungsvermerke, keine Bestätigungen gegenüber Dritten, keine Mittelabrufe.
 - **Belege und Stundennachweise:** Belege prüfen wir nicht; die Stundennachweise führt dein Team zeitnah selbst. <!-- T9 ab Fassung 1.1: „Eure Stunden erfasst euer Team selbst, am besten täglich; die Vorlage dafür bekommst du von uns zum Start.“ -->
-- **VC-Fundraising:** Wir vermitteln keine Beteiligungen; auf Wunsch empfehlen wir dir kompetente Partner.
+- **Staatliches Equity:** Wir vermitteln keine Beteiligungen; auf Wunsch empfehlen wir dir kompetente Partner.
 - **Garantien:** Wir schulden sorgfältige Arbeit, keine Bewilligung und keine bestimmte Förderhöhe.
 
 Bei steuerlichen oder rechtlichen Fragen sagen wir es dir und verweisen an deinen Steuerberater oder eine Kanzlei. Für die Empfehlung nehmen wir kein Geld.
