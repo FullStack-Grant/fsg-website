@@ -229,6 +229,8 @@ p { max-width: 66ch; }
 .prosa { font-size: var(--fsg-text-body-lg); }
 .prosa h2 { margin-top: 56px; font-size: var(--fsg-text-h1); }
 .prosa h3 { margin-top: 32px; font-size: var(--fsg-text-h4); }
+.prosa.kompakt h2 { margin-top: 40px; font-size: var(--fsg-text-h3); }
+.prosa.kompakt h3 { margin-top: 24px; font-size: 1.0625rem; }
 .prosa ul, .prosa ol { padding-left: 22px; max-width: 66ch; }
 .prosa li { margin-bottom: 8px; }
 .prosa blockquote { margin: 32px 0; padding: 24px 28px; border-radius: var(--ui-radius-karte); background: var(--ui-flaeche-gold-2); box-shadow: inset 4px 0 0 var(--ui-goldlinie); font-size: var(--fsg-text-lead); font-weight: 400; }

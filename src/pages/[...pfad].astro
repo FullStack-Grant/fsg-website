@@ -93,6 +93,7 @@ if (eintrag.collection === 'referenz' && eintrag.data.typ === 'faq' && eintrag.b
 <Inhalt titel={d.title} h1={h1} beschreibung={d.description} pfad={pfad} krumen={krumen}
   antwort={d.antwort} status={d.status} jsonld={jsonld} compliance={compliance} quellen={quellen}
   ogTyp={eintrag.collection === 'artikel' ? 'article' : 'website'}
+  kompakt={eintrag.collection === 'recht'}
   cta={eintrag.collection !== 'recht' && !(eintrag.collection === 'seiten' && eintrag.data.seitentyp === 'kontakt')}>
 
   {eintrag.collection === 'artikel' && (

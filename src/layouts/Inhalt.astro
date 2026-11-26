@@ -22,10 +22,12 @@ interface Props {
   compliance?: boolean;
   quellen?: { titel: string; url: string; abruf: Date }[];
   cta?: boolean | { titel?: string; text?: string; ziel?: string; knopf?: string };
+  /** Kleinere Überschriften im Text (Rechtliches: Impressum, Datenschutz). */
+  kompakt?: boolean;
 }
 const {
   titel, h1, beschreibung, pfad, krumen, antwort, status, jsonld = [], ogTyp,
-  compliance = false, quellen = [], cta = true,
+  compliance = false, quellen = [], cta = true, kompakt = false,
 } = Astro.props;
 const ctaProps = typeof cta === 'object' ? cta : {};
 ---
@@ -45,7 +47,7 @@ const ctaProps = typeof cta === 'object' ? cta : {};
           {antwort && <Antwortblock text={antwort} />}
           <slot name="kopf" />
         </div>
-        <div class="prosa">
+        <div class:list={['prosa', { kompakt }]}>
           <slot />
         </div>
         <slot name="nach-text" />
