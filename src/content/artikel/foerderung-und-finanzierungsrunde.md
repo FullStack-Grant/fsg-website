@@ -10,8 +10,8 @@ dateModified: 2026-12-01
 zuletztGeprueft: 2026-11-19
 pruefintervall_tage: 90
 grenzenImText: true
-status: entwurf
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 antwort: "Eine Finanzierungsrunde kann laufende Förderung verändern: Sie kann den KMU-Status kosten, die Forschungszulage im Jahr der Runde senken oder retten und Meldepflichten gegenüber Projektträger und Hausbank auslösen. Eine ausdrückliche Pflicht, einen Gesellschafterwechsel zu melden, steht in den Standard-Nebenbestimmungen des Bundes nicht; melden musst du aber jede Änderung von Umständen, die für die Bewilligung maßgeblich waren (ANBest-P Nr. 5.2, Stand 17.11.2026). Prüfe das vor dem Signing, nicht danach."
 hauptbegriff: Förderung und Finanzierungsrunde
 nebenbegriffe: [KMU-Status nach Finanzierungsrunde, verbundene Unternehmen, Änderungsanzeige Projektträger, INVEST Zuschuss Wandeldarlehen, Kumulierung, Due Diligence Fördermittel, Blended Finance]

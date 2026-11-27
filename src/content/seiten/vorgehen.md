@@ -5,10 +5,10 @@ description: "Ablauf der Förderberatung vom Erstgespräch bis zum Verwendungsna
 url: /vorgehen/
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-status: entwurf
+status: freigegeben
 quellen:
   - {titel: "BSFZ, FAQ", url: "https://www.bescheinigung-forschungszulage.de/faq", abruf: 2026-11-25}
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "Ablauf Förderberatung"
 nebenbegriffe: ["seriöse Förderberatung", "Fördermittelberater auswählen", "wer reicht den Förderantrag ein", "Forschungszulage Steuerberater Rolle", "Verwendungsnachweis", "Datenschutz und KI-Einsatz"]
 fragen:

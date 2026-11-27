@@ -6,8 +6,8 @@ url: /kontakt/
 seitentyp: kontakt
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-status: entwurf
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "Erstgespräch Förderberatung"
 nebenbegriffe: ["FullStack Grant Kontakt", "Fördermittelberatung Hamburg", "Fördercheck"]
 fragen:

@@ -7,12 +7,12 @@ foerderart: "Zuschuss"
 ebene: "02 Zuschüsse und Grants"
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-zuletztGeprueft: 2026-11-19
+zuletztGeprueft: 2026-11-27
 pruefintervall_tage: 90
-pruefTermin: 2026-11-27
+pruefTermin: 2027-01-08
 grenzenImText: true
-status: entwurf
-freigabe: "2026-11-18, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "2026-11-18, Felix; T9 19.11.2026; Stand 27.11.2026 aktualisiert, Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "ZIM Förderung 2026"
 nebenbegriffe: ["ZIM Antragsstopp", "ZIM ausgesetzt", "ZIM 2027", "ZIM Förderquote", "ZIM Voraussetzungen", "ZIM international", "ZIM Alternative"]
 fragen:
@@ -24,20 +24,23 @@ fragen:
   - "Welche Alternativen haben Software- und Tech-Startups jetzt?"
   - "Was solltest du jetzt vorbereiten?"
   - "Was leistet FullStack Grant?"
-antwort: "Neue Anträge im Zentralen Innovationsprogramm Mittelstand (ZIM) sind seit 07.07.2026, 12:00 Uhr, gestoppt, für alle Projektformen und Skizzen; ausgenommen sind nur Anträge in offenen internationalen Ausschreibungen (zim.de, Stand 17.11.2026). Der Haushaltsausschuss des Bundestags fordert das Wirtschaftsministerium auf, ZIM zu Beginn 2027 wieder zu öffnen; zugesagt ist das nicht. Bis dahin sind die Forschungszulage, KMU-innovativ, der EIC Accelerator und Landesprogramme die naheliegenden Alternativen."
+antwort: "Neue Anträge im Zentralen Innovationsprogramm Mittelstand (ZIM) sind seit 07.07.2026, 12:00 Uhr, gestoppt, für alle Projektformen und Skizzen; ausgenommen sind nur Anträge in offenen internationalen Ausschreibungen (zim.de, Stand 27.11.2026). Der Haushaltsausschuss des Bundestags fordert das Wirtschaftsministerium auf, ZIM zu Beginn 2027 wieder zu öffnen; zugesagt ist das nicht, und der am 27.11.2026 beschlossene Haushalt 2027 sieht für ZIM nicht mehr Geld vor. Bis dahin sind die Forschungszulage, KMU-innovativ, der EIC Accelerator und Landesprogramme die naheliegenden Alternativen."
 steckbrief:
-  - {merkmal: "Neue Anträge", wert: "gestoppt seit 07.07.2026, 12:00 Uhr, alle Projektformen und Skizzen", stand: "17.11.2026"}
-  - {merkmal: "Ausnahme", wert: "ZIM International und IraSME in offenen Ausschreibungen", stand: "17.11.2026"}
-  - {merkmal: "Vor dem Stopp eingereichte Anträge", wert: "werden bewilligt, soweit die Förderbedingungen erfüllt und Mittel verfügbar sind", stand: "17.11.2026"}
-  - {merkmal: "Laufende Projekte", wert: "Auszahlungen und Projektbegleitung laufen weiter", stand: "17.11.2026"}
-  - {merkmal: "Wiederaufnahme", wert: "laut zim.de „für Anfang 2027 angestrebt“; Maßgabebeschluss des Haushaltsausschusses vom 12./13.11.2026", stand: "17.11.2026"}
-  - {merkmal: "Richtlinie", wert: "Förderrichtlinie ZIM vom 28.11.2024, gültig bis 30.06.2027", stand: "17.11.2026"}
+  - {merkmal: "Neue Anträge", wert: "gestoppt seit 07.07.2026, 12:00 Uhr, alle Projektformen und Skizzen", stand: "27.11.2026"}
+  - {merkmal: "Ausnahme", wert: "ZIM International und IraSME in offenen Ausschreibungen; ab 02.12.2026 ist keine mehr offen", stand: "27.11.2026"}
+  - {merkmal: "Vor dem Stopp eingereichte Anträge", wert: "werden bewilligt, soweit die Förderbedingungen erfüllt und Mittel verfügbar sind", stand: "27.11.2026"}
+  - {merkmal: "Laufende Projekte", wert: "Auszahlungen und Projektbegleitung laufen weiter", stand: "27.11.2026"}
+  - {merkmal: "Wiederaufnahme", wert: "laut zim.de „für Anfang 2027 angestrebt“; Maßgabebeschluss des Haushaltsausschusses vom 12./13.11.2026; Haushalt 2027 am 27.11.2026 beschlossen, ZIM und IGP zusammen rund 539 Mio. €", stand: "27.11.2026"}
+  - {merkmal: "Richtlinie", wert: "Förderrichtlinie ZIM vom 28.11.2024, gültig bis 30.06.2027", stand: "27.11.2026"}
 quellen:
-  - {titel: "zim.de, Befristeter Antragsstopp, Meldung vom 07.07.2026", url: "https://www.zim.de/ZIM/Redaktion/DE/Meldungen/2026/3/2026-07-07-befristeter-antragsstopp.html", abruf: 2026-11-17}
-  - {titel: "Förderrichtlinie ZIM vom 28.11.2024", url: "https://www.zim.de/ZIM/Redaktion/DE/Downloads/Richtlinien/richtlinie-zim-2025.pdf", abruf: 2026-11-17}
+  - {titel: "zim.de, Befristeter Antragsstopp, Meldung vom 07.07.2026", url: "https://www.zim.de/ZIM/Redaktion/DE/Meldungen/2026/3/2026-07-07-befristeter-antragsstopp.html", abruf: 2026-11-27}
+  - {titel: "zim.de, Internationale Ausschreibungen, Länderübersicht", url: "https://www.zim.de/ZIM/Redaktion/DE/Dossiers/international-laender-uebersicht.html", abruf: 2026-11-27}
+  - {titel: "Förderrichtlinie ZIM vom 28.11.2024", url: "https://www.zim.de/ZIM/Redaktion/DE/Downloads/Richtlinien/richtlinie-zim-2025.pdf", abruf: 2026-11-27}
   - {titel: "zim.de, FAQ Allgemeines", url: "https://www.zim.de/ZIM/Redaktion/DE/FAQ/Allgemeines/allgemeines.html", abruf: 2026-11-17}
   - {titel: "Förderzentrale des Bundes, ZIM", url: "https://foerderzentrale.gov.de/partner/zim", abruf: 2026-11-18}
   - {titel: "Deutscher Bundestag, hib 947/2026 vom 16.11.2026", url: "https://www.bundestag.de/presse/hib/kurzmeldungen-1233464", abruf: 2026-11-18}
+  - {titel: "Deutscher Bundestag, hib 980/2026 vom 27.11.2026, Haushalt 2027 beschlossen", url: "https://www.bundestag.de/presse/hib/kurzmeldungen-1238868", abruf: 2026-11-27}
+  - {titel: "Deutscher Bundestag, Textarchiv 2026, KW 48, Einzelplan Wirtschaft", url: "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-wirtschaft-1232494", abruf: 2026-11-27}
   - {titel: "Entwurf Bundeshaushaltsplan 2027, Einzelplan 09", url: "https://www.bundeshaushalt.de/static/daten/2027/soll/draft/epl09.pdf", abruf: 2026-11-17}
   - {titel: "BMFTR, KMU-innovativ IKT", url: "https://www.bmftr.bund.de/DE/Forschung/Gesellschaft/ZukunftDerArbeit/KmuInnovativ/kmu-innovativ-ikt/kmu-innovativ-ikt_node.html", abruf: 2026-11-17}
   - {titel: "Förderdatenbank des Bundes, KMU-innovativ IKT", url: "https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BMBF/kmu-innovativ-ikt-30771.html", abruf: 2026-11-18}
@@ -53,15 +56,14 @@ Nein, außer in einer offenen internationalen Ausschreibung. Anträge, die nach 
 
 ## Welche Ausnahmen gelten?
 
-Ausgenommen sind Anträge mit internationalen Partnern in offenen bi- und multilateralen Ausschreibungen (ZIM International und IraSME). Am 17.11.2026 waren noch drei offen:
+Ausgenommen sind Anträge mit internationalen Partnern in offenen bi- und multilateralen Ausschreibungen (ZIM International und IraSME). Am 27.11.2026 waren nur noch zwei offen, beide mit Frist vor oder am Tag dieser Veröffentlichung:
 
 | Ausschreibung | Frist |
 |---|---|
-| Frankreich | 18.11.2026 |
-| Tschechien (bilaterale Ausschreibung) | 30.11.2026 |
-| Vereinigtes Königreich | 01.12.2026, 11:00 Uhr britischer Zeit |
+| Tschechien (IraSME) | 30.11.2026 |
+| Vereinigtes Königreich | 01.12.2026 |
 
-Weitere Länder sind als geplant gelistet, ohne Frist. Für die deutschen Partner gelten die Bedingungen der ZIM-Richtlinie.
+Ab 02.12.2026 ist keine Ausschreibung mehr offen; 17 Länder sind als geplant gelistet, ohne Frist (zim.de, Länderübersicht, Stand 27.11.2026). Für die deutschen Partner gelten die Bedingungen der ZIM-Richtlinie.
 
 ## Wann geht es mit ZIM weiter?
 
@@ -69,7 +71,7 @@ Das steht noch nicht fest. Laut zim.de hängt die Wiederaufnahme vom Bundeshaush
 
 Das Geld wird dabei nicht mehr: Der gemeinsame Haushaltstitel von ZIM und dem Innovationsprogramm IGP sinkt von 558,4 Mio. € (2026) auf 539,1 Mio. € (2027); der Ausschuss hat den Ansatz nicht erhöht (Entwurf Bundeshaushaltsplan 2027, Kap. 0901 Titel 683 01; hib 947/2026). Ein großer Teil davon ist durch frühere Bewilligungen gebunden. Rechne deshalb mit geänderten Bedingungen: zim.de kündigt an, bei der Wiederaufnahme die künftig geltenden Förderbedingungen zu veröffentlichen.
 
-Die Schlussabstimmung über den Haushalt 2027 im Bundestag ist für den 27.11.2026 angesetzt. Wir prüfen diese Seite regelmäßig; das Prüfdatum steht oben.
+Der Bundestag hat den Haushalt 2027 am 27.11.2026 beschlossen, den Einzelplan Wirtschaft in der Fassung des Haushaltsausschusses: ZIM und IGP erhalten zusammen rund 539 Mio. € nach 558,4 Mio. € (hib 980/2026; Bundestag, Textarchiv KW 48). Ein Datum für die Wiederaufnahme nennt zim.de weiterhin nicht. Wir prüfen diese Seite regelmäßig; das Prüfdatum steht oben.
 
 ## Was gilt für laufende ZIM-Projekte?
 

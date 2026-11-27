@@ -6,8 +6,8 @@ url: /ueber-uns/
 seitentyp: profil
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-status: entwurf
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "Felix Hinkelmann"
 nebenbegriffe: ["Förderberater Finance Lead", "Förderberatung CFO-Perspektive", "FullStack Grant Gründer", "Forschungszulage Erfahrung"]
 fragen:

@@ -5,8 +5,8 @@ description: "Was kostet eine Förderberatung? Fördercheck kostenlos, für den 
 url: /verguetung/
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-status: entwurf
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "Förderberatung Kosten"
 nebenbegriffe: ["Fördermittelberater Kosten", "Erfolgshonorar Förderberatung", "kostenloser Fördercheck", "Forschungszulage Berater Kosten"]
 fragen:

@@ -6,10 +6,10 @@ url: /leistungen/
 datePublished: 2026-12-01
 dateModified: 2026-12-01
 grenzenImText: true
-status: entwurf
+status: freigegeben
 quellen:
   - {titel: "BSFZ, FAQ", url: "https://www.bescheinigung-forschungszulage.de/faq", abruf: 2026-11-25}
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "Förderberatung Startup"
 nebenbegriffe: ["BSFZ-Antrag erstellen lassen", "Forschungszulage Beratung", "ZIM Antrag", "Förderkredit Startup", "EIC Accelerator Beratung", "Verwendungsnachweis Unterstützung", "Fördercheck kostenlos", "Finanzierungsmix"]
 fragen:

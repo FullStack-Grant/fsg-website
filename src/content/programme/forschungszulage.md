@@ -8,12 +8,12 @@ foerderart: "steuerliche Förderung (Zulage)"
 ebene: "01 Steuerliche Förderung"
 datePublished: 2026-12-01
 dateModified: 2026-12-01
-zuletztGeprueft: 2026-11-19
+zuletztGeprueft: 2026-11-27
 pruefintervall_tage: 90
-pruefTermin: 2026-11-30
+pruefTermin: 2026-12-19
 grenzenImText: true
-status: entwurf
-freigabe: "2026-11-18, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "2026-11-18, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 hauptbegriff: "Forschungszulage für Startups"
 nebenbegriffe: ["Forschungszulage beantragen", "Voraussetzungen", "Forschungszulage Höhe", "Forschungszulage rückwirkend", "BSFZ-Antrag", "Auszahlung bei Verlust", "Forschungszulage buchen", "Betriebsprüfung", "Softwareentwicklung"]
 fragen:
@@ -43,7 +43,8 @@ quellen:
   - {titel: "BSFZ, Prüfleitfaden, Stand 10/2025", url: "https://www.bescheinigung-forschungszulage.de/dateien/PDF/Pruefleitfaden_BSFZ.pdf", abruf: 2026-11-17}
   - {titel: "BSFZ, Statistiken zur Nutzung der Forschungszulage, Stand 30.09.2026", url: "https://www.bescheinigung-forschungszulage.de/infothek/infomaterialien-und-downloads/statistiken-zur-nutzung-der-forschungszulage", abruf: 2026-11-17}
   - {titel: "Bundesregierung, Evaluierungsbericht FZulG, BT-Drs. 21/7999", url: "https://dserver.bundestag.de/btd/21/079/2107999.pdf", abruf: 2026-11-17}
-  - {titel: "Jahressteuergesetz 2026, Beschlussempfehlung, BT-Drs. 21/9139", url: "https://dserver.bundestag.de/btd/21/091/2109139.pdf", abruf: 2026-11-17}
+  - {titel: "Jahressteuergesetz 2026, Beschlussempfehlung, BT-Drs. 21/9139", url: "https://dserver.bundestag.de/btd/21/091/2109139.pdf", abruf: 2026-11-27}
+  - {titel: "Bundesrat, 1071. Sitzung am 18.12.2026", url: "https://www.bundesrat.de/SharedDocs/termine/DE/plenum/2026/2026-12-18.html", abruf: 2026-11-27}
   - {titel: "Förderrichtlinie ZIM vom 28.11.2024", url: "https://www.zim.de/ZIM/Redaktion/DE/Downloads/Richtlinien/richtlinie-zim-2025.pdf", abruf: 2026-11-17}
 links_intern: ["/leistungen/#steuerliche-foerderung", "/vorgehen/", "/wissen/artikel/mehr-als-forschungszulage/", "/foerderung/programme/zim/", "/wissen/artikel/foerderung-und-finanzierungsrunde/", "/verguetung/", "/kontakt/"]
 ---
@@ -76,7 +77,7 @@ Förderfähig sind nach § 3 FZulG:
 
 Für ein KMU mit einem Vorhaben ab 2026 heißt das: Auf 100 € Personalaufwand kommen 20 € Pauschale, darauf 35 % Zulage, zusammen 42 € (so auch der Evaluierungsbericht, BT-Drs. 21/7999, S. 134). Material und sonstige Sachkosten sind außer Abschreibungen und Pauschale nicht förderfähig. Welche Aufwendungen bei dir zählen, klärst du mit deinem Steuerberater.
 
-**Geplant:** Das Jahressteuergesetz 2026 hebt die Obergrenze aller Beihilfen je Unternehmen und Vorhaben von 15 auf 25 Mio. € an, rückwirkend ab 01.01.2026. Der Bundestag hat es am 12.11.2026 beschlossen, die Zustimmung des Bundesrats steht aus (BT-Drs. 21/9139, Stand 17.11.2026).
+**Geplant:** Das Jahressteuergesetz 2026 hebt die Anmeldeschwelle für Beihilfen je Unternehmen und Vorhaben (§ 4 Abs. 3 FZulG) von 15 auf 25 Mio. € an, rückwirkend ab 01.01.2026. Der Bundestag hat es am 12.11.2026 beschlossen; der Bundesrat hat noch nicht zugestimmt, seine nächste Plenarsitzung ist am 18.12.2026 (BT-Drs. 21/9139; bundesrat.de, Stand 27.11.2026).
 
 ## Wird die Forschungszulage bei Verlust ausgezahlt, und wann fließt das Geld?
 
@@ -99,7 +100,7 @@ Für den BSFZ-Antrag brauchst du ein ELSTER-Organisationszertifikat; die Registr
 
 Begünstigt sind Vorhaben, die nach dem 01.01.2020 begonnen haben (§ 8 FZulG). Der Antrag beim Finanzamt ist bis zum Ende der vierjährigen Festsetzungsfrist möglich; sie beginnt mit Ablauf des Jahres, in dem das Wirtschaftsjahr endet (BMF Rn. 221).
 
-**Wichtig für 2026:** Bei einem Wirtschaftsjahr gleich Kalenderjahr endet die Frist für das Wirtschaftsjahr 2022 am 31.12.2026. Nach geltendem Recht hemmt nur ein wirksamer Antrag beim Finanzamt den Fristablauf, nicht schon der BSFZ-Antrag. Das Jahressteuergesetz 2026 soll das ändern, ist aber noch nicht verkündet (BT-Drs. 21/9139, Stand 17.11.2026). Hast du für 2022 noch nichts beantragt, sprich jetzt mit deinem Steuerberater.
+**Wichtig für 2026:** Bei einem Wirtschaftsjahr gleich Kalenderjahr endet die Frist für das Wirtschaftsjahr 2022 am 31.12.2026. Nach geltendem Recht hemmt nur ein wirksamer Antrag beim Finanzamt den Fristablauf, nicht schon der BSFZ-Antrag. Das Jahressteuergesetz 2026 soll das ändern: Ein rechtzeitiger BSFZ-Antrag hemmt dann den Ablauf der Festsetzungsfrist, auch für Fristen, die am 31.12.2026 noch laufen. Es ist aber noch nicht verkündet; der Bundesrat entscheidet frühestens am 18.12.2026 (BT-Drs. 21/9139; bundesrat.de, Stand 27.11.2026). Hast du für 2022 noch nichts beantragt, sprich jetzt mit deinem Steuerberater.
 
 ## Ist Softwareentwicklung förderfähig?
 

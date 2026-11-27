@@ -9,8 +9,8 @@ datePublished: 2026-12-01
 dateModified: 2026-12-01
 zuletztGeprueft: 2026-11-19
 grenzenImText: true
-status: entwurf
-freigabe: "18.11.2026, Felix; T9 19.11.2026"
+status: freigegeben
+freigabe: "18.11.2026, Felix; T9 19.11.2026; Go-live-Freigabe Felix 27.11.2026"
 antwort: "Ich halte Finance-Leute, die Förderung im Startup selbst verantwortet haben, für gute Förderberater: Sie kennen Liquidität, Abschluss und Prüfung, und sie wissen, wann eine schlecht dokumentierte Förderung zum Risiko wird. Ein Finance-Hintergrund allein reicht dafür nicht. Er zählt erst zusammen mit eigener Praxis in Antrag und Abwicklung."
 hauptbegriff: Förderberater mit Finance-Hintergrund
 nebenbegriffe: [Startup-CFO als Fördermittelberater, Förderung aus CFO-Sicht, Förderung in Liquiditätsplanung und Abschluss, Fördermittelberater auswählen, Fördermittelberatung]
