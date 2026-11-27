@@ -10,7 +10,7 @@ dateModified: 2026-12-01
 status: entwurf
 ---
 
-<!-- Platzhalter (WEB T12, Felix 26.11.2026). Übersicht der AGB-Fassungen; Verträge verweisen nie auf /agb/, sondern auf die feste Seite ihrer Fassung (/agb/1-1/). Archiv ohne Fassung 1.0 (Felix 26.11.2026). Felix 26.11.2026: nur die Fassungsseite /agb/1-1/ geht online; diese Übersicht bleibt Entwurf, kein Footer-Link. -->
+<!-- Platzhalter (WEB T12, Felix 26.11.2026). Übersicht der AGB-Fassungen; Verträge verweisen nie auf /agb/, sondern auf die feste Seite ihrer Fassung (/agb/1-1/). Archiv ohne Fassung 1.0 (Felix 26.11.2026). Felix 26.11.2026: nur die Fassungsseite /agb/1-1/ geht online; diese Übersicht bleibt Entwurf; der Footer-Link „AGB“ zeigt direkt auf /agb/1-1/ (Felix 27.11.2026). -->
 
 Für Ihren Vertrag gilt die Fassung, auf die er verweist (Vertrag § 1 Abs. 3).
 
