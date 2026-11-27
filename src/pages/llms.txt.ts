@@ -12,7 +12,7 @@ export const GET: APIRoute = async ({ site }) => {
   const zeilen = [
     '# FullStack Grant',
     '',
-    '> Förderberatung für Tech-Startups aus Hamburg: Forschungszulage, Zuschüsse, EU-Grants und Förderkredite, geführt von einem ehemaligen Finance Lead.',
+    '> Boutique für Förderberatung aus Hamburg, für Tech-Startups: Forschungszulage, Zuschüsse, EU-Grants und Förderkredite, geführt von einem ehemaligen Finance Lead.',
     '',
     '## Kernseiten',
     ...kern.map(([t, p]) => `- [${t}](${abs(p)})`),

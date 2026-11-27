@@ -1,0 +1,35 @@
+---
+// Feste Seite einer eingefrorenen AGB-Fassung (WEB T12, Felix 26.11.2026): nur Fassung, Datum und PDF (Prüfsumme nicht sichtbar, Felix 27.11.2026),
+// kein AGB-Text als HTML. Daten aus src/data/agb-fassungen.json; der Build bricht ab, wenn das PDF in public/
+// nicht mehr zur eingefrorenen Prüfsumme passt (die Datei wird nie ersetzt, neue Fassung = neue Adresse).
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import register from '../data/agb-fassungen.json';
+import { datumDe } from '../lib/inhalte';
+
+interface Props { fassung: string }
+const f = register.fassungen.find((x) => x.fassung === Astro.props.fassung);
+if (!f) throw new Error(`AGB-Fassung ${Astro.props.fassung} fehlt in src/data/agb-fassungen.json`);
+// Pfad vom Projektordner aus (Build läuft dort; import.meta.url zeigt beim Prerender in den Ausgabeordner).
+const bytes = readFileSync(join(process.cwd(), 'public', f.pdf));
+const ist = createHash('sha256').update(bytes).digest('hex');
+if (ist !== f.sha256) throw new Error(`AGB ${f.fassung}: PDF ${f.pdf} hat SHA-256 ${ist}, eingefroren ist ${f.sha256}`);
+const kb = Math.round(bytes.length / 1024);
+---
+<div class="agb-fassung">
+  <dl>
+    <dt>Fassung</dt><dd>{f.bezeichnung}</dd>
+    <dt>Datum der Fassung</dt><dd>{datumDe(new Date(f.datum))}</dd>
+  </dl>
+  <p><a class="pdf" href={f.pdf}>AGB {f.bezeichnung} als PDF ({kb} KB)</a></p>
+</div>
+
+<style>
+  .agb-fassung { margin: 24px 0 40px; }
+  dl { display: grid; grid-template-columns: 200px 1fr; gap: 8px 24px; }
+  dt { color: var(--fsg-color-text-muted); }
+  dd { margin: 0; }
+  .pdf { font-weight: 700; }
+  @media (max-width: 820px) { dl { grid-template-columns: 1fr; gap: 0; } dd { margin-bottom: 10px; } }
+</style>

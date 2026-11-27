@@ -12,8 +12,11 @@ const { teile } = Astro.props;
 </nav>
 
 <style>
-  .krumen { padding: 20px 0 0; }
-  ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; font: 500 11px/1.6 var(--fsg-font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fsg-color-text-subtle); }
+  .krumen { padding: 24px 0 0; }
+  ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; font: 500 0.75rem/1.6 var(--fsg-font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ui-subtle); }
+  /* Im Seitenkopf (Ink-Band) helle Schrift: Neutral 300 auf Ink 10,6:1 */
+  :global(.auf-ink) ol { color: var(--ui-ink-lead); }
+  li { display: inline-flex; align-items: center; min-height: 24px; }
   li + li::before { content: '/'; margin-right: 6px; }
   a { text-decoration: none; }
   a:hover { text-decoration: underline; }

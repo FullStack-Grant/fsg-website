@@ -40,6 +40,9 @@ const basis = z.object({
   pruefintervall_tage: z.number().int().positive().optional(),
   // Antwortblock oben (T6 4.3 Nr. 1); fehlt er, beginnt die Seite mit dem Text.
   antwort: z.string().optional(),
+  // Text enthält einen eigenen, von T9 geprüften Grenzen-Absatz („So arbeitet FullStack Grant“);
+  // dann setzt das Layout den Kasten ComplianceHinweis nicht zusätzlich.
+  grenzenImText: z.boolean().default(false),
 });
 
 const mitPfad = <T extends z.ZodType<{ slug?: string; url?: string; datePublished: Date; dateModified: Date }>>(schema: T) =>
@@ -142,12 +145,14 @@ const referenz = defineCollection({
   ),
 });
 
-// Rechtliches (Impressum, Datenschutz).
+// Rechtliches (Impressum, Datenschutz, AGB mit fester Seite je Fassung).
 const recht = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/recht' }),
   schema: mitPfad(
     basis.extend({
-      typ: z.enum(['impressum', 'datenschutz']),
+      typ: z.enum(['impressum', 'datenschutz', 'agb']),
+      // Feste Seite einer eingefrorenen AGB-Fassung (Schlüssel in src/data/agb-fassungen.json).
+      fassung: z.string().optional(),
       stand: z.coerce.date(),
     }),
   ),

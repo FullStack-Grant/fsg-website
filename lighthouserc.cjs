@@ -2,7 +2,7 @@
 // Kategorien a11y, Best Practices, SEO ≥ 0,95 und LCP, CLS blockieren; Performance-Score und Gewicht warnen.
 // „is-crawlable“ entfällt, weil die Vorschau bewusst noindex trägt (Produktion prüft seo.mjs).
 const basis = 'http://localhost:4401';
-const seiten = ['/', '/leistungen/', '/foerderung/programme/muster-programm/', '/wissen/artikel/muster-artikel/', '/wissen/faq/'];
+const seiten = ['/', '/leistungen/', '/foerderung/programme/forschungszulage/', '/wissen/artikel/foerderberatung-aus-finance-sicht/', '/ueber-uns/'];
 
 module.exports = {
   ci: {

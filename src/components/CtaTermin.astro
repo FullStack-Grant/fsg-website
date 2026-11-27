@@ -1,6 +1,7 @@
 ---
-// Genau ein Abschluss-CTA je Inhaltsseite (T6 6 Nr. 4). Ziel: Erstgespräch oder passende Leistungs-Ebene.
+// Genau ein Abschluss-CTA je Inhaltsseite (T6 6 Nr. 4), als Ink-Fläche (Design K3b). Ziel: Erstgespräch oder passende Leistungs-Ebene.
 import { firma } from '../data/firma';
+import Icon from './Icon.astro';
 interface Props { titel?: string; text?: string; ziel?: string; knopf?: string }
 const {
   titel = 'Ein Gespräch, danach weißt du, welche Förderung zu dir passt.',
@@ -9,12 +10,20 @@ const {
   knopf = 'Erstgespräch buchen',
 } = Astro.props;
 ---
-<section class="cta" aria-labelledby="h-cta">
+<section class="cta auf-ink" aria-labelledby="h-cta">
   <h2 id="h-cta">{titel}</h2>
   <p class="lead">{text}</p>
-  <a class="btn" href={ziel}>{knopf} <span class="pfeil" aria-hidden="true">→</span></a>
+  <a class="btn" href={ziel}>{knopf} <Icon name="pfeil" /></a>
 </section>
 
 <style>
-  .cta { padding: 56px 0 64px; border-top: var(--rule); margin-top: 56px; }
+  /* Ink-Fläche mit Goldbutton und sparsamem Goldglühen (Design K3b), wie das Erstgespräch der Startseite */
+  .cta { margin-top: 96px; padding: 56px 64px; border-radius: var(--ui-radius-band); border: 1px solid var(--ui-ink-rand);
+         background-image: radial-gradient(48% 80% at 100% 100%, var(--ui-glow), rgb(224 154 0 / 0) 70%); }
+  h2 { max-width: 22ch; }
+  .lead { margin: 16px 0 32px; }
+  @media (max-width: 720px) {
+    .cta { margin-top: 72px; padding: 40px 22px; border-radius: 28px; }
+    .btn { width: 100%; }
+  }
 </style>

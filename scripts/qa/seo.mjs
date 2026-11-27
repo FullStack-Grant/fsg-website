@@ -37,6 +37,16 @@ for (const datei of dateien(root, '.html')) {
 const gemeldet = new Set();
 const ids = new Map([...seiten].map(([p, s]) => [p, new Set(s.$('[id]').map((_, e) => s.$(e).attr('id')).get())]));
 
+// Feste Anker, auf die Links von außen zeigen (Banner, Google-Meet-Hinweis, Kontakt, Verträge; WEB T12, LEGAL T21).
+// Fehlen sie, laufen fremde Links ins Leere, ohne dass ein interner Link es meldet.
+const FESTE_ANKER = {
+  '/datenschutz/': ['einwilligung', 'kontakt', 'terminbuchung', 'telefonate', 'online-besprechungen', 'auftraggeber', 'widerspruch'],
+};
+for (const [pfad, anker] of Object.entries(FESTE_ANKER)) {
+  if (!ids.has(pfad)) { b.fehler_(pfad, 'Seite mit festen Ankern fehlt im Build'); continue; }
+  for (const a of anker) if (!ids.get(pfad).has(a)) b.fehler_(pfad, `fester Anker #${a} fehlt`);
+}
+
 const schemaOrg = JSON.parse(lesen(new URL('./daten/schemaorg-30.1-current-https.jsonld', import.meta.url)));
 const validator = new Validator(schemaOrg);
 

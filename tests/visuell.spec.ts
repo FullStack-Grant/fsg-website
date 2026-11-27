@@ -3,11 +3,11 @@
 import { test, expect } from '@playwright/test';
 import { istExtern } from './seiten';
 
-// Je Seitentyp eine Seite (Mustertexte ersetzt T12, dann Baselines neu).
+// Je Seitentyp eine Seite (seit WEB T12 echte Seiten statt Muster).
 const VORLAGEN = [
   '/', '/leistungen/', '/vorgehen/', '/ueber-uns/', '/kontakt/', '/verguetung/',
-  '/foerderung/', '/foerderung/programme/', '/foerderung/programme/muster-programm/', '/foerderung/muster-thema/',
-  '/wissen/', '/wissen/artikel/muster-artikel/', '/wissen/faq/', '/wissen/glossar/', '/impressum/', '/gibt-es-nicht/',
+  '/foerderung/', '/foerderung/programme/', '/foerderung/programme/forschungszulage/', '/foerderung/muster-thema/',
+  '/wissen/', '/wissen/artikel/foerderberatung-aus-finance-sicht/', '/wissen/glossar/', '/impressum/', '/gibt-es-nicht/',
 ];
 
 test.describe('Visuell', () => {

@@ -39,7 +39,7 @@ Produktion baut nur `freigegeben`; die Vorschau baut auch Entwürfe und setzt ü
 ## Markdown: Fallen
 - **Keine H1 im Text.** Die H1 steht im Feld `h1` (sonst Title vor dem Doppelpunkt); `# …` im Markdown bricht den Build.
 - **Anker** mit `## Frage {#anker}`; jeder Anker nur einmal je Seite (Gruppen-H2 und Frage-H3 kollidieren leicht, z. B. „Kosten“). Der Build bricht bei doppelten Ankern ab. Bestehende Anker nie umbenennen, auf sie zeigen Links von außen (z. B. `/datenschutz/#online-besprechungen` aus Google Meet).
-- **Kein HTML im Markdown** (abgeschaltet). Kommentare `<!-- -->` (etwa „ab Fassung 1.1“) entfernt der Build aus dem ausgelieferten HTML. Redaktionsmarker wie `[T9-1]`, `[prüfen]`, `[Platzhalter]` und Gedankenstriche bricht der Produktions-Build ab (`scripts/nachbearbeitung.mjs`), die Vorschau warnt nur.
+- **Kein HTML im Markdown.** Braucht ein Block eigene Gestaltung, bekommt er eine Klasse per Attributzeile direkt darunter (`{.zeitleiste}` unter einer Liste); die Klasse steht in `src/styles/global.css`. Kommentare `<!-- -->` (etwa „ab Fassung 1.1“) entfernt der Build aus dem ausgelieferten HTML. Redaktionsmarker wie `[T9-1]`, `[prüfen]`, `[Platzhalter]` und Gedankenstriche bricht der Produktions-Build ab (`scripts/nachbearbeitung.mjs`), die Vorschau warnt nur.
 - **Typografie bleibt wie geschrieben** (Smart Punctuation aus): deutsche Anführungszeichen „…“ selbst setzen.
 
 ## Schreiben
@@ -57,7 +57,7 @@ Produktion baut nur `freigegeben`; die Vorschau baut auch Entwürfe und setzt ü
 - Genau ein Abschluss-CTA je Inhaltsseite; das Layout setzt ihn (Komponente `CtaTermin`).
 
 ## Komponenten und Design
-- Fester Satz in `src/components/` (Liste `Bausteine.md`); neue Komponenten nur mit Felix' Designfreigabe (Design E2 „Kapitalsäule“).
+- Fester Satz in `src/components/` (Liste `Bausteine.md`); neue Komponenten nur mit Felix' Designfreigabe (Design K3b „Gold auf Ink“).
 - Farben, Schrift, Abstände nur über die Kit-Tokens `--fsg-*`; Kit-Dateien nie von Hand ändern (`npm run kit:sync`).
 - JSON-LD erzeugen nur die Layouts aus dem Frontmatter (`src/lib/jsonld.ts`); nie von Hand. Firmendaten nur in `src/data/firma.ts`.
 - **CSP und Datenschutz:** kein Inline-Skript, kein `style="…"`, kein `localStorage`, keine Fremd-Requests (Schriften, Bilder, Skripte nur vom eigenen Host). Neue Dienste mit Datenfluss (Terminbuchung, Karten, Videos, Analytics) erst nach Eintrag in `10_Legal\datenschutz\diensteliste.md` (Repo `fsg-hq`), Fortschreibung der Datenschutzerklärung und Felix' OK.
@@ -65,5 +65,11 @@ Produktion baut nur `freigegeben`; die Vorschau baut auch Entwürfe und setzt ü
 ## Bilder
 Originale im Drive (`50_Sales\52_Website\Bilder\`), ins Repo nur optimierte Fassungen (AVIF/WebP, `width`/`height`, ≤ 500 KB) mit `alt`-Text (dekorativ leer). Personenfotos nur mit Einwilligung; keine Stockfotos mit Personen, die wie Kunden wirken.
 
-## Recht und Freigabe
-Leistungsgrenzen und Werbeaussagen nach `rechtsregeln.md`. Neue Werbeaussagen (Vergleich, Überlegenheit, Erfolgsquoten, Compliance-Versprechen) vor der Freigabe durch den Agenten `pruefer-recht` (Repo `fsg-hq`) prüfen lassen; Thesen als Meinungsbeitrag (`typ: meinung`) kennzeichnen oder belegen.
+## Recht, Sichtbarkeit und Freigabe
+Leistungsgrenzen und Werbeaussagen nach `rechtsregeln.md`; Thesen als Meinungsbeitrag (`typ: meinung`) kennzeichnen oder belegen.
+
+Jede neue oder inhaltlich geänderte Seite geht vor Felix' Freigabe an zwei Prüfer (nur lesen, Ausgabe Befundtabelle):
+- `pruefer-recht` (Repo `fsg-hq`, `.claude/agents/`): Leistungsgrenzen, Werbeaussagen (Vergleich, Überlegenheit, Erfolgsquoten, Compliance-Versprechen), Befugnis.
+- `pruefer-sichtbarkeit` (dieses Repo, `.claude/agents/`): SEO und GEO auf Textebene, also Keyword-Passung, Antwort zuerst, Fakten mit Quelle, Entitäten, Überschriften, interne Verlinkung, Title und Description.
+
+Rote Befunde vor der Freigabe einarbeiten; Wording-Fragen gehen gesammelt an Felix. Reine Design-, CSS- oder Infrastruktur-Änderungen ohne Textänderung gehen an keinen der beiden Prüfer.

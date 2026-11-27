@@ -4,7 +4,8 @@ export const firma = {
   name: 'FullStack Grant',
   rechtsname: 'FullStack Grant UG (haftungsbeschränkt)',
   url: 'https://fullstackgrant.de',
-  slogan: ['Fördergeld für Innovation.', 'Vom Startup bis zum Hidden Champion.'],
+  // Slogan mit „Boutique“ (Felix 25.11.2026); Logo mit Slogan und OG-Bild zieht das Kit nach (fsg-hq, Marke).
+  slogan: ['Fördergeld-Boutique für Innovation.', 'Vom Startup bis zum Hidden Champion.'],
   anschrift: {
     strasse: 'Schwenckestraße 81',
     plz: '20255',
@@ -16,10 +17,13 @@ export const firma = {
   email: 'info@fullstackgrant.de',
   telefon: { anzeige: '+49 40 89741524', link: '+494089741524' },
   register: { gericht: 'Amtsgericht Hamburg', nummer: 'HRB 202375' },
-  // Nur Profile, die live sind (T14 `sameAs`-Liste); T12 trägt sie ein.
+  // Nur Profile, die live sind (T14 `sameAs`-Liste, Drive `02_Arbeitsstand\T14_Off-site\…_sameAs-Liste_v1.md`).
+  // LinkedIn-Firmenseite, Google-Profil und Startup City erst eintragen, wenn sie öffentlich sind (T13 zieht nach).
   sameAs: [] as string[],
-  // Buchungsseite Google Kalender; Einbettung mit Einwilligung baut T12 (DECISIONS 18.11.).
+  // Alle Termin-Buttons führen auf /kontakt/; dort lädt die Buchung mit Einwilligung (DECISIONS T7 Nr. 4).
   terminUrl: '/kontakt/',
+  // Google-Kalender-Buchungsseite „Erstgespräch“ (20 Minuten, Konto fh@), Link ohne Einwilligung, iframe mit.
+  buchungUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1qfRN5CQbqSmYLQ-feZpuRhqkGC9L17EAjMjVjkvdXjQQtmsvcxAT_CCcdRegBTREmHQm7v06P',
 } as const;
 
 export const person = {
@@ -27,5 +31,15 @@ export const person = {
   rolle: 'Gründer und Geschäftsführer',
   id: `${firma.url}/ueber-uns/#felix-hinkelmann`,
   url: `${firma.url}/ueber-uns/`,
-  sameAs: [] as string[],
+  // LinkedIn-Profil live und am 17.11.2026 angeglichen (T14 sameAs-Liste).
+  sameAs: ['https://www.linkedin.com/in/felix-hinkelmann'] as string[],
+  // Porträt (Felix 23.11.2026): KI-bearbeitetes Foto, Original in Meine Ablage 20_AREAS\00_Identifikation\60_Fotos\
+  // 2026-11-23_Beraterbilder (navy-weiss_blur_v1), Webfassung 480×600 in public/bilder/ als AVIF, WebP, JPEG.
+  // Ohne sichtbaren KI-Vermerk: Felix 25.11.2026, Risiko bewusst getragen (Person selbst unbearbeitet).
+  bild: {
+    basis: '/bilder/felix-hinkelmann',
+    alt: 'Porträt von Felix Hinkelmann im dunkelblauen Sakko',
+    breite: 480,
+    hoehe: 600,
+  },
 } as const;

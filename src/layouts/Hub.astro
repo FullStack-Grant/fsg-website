@@ -18,10 +18,14 @@ const { titel, h1, beschreibung, einleitung, pfad, krumen, gruppen } = Astro.pro
 const info = { pfad, titel, beschreibung };
 ---
 <Basis titel={titel} beschreibung={beschreibung} pfad={pfad} jsonld={[sammlungsseite(info), brotkrumen(krumen)]}>
-  <Brotkrumen teile={krumen} />
-  <div class="hub">
-    <h1 class="klein">{h1}</h1>
-    <p class="lead">{einleitung}</p>
+  <div class="seitenkopf auf-ink">
+    <div class="wrap">
+      <Brotkrumen teile={krumen} />
+      <h1 class="klein">{h1}</h1>
+      <p class="lead">{einleitung}</p>
+    </div>
+  </div>
+  <div class="wrap">
     {gruppen.filter((g) => g.karten.length).map((g) => (
       <section>
         <h2>{g.titel}</h2>
@@ -36,17 +40,21 @@ const info = { pfad, titel, beschreibung };
         </ul>
       </section>
     ))}
+    <CtaTermin />
   </div>
-  <CtaTermin />
 </Basis>
 
 <style>
-  .hub { padding: 40px 0 0; }
-  section { margin-top: 48px; }
-  .karten { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); border-top: var(--rule); }
-  .karten li { padding: 20px 24px 24px 0; border-bottom: 1px solid var(--fsg-color-border); }
-  h3 { margin: 6px 0 8px; }
+  section + section { margin-top: 64px; }
+  .karten { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .karten li { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 26px; border-radius: var(--ui-radius-karte); background: var(--ui-flaeche-neutral); box-shadow: inset 0 3px 0 transparent; transition: box-shadow .15s ease, background-color .15s ease; }
+  .karten li:hover { background: var(--ui-flaeche-gold-1); box-shadow: inset 0 3px 0 var(--ui-goldlinie); }
+  h3 { margin: 2px 0 4px; }
   h3 a { text-decoration: none; }
-  h3 a:hover { text-decoration: underline; text-decoration-color: var(--fsg-color-accent); }
-  .karten p { margin: 0; font-size: var(--fsg-text-small); color: var(--fsg-color-text-muted); }
+  h3 a:hover { text-decoration: underline; text-decoration-color: var(--ui-goldlinie); }
+  .karten p { margin: 0; font-size: var(--fsg-text-small); color: var(--ui-text-muted); }
+  @media (max-width: 720px) {
+    .karten { grid-template-columns: minmax(0, 1fr); }
+    .karten li { padding: 22px 20px; }
+  }
 </style>

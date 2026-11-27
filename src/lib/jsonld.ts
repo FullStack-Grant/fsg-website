@@ -2,7 +2,7 @@
 // Kein ProfessionalService/LocalBusiness (abgekündigt bzw. an Ladenadresse gebunden).
 import type {
   Organization, WebSite, Person, BreadcrumbList, WebPage, Service, BlogPosting,
-  CollectionPage, ProfilePage, ContactPage, DefinedTermSet,
+  CollectionPage, ProfilePage, ContactPage, DefinedTermSet, FAQPage,
 } from 'schema-dts';
 import { firma, person } from '../data/firma';
 
@@ -56,6 +56,7 @@ export function personKnoten(): Person {
     name: person.name,
     url: person.url,
     jobTitle: person.rolle,
+    image: `${URL_BASIS}${person.bild.basis}.jpg`,
     worksFor: { '@id': ids.organisation },
     ...(person.sameAs.length ? { sameAs: [...person.sameAs] } : {}),
   };
@@ -142,6 +143,38 @@ export const begriffsliste = (s: SeitenInfo, begriffe: { id: string; begriff: st
     name: b.begriff,
     description: b.definition,
     inDefinedTermSet: { '@id': `${URL_BASIS}${s.pfad}#glossar` },
+  })),
+});
+
+// Fragen (### …) und Antworten (Text bis zur nächsten Überschrift) aus dem Markdown einer FAQ-Seite.
+// Links, Hervorhebungen und Kommentare werden zu Klartext.
+export function fragenAusMarkdown(md: string): { frage: string; antwort: string }[] {
+  const klartext = (s: string) =>
+    s
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/[*_`]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  const teile = md.split(/^(#{2,3}) +(.+)$/m);
+  const fragen: { frage: string; antwort: string }[] = [];
+  for (let i = 1; i < teile.length; i += 3) {
+    if (teile[i] !== '###') continue;
+    const frage = klartext(teile[i + 1].replace(/\s*\{#[^}]+\}\s*$/, ''));
+    const antwort = klartext(teile[i + 2] ?? '');
+    if (frage && antwort) fragen.push({ frage, antwort });
+  }
+  return fragen;
+}
+
+export const fragenseite = (s: SeitenInfo, fragen: { frage: string; antwort: string }[]): FAQPage => ({
+  '@type': 'FAQPage',
+  '@id': `${URL_BASIS}${s.pfad}#faq`,
+  isPartOf: { '@id': `${URL_BASIS}${s.pfad}#webpage` },
+  mainEntity: fragen.map((f) => ({
+    '@type': 'Question',
+    name: f.frage,
+    acceptedAnswer: { '@type': 'Answer', text: f.antwort },
   })),
 });
 
