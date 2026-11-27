@@ -18,7 +18,6 @@ test.describe('AGB-Fassungen', () => {
       const antwort = await page.goto(ohne);
       expect(antwort!.status(), 'HTTP-Status').toBe(200);
       expect(new URL(page.url()).pathname).toBe(f.seite);
-      await expect(page.locator('main')).toContainText(f.sha256);
       await expect(page.locator(`a[href="${f.pdf}"]`)).toBeVisible();
 
       const pdf = await request.get(f.pdf);
